@@ -56,16 +56,21 @@ def sparse_ggnn_layer(node_embeddings: tf.Tensor,
     gated_cell = get_gated_unit(state_dim, gated_unit_type, activation_function)
     edge_type_to_message_transformation_layers = []  # Layers to compute the message from a source state
     edge_type_to_message_targets = []  # List of tensors of message targets
+    # for each edge type, create a dense linear layer to project into the state dimension.
     for edge_type_idx, adjacency_list_for_edge_type in enumerate(adjacency_lists):
         edge_type_to_message_transformation_layers.append(
             tf.keras.layers.Dense(units=state_dim,
                                   use_bias=False,
                                   activation=None,
                                   name="Edge_%i_Weight" % edge_type_idx))
+        # append the column vector of targets (i.e., only the second column of the list)
+        # for the edge types to the edge_type_to_message_targets
         edge_type_to_message_targets.append(adjacency_list_for_edge_type[:, 1])
+        # Produces row vectors of targets (i.e., [[1, 2], [1, 5]] turns to [2 5]
 
     # Let M be the number of messages (sum of all E):
     message_targets = tf.concat(edge_type_to_message_targets, axis=0)  # Shape [M]
+    # single row vector of all message targets
 
     cur_node_states = node_embeddings
     for _ in range(num_timesteps):
@@ -74,21 +79,34 @@ def sparse_ggnn_layer(node_embeddings: tf.Tensor,
 
         # Collect incoming messages per edge type
         for edge_type_idx, adjacency_list_for_edge_type in enumerate(adjacency_lists):
-            edge_sources = adjacency_list_for_edge_type[:, 0]
+            edge_sources = adjacency_list_for_edge_type[:, 0] # Shape [E]
             edge_source_states = tf.nn.embedding_lookup(params=cur_node_states,
                                                         ids=edge_sources)  # Shape [E, D]
             all_messages_for_edge_type = \
-                edge_type_to_message_transformation_layers[edge_type_idx](edge_source_states)  # Shape [E,D]
-            messages.append(all_messages_for_edge_type)
-            message_source_states.append(edge_source_states)
+                edge_type_to_message_transformation_layers[edge_type_idx](edge_source_states)# Shape [E,D]
+            # This just projects the edge source states to the desired dimension through the linear layers that
+            # were added to the list abvoe on line 62.
+
+            messages.append(all_messages_for_edge_type) # List of tensors of shape [E,D]
+            message_source_states.append(edge_source_states) # List if tensors of shape [E,D]
 
         messages = tf.concat(messages, axis=0)  # Shape [M, D]
         aggregated_messages = \
             message_aggregation_fn(data=messages,
                                    segment_ids=message_targets,
                                    num_segments=num_nodes)  # Shape [V, D]
+        # this function sums the node states based on message targets.
+        # thus, every node in the messages list that is to the same target will be
+        # summed together. Thus, the length of this vector is the number of
+        # nodes (or more precisely, the number of message targets).
 
         # pass updated vertex features into RNN cell
+        # first parameter is the input (shape [batch, feature] in this case [V, D].
+        # the second parameter are the states. In more than one timestep, this would be
+        # the output from the previous timestep. In timestep 0, this is the initial state.
+
+        # index [0] for the return because the return value is [new_node_states, [list]]
+        # where list is the internal states that should be passed to the next layer.
         new_node_states = gated_cell(aggregated_messages, [cur_node_states])[0]  # Shape [V, D]
         cur_node_states = new_node_states
 

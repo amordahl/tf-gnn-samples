@@ -37,7 +37,16 @@ class GraphSample(NamedTuple):
     variable_candidate_nodes: np.ndarray
     variable_candidate_nodes_mask: np.ndarray
 
+"""
+Austin: iterates through node labels in the graph and detects alphanumeric strings that are not part
+of the language vocabulary.
 
+For each alphanumeric token in the node label, it then splits the token on camelcase or snake case, and adds to the
+dictionary "subtoken_to_using_nodes". This dictionary has keys as tokens and values as lists of node ids, such that the 
+key k_1 has the value of all the nodes that contain that string.
+
+Then, the code adds a node for each subtoken it found and adds "UsesSubtoken" edges from each 
+"""
 def _add_per_subtoken_nodes(unsplittable_node_names: Set[str], graph_dict: Dict[str, Any]) -> None:
     graph_node_labels = graph_dict['NodeLabels']
     subtoken_to_using_nodes = defaultdict(set)
@@ -71,7 +80,7 @@ def _load_single_sample(raw_sample: Dict[str, Any],
                         graph_node_label_max_num_chars: int,
                         max_variable_candidates: int = 5,
                         add_self_loop_edges: bool = False):
-    _add_per_subtoken_nodes(unsplittable_node_names, raw_sample['ContextGraph'])
+    _add_per_subtoken_nodes(unsplittable_node_names, raw_sample['ContextGraph']) # adds uses subtoken edges
     num_nodes = len(raw_sample['ContextGraph']['NodeLabels'])
 
     node_label_chars = np.zeros(shape=(num_nodes, graph_node_label_max_num_chars),
@@ -79,15 +88,19 @@ def _load_single_sample(raw_sample: Dict[str, Any],
     for (node, label) in raw_sample['ContextGraph']['NodeLabels'].items():
         for (char_idx, label_char) in enumerate(label[:graph_node_label_max_num_chars].lower()):
             node_label_chars[int(node), char_idx] = ALPHABET_DICT.get(label_char, 1)
+    # Returns the sorted unique rows, and the associated indices
     node_label_chars_unique, node_label_chars_indices = np.unique(node_label_chars,
                                                                   axis=0,
                                                                   return_inverse=True)
 
     # Split edges according to edge_type and count their numbers:
     num_edge_types = len(PROGRAM_GRAPH_EDGES_TYPES_VOCAB)
+    # constructs adjacency placeholders
     adjacency_lists = [np.zeros((0, 2), dtype=np.int32) for _ in range(num_edge_types)]
     num_incoming_edges_per_type = np.zeros((num_edge_types, num_nodes), dtype=np.uint16)
     raw_edges = raw_sample['ContextGraph']['Edges']
+
+    # Controls adding back in backwards edges
     for e_type, e_type_edges in raw_edges.items():
         if len(e_type_edges) > 0:
             e_type_bkwd = e_type + BACKWARD_EDGE_TYPE_NAME_SUFFIX
@@ -285,6 +298,7 @@ class VarMisuse_Task(Sparse_Graph_Task):
             all_data_files = list(all_data_files)
         print(" Loading VarMisuse data from %s [%i data files]." % (data_dir, len(all_data_files)))
 
+        # this is used for
         unsplittable_keywords = get_language_keywords('csharp')
         return _load_data(all_data_files,
                           unsplittable_keywords,
