@@ -1,0 +1,1367 @@
+TranslationUnitDecl 0x556dd21c6f88 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x556dd21c7848 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x556dd21c7520 '__int128'
+|-TypedefDecl 0x556dd21c78b8 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x556dd21c7540 'unsigned __int128'
+|-TypedefDecl 0x556dd21c7bc0 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x556dd21c7990 'struct __NSConstantString_tag'
+|   `-Record 0x556dd21c7910 '__NSConstantString_tag'
+|-TypedefDecl 0x556dd21c7c68 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x556dd21c7c20 'char *'
+|   `-BuiltinType 0x556dd21c7020 'char'
+|-TypedefDecl 0x556dd2206b60 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x556dd21c7f00 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x556dd21c7d40 'struct __va_list_tag'
+|     `-Record 0x556dd21c7cc0 '__va_list_tag'
+|-FunctionDecl 0x556dd2206ca0 <pthread-wmm/safe025_pso.opt_true-unreach-call.i:1:1, col:34> col:13 used __VERIFIER_assume 'void (int)' extern
+| `-ParmVarDecl 0x556dd2206bd0 <col:31> col:34 'int'
+|-FunctionDecl 0x556dd2206e68 <line:2:1, col:45> col:15 used __VERIFIER_nondet_pointer 'void *(void)' extern
+|-FunctionDecl 0x556dd2206f90 <line:3:1, col:61> col:13 used __VERIFIER_error 'void () __attribute__((noreturn))' extern
+|-FunctionDecl 0x556dd22070d8 <line:4:1, col:99> col:6 used __VERIFIER_assert 'void (int)'
+| |-ParmVarDecl 0x556dd2207048 <col:24, col:28> col:28 used expression 'int'
+| `-CompoundStmt 0x556dd2207308 <col:40, col:99>
+|   |-IfStmt 0x556dd22072d8 <col:42, col:88>
+|   | |-UnaryOperator 0x556dd22071b8 <col:46, col:47> 'int' prefix '!' cannot overflow
+|   | | `-ImplicitCastExpr 0x556dd22071a0 <col:47> 'int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x556dd2207180 <col:47> 'int' lvalue ParmVar 0x556dd2207048 'expression' 'int'
+|   | `-CompoundStmt 0x556dd22072c0 <col:59, col:88>
+|   |   `-LabelStmt 0x556dd22072a8 <col:61, col:85> 'ERROR'
+|   |     `-CallExpr 0x556dd2207238 <col:68, col:85> 'void'
+|   |       `-ImplicitCastExpr 0x556dd2207220 <col:68> 'void (*)() __attribute__((noreturn))' <FunctionToPointerDecay>
+|   |         `-DeclRefExpr 0x556dd22071d0 <col:68> 'void () __attribute__((noreturn))' Function 0x556dd2206f90 '__VERIFIER_error' 'void () __attribute__((noreturn))'
+|   |-NullStmt 0x556dd22072f0 <col:89>
+|   `-ReturnStmt 0x556dd22072f8 <col:91>
+|-FunctionDecl 0x556dd2207350 <line:5:1, col:37> col:13 used __VERIFIER_atomic_begin 'void ()' extern
+|-FunctionDecl 0x556dd2207410 <line:6:1, col:35> col:13 used __VERIFIER_atomic_end 'void ()' extern
+|-FunctionDecl 0x556dd2207790 <line:8:1, line:10:76> line:8:13 __assert_fail 'void (const char *, const char *, unsigned int, const char *) __attribute__((noreturn))' extern
+| |-ParmVarDecl 0x556dd22074c8 <col:28, col:40> col:40 __assertion 'const char *'
+| |-ParmVarDecl 0x556dd2207548 <col:53, col:65> col:65 __file 'const char *'
+| |-ParmVarDecl 0x556dd22075c8 <line:9:7, col:20> col:20 __line 'unsigned int'
+| |-ParmVarDecl 0x556dd2207648 <col:28, col:40> col:40 __function 'const char *'
+| `-NoThrowAttr 0x556dd2207850 <line:10:22>
+|-FunctionDecl 0x556dd222d8a0 <line:11:1, line:13:76> line:11:13 __assert_perror_fail 'void (int, const char *, unsigned int, const char *) __attribute__((noreturn))' extern
+| |-ParmVarDecl 0x556dd22078c0 <col:35, col:39> col:39 __errnum 'int'
+| |-ParmVarDecl 0x556dd2207940 <col:49, col:61> col:61 __file 'const char *'
+| |-ParmVarDecl 0x556dd22079c0 <line:12:7, col:20> col:20 __line 'unsigned int'
+| |-ParmVarDecl 0x556dd2207a40 <col:28, col:40> col:40 __function 'const char *'
+| `-NoThrowAttr 0x556dd222d960 <line:13:22>
+|-FunctionDecl 0x556dd222dc10 <line:14:1, line:15:76> line:14:13 __assert 'void (const char *, const char *, int) __attribute__((noreturn))' extern
+| |-ParmVarDecl 0x556dd222d9d0 <col:23, col:35> col:35 __assertion 'const char *'
+| |-ParmVarDecl 0x556dd222da50 <col:48, col:60> col:60 __file 'const char *'
+| |-ParmVarDecl 0x556dd222dad0 <col:68, col:72> col:72 __line 'int'
+| `-NoThrowAttr 0x556dd222dcc8 <line:15:22>
+|-TypedefDecl 0x556dd222dd38 <line:17:1, col:23> col:23 __u_char 'unsigned char'
+| `-BuiltinType 0x556dd21c70e0 'unsigned char'
+|-TypedefDecl 0x556dd222dda8 <line:18:1, col:28> col:28 __u_short 'unsigned short'
+| `-BuiltinType 0x556dd21c7100 'unsigned short'
+|-TypedefDecl 0x556dd222de18 <line:19:1, col:22> col:22 __u_int 'unsigned int'
+| `-BuiltinType 0x556dd21c7120 'unsigned int'
+|-TypedefDecl 0x556dd222de88 <line:20:1, col:27> col:27 __u_long 'unsigned long'
+| `-BuiltinType 0x556dd21c7140 'unsigned long'
+|-TypedefDecl 0x556dd222def8 <line:21:1, col:21> col:21 __int8_t 'signed char'
+| `-BuiltinType 0x556dd21c7040 'signed char'
+|-TypedefDecl 0x556dd222df68 <line:22:1, col:23> col:23 __uint8_t 'unsigned char'
+| `-BuiltinType 0x556dd21c70e0 'unsigned char'
+|-TypedefDecl 0x556dd222dfd8 <line:23:1, col:26> col:26 __int16_t 'short'
+| `-BuiltinType 0x556dd21c7060 'short'
+|-TypedefDecl 0x556dd222e048 <line:24:1, col:28> col:28 __uint16_t 'unsigned short'
+| `-BuiltinType 0x556dd21c7100 'unsigned short'
+|-TypedefDecl 0x556dd222e0b8 <line:25:1, col:20> col:20 __int32_t 'int'
+| `-BuiltinType 0x556dd21c7080 'int'
+|-TypedefDecl 0x556dd222e128 <line:26:1, col:22> col:22 __uint32_t 'unsigned int'
+| `-BuiltinType 0x556dd21c7120 'unsigned int'
+|-TypedefDecl 0x556dd222e198 <line:27:1, col:25> col:25 __int64_t 'long'
+| `-BuiltinType 0x556dd21c70a0 'long'
+|-TypedefDecl 0x556dd222e208 <line:28:1, col:27> col:27 referenced __uint64_t 'unsigned long'
+| `-BuiltinType 0x556dd21c7140 'unsigned long'
+|-TypedefDecl 0x556dd222e278 <line:29:1, col:18> col:18 referenced __quad_t 'long'
+| `-BuiltinType 0x556dd21c70a0 'long'
+|-TypedefDecl 0x556dd222e2e8 <line:30:1, col:27> col:27 __u_quad_t 'unsigned long'
+| `-BuiltinType 0x556dd21c7140 'unsigned long'
+|-TypedefDecl 0x556dd222e358 <line:31:1, col:27> col:27 __dev_t 'unsigned long'
+| `-BuiltinType 0x556dd21c7140 'unsigned long'
+|-TypedefDecl 0x556dd222e3c8 <line:32:1, col:22> col:22 __uid_t 'unsigned int'
+| `-BuiltinType 0x556dd21c7120 'unsigned int'
+|-TypedefDecl 0x556dd222e438 <line:33:1, col:22> col:22 __gid_t 'unsigned int'
+| `-BuiltinType 0x556dd21c7120 'unsigned int'
+|-TypedefDecl 0x556dd222e4a8 <line:34:1, col:27> col:27 __ino_t 'unsigned long'
+| `-BuiltinType 0x556dd21c7140 'unsigned long'
+|-TypedefDecl 0x556dd222e518 <line:35:1, col:27> col:27 __ino64_t 'unsigned long'
+| `-BuiltinType 0x556dd21c7140 'unsigned long'
+|-TypedefDecl 0x556dd222e588 <line:36:1, col:22> col:22 __mode_t 'unsigned int'
+| `-BuiltinType 0x556dd21c7120 'unsigned int'
+|-TypedefDecl 0x556dd222e5f8 <line:37:1, col:27> col:27 __nlink_t 'unsigned long'
+| `-BuiltinType 0x556dd21c7140 'unsigned long'
+|-TypedefDecl 0x556dd222e668 <line:38:1, col:18> col:18 __off_t 'long'
+| `-BuiltinType 0x556dd21c70a0 'long'
+|-TypedefDecl 0x556dd222e6d8 <line:39:1, col:18> col:18 referenced __off64_t 'long'
+| `-BuiltinType 0x556dd21c70a0 'long'
+|-TypedefDecl 0x556dd222e748 <line:40:1, col:13> col:13 referenced __pid_t 'int'
+| `-BuiltinType 0x556dd21c7080 'int'
+|-RecordDecl 0x556dd222e7a0 <line:41:9, col:32> col:9 struct definition
+| `-FieldDecl 0x556dd222e918 <col:18, col:29> col:22 __val 'int [2]'
+|-TypedefDecl 0x556dd222e9d0 <col:1, col:34> col:34 __fsid_t 'struct __fsid_t':'__fsid_t'
+| `-ElaboratedType 0x556dd222e970 'struct __fsid_t' sugar
+|   `-RecordType 0x556dd222e820 '__fsid_t'
+|     `-Record 0x556dd222e7a0 ''
+|-TypedefDecl 0x556dd222ea58 <line:42:1, col:18> col:18 referenced __clock_t 'long'
+| `-BuiltinType 0x556dd21c70a0 'long'
+|-TypedefDecl 0x556dd222eac8 <line:43:1, col:27> col:27 __rlim_t 'unsigned long'
+| `-BuiltinType 0x556dd21c7140 'unsigned long'
+|-TypedefDecl 0x556dd222eb38 <line:44:1, col:27> col:27 __rlim64_t 'unsigned long'
+| `-BuiltinType 0x556dd21c7140 'unsigned long'
+|-TypedefDecl 0x556dd222eba8 <line:45:1, col:22> col:22 __id_t 'unsigned int'
+| `-BuiltinType 0x556dd21c7120 'unsigned int'
+|-TypedefDecl 0x556dd222ec18 <line:46:1, col:18> col:18 referenced __time_t 'long'
+| `-BuiltinType 0x556dd21c70a0 'long'
+|-TypedefDecl 0x556dd222ec88 <line:47:1, col:22> col:22 __useconds_t 'unsigned int'
+| `-BuiltinType 0x556dd21c7120 'unsigned int'
+|-TypedefDecl 0x556dd222ecf8 <line:48:1, col:18> col:18 __suseconds_t 'long'
+| `-BuiltinType 0x556dd21c70a0 'long'
+|-TypedefDecl 0x556dd222ed68 <line:49:1, col:13> col:13 __daddr_t 'int'
+| `-BuiltinType 0x556dd21c7080 'int'
+|-TypedefDecl 0x556dd222edd8 <line:50:1, col:13> col:13 __key_t 'int'
+| `-BuiltinType 0x556dd21c7080 'int'
+|-TypedefDecl 0x556dd222ee48 <line:51:1, col:13> col:13 referenced __clockid_t 'int'
+| `-BuiltinType 0x556dd21c7080 'int'
+|-TypedefDecl 0x556dd222eeb8 <line:52:1, col:16> col:16 referenced __timer_t 'void *'
+| `-PointerType 0x556dd21c77a0 'void *'
+|   `-BuiltinType 0x556dd21c6fe0 'void'
+|-TypedefDecl 0x556dd222ef28 <line:53:1, col:18> col:18 __blksize_t 'long'
+| `-BuiltinType 0x556dd21c70a0 'long'
+|-TypedefDecl 0x556dd222ef98 <line:54:1, col:18> col:18 __blkcnt_t 'long'
+| `-BuiltinType 0x556dd21c70a0 'long'
+|-TypedefDecl 0x556dd222f008 <line:55:1, col:18> col:18 __blkcnt64_t 'long'
+| `-BuiltinType 0x556dd21c70a0 'long'
+|-TypedefDecl 0x556dd222f078 <line:56:1, col:27> col:27 __fsblkcnt_t 'unsigned long'
+| `-BuiltinType 0x556dd21c7140 'unsigned long'
+|-TypedefDecl 0x556dd222f0e8 <line:57:1, col:27> col:27 __fsblkcnt64_t 'unsigned long'
+| `-BuiltinType 0x556dd21c7140 'unsigned long'
+|-TypedefDecl 0x556dd222f158 <line:58:1, col:27> col:27 __fsfilcnt_t 'unsigned long'
+| `-BuiltinType 0x556dd21c7140 'unsigned long'
+|-TypedefDecl 0x556dd222f1c8 <line:59:1, col:27> col:27 __fsfilcnt64_t 'unsigned long'
+| `-BuiltinType 0x556dd21c7140 'unsigned long'
+|-TypedefDecl 0x556dd222f238 <line:60:1, col:18> col:18 __fsword_t 'long'
+| `-BuiltinType 0x556dd21c70a0 'long'
+|-TypedefDecl 0x556dd222f2a8 <line:61:1, col:18> col:18 __ssize_t 'long'
+| `-BuiltinType 0x556dd21c70a0 'long'
+|-TypedefDecl 0x556dd222f318 <line:62:1, col:18> col:18 referenced __syscall_slong_t 'long'
+| `-BuiltinType 0x556dd21c70a0 'long'
+|-TypedefDecl 0x556dd222f388 <line:63:1, col:27> col:27 __syscall_ulong_t 'unsigned long'
+| `-BuiltinType 0x556dd21c7140 'unsigned long'
+|-TypedefDecl 0x556dd222f418 <line:64:1, col:19> col:19 __loff_t '__off64_t':'long'
+| `-TypedefType 0x556dd222f3e0 '__off64_t' sugar
+|   |-Typedef 0x556dd222e6d8 '__off64_t'
+|   `-BuiltinType 0x556dd21c70a0 'long'
+|-TypedefDecl 0x556dd222f510 <line:65:1, col:19> col:19 __qaddr_t '__quad_t *'
+| `-PointerType 0x556dd222f4d0 '__quad_t *'
+|   `-TypedefType 0x556dd222f470 '__quad_t' sugar
+|     |-Typedef 0x556dd222e278 '__quad_t'
+|     `-BuiltinType 0x556dd21c70a0 'long'
+|-TypedefDecl 0x556dd222f580 <line:66:1, col:15> col:15 __caddr_t 'char *'
+| `-PointerType 0x556dd21c7c20 'char *'
+|   `-BuiltinType 0x556dd21c7020 'char'
+|-TypedefDecl 0x556dd222f5f0 <line:67:1, col:18> col:18 __intptr_t 'long'
+| `-BuiltinType 0x556dd21c70a0 'long'
+|-TypedefDecl 0x556dd222f660 <line:68:1, col:22> col:22 __socklen_t 'unsigned int'
+| `-BuiltinType 0x556dd21c7120 'unsigned int'
+|-FunctionDecl 0x556dd222f7a8 <line:69:1, line:73:1> line:70:1 __bswap_32 'unsigned int (unsigned int)' static inline
+| |-ParmVarDecl 0x556dd222f6d0 <col:13, col:26> col:26 used __bsx 'unsigned int'
+| `-CompoundStmt 0x556dd222fae8 <line:71:1, line:73:1>
+|   `-ReturnStmt 0x556dd222fad8 <line:72:3, col:34>
+|     `-CallExpr 0x556dd222fa98 <col:10, col:34> 'unsigned int'
+|       |-ImplicitCastExpr 0x556dd222fa80 <col:10> 'unsigned int (*)(unsigned int)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x556dd222fa10 <col:10> '<builtin fn type>' Function 0x556dd222f880 '__builtin_bswap32' 'unsigned int (unsigned int)'
+|       `-ImplicitCastExpr 0x556dd222fac0 <col:29> 'unsigned int' <LValueToRValue>
+|         `-DeclRefExpr 0x556dd222fa30 <col:29> 'unsigned int' lvalue ParmVar 0x556dd222f6d0 '__bsx' 'unsigned int'
+|-FunctionDecl 0x556dd222f880 <col:10> col:10 implicit used __builtin_bswap32 'unsigned int (unsigned int)' extern
+| |-ParmVarDecl 0x556dd222f920 <<invalid sloc>> <invalid sloc> 'unsigned int'
+| |-NoThrowAttr 0x556dd222f990 <col:10> Implicit
+| `-ConstAttr 0x556dd222f9e8 <col:10> Implicit
+|-FunctionDecl 0x556dd222fc40 <line:74:1, line:78:1> line:75:1 __bswap_64 '__uint64_t (__uint64_t)' static inline
+| |-ParmVarDecl 0x556dd222fb38 <col:13, col:24> col:24 used __bsx '__uint64_t':'unsigned long'
+| `-CompoundStmt 0x556dd222ff58 <line:76:1, line:78:1>
+|   `-ReturnStmt 0x556dd222ff48 <line:77:3, col:34>
+|     `-CallExpr 0x556dd222ff08 <col:10, col:34> 'unsigned long'
+|       |-ImplicitCastExpr 0x556dd222fef0 <col:10> 'unsigned long (*)(unsigned long)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x556dd222fe78 <col:10> '<builtin fn type>' Function 0x556dd222fce8 '__builtin_bswap64' 'unsigned long (unsigned long)'
+|       `-ImplicitCastExpr 0x556dd222ff30 <col:29> '__uint64_t':'unsigned long' <LValueToRValue>
+|         `-DeclRefExpr 0x556dd222fe98 <col:29> '__uint64_t':'unsigned long' lvalue ParmVar 0x556dd222fb38 '__bsx' '__uint64_t':'unsigned long'
+|-FunctionDecl 0x556dd222fce8 <col:10> col:10 implicit used __builtin_bswap64 'unsigned long (unsigned long)' extern
+| |-ParmVarDecl 0x556dd222fd88 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| |-NoThrowAttr 0x556dd222fdf8 <col:10> Implicit
+| `-ConstAttr 0x556dd222fe50 <col:10> Implicit
+|-TypedefDecl 0x556dd222ff88 <line:79:1, col:27> col:27 referenced size_t 'unsigned long'
+| `-BuiltinType 0x556dd21c7140 'unsigned long'
+|-TypedefDecl 0x556dd2230018 <line:81:1, col:18> col:18 referenced time_t '__time_t':'long'
+| `-TypedefType 0x556dd222ffe0 '__time_t' sugar
+|   |-Typedef 0x556dd222ec18 '__time_t'
+|   `-BuiltinType 0x556dd21c70a0 'long'
+|-RecordDecl 0x556dd2230070 <line:84:1, line:88:3> line:84:8 struct timespec definition
+| |-FieldDecl 0x556dd2230128 <line:86:5, col:14> col:14 tv_sec '__time_t':'long'
+| `-FieldDecl 0x556dd22301b8 <line:87:5, col:23> col:23 tv_nsec '__syscall_slong_t':'long'
+|-TypedefDecl 0x556dd2230248 <line:89:1, col:17> col:17 referenced pid_t '__pid_t':'int'
+| `-TypedefType 0x556dd2230210 '__pid_t' sugar
+|   |-Typedef 0x556dd222e748 '__pid_t'
+|   `-BuiltinType 0x556dd21c7080 'int'
+|-RecordDecl 0x556dd22302a0 <line:90:1, line:93:3> line:90:8 struct sched_param definition
+| `-FieldDecl 0x556dd2230360 <line:92:5, col:9> col:9 __sched_priority 'int'
+|-RecordDecl 0x556dd22303b0 <line:96:1, line:99:3> line:96:8 struct __sched_param definition
+| `-FieldDecl 0x556dd2230470 <line:98:5, col:9> col:9 __sched_priority 'int'
+|-TypedefDecl 0x556dd22304d8 <line:100:1, col:27> col:27 referenced __cpu_mask 'unsigned long'
+| `-BuiltinType 0x556dd21c7140 'unsigned long'
+|-RecordDecl 0x556dd2230530 <line:101:9, line:104:1> line:101:9 struct definition
+| `-FieldDecl 0x556dd22307c0 <line:103:3, col:53> col:14 __bits '__cpu_mask [64]'
+|-TypedefDecl 0x556dd22328b0 <line:101:1, line:104:3> col:3 referenced cpu_set_t 'struct cpu_set_t':'cpu_set_t'
+| `-ElaboratedType 0x556dd2230810 'struct cpu_set_t' sugar
+|   `-RecordType 0x556dd22305b0 'cpu_set_t'
+|     `-Record 0x556dd2230530 ''
+|-FunctionDecl 0x556dd2232b88 <line:106:1, line:107:42> line:106:12 __sched_cpucount 'int (size_t, const cpu_set_t *)' extern
+| |-ParmVarDecl 0x556dd2232958 <col:30, col:37> col:37 __setsize 'size_t':'unsigned long'
+| |-ParmVarDecl 0x556dd2232a60 <col:48, col:65> col:65 __setp 'const cpu_set_t *'
+| `-NoThrowAttr 0x556dd2232c38 <line:107:19>
+|-FunctionDecl 0x556dd2232e10 <line:108:1, col:92> col:19 __sched_cpualloc 'cpu_set_t *(size_t)' extern
+| |-ParmVarDecl 0x556dd2232ca0 <col:37, col:44> col:44 __count 'size_t':'unsigned long'
+| `-NoThrowAttr 0x556dd2232eb8 <col:69>
+|-FunctionDecl 0x556dd2233030 <line:109:1, col:87> col:13 __sched_cpufree 'void (cpu_set_t *)' extern
+| |-ParmVarDecl 0x556dd2232f20 <col:30, col:41> col:41 __set 'cpu_set_t *'
+| `-NoThrowAttr 0x556dd22330d8 <col:64>
+|-FunctionDecl 0x556dd2233398 <line:112:1, line:113:45> line:112:12 sched_setparam 'int (__pid_t, const struct sched_param *)' extern
+| |-ParmVarDecl 0x556dd2233140 <col:28, col:36> col:36 __pid '__pid_t':'int'
+| |-ParmVarDecl 0x556dd2233278 <col:43, col:69> col:69 __param 'const struct sched_param *'
+| `-NoThrowAttr 0x556dd2233448 <line:113:22>
+|-FunctionDecl 0x556dd22336c8 <line:114:1, col:111> col:12 sched_getparam 'int (__pid_t, struct sched_param *)' extern
+| |-ParmVarDecl 0x556dd22334b0 <col:28, col:36> col:36 __pid '__pid_t':'int'
+| |-ParmVarDecl 0x556dd22335a8 <col:43, col:63> col:63 __param 'struct sched_param *'
+| `-NoThrowAttr 0x556dd2233778 <col:88>
+|-FunctionDecl 0x556dd2233a98 <line:115:1, line:116:85> line:115:12 sched_setscheduler 'int (__pid_t, int, const struct sched_param *)' extern
+| |-ParmVarDecl 0x556dd22337e0 <col:32, col:40> col:40 __pid '__pid_t':'int'
+| |-ParmVarDecl 0x556dd22338c0 <col:47, col:51> col:51 __policy 'int'
+| |-ParmVarDecl 0x556dd2233950 <line:116:11, col:37> col:37 __param 'const struct sched_param *'
+| `-NoThrowAttr 0x556dd2233b50 <col:62>
+|-FunctionDecl 0x556dd2233cc8 <line:117:1, col:86> col:12 sched_getscheduler 'int (__pid_t)' extern
+| |-ParmVarDecl 0x556dd2233bb8 <col:32, col:40> col:40 __pid '__pid_t':'int'
+| `-NoThrowAttr 0x556dd2233d70 <col:63>
+|-FunctionDecl 0x556dd2233e98 <line:118:1, col:70> col:12 sched_yield 'int (void)' extern
+| `-NoThrowAttr 0x556dd2233f38 <col:47>
+|-FunctionDecl 0x556dd2234040 <line:119:1, col:92> col:12 sched_get_priority_max 'int (int)' extern
+| |-ParmVarDecl 0x556dd2233fa8 <col:36, col:40> col:40 __algorithm 'int'
+| `-NoThrowAttr 0x556dd22340e8 <col:69>
+|-FunctionDecl 0x556dd22341f0 <line:120:1, col:92> col:12 sched_get_priority_min 'int (int)' extern
+| |-ParmVarDecl 0x556dd2234158 <col:36, col:40> col:40 __algorithm 'int'
+| `-NoThrowAttr 0x556dd2234298 <col:69>
+|-FunctionDecl 0x556dd2234558 <line:121:1, col:111> col:12 sched_rr_get_interval 'int (__pid_t, struct timespec *)' extern
+| |-ParmVarDecl 0x556dd2234300 <col:35, col:43> col:43 __pid '__pid_t':'int'
+| |-ParmVarDecl 0x556dd2234438 <col:50, col:67> col:67 __t 'struct timespec *'
+| `-NoThrowAttr 0x556dd2234608 <col:88>
+|-TypedefDecl 0x556dd2234698 <line:125:1, col:19> col:19 referenced clock_t '__clock_t':'long'
+| `-TypedefType 0x556dd2234660 '__clock_t' sugar
+|   |-Typedef 0x556dd222ea58 '__clock_t'
+|   `-BuiltinType 0x556dd21c70a0 'long'
+|-TypedefDecl 0x556dd2234728 <line:128:1, col:21> col:21 referenced clockid_t '__clockid_t':'int'
+| `-TypedefType 0x556dd22346f0 '__clockid_t' sugar
+|   |-Typedef 0x556dd222ee48 '__clockid_t'
+|   `-BuiltinType 0x556dd21c7080 'int'
+|-TypedefDecl 0x556dd22347b8 <line:129:1, col:19> col:19 referenced timer_t '__timer_t':'void *'
+| `-TypedefType 0x556dd2234780 '__timer_t' sugar
+|   |-Typedef 0x556dd222eeb8 '__timer_t'
+|   `-PointerType 0x556dd21c77a0 'void *'
+|     `-BuiltinType 0x556dd21c6fe0 'void'
+|-RecordDecl 0x556dd2234810 <line:131:1, line:144:1> line:131:8 struct tm definition
+| |-FieldDecl 0x556dd22348e8 <line:133:3, col:7> col:7 tm_sec 'int'
+| |-FieldDecl 0x556dd2234950 <line:134:3, col:7> col:7 tm_min 'int'
+| |-FieldDecl 0x556dd22349b8 <line:135:3, col:7> col:7 tm_hour 'int'
+| |-FieldDecl 0x556dd2234a20 <line:136:3, col:7> col:7 tm_mday 'int'
+| |-FieldDecl 0x556dd2234a88 <line:137:3, col:7> col:7 tm_mon 'int'
+| |-FieldDecl 0x556dd2234af0 <line:138:3, col:7> col:7 tm_year 'int'
+| |-FieldDecl 0x556dd2234b58 <line:139:3, col:7> col:7 tm_wday 'int'
+| |-FieldDecl 0x556dd2234bc0 <line:140:3, col:7> col:7 tm_yday 'int'
+| |-FieldDecl 0x556dd2234c28 <line:141:3, col:7> col:7 tm_isdst 'int'
+| |-FieldDecl 0x556dd2234c90 <line:142:3, col:12> col:12 tm_gmtoff 'long'
+| `-FieldDecl 0x556dd2234cf8 <line:143:3, col:15> col:15 tm_zone 'const char *'
+|-RecordDecl 0x556dd2234d48 <line:147:1, line:151:3> line:147:8 struct itimerspec definition
+| |-FieldDecl 0x556dd2234e18 <line:149:5, col:21> col:21 it_interval 'struct timespec':'struct timespec'
+| `-FieldDecl 0x556dd2234e88 <line:150:5, col:21> col:21 it_value 'struct timespec':'struct timespec'
+|-RecordDecl 0x556dd2234f30 <line:152:1, col:8> col:8 struct sigevent
+|-FunctionDecl 0x556dd2235100 <line:154:1, col:68> col:16 clock 'clock_t (void)' extern
+| `-NoThrowAttr 0x556dd22351a0 <col:45>
+|-FunctionDecl 0x556dd2235380 <line:155:1, col:77> col:15 time 'time_t (time_t *)' extern
+| |-ParmVarDecl 0x556dd2235270 <col:21, col:29> col:29 __timer 'time_t *'
+| `-NoThrowAttr 0x556dd2235428 <col:54>
+|-FunctionDecl 0x556dd2235628 <line:156:1, line:157:73> line:156:15 difftime 'double (time_t, time_t)' extern
+| |-ParmVarDecl 0x556dd2235490 <col:25, col:32> col:32 __time1 'time_t':'long'
+| |-ParmVarDecl 0x556dd2235508 <col:41, col:48> col:48 __time0 'time_t':'long'
+| |-NoThrowAttr 0x556dd22356d8 <line:157:22>
+| `-ConstAttr 0x556dd2235730 <col:63>
+|-FunctionDecl 0x556dd2236560 <line:158:1, col:79> col:15 mktime 'time_t (struct tm *)' extern
+| |-ParmVarDecl 0x556dd2235828 <col:23, col:34> col:34 __tp 'struct tm *'
+| `-NoThrowAttr 0x556dd2236608 <col:56>
+|-FunctionDecl 0x556dd22369b0 <line:159:1, line:161:77> line:159:15 strftime 'size_t (char *restrict, size_t, const char *restrict, const struct tm *restrict)' extern
+| |-ParmVarDecl 0x556dd2236678 <col:25, col:42> col:42 __s 'char *restrict'
+| |-ParmVarDecl 0x556dd22366f0 <col:47, col:54> col:54 __maxsize 'size_t':'unsigned long'
+| |-ParmVarDecl 0x556dd2236770 <line:160:4, col:27> col:27 __format 'const char *restrict'
+| |-ParmVarDecl 0x556dd2236868 <line:161:4, col:32> col:32 __tp 'const struct tm *restrict'
+| `-NoThrowAttr 0x556dd2236a70 <col:54>
+|-RecordDecl 0x556dd2236ac8 <line:163:9, line:170:1> line:163:16 struct __locale_struct definition
+| |-RecordDecl 0x556dd2236b78 parent 0x556dd21c6f88 <line:165:3, col:10> col:10 struct __locale_data
+| |-FieldDecl 0x556dd2236dd8 <col:3, col:37> col:25 __locales 'struct __locale_data *[13]'
+| |-FieldDecl 0x556dd2236e78 <line:166:3, col:29> col:29 __ctype_b 'const unsigned short *'
+| |-FieldDecl 0x556dd2236ee0 <line:167:3, col:14> col:14 __ctype_tolower 'const int *'
+| |-FieldDecl 0x556dd2236f48 <line:168:3, col:14> col:14 __ctype_toupper 'const int *'
+| `-FieldDecl 0x556dd2237038 <line:169:3, col:25> col:15 __names 'const char *[13]'
+|-TypedefDecl 0x556dd2237158 <line:163:1, line:170:4> col:4 referenced __locale_t 'struct __locale_struct *'
+| `-PointerType 0x556dd2237100 'struct __locale_struct *'
+|   `-ElaboratedType 0x556dd2237090 'struct __locale_struct' sugar
+|     `-RecordType 0x556dd2236b50 'struct __locale_struct'
+|       `-Record 0x556dd2236ac8 '__locale_struct'
+|-TypedefDecl 0x556dd2237208 <line:171:1, col:20> col:20 locale_t '__locale_t':'struct __locale_struct *'
+| `-TypedefType 0x556dd22371d0 '__locale_t' sugar
+|   |-Typedef 0x556dd2237158 '__locale_t'
+|   `-PointerType 0x556dd2237100 'struct __locale_struct *'
+|     `-ElaboratedType 0x556dd2237090 'struct __locale_struct' sugar
+|       `-RecordType 0x556dd2236b50 'struct __locale_struct'
+|         `-Record 0x556dd2236ac8 '__locale_struct'
+|-FunctionDecl 0x556dd2237610 <line:172:1, line:175:63> line:172:15 strftime_l 'size_t (char *restrict, size_t, const char *restrict, const struct tm *restrict, __locale_t)' extern
+| |-ParmVarDecl 0x556dd2237278 <col:27, col:44> col:44 __s 'char *restrict'
+| |-ParmVarDecl 0x556dd22372f0 <col:49, col:56> col:56 __maxsize 'size_t':'unsigned long'
+| |-ParmVarDecl 0x556dd2237370 <line:173:6, col:29> col:29 __format 'const char *restrict'
+| |-ParmVarDecl 0x556dd2237400 <line:174:6, col:34> col:34 __tp 'const struct tm *restrict'
+| |-ParmVarDecl 0x556dd2237478 <line:175:6, col:17> col:17 __loc '__locale_t':'struct __locale_struct *'
+| `-NoThrowAttr 0x556dd22376d8 <col:40>
+|-FunctionDecl 0x556dd22378c8 <line:177:1, col:89> col:19 gmtime 'struct tm *(const time_t *)' extern
+| |-ParmVarDecl 0x556dd22377a0 <col:27, col:41> col:41 __timer 'const time_t *'
+| `-NoThrowAttr 0x556dd2237970 <col:66>
+|-FunctionDecl 0x556dd2237a80 <line:178:1, col:92> col:19 localtime 'struct tm *(const time_t *)' extern
+| |-ParmVarDecl 0x556dd22379d8 <col:30, col:44> col:44 __timer 'const time_t *'
+| `-NoThrowAttr 0x556dd2237b28 <col:69>
+|-FunctionDecl 0x556dd2237d58 <line:180:1, line:181:75> line:180:19 gmtime_r 'struct tm *(const time_t *restrict, struct tm *restrict)' extern
+| |-ParmVarDecl 0x556dd2237b90 <col:29, col:54> col:54 __timer 'const time_t *restrict'
+| |-ParmVarDecl 0x556dd2237c20 <line:181:8, col:30> col:30 __tp 'struct tm *restrict'
+| `-NoThrowAttr 0x556dd2237e08 <col:52>
+|-FunctionDecl 0x556dd2237fb0 <line:182:1, line:183:78> line:182:19 localtime_r 'struct tm *(const time_t *restrict, struct tm *restrict)' extern
+| |-ParmVarDecl 0x556dd2237e70 <col:32, col:57> col:57 __timer 'const time_t *restrict'
+| |-ParmVarDecl 0x556dd2237f00 <line:183:11, col:33> col:33 __tp 'struct tm *restrict'
+| `-NoThrowAttr 0x556dd2238060 <col:55>
+|-FunctionDecl 0x556dd22381f8 <line:185:1, col:85> col:14 asctime 'char *(const struct tm *)' extern
+| |-ParmVarDecl 0x556dd22380e0 <col:23, col:40> col:40 __tp 'const struct tm *'
+| `-NoThrowAttr 0x556dd22382a0 <col:62>
+|-FunctionDecl 0x556dd2238418 <line:186:1, col:83> col:14 ctime 'char *(const time_t *)' extern
+| |-ParmVarDecl 0x556dd2238308 <col:21, col:35> col:35 __timer 'const time_t *'
+| `-NoThrowAttr 0x556dd22384c0 <col:60>
+|-FunctionDecl 0x556dd2238718 <line:188:1, line:189:67> line:188:14 asctime_r 'char *(const struct tm *restrict, char *restrict)' extern
+| |-ParmVarDecl 0x556dd2238578 <col:25, col:53> col:53 __tp 'const struct tm *restrict'
+| |-ParmVarDecl 0x556dd22385f8 <line:189:4, col:21> col:21 __buf 'char *restrict'
+| `-NoThrowAttr 0x556dd22387c8 <col:44>
+|-FunctionDecl 0x556dd22389d8 <line:190:1, line:191:72> line:190:14 ctime_r 'char *(const time_t *restrict, char *restrict)' extern
+| |-ParmVarDecl 0x556dd2238830 <col:23, col:48> col:48 __timer 'const time_t *restrict'
+| |-ParmVarDecl 0x556dd22388b0 <line:191:9, col:26> col:26 __buf 'char *restrict'
+| `-NoThrowAttr 0x556dd2238a88 <col:49>
+|-VarDecl 0x556dd2238b88 <line:192:1, col:24> col:14 __tzname 'char *[2]' extern
+|-VarDecl 0x556dd2238c08 <line:193:1, col:12> col:12 __daylight 'int' extern
+|-VarDecl 0x556dd2238c88 <line:194:1, col:17> col:17 __timezone 'long' extern
+|-VarDecl 0x556dd2238d50 <line:195:1, col:22> col:14 tzname 'char *[2]' extern
+|-FunctionDecl 0x556dd2238e80 <line:196:1, col:65> col:13 tzset 'void (void)' extern
+| `-NoThrowAttr 0x556dd2238f20 <col:42>
+|-VarDecl 0x556dd2238f90 <line:197:1, col:12> col:12 daylight 'int' extern
+|-VarDecl 0x556dd2239010 <line:198:1, col:17> col:17 timezone 'long' extern
+|-FunctionDecl 0x556dd2239198 <line:199:1, col:80> col:12 stime 'int (const time_t *)' extern
+| |-ParmVarDecl 0x556dd2239088 <col:19, col:33> col:33 __when 'const time_t *'
+| `-NoThrowAttr 0x556dd2239240 <col:57>
+|-FunctionDecl 0x556dd2239350 <line:200:1, col:79> col:15 timegm 'time_t (struct tm *)' extern
+| |-ParmVarDecl 0x556dd22392c0 <col:23, col:34> col:34 __tp 'struct tm *'
+| `-NoThrowAttr 0x556dd22393f8 <col:56>
+|-FunctionDecl 0x556dd223a540 <line:201:1, col:82> col:15 timelocal 'time_t (struct tm *)' extern
+| |-ParmVarDecl 0x556dd2239478 <col:26, col:37> col:37 __tp 'struct tm *'
+| `-NoThrowAttr 0x556dd223a5e8 <col:59>
+|-FunctionDecl 0x556dd223a6f0 <line:202:1, col:99> col:12 dysize 'int (int)' extern
+| |-ParmVarDecl 0x556dd223a658 <col:20, col:24> col:24 __year 'int'
+| |-NoThrowAttr 0x556dd223a798 <col:48>
+| `-ConstAttr 0x556dd223a7f0 <col:89>
+|-FunctionDecl 0x556dd223aa58 <line:203:1, line:204:37> line:203:12 nanosleep 'int (const struct timespec *, struct timespec *)' extern
+| |-ParmVarDecl 0x556dd223a8a8 <col:23, col:46> col:46 __requested_time 'const struct timespec *'
+| `-ParmVarDecl 0x556dd223a938 <line:204:9, col:26> col:26 __remaining 'struct timespec *'
+|-FunctionDecl 0x556dd223acb8 <line:205:1, col:111> col:12 clock_getres 'int (clockid_t, struct timespec *)' extern
+| |-ParmVarDecl 0x556dd223ab48 <col:26, col:36> col:36 __clock_id 'clockid_t':'int'
+| |-ParmVarDecl 0x556dd223abd8 <col:48, col:65> col:65 __res 'struct timespec *'
+| `-NoThrowAttr 0x556dd223ad68 <col:88>
+|-FunctionDecl 0x556dd223af00 <line:206:1, col:111> col:12 clock_gettime 'int (clockid_t, struct timespec *)' extern
+| |-ParmVarDecl 0x556dd223add0 <col:27, col:37> col:37 __clock_id 'clockid_t':'int'
+| |-ParmVarDecl 0x556dd223ae60 <col:49, col:66> col:66 __tp 'struct timespec *'
+| `-NoThrowAttr 0x556dd223afb0 <col:88>
+|-FunctionDecl 0x556dd223b1c8 <line:207:1, line:208:45> line:207:12 clock_settime 'int (clockid_t, const struct timespec *)' extern
+| |-ParmVarDecl 0x556dd223b018 <col:27, col:37> col:37 __clock_id 'clockid_t':'int'
+| |-ParmVarDecl 0x556dd223b0a8 <col:49, col:72> col:72 __tp 'const struct timespec *'
+| `-NoThrowAttr 0x556dd223b278 <line:208:22>
+|-FunctionDecl 0x556dd223b5e8 <line:209:1, line:211:30> line:209:12 clock_nanosleep 'int (clockid_t, int, const struct timespec *, struct timespec *)' extern
+| |-ParmVarDecl 0x556dd223b2e0 <col:29, col:39> col:39 __clock_id 'clockid_t':'int'
+| |-ParmVarDecl 0x556dd223b360 <col:51, col:55> col:55 __flags 'int'
+| |-ParmVarDecl 0x556dd223b3f0 <line:210:8, col:31> col:31 __req 'const struct timespec *'
+| `-ParmVarDecl 0x556dd223b480 <line:211:8, col:25> col:25 __rem 'struct timespec *'
+|-FunctionDecl 0x556dd223b8e8 <line:212:1, col:108> col:12 clock_getcpuclockid 'int (pid_t, clockid_t *)' extern
+| |-ParmVarDecl 0x556dd223b6e8 <col:33, col:39> col:39 __pid 'pid_t':'int'
+| |-ParmVarDecl 0x556dd223b7c0 <col:46, col:57> col:57 __clock_id 'clockid_t *'
+| `-NoThrowAttr 0x556dd223b998 <col:85>
+|-FunctionDecl 0x556dd223bd88 <line:213:1, line:215:75> line:213:12 timer_create 'int (clockid_t, struct sigevent *restrict, timer_t *restrict)' extern
+| |-ParmVarDecl 0x556dd223ba00 <col:26, col:36> col:36 __clock_id 'clockid_t':'int'
+| |-ParmVarDecl 0x556dd223bb38 <line:214:5, col:33> col:33 __evp 'struct sigevent *restrict'
+| |-ParmVarDecl 0x556dd223bc40 <line:215:5, col:25> col:25 __timerid 'timer_t *restrict'
+| `-NoThrowAttr 0x556dd223be40 <col:52>
+|-FunctionDecl 0x556dd223bfb8 <line:216:1, col:84> col:12 timer_delete 'int (timer_t)' extern
+| |-ParmVarDecl 0x556dd223bea8 <col:26, col:34> col:34 __timerid 'timer_t':'void *'
+| `-NoThrowAttr 0x556dd223c060 <col:61>
+|-FunctionDecl 0x556dd223c560 <line:217:1, line:219:85> line:217:12 timer_settime 'int (timer_t, int, const struct itimerspec *restrict, struct itimerspec *restrict)' extern
+| |-ParmVarDecl 0x556dd223c0c8 <col:27, col:35> col:35 __timerid 'timer_t':'void *'
+| |-ParmVarDecl 0x556dd223c148 <col:46, col:50> col:50 __flags 'int'
+| |-ParmVarDecl 0x556dd223c278 <line:218:6, col:42> col:42 __value 'const struct itimerspec *restrict'
+| |-ParmVarDecl 0x556dd223c368 <line:219:6, col:36> col:36 __ovalue 'struct itimerspec *restrict'
+| `-NoThrowAttr 0x556dd223c620 <col:62>
+|-FunctionDecl 0x556dd223c838 <line:220:1, line:221:45> line:220:12 timer_gettime 'int (timer_t, struct itimerspec *)' extern
+| |-ParmVarDecl 0x556dd223c688 <col:27, col:35> col:35 __timerid 'timer_t':'void *'
+| |-ParmVarDecl 0x556dd223c718 <col:46, col:65> col:65 __value 'struct itimerspec *'
+| `-NoThrowAttr 0x556dd223c8e8 <line:221:22>
+|-FunctionDecl 0x556dd223c9e8 <line:222:1, col:88> col:12 timer_getoverrun 'int (timer_t)' extern
+| |-ParmVarDecl 0x556dd223c950 <col:30, col:38> col:38 __timerid 'timer_t':'void *'
+| `-NoThrowAttr 0x556dd223ca90 <col:65>
+|-TypedefDecl 0x556dd223cb00 <line:224:1, col:27> col:27 referenced pthread_t 'unsigned long'
+| `-BuiltinType 0x556dd21c7140 'unsigned long'
+|-RecordDecl 0x556dd223cb58 <line:225:1, line:229:1> line:225:7 union pthread_attr_t definition
+| |-FieldDecl 0x556dd223cca0 <line:227:3, col:17> col:8 __size 'char [56]'
+| `-FieldDecl 0x556dd223cd08 <line:228:3, col:12> col:12 __align 'long'
+|-TypedefDecl 0x556dd223cdb8 <line:230:1, col:30> col:30 referenced pthread_attr_t 'union pthread_attr_t':'union pthread_attr_t'
+| `-ElaboratedType 0x556dd223cd60 'union pthread_attr_t' sugar
+|   `-RecordType 0x556dd223cbe0 'union pthread_attr_t'
+|     `-Record 0x556dd223cb58 'pthread_attr_t'
+|-RecordDecl 0x556dd223ce10 <line:231:9, line:235:1> line:231:16 struct __pthread_internal_list definition
+| |-FieldDecl 0x556dd223cf88 <line:233:3, col:35> col:35 __prev 'struct __pthread_internal_list *'
+| `-FieldDecl 0x556dd223d000 <line:234:3, col:35> col:35 __next 'struct __pthread_internal_list *'
+|-TypedefDecl 0x556dd223d0b0 <line:231:1, line:235:3> col:3 referenced __pthread_list_t 'struct __pthread_internal_list':'struct __pthread_internal_list'
+| `-ElaboratedType 0x556dd223d050 'struct __pthread_internal_list' sugar
+|   `-RecordType 0x556dd223ce90 'struct __pthread_internal_list'
+|     `-Record 0x556dd223ce10 '__pthread_internal_list'
+|-RecordDecl 0x556dd223d120 <line:236:9, line:250:1> line:236:9 union definition
+| |-RecordDecl 0x556dd223d1c8 parent 0x556dd21c6f88 <line:238:3, line:247:3> line:238:10 struct __pthread_mutex_s definition
+| | |-FieldDecl 0x556dd223d2a0 <line:240:5, col:9> col:9 __lock 'int'
+| | |-FieldDecl 0x556dd223d308 <line:241:5, col:18> col:18 __count 'unsigned int'
+| | |-FieldDecl 0x556dd223d370 <line:242:5, col:9> col:9 __owner 'int'
+| | |-FieldDecl 0x556dd223d3d8 <line:243:5, col:18> col:18 __nusers 'unsigned int'
+| | |-FieldDecl 0x556dd223d440 <line:244:5, col:9> col:9 __kind 'int'
+| | |-FieldDecl 0x556dd223d4a8 <line:245:5, col:9> col:9 __spins 'int'
+| | `-FieldDecl 0x556dd2241580 <line:246:5, col:22> col:22 __list '__pthread_list_t':'struct __pthread_internal_list'
+| |-FieldDecl 0x556dd2241630 <line:238:3, line:247:5> col:5 __data 'struct __pthread_mutex_s':'struct __pthread_mutex_s'
+| |-FieldDecl 0x556dd2241720 <line:248:3, col:17> col:8 __size 'char [40]'
+| `-FieldDecl 0x556dd2241788 <line:249:3, col:12> col:12 __align 'long'
+|-TypedefDecl 0x556dd2241910 <line:236:1, line:250:3> col:3 referenced pthread_mutex_t 'union pthread_mutex_t':'pthread_mutex_t'
+| `-ElaboratedType 0x556dd22418b0 'union pthread_mutex_t' sugar
+|   `-RecordType 0x556dd223d1a0 'pthread_mutex_t'
+|     `-Record 0x556dd223d120 ''
+|-RecordDecl 0x556dd2241980 <line:251:9, line:255:1> line:251:9 union definition
+| |-FieldDecl 0x556dd2241ac0 <line:253:3, col:16> col:8 __size 'char [4]'
+| `-FieldDecl 0x556dd2241b28 <line:254:3, col:7> col:7 __align 'int'
+|-TypedefDecl 0x556dd2241be0 <line:251:1, line:255:3> col:3 referenced pthread_mutexattr_t 'union pthread_mutexattr_t':'pthread_mutexattr_t'
+| `-ElaboratedType 0x556dd2241b80 'union pthread_mutexattr_t' sugar
+|   `-RecordType 0x556dd2241a00 'pthread_mutexattr_t'
+|     `-Record 0x556dd2241980 ''
+|-RecordDecl 0x556dd2241c50 <line:256:9, line:271:1> line:256:9 union definition
+| |-RecordDecl 0x556dd2241cf8 <line:258:3, line:268:3> line:258:3 struct definition
+| | |-FieldDecl 0x556dd2241dc0 <line:260:5, col:9> col:9 __lock 'int'
+| | |-FieldDecl 0x556dd2241e28 <line:261:5, col:18> col:18 __futex 'unsigned int'
+| | |-FieldDecl 0x556dd2241e90 <line:262:19, col:42> col:42 __total_seq 'unsigned long long'
+| | |-FieldDecl 0x556dd2241ef8 <line:263:19, col:42> col:42 __wakeup_seq 'unsigned long long'
+| | |-FieldDecl 0x556dd2241f60 <line:264:19, col:42> col:42 __woken_seq 'unsigned long long'
+| | |-FieldDecl 0x556dd2241fc8 <line:265:5, col:11> col:11 __mutex 'void *'
+| | |-FieldDecl 0x556dd2242030 <line:266:5, col:18> col:18 __nwaiters 'unsigned int'
+| | `-FieldDecl 0x556dd2242098 <line:267:5, col:18> col:18 __broadcast_seq 'unsigned int'
+| |-FieldDecl 0x556dd2242150 <line:258:3, line:268:5> col:5 __data 'struct (anonymous struct at pthread-wmm/safe025_pso.opt_true-unreach-call.i:258:3)':'struct pthread_cond_t::(anonymous at pthread-wmm/safe025_pso.opt_true-unreach-call.i:258:3)'
+| |-FieldDecl 0x556dd2242240 <line:269:3, col:17> col:8 __size 'char [48]'
+| `-FieldDecl 0x556dd22422a8 <line:270:17, col:31> col:31 __align 'long long'
+|-TypedefDecl 0x556dd22423e0 <line:256:1, line:271:3> col:3 referenced pthread_cond_t 'union pthread_cond_t':'pthread_cond_t'
+| `-ElaboratedType 0x556dd2242380 'union pthread_cond_t' sugar
+|   `-RecordType 0x556dd2241cd0 'pthread_cond_t'
+|     `-Record 0x556dd2241c50 ''
+|-RecordDecl 0x556dd2242450 <line:272:9, line:276:1> line:272:9 union definition
+| |-FieldDecl 0x556dd2242590 <line:274:3, col:16> col:8 __size 'char [4]'
+| `-FieldDecl 0x556dd22425f8 <line:275:3, col:7> col:7 __align 'int'
+|-TypedefDecl 0x556dd22426b0 <line:272:1, line:276:3> col:3 referenced pthread_condattr_t 'union pthread_condattr_t':'pthread_condattr_t'
+| `-ElaboratedType 0x556dd2242650 'union pthread_condattr_t' sugar
+|   `-RecordType 0x556dd22424d0 'pthread_condattr_t'
+|     `-Record 0x556dd2242450 ''
+|-TypedefDecl 0x556dd2242738 <line:277:1, col:22> col:22 referenced pthread_key_t 'unsigned int'
+| `-BuiltinType 0x556dd21c7120 'unsigned int'
+|-TypedefDecl 0x556dd22427a8 <line:278:1, col:13> col:13 referenced pthread_once_t 'int'
+| `-BuiltinType 0x556dd21c7080 'int'
+|-RecordDecl 0x556dd2242800 <line:279:9, line:297:1> line:279:9 union definition
+| |-RecordDecl 0x556dd22428a8 <line:281:3, line:294:3> line:281:3 struct definition
+| | |-FieldDecl 0x556dd2242970 <line:283:5, col:9> col:9 __lock 'int'
+| | |-FieldDecl 0x556dd22429d8 <line:284:5, col:18> col:18 __nr_readers 'unsigned int'
+| | |-FieldDecl 0x556dd2242a40 <line:285:5, col:18> col:18 __readers_wakeup 'unsigned int'
+| | |-FieldDecl 0x556dd2242aa8 <line:286:5, col:18> col:18 __writer_wakeup 'unsigned int'
+| | |-FieldDecl 0x556dd2242b10 <line:287:5, col:18> col:18 __nr_readers_queued 'unsigned int'
+| | |-FieldDecl 0x556dd2242b78 <line:288:5, col:18> col:18 __nr_writers_queued 'unsigned int'
+| | |-FieldDecl 0x556dd2242be0 <line:289:5, col:9> col:9 __writer 'int'
+| | |-FieldDecl 0x556dd2242c48 <line:290:5, col:9> col:9 __shared 'int'
+| | |-FieldDecl 0x556dd2242cb0 <line:291:5, col:23> col:23 __pad1 'unsigned long'
+| | |-FieldDecl 0x556dd2242d18 <line:292:5, col:23> col:23 __pad2 'unsigned long'
+| | `-FieldDecl 0x556dd2242d80 <line:293:5, col:18> col:18 __flags 'unsigned int'
+| |-FieldDecl 0x556dd2242e30 <line:281:3, line:294:5> col:5 __data 'struct (anonymous struct at pthread-wmm/safe025_pso.opt_true-unreach-call.i:281:3)':'struct pthread_rwlock_t::(anonymous at pthread-wmm/safe025_pso.opt_true-unreach-call.i:281:3)'
+| |-FieldDecl 0x556dd2242ed8 <line:295:3, col:17> col:8 __size 'char [56]'
+| `-FieldDecl 0x556dd2242f40 <line:296:3, col:12> col:12 __align 'long'
+|-TypedefDecl 0x556dd2243090 <line:279:1, line:297:3> col:3 referenced pthread_rwlock_t 'union pthread_rwlock_t':'pthread_rwlock_t'
+| `-ElaboratedType 0x556dd2243030 'union pthread_rwlock_t' sugar
+|   `-RecordType 0x556dd2242880 'pthread_rwlock_t'
+|     `-Record 0x556dd2242800 ''
+|-RecordDecl 0x556dd2243100 <line:298:9, line:302:1> line:298:9 union definition
+| |-FieldDecl 0x556dd2243240 <line:300:3, col:16> col:8 __size 'char [8]'
+| `-FieldDecl 0x556dd22432a8 <line:301:3, col:12> col:12 __align 'long'
+|-TypedefDecl 0x556dd2243360 <line:298:1, line:302:3> col:3 referenced pthread_rwlockattr_t 'union pthread_rwlockattr_t':'pthread_rwlockattr_t'
+| `-ElaboratedType 0x556dd2243300 'union pthread_rwlockattr_t' sugar
+|   `-RecordType 0x556dd2243180 'pthread_rwlockattr_t'
+|     `-Record 0x556dd2243100 ''
+|-TypedefDecl 0x556dd22433e8 <line:303:1, col:22> col:22 referenced pthread_spinlock_t 'volatile int'
+| `-QualType 0x556dd21c7084 'volatile int' volatile
+|   `-BuiltinType 0x556dd21c7080 'int'
+|-RecordDecl 0x556dd2243440 <line:304:9, line:308:1> line:304:9 union definition
+| |-FieldDecl 0x556dd22455b0 <line:306:3, col:17> col:8 __size 'char [32]'
+| `-FieldDecl 0x556dd2245618 <line:307:3, col:12> col:12 __align 'long'
+|-TypedefDecl 0x556dd22456d0 <line:304:1, line:308:3> col:3 referenced pthread_barrier_t 'union pthread_barrier_t':'pthread_barrier_t'
+| `-ElaboratedType 0x556dd2245670 'union pthread_barrier_t' sugar
+|   `-RecordType 0x556dd22434c0 'pthread_barrier_t'
+|     `-Record 0x556dd2243440 ''
+|-RecordDecl 0x556dd2245740 <line:309:9, line:313:1> line:309:9 union definition
+| |-FieldDecl 0x556dd2245840 <line:311:3, col:16> col:8 __size 'char [4]'
+| `-FieldDecl 0x556dd22458a8 <line:312:3, col:7> col:7 __align 'int'
+|-TypedefDecl 0x556dd2245960 <line:309:1, line:313:3> col:3 referenced pthread_barrierattr_t 'union pthread_barrierattr_t':'pthread_barrierattr_t'
+| `-ElaboratedType 0x556dd2245900 'union pthread_barrierattr_t' sugar
+|   `-RecordType 0x556dd22457c0 'pthread_barrierattr_t'
+|     `-Record 0x556dd2245740 ''
+|-TypedefDecl 0x556dd2245a78 <line:314:1, col:29> col:18 referenced __jmp_buf 'long [8]'
+| `-ConstantArrayType 0x556dd2245a10 'long [8]' 8 
+|   `-BuiltinType 0x556dd21c70a0 'long'
+|-EnumDecl 0x556dd2245ad0 <line:315:1, line:319:1> line:315:1
+| |-EnumConstantDecl 0x556dd2245b98 <line:317:3> col:3 PTHREAD_CREATE_JOINABLE 'int'
+| `-EnumConstantDecl 0x556dd2245be8 <line:318:3> col:3 PTHREAD_CREATE_DETACHED 'int'
+|-EnumDecl 0x556dd2245c38 <line:320:1, line:331:1> line:320:1
+| |-EnumConstantDecl 0x556dd2245d08 <line:322:3> col:3 referenced PTHREAD_MUTEX_TIMED_NP 'int'
+| |-EnumConstantDecl 0x556dd2245d58 <line:323:3> col:3 referenced PTHREAD_MUTEX_RECURSIVE_NP 'int'
+| |-EnumConstantDecl 0x556dd2245da8 <line:324:3> col:3 referenced PTHREAD_MUTEX_ERRORCHECK_NP 'int'
+| |-EnumConstantDecl 0x556dd2245df8 <line:325:3> col:3 PTHREAD_MUTEX_ADAPTIVE_NP 'int'
+| |-EnumConstantDecl 0x556dd2245e80 <line:327:3, col:26> col:3 referenced PTHREAD_MUTEX_NORMAL 'int'
+| | `-ConstantExpr 0x556dd2245e68 <col:26> 'int'
+| |   `-DeclRefExpr 0x556dd2245e48 <col:26> 'int' EnumConstant 0x556dd2245d08 'PTHREAD_MUTEX_TIMED_NP' 'int'
+| |-EnumConstantDecl 0x556dd2245f08 <line:328:3, col:29> col:3 PTHREAD_MUTEX_RECURSIVE 'int'
+| | `-ConstantExpr 0x556dd2245ef0 <col:29> 'int'
+| |   `-DeclRefExpr 0x556dd2245ed0 <col:29> 'int' EnumConstant 0x556dd2245d58 'PTHREAD_MUTEX_RECURSIVE_NP' 'int'
+| |-EnumConstantDecl 0x556dd2245f90 <line:329:3, col:30> col:3 PTHREAD_MUTEX_ERRORCHECK 'int'
+| | `-ConstantExpr 0x556dd2245f78 <col:30> 'int'
+| |   `-DeclRefExpr 0x556dd2245f58 <col:30> 'int' EnumConstant 0x556dd2245da8 'PTHREAD_MUTEX_ERRORCHECK_NP' 'int'
+| `-EnumConstantDecl 0x556dd2246018 <line:330:3, col:27> col:3 PTHREAD_MUTEX_DEFAULT 'int'
+|   `-ConstantExpr 0x556dd2246000 <col:27> 'int'
+|     `-DeclRefExpr 0x556dd2245fe0 <col:27> 'int' EnumConstant 0x556dd2245e80 'PTHREAD_MUTEX_NORMAL' 'int'
+|-EnumDecl 0x556dd2246068 <line:332:1, line:338:1> line:332:1
+| |-EnumConstantDecl 0x556dd2246138 <line:334:3> col:3 referenced PTHREAD_MUTEX_STALLED 'int'
+| |-EnumConstantDecl 0x556dd22461c0 <line:335:3, col:30> col:3 PTHREAD_MUTEX_STALLED_NP 'int'
+| | `-ConstantExpr 0x556dd22461a8 <col:30> 'int'
+| |   `-DeclRefExpr 0x556dd2246188 <col:30> 'int' EnumConstant 0x556dd2246138 'PTHREAD_MUTEX_STALLED' 'int'
+| |-EnumConstantDecl 0x556dd2246210 <line:336:3> col:3 referenced PTHREAD_MUTEX_ROBUST 'int'
+| `-EnumConstantDecl 0x556dd2246298 <line:337:3, col:29> col:3 PTHREAD_MUTEX_ROBUST_NP 'int'
+|   `-ConstantExpr 0x556dd2246280 <col:29> 'int'
+|     `-DeclRefExpr 0x556dd2246260 <col:29> 'int' EnumConstant 0x556dd2246210 'PTHREAD_MUTEX_ROBUST' 'int'
+|-EnumDecl 0x556dd22462e8 <line:339:1, line:344:1> line:339:1
+| |-EnumConstantDecl 0x556dd22463b8 <line:341:3> col:3 PTHREAD_PRIO_NONE 'int'
+| |-EnumConstantDecl 0x556dd2246408 <line:342:3> col:3 PTHREAD_PRIO_INHERIT 'int'
+| `-EnumConstantDecl 0x556dd2246458 <line:343:3> col:3 PTHREAD_PRIO_PROTECT 'int'
+|-EnumDecl 0x556dd22464a8 <line:345:1, line:351:1> line:345:1
+| |-EnumConstantDecl 0x556dd22465c0 <line:347:3> col:3 referenced PTHREAD_RWLOCK_PREFER_READER_NP 'int'
+| |-EnumConstantDecl 0x556dd2246610 <line:348:3> col:3 PTHREAD_RWLOCK_PREFER_WRITER_NP 'int'
+| |-EnumConstantDecl 0x556dd2246660 <line:349:3> col:3 PTHREAD_RWLOCK_PREFER_WRITER_NONRECURSIVE_NP 'int'
+| `-EnumConstantDecl 0x556dd22466e8 <line:350:3, col:31> col:3 PTHREAD_RWLOCK_DEFAULT_NP 'int'
+|   `-ConstantExpr 0x556dd22466d0 <col:31> 'int'
+|     `-DeclRefExpr 0x556dd22466b0 <col:31> 'int' EnumConstant 0x556dd22465c0 'PTHREAD_RWLOCK_PREFER_READER_NP' 'int'
+|-EnumDecl 0x556dd2246738 <line:352:1, line:356:1> line:352:1
+| |-EnumConstantDecl 0x556dd2246808 <line:354:3> col:3 PTHREAD_INHERIT_SCHED 'int'
+| `-EnumConstantDecl 0x556dd2246858 <line:355:3> col:3 PTHREAD_EXPLICIT_SCHED 'int'
+|-EnumDecl 0x556dd22468a8 <line:357:1, line:361:1> line:357:1
+| |-EnumConstantDecl 0x556dd2246978 <line:359:3> col:3 PTHREAD_SCOPE_SYSTEM 'int'
+| `-EnumConstantDecl 0x556dd22469c8 <line:360:3> col:3 PTHREAD_SCOPE_PROCESS 'int'
+|-EnumDecl 0x556dd2246a18 <line:362:1, line:366:1> line:362:1
+| |-EnumConstantDecl 0x556dd2246ae8 <line:364:3> col:3 PTHREAD_PROCESS_PRIVATE 'int'
+| `-EnumConstantDecl 0x556dd2246b38 <line:365:3> col:3 PTHREAD_PROCESS_SHARED 'int'
+|-RecordDecl 0x556dd2246b88 <line:367:1, line:373:1> line:367:8 struct _pthread_cleanup_buffer definition
+| |-FieldDecl 0x556dd2246dc8 <line:369:3, col:28> col:10 __routine 'void (*)(void *)'
+| |-FieldDecl 0x556dd2246e30 <line:370:3, col:9> col:9 __arg 'void *'
+| |-FieldDecl 0x556dd2246e98 <line:371:3, col:7> col:7 __canceltype 'int'
+| `-FieldDecl 0x556dd2246fb8 <line:372:3, col:35> col:35 __prev 'struct _pthread_cleanup_buffer *'
+|-EnumDecl 0x556dd2247008 <line:374:1, line:378:1> line:374:1
+| |-EnumConstantDecl 0x556dd22470d8 <line:376:3> col:3 PTHREAD_CANCEL_ENABLE 'int'
+| `-EnumConstantDecl 0x556dd2247128 <line:377:3> col:3 PTHREAD_CANCEL_DISABLE 'int'
+|-EnumDecl 0x556dd2247178 <line:379:1, line:383:1> line:379:1
+| |-EnumConstantDecl 0x556dd2247248 <line:381:3> col:3 PTHREAD_CANCEL_DEFERRED 'int'
+| `-EnumConstantDecl 0x556dd2247298 <line:382:3> col:3 PTHREAD_CANCEL_ASYNCHRONOUS 'int'
+|-FunctionDecl 0x556dd22478f8 <line:385:1, line:388:96> line:385:12 used pthread_create 'int (pthread_t *restrict, const pthread_attr_t *restrict, void *(*)(void *), void *restrict)' extern
+| |-ParmVarDecl 0x556dd2247390 <col:28, col:50> col:50 __newthread 'pthread_t *restrict'
+| |-ParmVarDecl 0x556dd22474a0 <line:386:7, col:40> col:40 __attr 'const pthread_attr_t *restrict'
+| |-ParmVarDecl 0x556dd22476e0 <line:387:7, col:39> col:15 __start_routine 'void *(*)(void *)'
+| |-ParmVarDecl 0x556dd2247760 <line:388:7, col:24> col:24 __arg 'void *restrict'
+| |-NoThrowAttr 0x556dd22479b8 <col:47>
+| |-NonNullAttr 0x556dd2247a10 <col:77, col:94> 1 3
+| `-CallbackAttr 0x556dd2247a48 <line:385:12> Implicit 2 3
+|-FunctionDecl 0x556dd2247b70 <line:389:1, col:72> col:13 pthread_exit 'void (void *) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x556dd2247aa0 <col:27, col:33> col:33 __retval 'void *'
+|-FunctionDecl 0x556dd2247dc8 <line:390:1, col:64> col:12 pthread_join 'int (pthread_t, void **)' extern
+| |-ParmVarDecl 0x556dd2247c28 <col:26, col:36> col:36 __th 'pthread_t':'unsigned long'
+| `-ParmVarDecl 0x556dd2247ca8 <col:42, col:49> col:49 __thread_return 'void **'
+|-FunctionDecl 0x556dd2247f98 <line:391:1, col:83> col:12 pthread_detach 'int (pthread_t)' extern
+| |-ParmVarDecl 0x556dd2247e88 <col:28, col:38> col:38 __th 'pthread_t':'unsigned long'
+| `-NoThrowAttr 0x556dd2248040 <col:60>
+|-FunctionDecl 0x556dd2248190 <line:392:1, col:105> col:18 pthread_self 'pthread_t (void)' extern
+| |-NoThrowAttr 0x556dd2248230 <col:54>
+| `-ConstAttr 0x556dd2248288 <col:95>
+|-FunctionDecl 0x556dd2248458 <line:393:1, line:394:70> line:393:12 pthread_equal 'int (pthread_t, pthread_t)' extern
+| |-ParmVarDecl 0x556dd22482c0 <col:27, col:37> col:37 __thread1 'pthread_t':'unsigned long'
+| |-ParmVarDecl 0x556dd2248338 <col:48, col:58> col:58 __thread2 'pthread_t':'unsigned long'
+| |-NoThrowAttr 0x556dd2248508 <line:394:19>
+| `-ConstAttr 0x556dd2248560 <col:60>
+|-FunctionDecl 0x556dd2248f68 <line:395:1, col:128> col:12 pthread_attr_init 'int (pthread_attr_t *)' extern
+| |-ParmVarDecl 0x556dd2248e30 <col:31, col:47> col:47 __attr 'pthread_attr_t *'
+| |-NoThrowAttr 0x556dd2249010 <col:71>
+| `-NonNullAttr 0x556dd2249068 <col:112, col:126> 1
+|-FunctionDecl 0x556dd2249170 <line:396:1, line:397:79> line:396:12 pthread_attr_destroy 'int (pthread_attr_t *)' extern
+| |-ParmVarDecl 0x556dd22490b8 <col:34, col:50> col:50 __attr 'pthread_attr_t *'
+| |-NoThrowAttr 0x556dd2249218 <line:397:22>
+| `-NonNullAttr 0x556dd2249270 <col:63, col:77> 1
+|-FunctionDecl 0x556dd2249498 <line:398:1, line:400:82> line:398:12 pthread_attr_getdetachstate 'int (const pthread_attr_t *, int *)' extern
+| |-ParmVarDecl 0x556dd22492b8 <col:41, col:63> col:63 __attr 'const pthread_attr_t *'
+| |-ParmVarDecl 0x556dd2249338 <line:399:6, col:11> col:11 __detachstate 'int *'
+| |-NoThrowAttr 0x556dd2249548 <line:400:22>
+| `-NonNullAttr 0x556dd22495a0 <col:63, col:80> 1 2
+|-FunctionDecl 0x556dd22497a8 <line:401:1, line:403:79> line:401:12 pthread_attr_setdetachstate 'int (pthread_attr_t *, int)' extern
+| |-ParmVarDecl 0x556dd22495e8 <col:41, col:57> col:57 __attr 'pthread_attr_t *'
+| |-ParmVarDecl 0x556dd2249668 <line:402:6, col:10> col:10 __detachstate 'int'
+| |-NoThrowAttr 0x556dd2249858 <line:403:22>
+| `-NonNullAttr 0x556dd22498b0 <col:63, col:77> 1
+|-FunctionDecl 0x556dd2249b08 <line:404:1, line:406:82> line:404:12 pthread_attr_getguardsize 'int (const pthread_attr_t *, size_t *)' extern
+| |-ParmVarDecl 0x556dd22498f8 <col:39, col:61> col:61 __attr 'const pthread_attr_t *'
+| |-ParmVarDecl 0x556dd22499a0 <line:405:11, col:19> col:19 __guardsize 'size_t *'
+| |-NoThrowAttr 0x556dd2249bb8 <line:406:22>
+| `-NonNullAttr 0x556dd2249c10 <col:63, col:80> 1 2
+|-FunctionDecl 0x556dd224ae48 <line:407:1, line:409:79> line:407:12 pthread_attr_setguardsize 'int (pthread_attr_t *, size_t)' extern
+| |-ParmVarDecl 0x556dd2249c58 <col:39, col:55> col:55 __attr 'pthread_attr_t *'
+| |-ParmVarDecl 0x556dd2249cd0 <line:408:11, col:18> col:18 __guardsize 'size_t':'unsigned long'
+| |-NoThrowAttr 0x556dd224aef8 <line:409:22>
+| `-NonNullAttr 0x556dd224af50 <col:63, col:77> 1
+|-FunctionDecl 0x556dd224b188 <line:410:1, line:412:82> line:410:12 pthread_attr_getschedparam 'int (const pthread_attr_t *restrict, struct sched_param *restrict)' extern
+| |-ParmVarDecl 0x556dd224af98 <col:40, col:73> col:73 __attr 'const pthread_attr_t *restrict'
+| |-ParmVarDecl 0x556dd224b028 <line:411:12, col:43> col:43 __param 'struct sched_param *restrict'
+| |-NoThrowAttr 0x556dd224b238 <line:412:22>
+| `-NonNullAttr 0x556dd224b290 <col:63, col:80> 1 2
+|-FunctionDecl 0x556dd224b4c8 <line:413:1, line:415:97> line:413:12 pthread_attr_setschedparam 'int (pthread_attr_t *restrict, const struct sched_param *restrict)' extern
+| |-ParmVarDecl 0x556dd224b2d8 <col:40, col:67> col:67 __attr 'pthread_attr_t *restrict'
+| |-ParmVarDecl 0x556dd224b368 <line:414:12, line:415:12> col:12 __param 'const struct sched_param *restrict'
+| |-NoThrowAttr 0x556dd224b578 <col:37>
+| `-NonNullAttr 0x556dd224b5d0 <col:78, col:95> 1 2
+|-FunctionDecl 0x556dd224b7b8 <line:416:1, line:418:82> line:416:12 pthread_attr_getschedpolicy 'int (const pthread_attr_t *restrict, int *restrict)' extern
+| |-ParmVarDecl 0x556dd224b618 <col:41, line:417:6> col:6 __attr 'const pthread_attr_t *restrict'
+| |-ParmVarDecl 0x556dd224b698 <col:14, col:30> col:30 __policy 'int *restrict'
+| |-NoThrowAttr 0x556dd224b868 <line:418:22>
+| `-NonNullAttr 0x556dd224b8c0 <col:63, col:80> 1 2
+|-FunctionDecl 0x556dd224ba48 <line:419:1, line:420:79> line:419:12 pthread_attr_setschedpolicy 'int (pthread_attr_t *, int)' extern
+| |-ParmVarDecl 0x556dd224b908 <col:41, col:57> col:57 __attr 'pthread_attr_t *'
+| |-ParmVarDecl 0x556dd224b988 <col:65, col:69> col:69 __policy 'int'
+| |-NoThrowAttr 0x556dd224baf8 <line:420:22>
+| `-NonNullAttr 0x556dd224bb50 <col:63, col:77> 1
+|-FunctionDecl 0x556dd224bcf8 <line:421:1, line:423:82> line:421:12 pthread_attr_getinheritsched 'int (const pthread_attr_t *restrict, int *restrict)' extern
+| |-ParmVarDecl 0x556dd224bb98 <col:42, line:422:7> col:7 __attr 'const pthread_attr_t *restrict'
+| |-ParmVarDecl 0x556dd224bc18 <col:15, col:31> col:31 __inherit 'int *restrict'
+| |-NoThrowAttr 0x556dd224bda8 <line:423:22>
+| `-NonNullAttr 0x556dd224ce30 <col:63, col:80> 1 2
+|-FunctionDecl 0x556dd224cfb8 <line:424:1, line:426:79> line:424:12 pthread_attr_setinheritsched 'int (pthread_attr_t *, int)' extern
+| |-ParmVarDecl 0x556dd224ce78 <col:42, col:58> col:58 __attr 'pthread_attr_t *'
+| |-ParmVarDecl 0x556dd224cef8 <line:425:7, col:11> col:11 __inherit 'int'
+| |-NoThrowAttr 0x556dd224d068 <line:426:22>
+| `-NonNullAttr 0x556dd224d0c0 <col:63, col:77> 1
+|-FunctionDecl 0x556dd224d268 <line:427:1, line:429:82> line:427:12 pthread_attr_getscope 'int (const pthread_attr_t *restrict, int *restrict)' extern
+| |-ParmVarDecl 0x556dd224d108 <col:35, col:68> col:68 __attr 'const pthread_attr_t *restrict'
+| |-ParmVarDecl 0x556dd224d188 <line:428:7, col:23> col:23 __scope 'int *restrict'
+| |-NoThrowAttr 0x556dd224d318 <line:429:22>
+| `-NonNullAttr 0x556dd224d370 <col:63, col:80> 1 2
+|-FunctionDecl 0x556dd224d4f8 <line:430:1, line:431:79> line:430:12 pthread_attr_setscope 'int (pthread_attr_t *, int)' extern
+| |-ParmVarDecl 0x556dd224d3b8 <col:35, col:51> col:51 __attr 'pthread_attr_t *'
+| |-ParmVarDecl 0x556dd224d438 <col:59, col:63> col:63 __scope 'int'
+| |-NoThrowAttr 0x556dd224d5a8 <line:431:22>
+| `-NonNullAttr 0x556dd224d600 <col:63, col:77> 1
+|-FunctionDecl 0x556dd224d828 <line:432:1, line:434:115> line:432:12 pthread_attr_getstackaddr 'int (const pthread_attr_t *restrict, void **restrict)' extern
+| |-ParmVarDecl 0x556dd224d648 <col:39, line:433:11> col:11 __attr 'const pthread_attr_t *restrict'
+| |-ParmVarDecl 0x556dd224d6c8 <col:19, col:37> col:37 __stackaddr 'void **restrict'
+| |-NoThrowAttr 0x556dd224d8d8 <line:434:22>
+| |-NonNullAttr 0x556dd224d930 <col:63, col:80> 1 2
+| `-DeprecatedAttr 0x556dd224d968 <col:100> "" ""
+|-FunctionDecl 0x556dd224db78 <line:435:1, line:437:112> line:435:12 pthread_attr_setstackaddr 'int (pthread_attr_t *, void *)' extern
+| |-ParmVarDecl 0x556dd224d9b8 <col:39, col:55> col:55 __attr 'pthread_attr_t *'
+| |-ParmVarDecl 0x556dd224da38 <line:436:11, col:17> col:17 __stackaddr 'void *'
+| |-NoThrowAttr 0x556dd224dc28 <line:437:22>
+| |-NonNullAttr 0x556dd224dc80 <col:63, col:77> 1
+| `-DeprecatedAttr 0x556dd224dcb8 <col:97> "" ""
+|-FunctionDecl 0x556dd224deb8 <line:438:1, line:440:82> line:438:12 pthread_attr_getstacksize 'int (const pthread_attr_t *restrict, size_t *restrict)' extern
+| |-ParmVarDecl 0x556dd224dd08 <col:39, line:439:11> col:11 __attr 'const pthread_attr_t *restrict'
+| |-ParmVarDecl 0x556dd224dd80 <col:19, col:38> col:38 __stacksize 'size_t *restrict'
+| |-NoThrowAttr 0x556dd224df68 <line:440:22>
+| `-NonNullAttr 0x556dd224dfc0 <col:63, col:80> 1 2
+|-FunctionDecl 0x556dd224e140 <line:441:1, line:443:79> line:441:12 pthread_attr_setstacksize 'int (pthread_attr_t *, size_t)' extern
+| |-ParmVarDecl 0x556dd224e008 <col:39, col:55> col:55 __attr 'pthread_attr_t *'
+| |-ParmVarDecl 0x556dd224e080 <line:442:11, col:18> col:18 __stacksize 'size_t':'unsigned long'
+| |-NoThrowAttr 0x556dd224e1f0 <line:443:22>
+| `-NonNullAttr 0x556dd224e248 <col:63, col:77> 1
+|-FunctionDecl 0x556dd224e538 <line:444:1, line:447:85> line:444:12 pthread_attr_getstack 'int (const pthread_attr_t *restrict, void **restrict, size_t *restrict)' extern
+| |-ParmVarDecl 0x556dd224e298 <col:35, col:68> col:68 __attr 'const pthread_attr_t *restrict'
+| |-ParmVarDecl 0x556dd224e318 <line:445:7, col:25> col:25 __stackaddr 'void **restrict'
+| |-ParmVarDecl 0x556dd224e390 <line:446:7, col:26> col:26 __stacksize 'size_t *restrict'
+| |-NoThrowAttr 0x556dd224e5f0 <line:447:22>
+| `-NonNullAttr 0x556dd224e648 <col:63, col:83> 1 2 3
+|-FunctionDecl 0x556dd224e8f8 <line:448:1, line:449:100> line:448:12 pthread_attr_setstack 'int (pthread_attr_t *, void *, size_t)' extern
+| |-ParmVarDecl 0x556dd224e6a0 <col:35, col:51> col:51 __attr 'pthread_attr_t *'
+| |-ParmVarDecl 0x556dd224e720 <col:59, col:65> col:65 __stackaddr 'void *'
+| |-ParmVarDecl 0x556dd224e798 <line:449:7, col:14> col:14 __stacksize 'size_t':'unsigned long'
+| |-NoThrowAttr 0x556dd224e9b0 <col:43>
+| `-NonNullAttr 0x556dd224ea08 <col:84, col:98> 1
+|-FunctionDecl 0x556dd224ecc8 <line:450:1, line:452:79> line:450:12 pthread_setschedparam 'int (pthread_t, int, const struct sched_param *)' extern
+| |-ParmVarDecl 0x556dd224ea58 <col:35, col:45> col:45 __target_thread 'pthread_t':'unsigned long'
+| |-ParmVarDecl 0x556dd224ead8 <col:62, col:66> col:66 __policy 'int'
+| |-ParmVarDecl 0x556dd224eb68 <line:451:7, col:33> col:33 __param 'const struct sched_param *'
+| |-NoThrowAttr 0x556dd224ed80 <line:452:22>
+| `-NonNullAttr 0x556dd224edd8 <col:63, col:77> 3
+|-FunctionDecl 0x556dd224f0e8 <line:453:1, line:456:82> line:453:12 pthread_getschedparam 'int (pthread_t, int *restrict, struct sched_param *restrict)' extern
+| |-ParmVarDecl 0x556dd224ee50 <col:35, col:45> col:45 __target_thread 'pthread_t':'unsigned long'
+| |-ParmVarDecl 0x556dd224eed0 <line:454:7, col:23> col:23 __policy 'int *restrict'
+| |-ParmVarDecl 0x556dd224ef60 <line:455:7, col:38> col:38 __param 'struct sched_param *restrict'
+| |-NoThrowAttr 0x556dd224f1a0 <line:456:22>
+| `-NonNullAttr 0x556dd224f1f8 <col:63, col:80> 2 3
+|-FunctionDecl 0x556dd224f3e8 <line:457:1, line:458:45> line:457:12 pthread_setschedprio 'int (pthread_t, int)' extern
+| |-ParmVarDecl 0x556dd224f248 <col:34, col:44> col:44 __target_thread 'pthread_t':'unsigned long'
+| |-ParmVarDecl 0x556dd224f2c8 <col:61, col:65> col:65 __prio 'int'
+| `-NoThrowAttr 0x556dd224f498 <line:458:22>
+|-FunctionDecl 0x556dd224f868 <line:459:1, line:460:71> line:459:12 pthread_once 'int (pthread_once_t *, void (*)(void))' extern
+| |-ParmVarDecl 0x556dd224f560 <col:26, col:42> col:42 __once_control 'pthread_once_t *'
+| |-ParmVarDecl 0x556dd224f700 <line:460:5, col:33> col:12 __init_routine 'void (*)(void)'
+| `-NonNullAttr 0x556dd224f918 <col:52, col:69> 1 2
+|-FunctionDecl 0x556dd224fac0 <line:461:1, col:64> col:12 pthread_setcancelstate 'int (int, int *)' extern
+| |-ParmVarDecl 0x556dd224f9a0 <col:36, col:40> col:40 __state 'int'
+| `-ParmVarDecl 0x556dd224fa20 <col:49, col:54> col:54 __oldstate 'int *'
+|-FunctionDecl 0x556dd224fca8 <line:462:1, col:61> col:12 pthread_setcanceltype 'int (int, int *)' extern
+| |-ParmVarDecl 0x556dd224fb88 <col:35, col:39> col:39 __type 'int'
+| `-ParmVarDecl 0x556dd224fc08 <col:47, col:52> col:52 __oldtype 'int *'
+|-FunctionDecl 0x556dd224fe60 <line:463:1, col:42> col:12 pthread_cancel 'int (pthread_t)' extern
+| `-ParmVarDecl 0x556dd224fd68 <col:28, col:38> col:38 __th 'pthread_t':'unsigned long'
+|-FunctionDecl 0x556dd224ffa0 <line:464:1, col:37> col:13 pthread_testcancel 'void (void)' extern
+|-RecordDecl 0x556dd2250040 <line:465:9, line:473:1> line:465:9 struct definition
+| |-RecordDecl 0x556dd22500e8 <line:467:3, line:471:3> line:467:3 struct definition
+| | |-FieldDecl 0x556dd22501d8 <line:469:5, col:15> col:15 __cancel_jmp_buf '__jmp_buf':'long [8]'
+| | `-FieldDecl 0x556dd2250240 <line:470:5, col:9> col:9 __mask_was_saved 'int'
+| |-FieldDecl 0x556dd2250410 <line:467:3, line:471:23> col:5 __cancel_jmp_buf 'struct (anonymous struct at pthread-wmm/safe025_pso.opt_true-unreach-call.i:467:3) [1]'
+| `-FieldDecl 0x556dd2250508 <line:472:3, col:16> col:9 __pad 'void *[4]'
+|-TypedefDecl 0x556dd22505c0 <line:465:1, line:473:3> col:3 referenced __pthread_unwind_buf_t 'struct __pthread_unwind_buf_t':'__pthread_unwind_buf_t'
+| |-ElaboratedType 0x556dd2250560 'struct __pthread_unwind_buf_t' sugar
+| | `-RecordType 0x556dd22500c0 '__pthread_unwind_buf_t'
+| |   `-Record 0x556dd2250040 ''
+| `-AlignedAttr 0x556dd2250618 <col:42> aligned
+|   `-<<<NULL>>>
+|-RecordDecl 0x556dd2250690 <line:474:1, line:480:1> line:474:8 struct __pthread_cleanup_frame definition
+| |-FieldDecl 0x556dd22507f0 <line:476:3, col:35> col:10 __cancel_routine 'void (*)(void *)'
+| |-FieldDecl 0x556dd2250858 <line:477:3, col:9> col:9 __cancel_arg 'void *'
+| |-FieldDecl 0x556dd22508c0 <line:478:3, col:7> col:7 __do_it 'int'
+| `-FieldDecl 0x556dd2250928 <line:479:3, col:7> col:7 __cancel_type 'int'
+|-FunctionDecl 0x556dd2250b30 <line:481:1, col:69> col:13 __pthread_register_cancel 'void (__pthread_unwind_buf_t *)' extern
+| `-ParmVarDecl 0x556dd2250a20 <col:40, col:64> col:64 __buf '__pthread_unwind_buf_t *'
+|-FunctionDecl 0x556dd2250c78 <line:483:1, col:71> col:13 __pthread_unregister_cancel 'void (__pthread_unwind_buf_t *)' extern
+| `-ParmVarDecl 0x556dd2250be8 <col:42, col:66> col:66 __buf '__pthread_unwind_buf_t *'
+|-FunctionDecl 0x556dd2250e70 <line:485:1, line:487:31> line:485:13 __pthread_unwind_next 'void (__pthread_unwind_buf_t *) __attribute__((noreturn))' extern
+| |-ParmVarDecl 0x556dd2250d30 <col:36, col:60> col:60 __buf '__pthread_unwind_buf_t *'
+| `-WeakAttr 0x556dd2250f18 <line:487:22>
+|-RecordDecl 0x556dd2250f70 <line:489:1, col:8> col:8 struct __jmp_buf_tag
+|-FunctionDecl 0x556dd2251288 <line:490:1, col:98> col:12 __sigsetjmp 'int (struct __jmp_buf_tag *, int)' extern
+| |-ParmVarDecl 0x556dd22510e8 <col:25, col:47> col:47 __env 'struct __jmp_buf_tag *'
+| |-ParmVarDecl 0x556dd2251168 <col:54, col:58> col:58 __savemask 'int'
+| |-NoThrowAttr 0x556dd2251338 <col:86>
+| `-ReturnsTwiceAttr 0x556dd2251390 <col:12> Implicit
+|-FunctionDecl 0x556dd22516b8 <line:491:1, line:493:79> line:491:12 pthread_mutex_init 'int (pthread_mutex_t *, const pthread_mutexattr_t *)' extern
+| |-ParmVarDecl 0x556dd2251460 <col:32, col:49> col:49 __mutex 'pthread_mutex_t *'
+| |-ParmVarDecl 0x556dd2251570 <line:492:11, col:38> col:38 __mutexattr 'const pthread_mutexattr_t *'
+| |-NoThrowAttr 0x556dd2251768 <line:493:22>
+| `-NonNullAttr 0x556dd22517c0 <col:63, col:77> 1
+|-FunctionDecl 0x556dd2251938 <line:494:1, line:495:79> line:494:12 pthread_mutex_destroy 'int (pthread_mutex_t *)' extern
+| |-ParmVarDecl 0x556dd2251808 <col:35, col:52> col:52 __mutex 'pthread_mutex_t *'
+| |-NoThrowAttr 0x556dd22519e0 <line:495:22>
+| `-NonNullAttr 0x556dd2251a38 <col:63, col:77> 1
+|-FunctionDecl 0x556dd2251b40 <line:496:1, line:497:68> line:496:12 pthread_mutex_trylock 'int (pthread_mutex_t *)' extern
+| |-ParmVarDecl 0x556dd2251a88 <col:35, col:52> col:52 __mutex 'pthread_mutex_t *'
+| |-NoThrowAttr 0x556dd2251be8 <line:497:22>
+| `-NonNullAttr 0x556dd2251c40 <col:52, col:66> 1
+|-FunctionDecl 0x556dd2251d40 <line:498:1, line:499:68> line:498:12 pthread_mutex_lock 'int (pthread_mutex_t *)' extern
+| |-ParmVarDecl 0x556dd2251c88 <col:32, col:49> col:49 __mutex 'pthread_mutex_t *'
+| |-NoThrowAttr 0x556dd2251de8 <line:499:22>
+| `-NonNullAttr 0x556dd2251e40 <col:52, col:66> 1
+|-FunctionDecl 0x556dd2252088 <line:500:1, line:502:85> line:500:12 pthread_mutex_timedlock 'int (pthread_mutex_t *restrict, const struct timespec *restrict)' extern
+| |-ParmVarDecl 0x556dd2251e98 <col:37, col:65> col:65 __mutex 'pthread_mutex_t *restrict'
+| |-ParmVarDecl 0x556dd2251f28 <line:501:9, line:502:9> col:9 __abstime 'const struct timespec *restrict'
+| |-NoThrowAttr 0x556dd2252138 <col:36>
+| `-NonNullAttr 0x556dd2252190 <col:66, col:83> 1 2
+|-FunctionDecl 0x556dd2252290 <line:503:1, line:504:68> line:503:12 pthread_mutex_unlock 'int (pthread_mutex_t *)' extern
+| |-ParmVarDecl 0x556dd22521d8 <col:34, col:51> col:51 __mutex 'pthread_mutex_t *'
+| |-NoThrowAttr 0x556dd2252338 <line:504:22>
+| `-NonNullAttr 0x556dd2252390 <col:52, col:66> 1
+|-FunctionDecl 0x556dd2252628 <line:505:1, line:508:82> line:505:12 pthread_mutex_getprioceiling 'int (const pthread_mutex_t *restrict, int *restrict)' extern
+| |-ParmVarDecl 0x556dd2252440 <col:42, line:506:18> col:18 __mutex 'const pthread_mutex_t *restrict'
+| |-ParmVarDecl 0x556dd22524c0 <line:507:7, col:23> col:23 __prioceiling 'int *restrict'
+| |-NoThrowAttr 0x556dd22526d8 <line:508:22>
+| `-NonNullAttr 0x556dd2252730 <col:63, col:80> 1 2
+|-FunctionDecl 0x556dd22529f8 <line:509:1, line:512:82> line:509:12 pthread_mutex_setprioceiling 'int (pthread_mutex_t *restrict, int, int *restrict)' extern
+| |-ParmVarDecl 0x556dd2252778 <col:42, col:70> col:70 __mutex 'pthread_mutex_t *restrict'
+| |-ParmVarDecl 0x556dd22527f8 <line:510:7, col:11> col:11 __prioceiling 'int'
+| |-ParmVarDecl 0x556dd2252878 <line:511:7, col:23> col:23 __old_ceiling 'int *restrict'
+| |-NoThrowAttr 0x556dd2252ab0 <line:512:22>
+| `-NonNullAttr 0x556dd2252b08 <col:63, col:80> 1 3
+|-FunctionDecl 0x556dd2252c10 <line:513:1, line:514:79> line:513:12 pthread_mutex_consistent 'int (pthread_mutex_t *)' extern
+| |-ParmVarDecl 0x556dd2252b58 <col:38, col:55> col:55 __mutex 'pthread_mutex_t *'
+| |-NoThrowAttr 0x556dd2252cb8 <line:514:22>
+| `-NonNullAttr 0x556dd2252d10 <col:63, col:77> 1
+|-FunctionDecl 0x556dd2252f38 <line:515:1, line:516:79> line:515:12 pthread_mutexattr_init 'int (pthread_mutexattr_t *)' extern
+| |-ParmVarDecl 0x556dd2252dc0 <col:36, col:57> col:57 __attr 'pthread_mutexattr_t *'
+| |-NoThrowAttr 0x556dd2252fe0 <line:516:22>
+| `-NonNullAttr 0x556dd2253038 <col:63, col:77> 1
+|-FunctionDecl 0x556dd2253140 <line:517:1, line:518:79> line:517:12 pthread_mutexattr_destroy 'int (pthread_mutexattr_t *)' extern
+| |-ParmVarDecl 0x556dd2253088 <col:39, col:60> col:60 __attr 'pthread_mutexattr_t *'
+| |-NoThrowAttr 0x556dd22531e8 <line:518:22>
+| `-NonNullAttr 0x556dd2253240 <col:63, col:77> 1
+|-FunctionDecl 0x556dd2253468 <line:519:1, line:522:82> line:519:12 pthread_mutexattr_getpshared 'int (const pthread_mutexattr_t *restrict, int *restrict)' extern
+| |-ParmVarDecl 0x556dd2253288 <col:42, line:520:18> col:18 __attr 'const pthread_mutexattr_t *restrict'
+| |-ParmVarDecl 0x556dd2253308 <line:521:7, col:23> col:23 __pshared 'int *restrict'
+| |-NoThrowAttr 0x556dd2253518 <line:522:22>
+| `-NonNullAttr 0x556dd2253570 <col:63, col:80> 1 2
+|-FunctionDecl 0x556dd2253778 <line:523:1, line:525:79> line:523:12 pthread_mutexattr_setpshared 'int (pthread_mutexattr_t *, int)' extern
+| |-ParmVarDecl 0x556dd22535b8 <col:42, col:63> col:63 __attr 'pthread_mutexattr_t *'
+| |-ParmVarDecl 0x556dd2253638 <line:524:7, col:11> col:11 __pshared 'int'
+| |-NoThrowAttr 0x556dd2253828 <line:525:22>
+| `-NonNullAttr 0x556dd2253880 <col:63, col:77> 1
+|-FunctionDecl 0x556dd2253a28 <line:526:1, line:528:82> line:526:12 pthread_mutexattr_gettype 'int (const pthread_mutexattr_t *restrict, int *restrict)' extern
+| |-ParmVarDecl 0x556dd22538c8 <col:39, line:527:11> col:11 __attr 'const pthread_mutexattr_t *restrict'
+| |-ParmVarDecl 0x556dd2253948 <col:19, col:35> col:35 __kind 'int *restrict'
+| |-NoThrowAttr 0x556dd2253ad8 <line:528:22>
+| `-NonNullAttr 0x556dd2253b30 <col:63, col:80> 1 2
+|-FunctionDecl 0x556dd2253cb8 <line:529:1, line:530:79> line:529:12 pthread_mutexattr_settype 'int (pthread_mutexattr_t *, int)' extern
+| |-ParmVarDecl 0x556dd2253b78 <col:39, col:60> col:60 __attr 'pthread_mutexattr_t *'
+| |-ParmVarDecl 0x556dd2253bf8 <col:68, col:72> col:72 __kind 'int'
+| |-NoThrowAttr 0x556dd2253d68 <line:530:22>
+| `-NonNullAttr 0x556dd2253dc0 <col:63, col:77> 1
+|-FunctionDecl 0x556dd2254f90 <line:531:1, line:534:82> line:531:12 pthread_mutexattr_getprotocol 'int (const pthread_mutexattr_t *restrict, int *restrict)' extern
+| |-ParmVarDecl 0x556dd2253e08 <col:43, line:532:19> col:19 __attr 'const pthread_mutexattr_t *restrict'
+| |-ParmVarDecl 0x556dd2254eb0 <line:533:8, col:24> col:24 __protocol 'int *restrict'
+| |-NoThrowAttr 0x556dd2255040 <line:534:22>
+| `-NonNullAttr 0x556dd2255098 <col:63, col:80> 1 2
+|-FunctionDecl 0x556dd2255228 <line:535:1, line:537:79> line:535:12 pthread_mutexattr_setprotocol 'int (pthread_mutexattr_t *, int)' extern
+| |-ParmVarDecl 0x556dd22550e8 <col:43, col:64> col:64 __attr 'pthread_mutexattr_t *'
+| |-ParmVarDecl 0x556dd2255168 <line:536:8, col:12> col:12 __protocol 'int'
+| |-NoThrowAttr 0x556dd22552d8 <line:537:22>
+| `-NonNullAttr 0x556dd2255330 <col:63, col:77> 1
+|-FunctionDecl 0x556dd22554d8 <line:538:1, line:541:82> line:538:12 pthread_mutexattr_getprioceiling 'int (const pthread_mutexattr_t *restrict, int *restrict)' extern
+| |-ParmVarDecl 0x556dd2255378 <col:46, line:539:22> col:22 __attr 'const pthread_mutexattr_t *restrict'
+| |-ParmVarDecl 0x556dd22553f8 <line:540:11, col:27> col:27 __prioceiling 'int *restrict'
+| |-NoThrowAttr 0x556dd2255588 <line:541:22>
+| `-NonNullAttr 0x556dd22555e0 <col:63, col:80> 1 2
+|-FunctionDecl 0x556dd2255768 <line:542:1, line:544:79> line:542:12 pthread_mutexattr_setprioceiling 'int (pthread_mutexattr_t *, int)' extern
+| |-ParmVarDecl 0x556dd2255628 <col:46, col:67> col:67 __attr 'pthread_mutexattr_t *'
+| |-ParmVarDecl 0x556dd22556a8 <line:543:11, col:15> col:15 __prioceiling 'int'
+| |-NoThrowAttr 0x556dd2255818 <line:544:22>
+| `-NonNullAttr 0x556dd2255870 <col:63, col:77> 1
+|-FunctionDecl 0x556dd2255a58 <line:545:1, line:547:82> line:545:12 pthread_mutexattr_getrobust 'int (const pthread_mutexattr_t *, int *)' extern
+| |-ParmVarDecl 0x556dd22558b8 <col:41, col:68> col:68 __attr 'const pthread_mutexattr_t *'
+| |-ParmVarDecl 0x556dd2255938 <line:546:6, col:11> col:11 __robustness 'int *'
+| |-NoThrowAttr 0x556dd2255b08 <line:547:22>
+| `-NonNullAttr 0x556dd2255b60 <col:63, col:80> 1 2
+|-FunctionDecl 0x556dd2255ce8 <line:548:1, line:550:79> line:548:12 pthread_mutexattr_setrobust 'int (pthread_mutexattr_t *, int)' extern
+| |-ParmVarDecl 0x556dd2255ba8 <col:41, col:62> col:62 __attr 'pthread_mutexattr_t *'
+| |-ParmVarDecl 0x556dd2255c28 <line:549:6, col:10> col:10 __robustness 'int'
+| |-NoThrowAttr 0x556dd2255d98 <line:550:22>
+| `-NonNullAttr 0x556dd2255df0 <col:63, col:77> 1
+|-FunctionDecl 0x556dd2257168 <line:551:1, line:553:86> line:551:12 pthread_rwlock_init 'int (pthread_rwlock_t *restrict, const pthread_rwlockattr_t *restrict)' extern
+| |-ParmVarDecl 0x556dd2256f10 <col:33, col:62> col:62 __rwlock 'pthread_rwlock_t *restrict'
+| |-ParmVarDecl 0x556dd2257020 <line:552:5, line:553:5> col:5 __attr 'const pthread_rwlockattr_t *restrict'
+| |-NoThrowAttr 0x556dd2257218 <col:29>
+| `-NonNullAttr 0x556dd2257270 <col:70, col:84> 1
+|-FunctionDecl 0x556dd22573e8 <line:554:1, line:555:79> line:554:12 pthread_rwlock_destroy 'int (pthread_rwlock_t *)' extern
+| |-ParmVarDecl 0x556dd22572b8 <col:36, col:54> col:54 __rwlock 'pthread_rwlock_t *'
+| |-NoThrowAttr 0x556dd2257490 <line:555:22>
+| `-NonNullAttr 0x556dd22574e8 <col:63, col:77> 1
+|-FunctionDecl 0x556dd22575f0 <line:556:1, line:557:68> line:556:12 pthread_rwlock_rdlock 'int (pthread_rwlock_t *)' extern
+| |-ParmVarDecl 0x556dd2257538 <col:35, col:53> col:53 __rwlock 'pthread_rwlock_t *'
+| |-NoThrowAttr 0x556dd2257698 <line:557:22>
+| `-NonNullAttr 0x556dd22576f0 <col:52, col:66> 1
+|-FunctionDecl 0x556dd22577f0 <line:558:1, line:559:65> line:558:12 pthread_rwlock_tryrdlock 'int (pthread_rwlock_t *)' extern
+| |-ParmVarDecl 0x556dd2257738 <col:38, col:56> col:56 __rwlock 'pthread_rwlock_t *'
+| |-NoThrowAttr 0x556dd2257898 <line:559:19>
+| `-NonNullAttr 0x556dd22578f0 <col:49, col:63> 1
+|-FunctionDecl 0x556dd2257b28 <line:560:1, line:562:88> line:560:12 pthread_rwlock_timedrdlock 'int (pthread_rwlock_t *restrict, const struct timespec *restrict)' extern
+| |-ParmVarDecl 0x556dd2257938 <col:40, col:69> col:69 __rwlock 'pthread_rwlock_t *restrict'
+| |-ParmVarDecl 0x556dd22579c8 <line:561:12, line:562:12> col:12 __abstime 'const struct timespec *restrict'
+| |-NoThrowAttr 0x556dd2257bd8 <col:39>
+| `-NonNullAttr 0x556dd2257c30 <col:69, col:86> 1 2
+|-FunctionDecl 0x556dd2257d30 <line:563:1, line:564:68> line:563:12 pthread_rwlock_wrlock 'int (pthread_rwlock_t *)' extern
+| |-ParmVarDecl 0x556dd2257c78 <col:35, col:53> col:53 __rwlock 'pthread_rwlock_t *'
+| |-NoThrowAttr 0x556dd2257dd8 <line:564:22>
+| `-NonNullAttr 0x556dd2257e30 <col:52, col:66> 1
+|-FunctionDecl 0x556dd2257f98 <line:565:1, line:566:68> line:565:12 pthread_rwlock_trywrlock 'int (pthread_rwlock_t *)' extern
+| |-ParmVarDecl 0x556dd2257ee0 <col:38, col:56> col:56 __rwlock 'pthread_rwlock_t *'
+| |-NoThrowAttr 0x556dd2258040 <line:566:22>
+| `-NonNullAttr 0x556dd2258098 <col:52, col:66> 1
+|-FunctionDecl 0x556dd2258258 <line:567:1, line:569:88> line:567:12 pthread_rwlock_timedwrlock 'int (pthread_rwlock_t *restrict, const struct timespec *restrict)' extern
+| |-ParmVarDecl 0x556dd22580e8 <col:40, col:69> col:69 __rwlock 'pthread_rwlock_t *restrict'
+| |-ParmVarDecl 0x556dd2258178 <line:568:12, line:569:12> col:12 __abstime 'const struct timespec *restrict'
+| |-NoThrowAttr 0x556dd2258308 <col:39>
+| `-NonNullAttr 0x556dd2258360 <col:69, col:86> 1 2
+|-FunctionDecl 0x556dd2258460 <line:570:1, line:571:68> line:570:12 pthread_rwlock_unlock 'int (pthread_rwlock_t *)' extern
+| |-ParmVarDecl 0x556dd22583a8 <col:35, col:53> col:53 __rwlock 'pthread_rwlock_t *'
+| |-NoThrowAttr 0x556dd2258508 <line:571:22>
+| `-NonNullAttr 0x556dd2258560 <col:52, col:66> 1
+|-FunctionDecl 0x556dd2258748 <line:572:1, line:573:79> line:572:12 pthread_rwlockattr_init 'int (pthread_rwlockattr_t *)' extern
+| |-ParmVarDecl 0x556dd2258610 <col:37, col:59> col:59 __attr 'pthread_rwlockattr_t *'
+| |-NoThrowAttr 0x556dd22587f0 <line:573:22>
+| `-NonNullAttr 0x556dd2258848 <col:63, col:77> 1
+|-FunctionDecl 0x556dd2258950 <line:574:1, line:575:79> line:574:12 pthread_rwlockattr_destroy 'int (pthread_rwlockattr_t *)' extern
+| |-ParmVarDecl 0x556dd2258898 <col:40, col:62> col:62 __attr 'pthread_rwlockattr_t *'
+| |-NoThrowAttr 0x556dd22589f8 <line:575:22>
+| `-NonNullAttr 0x556dd2258a50 <col:63, col:77> 1
+|-FunctionDecl 0x556dd2258c78 <line:576:1, line:579:82> line:576:12 pthread_rwlockattr_getpshared 'int (const pthread_rwlockattr_t *restrict, int *restrict)' extern
+| |-ParmVarDecl 0x556dd2258a98 <col:43, line:577:19> col:19 __attr 'const pthread_rwlockattr_t *restrict'
+| |-ParmVarDecl 0x556dd2258b18 <line:578:8, col:24> col:24 __pshared 'int *restrict'
+| |-NoThrowAttr 0x556dd2258d28 <line:579:22>
+| `-NonNullAttr 0x556dd2258d80 <col:63, col:80> 1 2
+|-FunctionDecl 0x556dd2258fa8 <line:580:1, line:582:79> line:580:12 pthread_rwlockattr_setpshared 'int (pthread_rwlockattr_t *, int)' extern
+| |-ParmVarDecl 0x556dd2258dc8 <col:43, col:65> col:65 __attr 'pthread_rwlockattr_t *'
+| |-ParmVarDecl 0x556dd2258e48 <line:581:8, col:12> col:12 __pshared 'int'
+| |-NoThrowAttr 0x556dd2259058 <line:582:22>
+| `-NonNullAttr 0x556dd22590b0 <col:63, col:77> 1
+|-FunctionDecl 0x556dd2259258 <line:583:1, line:586:82> line:583:12 pthread_rwlockattr_getkind_np 'int (const pthread_rwlockattr_t *restrict, int *restrict)' extern
+| |-ParmVarDecl 0x556dd22590f8 <col:43, line:584:19> col:19 __attr 'const pthread_rwlockattr_t *restrict'
+| |-ParmVarDecl 0x556dd2259178 <line:585:8, col:24> col:24 __pref 'int *restrict'
+| |-NoThrowAttr 0x556dd2259308 <line:586:22>
+| `-NonNullAttr 0x556dd2259360 <col:63, col:80> 1 2
+|-FunctionDecl 0x556dd22594e8 <line:587:1, line:588:93> line:587:12 pthread_rwlockattr_setkind_np 'int (pthread_rwlockattr_t *, int)' extern
+| |-ParmVarDecl 0x556dd22593a8 <col:43, col:65> col:65 __attr 'pthread_rwlockattr_t *'
+| |-ParmVarDecl 0x556dd2259428 <line:588:8, col:12> col:12 __pref 'int'
+| |-NoThrowAttr 0x556dd2259598 <col:36>
+| `-NonNullAttr 0x556dd22595f0 <col:77, col:91> 1
+|-FunctionDecl 0x556dd2259928 <line:589:1, line:591:79> line:589:12 pthread_cond_init 'int (pthread_cond_t *restrict, const pthread_condattr_t *restrict)' extern
+| |-ParmVarDecl 0x556dd22596d0 <col:31, col:58> col:58 __cond 'pthread_cond_t *restrict'
+| |-ParmVarDecl 0x556dd22597e0 <line:590:10, col:47> col:47 __cond_attr 'const pthread_condattr_t *restrict'
+| |-NoThrowAttr 0x556dd22599d8 <line:591:22>
+| `-NonNullAttr 0x556dd2259a30 <col:63, col:77> 1
+|-FunctionDecl 0x556dd2259ba8 <line:592:1, line:593:79> line:592:12 pthread_cond_destroy 'int (pthread_cond_t *)' extern
+| |-ParmVarDecl 0x556dd2259a78 <col:34, col:50> col:50 __cond 'pthread_cond_t *'
+| |-NoThrowAttr 0x556dd2259c50 <line:593:22>
+| `-NonNullAttr 0x556dd2259ca8 <col:63, col:77> 1
+|-FunctionDecl 0x556dd2259db0 <line:594:1, line:595:68> line:594:12 pthread_cond_signal 'int (pthread_cond_t *)' extern
+| |-ParmVarDecl 0x556dd2259cf8 <col:33, col:49> col:49 __cond 'pthread_cond_t *'
+| |-NoThrowAttr 0x556dd2259e58 <line:595:22>
+| `-NonNullAttr 0x556dd2259eb0 <col:52, col:66> 1
+|-FunctionDecl 0x556dd2259fc8 <line:596:1, line:597:68> line:596:12 pthread_cond_broadcast 'int (pthread_cond_t *)' extern
+| |-ParmVarDecl 0x556dd2259f10 <col:36, col:52> col:52 __cond 'pthread_cond_t *'
+| |-NoThrowAttr 0x556dd225a070 <line:597:22>
+| `-NonNullAttr 0x556dd225a0c8 <col:52, col:66> 1
+|-FunctionDecl 0x556dd225a2f8 <line:598:1, line:600:41> line:598:12 pthread_cond_wait 'int (pthread_cond_t *restrict, pthread_mutex_t *restrict)' extern
+| |-ParmVarDecl 0x556dd225a118 <col:31, col:58> col:58 __cond 'pthread_cond_t *restrict'
+| |-ParmVarDecl 0x556dd225a190 <line:599:10, col:38> col:38 __mutex 'pthread_mutex_t *restrict'
+| `-NonNullAttr 0x556dd225a3a8 <line:600:22, col:39> 1 2
+|-FunctionDecl 0x556dd225a6d8 <line:601:1, line:604:44> line:601:12 pthread_cond_timedwait 'int (pthread_cond_t *restrict, pthread_mutex_t *restrict, const struct timespec *restrict)' extern
+| |-ParmVarDecl 0x556dd225a428 <col:36, col:63> col:63 __cond 'pthread_cond_t *restrict'
+| |-ParmVarDecl 0x556dd225a4a0 <line:602:8, col:36> col:36 __mutex 'pthread_mutex_t *restrict'
+| |-ParmVarDecl 0x556dd225a530 <line:603:8, col:42> col:42 __abstime 'const struct timespec *restrict'
+| `-NonNullAttr 0x556dd225a790 <line:604:22, col:42> 1 2 3
+|-FunctionDecl 0x556dd225a9a8 <line:605:1, line:606:79> line:605:12 pthread_condattr_init 'int (pthread_condattr_t *)' extern
+| |-ParmVarDecl 0x556dd225a870 <col:35, col:55> col:55 __attr 'pthread_condattr_t *'
+| |-NoThrowAttr 0x556dd225aa50 <line:606:22>
+| `-NonNullAttr 0x556dd225aaa8 <col:63, col:77> 1
+|-FunctionDecl 0x556dd225abb0 <line:607:1, line:608:79> line:607:12 pthread_condattr_destroy 'int (pthread_condattr_t *)' extern
+| |-ParmVarDecl 0x556dd225aaf8 <col:38, col:58> col:58 __attr 'pthread_condattr_t *'
+| |-NoThrowAttr 0x556dd225ac58 <line:608:22>
+| `-NonNullAttr 0x556dd225acb0 <col:63, col:77> 1
+|-FunctionDecl 0x556dd225af10 <line:609:1, line:612:82> line:609:12 pthread_condattr_getpshared 'int (const pthread_condattr_t *restrict, int *restrict)' extern
+| |-ParmVarDecl 0x556dd225acf8 <col:41, line:610:17> col:17 __attr 'const pthread_condattr_t *restrict'
+| |-ParmVarDecl 0x556dd225ad78 <line:611:6, col:22> col:22 __pshared 'int *restrict'
+| |-NoThrowAttr 0x556dd225afc0 <line:612:22>
+| `-NonNullAttr 0x556dd225b018 <col:63, col:80> 1 2
+|-FunctionDecl 0x556dd225b228 <line:613:1, line:614:94> line:613:12 pthread_condattr_setpshared 'int (pthread_condattr_t *, int)' extern
+| |-ParmVarDecl 0x556dd225b068 <col:41, col:61> col:61 __attr 'pthread_condattr_t *'
+| |-ParmVarDecl 0x556dd225b0e8 <line:614:6, col:10> col:10 __pshared 'int'
+| |-NoThrowAttr 0x556dd225b2d8 <col:37>
+| `-NonNullAttr 0x556dd225b330 <col:78, col:92> 1
+|-FunctionDecl 0x556dd225b548 <line:615:1, line:618:82> line:615:12 pthread_condattr_getclock 'int (const pthread_condattr_t *restrict, __clockid_t *restrict)' extern
+| |-ParmVarDecl 0x556dd225b378 <col:39, line:616:22> col:22 __attr 'const pthread_condattr_t *restrict'
+| |-ParmVarDecl 0x556dd225b420 <line:617:11, col:35> col:35 __clock_id '__clockid_t *restrict'
+| |-NoThrowAttr 0x556dd225b5f8 <line:618:22>
+| `-NonNullAttr 0x556dd225b650 <col:63, col:80> 1 2
+|-FunctionDecl 0x556dd225b818 <line:619:1, line:621:79> line:619:12 pthread_condattr_setclock 'int (pthread_condattr_t *, __clockid_t)' extern
+| |-ParmVarDecl 0x556dd225b698 <col:39, col:59> col:59 __attr 'pthread_condattr_t *'
+| |-ParmVarDecl 0x556dd225b710 <line:620:11, col:23> col:23 __clock_id '__clockid_t':'int'
+| |-NoThrowAttr 0x556dd225b8c8 <line:621:22>
+| `-NonNullAttr 0x556dd225b920 <col:63, col:77> 1
+|-FunctionDecl 0x556dd225bbc8 <line:622:1, line:623:79> line:622:12 pthread_spin_init 'int (pthread_spinlock_t *, int)' extern
+| |-ParmVarDecl 0x556dd225ba00 <col:31, col:51> col:51 __lock 'pthread_spinlock_t *'
+| |-ParmVarDecl 0x556dd225ba80 <col:59, col:63> col:63 __pshared 'int'
+| |-NoThrowAttr 0x556dd225bc78 <line:623:22>
+| `-NonNullAttr 0x556dd225bcd0 <col:63, col:77> 1
+|-FunctionDecl 0x556dd225be48 <line:624:1, line:625:79> line:624:12 pthread_spin_destroy 'int (pthread_spinlock_t *)' extern
+| |-ParmVarDecl 0x556dd225bd18 <col:34, col:54> col:54 __lock 'pthread_spinlock_t *'
+| |-NoThrowAttr 0x556dd225bf20 <line:625:22>
+| `-NonNullAttr 0x556dd225bf78 <col:63, col:77> 1
+|-FunctionDecl 0x556dd225c080 <line:626:1, line:627:68> line:626:12 pthread_spin_lock 'int (pthread_spinlock_t *)' extern
+| |-ParmVarDecl 0x556dd225bfc8 <col:31, col:51> col:51 __lock 'pthread_spinlock_t *'
+| |-NoThrowAttr 0x556dd225c128 <line:627:22>
+| `-NonNullAttr 0x556dd225c180 <col:52, col:66> 1
+|-FunctionDecl 0x556dd225c280 <line:628:1, line:629:68> line:628:12 pthread_spin_trylock 'int (pthread_spinlock_t *)' extern
+| |-ParmVarDecl 0x556dd225c1c8 <col:34, col:54> col:54 __lock 'pthread_spinlock_t *'
+| |-NoThrowAttr 0x556dd225c328 <line:629:22>
+| `-NonNullAttr 0x556dd225c380 <col:52, col:66> 1
+|-FunctionDecl 0x556dd225c480 <line:630:1, line:631:68> line:630:12 pthread_spin_unlock 'int (pthread_spinlock_t *)' extern
+| |-ParmVarDecl 0x556dd225c3c8 <col:33, col:53> col:53 __lock 'pthread_spinlock_t *'
+| |-NoThrowAttr 0x556dd225c528 <line:631:22>
+| `-NonNullAttr 0x556dd225c580 <col:52, col:66> 1
+|-FunctionDecl 0x556dd225c958 <line:632:1, line:635:79> line:632:12 pthread_barrier_init 'int (pthread_barrier_t *restrict, const pthread_barrierattr_t *restrict, unsigned int)' extern
+| |-ParmVarDecl 0x556dd225c660 <col:34, col:64> col:64 __barrier 'pthread_barrier_t *restrict'
+| |-ParmVarDecl 0x556dd225c770 <line:633:6, line:634:6> col:6 __attr 'const pthread_barrierattr_t *restrict'
+| |-ParmVarDecl 0x556dd225c7f0 <col:14, col:27> col:27 __count 'unsigned int'
+| |-NoThrowAttr 0x556dd225ca10 <line:635:22>
+| `-NonNullAttr 0x556dd225ca68 <col:63, col:77> 1
+|-FunctionDecl 0x556dd225cbe8 <line:636:1, line:637:79> line:636:12 pthread_barrier_destroy 'int (pthread_barrier_t *)' extern
+| |-ParmVarDecl 0x556dd225cab8 <col:37, col:56> col:56 __barrier 'pthread_barrier_t *'
+| |-NoThrowAttr 0x556dd225cc90 <line:637:22>
+| `-NonNullAttr 0x556dd225cce8 <col:63, col:77> 1
+|-FunctionDecl 0x556dd225cdf0 <line:638:1, line:639:68> line:638:12 pthread_barrier_wait 'int (pthread_barrier_t *)' extern
+| |-ParmVarDecl 0x556dd225cd38 <col:34, col:53> col:53 __barrier 'pthread_barrier_t *'
+| |-NoThrowAttr 0x556dd225ce98 <line:639:22>
+| `-NonNullAttr 0x556dd225cef0 <col:52, col:66> 1
+|-FunctionDecl 0x556dd225d0e8 <line:640:1, line:641:79> line:640:12 pthread_barrierattr_init 'int (pthread_barrierattr_t *)' extern
+| |-ParmVarDecl 0x556dd225cfb0 <col:38, col:61> col:61 __attr 'pthread_barrierattr_t *'
+| |-NoThrowAttr 0x556dd225d190 <line:641:22>
+| `-NonNullAttr 0x556dd225d1e8 <col:63, col:77> 1
+|-FunctionDecl 0x556dd225d2f0 <line:642:1, line:643:79> line:642:12 pthread_barrierattr_destroy 'int (pthread_barrierattr_t *)' extern
+| |-ParmVarDecl 0x556dd225d238 <col:41, col:64> col:64 __attr 'pthread_barrierattr_t *'
+| |-NoThrowAttr 0x556dd225d398 <line:643:22>
+| `-NonNullAttr 0x556dd225d3f0 <col:63, col:77> 1
+|-FunctionDecl 0x556dd225d618 <line:644:1, line:647:82> line:644:12 pthread_barrierattr_getpshared 'int (const pthread_barrierattr_t *restrict, int *restrict)' extern
+| |-ParmVarDecl 0x556dd225d438 <col:44, line:645:20> col:20 __attr 'const pthread_barrierattr_t *restrict'
+| |-ParmVarDecl 0x556dd225d4b8 <line:646:9, col:25> col:25 __pshared 'int *restrict'
+| |-NoThrowAttr 0x556dd225d6c8 <line:647:22>
+| `-NonNullAttr 0x556dd225d720 <col:63, col:80> 1 2
+|-FunctionDecl 0x556dd225d928 <line:648:1, line:650:79> line:648:12 pthread_barrierattr_setpshared 'int (pthread_barrierattr_t *, int)' extern
+| |-ParmVarDecl 0x556dd225d768 <col:44, col:67> col:67 __attr 'pthread_barrierattr_t *'
+| |-ParmVarDecl 0x556dd225d7e8 <line:649:9, col:13> col:13 __pshared 'int'
+| |-NoThrowAttr 0x556dd225d9d8 <line:650:22>
+| `-NonNullAttr 0x556dd225da30 <col:63, col:77> 1
+|-FunctionDecl 0x556dd225dd78 <line:651:1, line:653:79> line:651:12 pthread_key_create 'int (pthread_key_t *, void (*)(void *))' extern
+| |-ParmVarDecl 0x556dd225db10 <col:32, col:47> col:47 __key 'pthread_key_t *'
+| |-ParmVarDecl 0x556dd225dc30 <line:652:11, col:43> col:18 __destr_function 'void (*)(void *)'
+| |-NoThrowAttr 0x556dd225de28 <line:653:22>
+| `-NonNullAttr 0x556dd225de80 <col:63, col:77> 1
+|-FunctionDecl 0x556dd225dfe8 <line:654:1, col:92> col:12 pthread_key_delete 'int (pthread_key_t)' extern
+| |-ParmVarDecl 0x556dd225dec8 <col:32, col:46> col:46 __key 'pthread_key_t':'unsigned int'
+| `-NoThrowAttr 0x556dd225e090 <col:69>
+|-FunctionDecl 0x556dd225e208 <line:655:1, col:95> col:14 pthread_getspecific 'void *(pthread_key_t)' extern
+| |-ParmVarDecl 0x556dd225e0f8 <col:35, col:49> col:49 __key 'pthread_key_t':'unsigned int'
+| `-NoThrowAttr 0x556dd225e2b0 <col:72>
+|-FunctionDecl 0x556dd225e4e8 <line:656:1, line:657:67> line:656:12 pthread_setspecific 'int (pthread_key_t, const void *)' extern
+| |-ParmVarDecl 0x556dd225e318 <col:33, col:47> col:47 __key 'pthread_key_t':'unsigned int'
+| |-ParmVarDecl 0x556dd225e3c8 <line:657:5, col:17> col:17 __pointer 'const void *'
+| `-NoThrowAttr 0x556dd225e598 <col:44>
+|-FunctionDecl 0x556dd225e7b8 <line:658:1, line:660:79> line:658:12 pthread_getcpuclockid 'int (pthread_t, __clockid_t *)' extern
+| |-ParmVarDecl 0x556dd225e600 <col:35, col:45> col:45 __thread_id 'pthread_t':'unsigned long'
+| |-ParmVarDecl 0x556dd225e678 <line:659:7, col:20> col:20 __clock_id '__clockid_t *'
+| |-NoThrowAttr 0x556dd225e868 <line:660:22>
+| `-NonNullAttr 0x556dd225e8c0 <col:63, col:77> 2
+|-FunctionDecl 0x556dd225ed08 <line:661:1, line:663:70> line:661:12 pthread_atfork 'int (void (*)(void), void (*)(void), void (*)(void))' extern
+| |-ParmVarDecl 0x556dd225e9a0 <col:28, col:51> col:35 __prepare 'void (*)(void)'
+| |-ParmVarDecl 0x556dd225eab0 <line:662:7, col:29> col:14 __parent 'void (*)(void)'
+| |-ParmVarDecl 0x556dd225ebc0 <line:663:7, col:28> col:14 __child 'void (*)(void)'
+| `-NoThrowAttr 0x556dd225edc0 <col:47>
+|-FunctionDecl 0x556dd225ff60 <line:665:1, col:20> col:8 used P0 'void *(void *)'
+| `-ParmVarDecl 0x556dd225ee30 <col:11, col:17> col:17 arg 'void *'
+|-FunctionDecl 0x556dd22600b8 <line:666:1, col:20> col:8 used P1 'void *(void *)'
+| `-ParmVarDecl 0x556dd2260020 <col:11, col:17> col:17 arg 'void *'
+|-FunctionDecl 0x556dd2260210 <line:667:1, col:20> col:8 used P2 'void *(void *)'
+| `-ParmVarDecl 0x556dd2260178 <col:11, col:17> col:17 arg 'void *'
+|-FunctionDecl 0x556dd22602d8 <line:668:1, col:12> col:6 fence 'void ()'
+|-FunctionDecl 0x556dd2260398 <line:669:1, col:12> col:6 isync 'void ()'
+|-FunctionDecl 0x556dd2260458 <line:670:1, col:14> col:6 lwfence 'void ()'
+|-VarDecl 0x556dd2260510 <line:671:1, col:5> col:5 used __unbuffered_cnt 'int'
+|-VarDecl 0x556dd2260590 prev 0x556dd2260510 <line:672:1, col:24> col:5 used __unbuffered_cnt 'int' cinit
+| `-IntegerLiteral 0x556dd22605f8 <col:24> 'int' 0
+|-VarDecl 0x556dd2260630 <line:673:1, col:5> col:5 used __unbuffered_p0_EAX 'int'
+|-VarDecl 0x556dd22606b0 prev 0x556dd2260630 <line:674:1, col:27> col:5 used __unbuffered_p0_EAX 'int' cinit
+| `-IntegerLiteral 0x556dd2260718 <col:27> 'int' 0
+|-VarDecl 0x556dd2260750 <line:675:1, col:5> col:5 used __unbuffered_p2_EAX 'int'
+|-VarDecl 0x556dd22607d0 prev 0x556dd2260750 <line:676:1, col:27> col:5 used __unbuffered_p2_EAX 'int' cinit
+| `-IntegerLiteral 0x556dd2260838 <col:27> 'int' 0
+|-VarDecl 0x556dd2260870 <line:677:1, col:5> col:5 used __unbuffered_p2_EBX 'int'
+|-VarDecl 0x556dd22608f0 prev 0x556dd2260870 <line:678:1, col:27> col:5 used __unbuffered_p2_EBX 'int' cinit
+| `-IntegerLiteral 0x556dd2260958 <col:27> 'int' 0
+|-VarDecl 0x556dd2260988 <line:679:1, col:7> col:7 used main$tmp_guard0 '_Bool'
+|-VarDecl 0x556dd2260a00 <line:680:1, col:7> col:7 used main$tmp_guard1 '_Bool'
+|-VarDecl 0x556dd2260a80 <line:681:1, col:5> col:5 used x 'int'
+|-VarDecl 0x556dd2260b00 prev 0x556dd2260a80 <line:682:1, col:9> col:5 used x 'int' cinit
+| `-IntegerLiteral 0x556dd2260b68 <col:9> 'int' 0
+|-VarDecl 0x556dd2260ba0 <line:683:1, col:5> col:5 used y 'int'
+|-VarDecl 0x556dd2260c20 prev 0x556dd2260ba0 <line:684:1, col:9> col:5 used y 'int' cinit
+| `-IntegerLiteral 0x556dd2260c88 <col:9> 'int' 0
+|-FunctionDecl 0x556dd2260d58 prev 0x556dd225ff60 <line:685:1, line:701:1> line:685:8 used P0 'void *(void *)'
+| |-ParmVarDecl 0x556dd2260cc0 <col:11, col:17> col:17 arg 'void *'
+| `-CompoundStmt 0x556dd22613d8 <line:686:1, line:701:1>
+|   |-CallExpr 0x556dd2260e68 <line:687:3, col:27> 'void'
+|   | `-ImplicitCastExpr 0x556dd2260e50 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x556dd2260e00 <col:3> 'void ()' Function 0x556dd2207350 '__VERIFIER_atomic_begin' 'void ()'
+|   |-BinaryOperator 0x556dd2260ec8 <line:688:3, col:7> 'int' '='
+|   | |-DeclRefExpr 0x556dd2260e88 <col:3> 'int' lvalue Var 0x556dd2260c20 'y' 'int'
+|   | `-IntegerLiteral 0x556dd2260ea8 <col:7> 'int' 1
+|   |-CallExpr 0x556dd2260f20 <line:689:3, col:25> 'void'
+|   | `-ImplicitCastExpr 0x556dd2260f08 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x556dd2260ee8 <col:3> 'void ()' Function 0x556dd2207410 '__VERIFIER_atomic_end' 'void ()'
+|   |-CallExpr 0x556dd2260f88 <line:690:3, col:27> 'void'
+|   | `-ImplicitCastExpr 0x556dd2260f70 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x556dd2260f40 <col:3> 'void ()' Function 0x556dd2207350 '__VERIFIER_atomic_begin' 'void ()'
+|   |-CallExpr 0x556dd2260fe0 <line:691:3, col:25> 'void'
+|   | `-ImplicitCastExpr 0x556dd2260fc8 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x556dd2260fa8 <col:3> 'void ()' Function 0x556dd2207410 '__VERIFIER_atomic_end' 'void ()'
+|   |-CallExpr 0x556dd2261038 <line:692:3, col:27> 'void'
+|   | `-ImplicitCastExpr 0x556dd2261020 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x556dd2261000 <col:3> 'void ()' Function 0x556dd2207350 '__VERIFIER_atomic_begin' 'void ()'
+|   |-BinaryOperator 0x556dd22610b0 <line:693:3, col:25> 'int' '='
+|   | |-DeclRefExpr 0x556dd2261058 <col:3> 'int' lvalue Var 0x556dd22606b0 '__unbuffered_p0_EAX' 'int'
+|   | `-ImplicitCastExpr 0x556dd2261098 <col:25> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x556dd2261078 <col:25> 'int' lvalue Var 0x556dd2260b00 'x' 'int'
+|   |-CallExpr 0x556dd2261108 <line:694:3, col:25> 'void'
+|   | `-ImplicitCastExpr 0x556dd22610f0 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x556dd22610d0 <col:3> 'void ()' Function 0x556dd2207410 '__VERIFIER_atomic_end' 'void ()'
+|   |-CallExpr 0x556dd2261160 <line:695:3, col:27> 'void'
+|   | `-ImplicitCastExpr 0x556dd2261148 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x556dd2261128 <col:3> 'void ()' Function 0x556dd2207350 '__VERIFIER_atomic_begin' 'void ()'
+|   |-CallExpr 0x556dd22611b8 <line:696:3, col:25> 'void'
+|   | `-ImplicitCastExpr 0x556dd22611a0 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x556dd2261180 <col:3> 'void ()' Function 0x556dd2207410 '__VERIFIER_atomic_end' 'void ()'
+|   |-CallExpr 0x556dd2261210 <line:697:3, col:27> 'void'
+|   | `-ImplicitCastExpr 0x556dd22611f8 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x556dd22611d8 <col:3> 'void ()' Function 0x556dd2207350 '__VERIFIER_atomic_begin' 'void ()'
+|   |-BinaryOperator 0x556dd22612c8 <line:698:3, col:41> 'int' '='
+|   | |-DeclRefExpr 0x556dd2261230 <col:3> 'int' lvalue Var 0x556dd2260590 '__unbuffered_cnt' 'int'
+|   | `-BinaryOperator 0x556dd22612a8 <col:22, col:41> 'int' '+'
+|   |   |-ImplicitCastExpr 0x556dd2261290 <col:22> 'int' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x556dd2261250 <col:22> 'int' lvalue Var 0x556dd2260590 '__unbuffered_cnt' 'int'
+|   |   `-IntegerLiteral 0x556dd2261270 <col:41> 'int' 1
+|   |-CallExpr 0x556dd2261320 <line:699:3, col:25> 'void'
+|   | `-ImplicitCastExpr 0x556dd2261308 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x556dd22612e8 <col:3> 'void ()' Function 0x556dd2207410 '__VERIFIER_atomic_end' 'void ()'
+|   `-ReturnStmt 0x556dd22613c8 <line:700:3, col:36>
+|     `-CallExpr 0x556dd22613a8 <col:10, col:36> 'void *'
+|       `-ImplicitCastExpr 0x556dd2261390 <col:10> 'void *(*)(void)' <FunctionToPointerDecay>
+|         `-DeclRefExpr 0x556dd2261340 <col:10> 'void *(void)' Function 0x556dd2206e68 '__VERIFIER_nondet_pointer' 'void *(void)'
+|-FunctionDecl 0x556dd2261508 prev 0x556dd22600b8 <line:702:1, line:716:1> line:702:8 used P1 'void *(void *)'
+| |-ParmVarDecl 0x556dd2261470 <col:11, col:17> col:17 arg 'void *'
+| `-CompoundStmt 0x556dd2261a50 <line:703:1, line:716:1>
+|   |-CallExpr 0x556dd22615e8 <line:704:3, col:27> 'void'
+|   | `-ImplicitCastExpr 0x556dd22615d0 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x556dd22615b0 <col:3> 'void ()' Function 0x556dd2207350 '__VERIFIER_atomic_begin' 'void ()'
+|   |-BinaryOperator 0x556dd2261648 <line:705:3, col:7> 'int' '='
+|   | |-DeclRefExpr 0x556dd2261608 <col:3> 'int' lvalue Var 0x556dd2260b00 'x' 'int'
+|   | `-IntegerLiteral 0x556dd2261628 <col:7> 'int' 1
+|   |-CallExpr 0x556dd22616a0 <line:706:3, col:25> 'void'
+|   | `-ImplicitCastExpr 0x556dd2261688 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x556dd2261668 <col:3> 'void ()' Function 0x556dd2207410 '__VERIFIER_atomic_end' 'void ()'
+|   |-CallExpr 0x556dd22616f8 <line:707:3, col:27> 'void'
+|   | `-ImplicitCastExpr 0x556dd22616e0 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x556dd22616c0 <col:3> 'void ()' Function 0x556dd2207350 '__VERIFIER_atomic_begin' 'void ()'
+|   |-BinaryOperator 0x556dd2261758 <line:708:3, col:7> 'int' '='
+|   | |-DeclRefExpr 0x556dd2261718 <col:3> 'int' lvalue Var 0x556dd2260b00 'x' 'int'
+|   | `-IntegerLiteral 0x556dd2261738 <col:7> 'int' 2
+|   |-CallExpr 0x556dd22617b0 <line:709:3, col:25> 'void'
+|   | `-ImplicitCastExpr 0x556dd2261798 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x556dd2261778 <col:3> 'void ()' Function 0x556dd2207410 '__VERIFIER_atomic_end' 'void ()'
+|   |-CallExpr 0x556dd2261808 <line:710:3, col:27> 'void'
+|   | `-ImplicitCastExpr 0x556dd22617f0 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x556dd22617d0 <col:3> 'void ()' Function 0x556dd2207350 '__VERIFIER_atomic_begin' 'void ()'
+|   |-CallExpr 0x556dd2261860 <line:711:3, col:25> 'void'
+|   | `-ImplicitCastExpr 0x556dd2261848 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x556dd2261828 <col:3> 'void ()' Function 0x556dd2207410 '__VERIFIER_atomic_end' 'void ()'
+|   |-CallExpr 0x556dd22618b8 <line:712:3, col:27> 'void'
+|   | `-ImplicitCastExpr 0x556dd22618a0 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x556dd2261880 <col:3> 'void ()' Function 0x556dd2207350 '__VERIFIER_atomic_begin' 'void ()'
+|   |-BinaryOperator 0x556dd2261970 <line:713:3, col:41> 'int' '='
+|   | |-DeclRefExpr 0x556dd22618d8 <col:3> 'int' lvalue Var 0x556dd2260590 '__unbuffered_cnt' 'int'
+|   | `-BinaryOperator 0x556dd2261950 <col:22, col:41> 'int' '+'
+|   |   |-ImplicitCastExpr 0x556dd2261938 <col:22> 'int' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x556dd22618f8 <col:22> 'int' lvalue Var 0x556dd2260590 '__unbuffered_cnt' 'int'
+|   |   `-IntegerLiteral 0x556dd2261918 <col:41> 'int' 1
+|   |-CallExpr 0x556dd22619c8 <line:714:3, col:25> 'void'
+|   | `-ImplicitCastExpr 0x556dd22619b0 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x556dd2261990 <col:3> 'void ()' Function 0x556dd2207410 '__VERIFIER_atomic_end' 'void ()'
+|   `-ReturnStmt 0x556dd2261a40 <line:715:3, col:36>
+|     `-CallExpr 0x556dd2261a20 <col:10, col:36> 'void *'
+|       `-ImplicitCastExpr 0x556dd2261a08 <col:10> 'void *(*)(void)' <FunctionToPointerDecay>
+|         `-DeclRefExpr 0x556dd22619e8 <col:10> 'void *(void)' Function 0x556dd2206e68 '__VERIFIER_nondet_pointer' 'void *(void)'
+|-FunctionDecl 0x556dd2261b70 prev 0x556dd2260210 <line:717:1, line:731:1> line:717:8 used P2 'void *(void *)'
+| |-ParmVarDecl 0x556dd2261ad8 <col:11, col:17> col:17 arg 'void *'
+| `-CompoundStmt 0x556dd22620f8 <line:718:1, line:731:1>
+|   |-CallExpr 0x556dd2261c50 <line:719:3, col:27> 'void'
+|   | `-ImplicitCastExpr 0x556dd2261c38 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x556dd2261c18 <col:3> 'void ()' Function 0x556dd2207350 '__VERIFIER_atomic_begin' 'void ()'
+|   |-BinaryOperator 0x556dd2261cc8 <line:720:3, col:25> 'int' '='
+|   | |-DeclRefExpr 0x556dd2261c70 <col:3> 'int' lvalue Var 0x556dd22607d0 '__unbuffered_p2_EAX' 'int'
+|   | `-ImplicitCastExpr 0x556dd2261cb0 <col:25> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x556dd2261c90 <col:25> 'int' lvalue Var 0x556dd2260b00 'x' 'int'
+|   |-CallExpr 0x556dd2261d20 <line:721:3, col:25> 'void'
+|   | `-ImplicitCastExpr 0x556dd2261d08 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x556dd2261ce8 <col:3> 'void ()' Function 0x556dd2207410 '__VERIFIER_atomic_end' 'void ()'
+|   |-CallExpr 0x556dd2261d78 <line:722:3, col:27> 'void'
+|   | `-ImplicitCastExpr 0x556dd2261d60 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x556dd2261d40 <col:3> 'void ()' Function 0x556dd2207350 '__VERIFIER_atomic_begin' 'void ()'
+|   |-BinaryOperator 0x556dd2261df0 <line:723:3, col:25> 'int' '='
+|   | |-DeclRefExpr 0x556dd2261d98 <col:3> 'int' lvalue Var 0x556dd22608f0 '__unbuffered_p2_EBX' 'int'
+|   | `-ImplicitCastExpr 0x556dd2261dd8 <col:25> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x556dd2261db8 <col:25> 'int' lvalue Var 0x556dd2260c20 'y' 'int'
+|   |-CallExpr 0x556dd2261e48 <line:724:3, col:25> 'void'
+|   | `-ImplicitCastExpr 0x556dd2261e30 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x556dd2261e10 <col:3> 'void ()' Function 0x556dd2207410 '__VERIFIER_atomic_end' 'void ()'
+|   |-CallExpr 0x556dd2261ea0 <line:725:3, col:27> 'void'
+|   | `-ImplicitCastExpr 0x556dd2261e88 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x556dd2261e68 <col:3> 'void ()' Function 0x556dd2207350 '__VERIFIER_atomic_begin' 'void ()'
+|   |-CallExpr 0x556dd2261ef8 <line:726:3, col:25> 'void'
+|   | `-ImplicitCastExpr 0x556dd2261ee0 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x556dd2261ec0 <col:3> 'void ()' Function 0x556dd2207410 '__VERIFIER_atomic_end' 'void ()'
+|   |-CallExpr 0x556dd2261f50 <line:727:3, col:27> 'void'
+|   | `-ImplicitCastExpr 0x556dd2261f38 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x556dd2261f18 <col:3> 'void ()' Function 0x556dd2207350 '__VERIFIER_atomic_begin' 'void ()'
+|   |-BinaryOperator 0x556dd2262018 <line:728:3, col:41> 'int' '='
+|   | |-DeclRefExpr 0x556dd2261f80 <col:3> 'int' lvalue Var 0x556dd2260590 '__unbuffered_cnt' 'int'
+|   | `-BinaryOperator 0x556dd2261ff8 <col:22, col:41> 'int' '+'
+|   |   |-ImplicitCastExpr 0x556dd2261fe0 <col:22> 'int' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x556dd2261fa0 <col:22> 'int' lvalue Var 0x556dd2260590 '__unbuffered_cnt' 'int'
+|   |   `-IntegerLiteral 0x556dd2261fc0 <col:41> 'int' 1
+|   |-CallExpr 0x556dd2262070 <line:729:3, col:25> 'void'
+|   | `-ImplicitCastExpr 0x556dd2262058 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x556dd2262038 <col:3> 'void ()' Function 0x556dd2207410 '__VERIFIER_atomic_end' 'void ()'
+|   `-ReturnStmt 0x556dd22620e8 <line:730:3, col:36>
+|     `-CallExpr 0x556dd22620c8 <col:10, col:36> 'void *'
+|       `-ImplicitCastExpr 0x556dd22620b0 <col:10> 'void *(*)(void)' <FunctionToPointerDecay>
+|         `-DeclRefExpr 0x556dd2262090 <col:10> 'void *(void)' Function 0x556dd2206e68 '__VERIFIER_nondet_pointer' 'void *(void)'
+|-FunctionDecl 0x556dd2262188 prev 0x556dd22602d8 <line:732:1, line:734:1> line:732:6 fence 'void ()'
+| `-CompoundStmt 0x556dd2262228 <line:733:1, line:734:1>
+|-FunctionDecl 0x556dd2262258 prev 0x556dd2260398 <line:735:1, line:737:1> line:735:6 isync 'void ()'
+| `-CompoundStmt 0x556dd22622f8 <line:736:1, line:737:1>
+|-FunctionDecl 0x556dd2262328 prev 0x556dd2260458 <line:738:1, line:740:1> line:738:6 lwfence 'void ()'
+| `-CompoundStmt 0x556dd22623c8 <line:739:1, line:740:1>
+`-FunctionDecl 0x556dd2262438 <line:741:1, line:760:1> line:741:5 main 'int ()'
+  `-CompoundStmt 0x556dd2263480 <line:742:1, line:760:1>
+    |-DeclStmt 0x556dd2262550 <line:743:3, col:18>
+    | `-VarDecl 0x556dd22624e8 <col:3, col:13> col:13 used t2380 'pthread_t':'unsigned long'
+    |-CallExpr 0x556dd2262758 <line:744:3, col:54> 'int'
+    | |-ImplicitCastExpr 0x556dd2262740 <col:3> 'int (*)(pthread_t *restrict, const pthread_attr_t *restrict, void *(*)(void *), void *restrict)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x556dd2262568 <col:3> 'int (pthread_t *restrict, const pthread_attr_t *restrict, void *(*)(void *), void *restrict)' Function 0x556dd22478f8 'pthread_create' 'int (pthread_t *restrict, const pthread_attr_t *restrict, void *(*)(void *), void *restrict)'
+    | |-UnaryOperator 0x556dd22625a8 <col:18, col:19> 'pthread_t *' prefix '&' cannot overflow
+    | | `-DeclRefExpr 0x556dd2262588 <col:19> 'pthread_t':'unsigned long' lvalue Var 0x556dd22624e8 't2380' 'pthread_t':'unsigned long'
+    | |-ImplicitCastExpr 0x556dd2262798 <col:26, col:36> 'const pthread_attr_t *' <NullToPointer>
+    | | `-ParenExpr 0x556dd2262620 <col:26, col:36> 'void *'
+    | |   `-CStyleCastExpr 0x556dd22625f8 <col:27, col:35> 'void *' <NullToPointer>
+    | |     `-IntegerLiteral 0x556dd22625c0 <col:35> 'int' 0
+    | |-ImplicitCastExpr 0x556dd22627b0 <col:39> 'void *(*)(void *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x556dd2262640 <col:39> 'void *(void *)' Function 0x556dd2260d58 'P0' 'void *(void *)'
+    | `-ParenExpr 0x556dd22626c0 <col:43, col:53> 'void *'
+    |   `-CStyleCastExpr 0x556dd2262698 <col:44, col:52> 'void *' <NullToPointer>
+    |     `-IntegerLiteral 0x556dd2262660 <col:52> 'int' 0
+    |-DeclStmt 0x556dd2262840 <line:745:3, col:18>
+    | `-VarDecl 0x556dd22627d8 <col:3, col:13> col:13 used t2381 'pthread_t':'unsigned long'
+    |-CallExpr 0x556dd22629e8 <line:746:3, col:54> 'int'
+    | |-ImplicitCastExpr 0x556dd22629d0 <col:3> 'int (*)(pthread_t *restrict, const pthread_attr_t *restrict, void *(*)(void *), void *restrict)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x556dd2262858 <col:3> 'int (pthread_t *restrict, const pthread_attr_t *restrict, void *(*)(void *), void *restrict)' Function 0x556dd22478f8 'pthread_create' 'int (pthread_t *restrict, const pthread_attr_t *restrict, void *(*)(void *), void *restrict)'
+    | |-UnaryOperator 0x556dd2262898 <col:18, col:19> 'pthread_t *' prefix '&' cannot overflow
+    | | `-DeclRefExpr 0x556dd2262878 <col:19> 'pthread_t':'unsigned long' lvalue Var 0x556dd22627d8 't2381' 'pthread_t':'unsigned long'
+    | |-ImplicitCastExpr 0x556dd2262a28 <col:26, col:36> 'const pthread_attr_t *' <NullToPointer>
+    | | `-ParenExpr 0x556dd2262910 <col:26, col:36> 'void *'
+    | |   `-CStyleCastExpr 0x556dd22628e8 <col:27, col:35> 'void *' <NullToPointer>
+    | |     `-IntegerLiteral 0x556dd22628b0 <col:35> 'int' 0
+    | |-ImplicitCastExpr 0x556dd2262a40 <col:39> 'void *(*)(void *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x556dd2262930 <col:39> 'void *(void *)' Function 0x556dd2261508 'P1' 'void *(void *)'
+    | `-ParenExpr 0x556dd22629b0 <col:43, col:53> 'void *'
+    |   `-CStyleCastExpr 0x556dd2262988 <col:44, col:52> 'void *' <NullToPointer>
+    |     `-IntegerLiteral 0x556dd2262950 <col:52> 'int' 0
+    |-DeclStmt 0x556dd2262ad0 <line:747:3, col:18>
+    | `-VarDecl 0x556dd2262a68 <col:3, col:13> col:13 used t2382 'pthread_t':'unsigned long'
+    |-CallExpr 0x556dd2262c78 <line:748:3, col:54> 'int'
+    | |-ImplicitCastExpr 0x556dd2262c60 <col:3> 'int (*)(pthread_t *restrict, const pthread_attr_t *restrict, void *(*)(void *), void *restrict)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x556dd2262ae8 <col:3> 'int (pthread_t *restrict, const pthread_attr_t *restrict, void *(*)(void *), void *restrict)' Function 0x556dd22478f8 'pthread_create' 'int (pthread_t *restrict, const pthread_attr_t *restrict, void *(*)(void *), void *restrict)'
+    | |-UnaryOperator 0x556dd2262b28 <col:18, col:19> 'pthread_t *' prefix '&' cannot overflow
+    | | `-DeclRefExpr 0x556dd2262b08 <col:19> 'pthread_t':'unsigned long' lvalue Var 0x556dd2262a68 't2382' 'pthread_t':'unsigned long'
+    | |-ImplicitCastExpr 0x556dd2262cb8 <col:26, col:36> 'const pthread_attr_t *' <NullToPointer>
+    | | `-ParenExpr 0x556dd2262ba0 <col:26, col:36> 'void *'
+    | |   `-CStyleCastExpr 0x556dd2262b78 <col:27, col:35> 'void *' <NullToPointer>
+    | |     `-IntegerLiteral 0x556dd2262b40 <col:35> 'int' 0
+    | |-ImplicitCastExpr 0x556dd2262cd0 <col:39> 'void *(*)(void *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x556dd2262bc0 <col:39> 'void *(void *)' Function 0x556dd2261b70 'P2' 'void *(void *)'
+    | `-ParenExpr 0x556dd2262c40 <col:43, col:53> 'void *'
+    |   `-CStyleCastExpr 0x556dd2262c18 <col:44, col:52> 'void *' <NullToPointer>
+    |     `-IntegerLiteral 0x556dd2262be0 <col:52> 'int' 0
+    |-CallExpr 0x556dd2262d20 <line:749:3, col:27> 'void'
+    | `-ImplicitCastExpr 0x556dd2262d08 <col:3> 'void (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x556dd2262ce8 <col:3> 'void ()' Function 0x556dd2207350 '__VERIFIER_atomic_begin' 'void ()'
+    |-BinaryOperator 0x556dd2262df0 <line:750:3, col:41> '_Bool' '='
+    | |-DeclRefExpr 0x556dd2262d40 <col:3> '_Bool' lvalue Var 0x556dd2260988 'main$tmp_guard0' '_Bool'
+    | `-ImplicitCastExpr 0x556dd2262dd8 <col:21, col:41> '_Bool' <IntegralToBoolean>
+    |   `-BinaryOperator 0x556dd2262db8 <col:21, col:41> 'int' '=='
+    |     |-ImplicitCastExpr 0x556dd2262da0 <col:21> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x556dd2262d60 <col:21> 'int' lvalue Var 0x556dd2260590 '__unbuffered_cnt' 'int'
+    |     `-IntegerLiteral 0x556dd2262d80 <col:41> 'int' 3
+    |-CallExpr 0x556dd2262e48 <line:751:3, col:25> 'void'
+    | `-ImplicitCastExpr 0x556dd2262e30 <col:3> 'void (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x556dd2262e10 <col:3> 'void ()' Function 0x556dd2207410 '__VERIFIER_atomic_end' 'void ()'
+    |-CallExpr 0x556dd2262ef8 <line:752:3, col:36> 'void'
+    | |-ImplicitCastExpr 0x556dd2262ee0 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x556dd2262e68 <col:3> 'void (int)' Function 0x556dd2206ca0 '__VERIFIER_assume' 'void (int)'
+    | `-ImplicitCastExpr 0x556dd2262f38 <col:21> 'int' <IntegralCast>
+    |   `-ImplicitCastExpr 0x556dd2262f20 <col:21> '_Bool' <LValueToRValue>
+    |     `-DeclRefExpr 0x556dd2262e88 <col:21> '_Bool' lvalue Var 0x556dd2260988 'main$tmp_guard0' '_Bool'
+    |-CallExpr 0x556dd2262fa8 <line:753:3, col:27> 'void'
+    | `-ImplicitCastExpr 0x556dd2262f90 <col:3> 'void (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x556dd2262f50 <col:3> 'void ()' Function 0x556dd2207350 '__VERIFIER_atomic_begin' 'void ()'
+    |-CallExpr 0x556dd2263000 <line:754:3, col:25> 'void'
+    | `-ImplicitCastExpr 0x556dd2262fe8 <col:3> 'void (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x556dd2262fc8 <col:3> 'void ()' Function 0x556dd2207410 '__VERIFIER_atomic_end' 'void ()'
+    |-CallExpr 0x556dd2263058 <line:755:3, col:27> 'void'
+    | `-ImplicitCastExpr 0x556dd2263040 <col:3> 'void (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x556dd2263020 <col:3> 'void ()' Function 0x556dd2207350 '__VERIFIER_atomic_begin' 'void ()'
+    |-BinaryOperator 0x556dd2263328 <line:756:3, col:113> '_Bool' '='
+    | |-DeclRefExpr 0x556dd2263078 <col:3> '_Bool' lvalue Var 0x556dd2260a00 'main$tmp_guard1' '_Bool'
+    | `-ImplicitCastExpr 0x556dd2263310 <col:21, col:113> '_Bool' <IntegralToBoolean>
+    |   `-UnaryOperator 0x556dd22632f8 <col:21, col:113> 'int' prefix '!' cannot overflow
+    |     `-ParenExpr 0x556dd22632d8 <col:22, col:113> 'int'
+    |       `-BinaryOperator 0x556dd22632b8 <col:23, col:112> 'int' '&&'
+    |         |-BinaryOperator 0x556dd2263220 <col:23, col:84> 'int' '&&'
+    |         | |-BinaryOperator 0x556dd2263188 <col:23, col:56> 'int' '&&'
+    |         | | |-BinaryOperator 0x556dd22630f0 <col:23, col:28> 'int' '=='
+    |         | | | |-ImplicitCastExpr 0x556dd22630d8 <col:23> 'int' <LValueToRValue>
+    |         | | | | `-DeclRefExpr 0x556dd2263098 <col:23> 'int' lvalue Var 0x556dd2260b00 'x' 'int'
+    |         | | | `-IntegerLiteral 0x556dd22630b8 <col:28> 'int' 2
+    |         | | `-BinaryOperator 0x556dd2263168 <col:33, col:56> 'int' '=='
+    |         | |   |-ImplicitCastExpr 0x556dd2263150 <col:33> 'int' <LValueToRValue>
+    |         | |   | `-DeclRefExpr 0x556dd2263110 <col:33> 'int' lvalue Var 0x556dd22606b0 '__unbuffered_p0_EAX' 'int'
+    |         | |   `-IntegerLiteral 0x556dd2263130 <col:56> 'int' 0
+    |         | `-BinaryOperator 0x556dd2263200 <col:61, col:84> 'int' '=='
+    |         |   |-ImplicitCastExpr 0x556dd22631e8 <col:61> 'int' <LValueToRValue>
+    |         |   | `-DeclRefExpr 0x556dd22631a8 <col:61> 'int' lvalue Var 0x556dd22607d0 '__unbuffered_p2_EAX' 'int'
+    |         |   `-IntegerLiteral 0x556dd22631c8 <col:84> 'int' 2
+    |         `-BinaryOperator 0x556dd2263298 <col:89, col:112> 'int' '=='
+    |           |-ImplicitCastExpr 0x556dd2263280 <col:89> 'int' <LValueToRValue>
+    |           | `-DeclRefExpr 0x556dd2263240 <col:89> 'int' lvalue Var 0x556dd22608f0 '__unbuffered_p2_EBX' 'int'
+    |           `-IntegerLiteral 0x556dd2263260 <col:112> 'int' 0
+    |-CallExpr 0x556dd2263380 <line:757:3, col:25> 'void'
+    | `-ImplicitCastExpr 0x556dd2263368 <col:3> 'void (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x556dd2263348 <col:3> 'void ()' Function 0x556dd2207410 '__VERIFIER_atomic_end' 'void ()'
+    |-CallExpr 0x556dd22633f8 <line:758:3, col:36> 'void'
+    | |-ImplicitCastExpr 0x556dd22633e0 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x556dd22633a0 <col:3> 'void (int)' Function 0x556dd22070d8 '__VERIFIER_assert' 'void (int)'
+    | `-ImplicitCastExpr 0x556dd2263438 <col:21> 'int' <IntegralCast>
+    |   `-ImplicitCastExpr 0x556dd2263420 <col:21> '_Bool' <LValueToRValue>
+    |     `-DeclRefExpr 0x556dd22633c0 <col:21> '_Bool' lvalue Var 0x556dd2260a00 'main$tmp_guard1' '_Bool'
+    `-ReturnStmt 0x556dd2263470 <line:759:3, col:10>
+      `-IntegerLiteral 0x556dd2263450 <col:10> 'int' 0

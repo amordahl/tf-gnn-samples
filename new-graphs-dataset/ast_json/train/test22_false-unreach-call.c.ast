@@ -1,0 +1,163 @@
+TranslationUnitDecl 0x5594f7b654d8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x5594f7b65d98 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x5594f7b65a70 '__int128'
+|-TypedefDecl 0x5594f7b65e08 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x5594f7b65a90 'unsigned __int128'
+|-TypedefDecl 0x5594f7b66110 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x5594f7b65ee0 'struct __NSConstantString_tag'
+|   `-Record 0x5594f7b65e60 '__NSConstantString_tag'
+|-TypedefDecl 0x5594f7b661b8 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x5594f7b66170 'char *'
+|   `-BuiltinType 0x5594f7b65570 'char'
+|-TypedefDecl 0x5594f7ba54d0 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x5594f7b66450 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x5594f7b66290 'struct __va_list_tag'
+|     `-Record 0x5594f7b66210 '__va_list_tag'
+|-FunctionDecl 0x5594f7ba55b0 <ldv-regression/test22_false-unreach-call.c:1:1, col:61> col:13 used __VERIFIER_error 'void () __attribute__((noreturn))' extern
+|-FunctionDecl 0x5594f7ba5768 <line:2:1, col:38> col:12 used __VERIFIER_nondet_int 'int (void)' extern
+|-FunctionDecl 0x5594f7ba58d0 <line:3:1, col:41> col:14 used __VERIFIER_nondet_bool '_Bool (void)' extern
+|-RecordDecl 0x5594f7ba5970 <line:5:1, line:7:1> line:5:8 struct dummy definition
+| |-FieldDecl 0x5594f7ba5a30 <line:6:3, col:7> col:7 referenced a 'int'
+| `-FieldDecl 0x5594f7ba5a98 <col:3, col:10> col:10 referenced b 'int'
+|-VarDecl 0x5594f7ba5b48 <line:9:1, col:14> col:14 used d1 'struct dummy':'struct dummy'
+|-VarDecl 0x5594f7ba5bd0 <col:1, col:18> col:18 used d2 'struct dummy':'struct dummy'
+|-FunctionDecl 0x5594f7ba5c70 <line:11:1, line:18:1> line:11:6 used init 'void ()'
+| `-CompoundStmt 0x5594f7ba60b8 <line:12:1, line:18:1>
+|   |-BinaryOperator 0x5594f7ba5de8 <line:13:3, col:32> 'int' '='
+|   | |-MemberExpr 0x5594f7ba5d30 <col:3, col:6> 'int' lvalue .a 0x5594f7ba5a30
+|   | | `-DeclRefExpr 0x5594f7ba5d10 <col:3> 'struct dummy':'struct dummy' lvalue Var 0x5594f7ba5b48 'd1' 'struct dummy':'struct dummy'
+|   | `-CallExpr 0x5594f7ba5dc8 <col:10, col:32> 'int'
+|   |   `-ImplicitCastExpr 0x5594f7ba5db0 <col:10> 'int (*)(void)' <FunctionToPointerDecay>
+|   |     `-DeclRefExpr 0x5594f7ba5d60 <col:10> 'int (void)' Function 0x5594f7ba5768 '__VERIFIER_nondet_int' 'int (void)'
+|   |-BinaryOperator 0x5594f7ba5f08 <line:14:3, col:32> 'int' '='
+|   | |-MemberExpr 0x5594f7ba5e80 <col:3, col:6> 'int' lvalue .b 0x5594f7ba5a98
+|   | | `-DeclRefExpr 0x5594f7ba5e60 <col:3> 'struct dummy':'struct dummy' lvalue Var 0x5594f7ba5b48 'd1' 'struct dummy':'struct dummy'
+|   | `-CallExpr 0x5594f7ba5ee8 <col:10, col:32> 'int'
+|   |   `-ImplicitCastExpr 0x5594f7ba5ed0 <col:10> 'int (*)(void)' <FunctionToPointerDecay>
+|   |     `-DeclRefExpr 0x5594f7ba5eb0 <col:10> 'int (void)' Function 0x5594f7ba5768 '__VERIFIER_nondet_int' 'int (void)'
+|   |-BinaryOperator 0x5594f7ba5fd0 <line:16:3, col:32> 'int' '='
+|   | |-MemberExpr 0x5594f7ba5f48 <col:3, col:6> 'int' lvalue .a 0x5594f7ba5a30
+|   | | `-DeclRefExpr 0x5594f7ba5f28 <col:3> 'struct dummy':'struct dummy' lvalue Var 0x5594f7ba5bd0 'd2' 'struct dummy':'struct dummy'
+|   | `-CallExpr 0x5594f7ba5fb0 <col:10, col:32> 'int'
+|   |   `-ImplicitCastExpr 0x5594f7ba5f98 <col:10> 'int (*)(void)' <FunctionToPointerDecay>
+|   |     `-DeclRefExpr 0x5594f7ba5f78 <col:10> 'int (void)' Function 0x5594f7ba5768 '__VERIFIER_nondet_int' 'int (void)'
+|   `-BinaryOperator 0x5594f7ba6098 <line:17:3, col:32> 'int' '='
+|     |-MemberExpr 0x5594f7ba6010 <col:3, col:6> 'int' lvalue .b 0x5594f7ba5a98
+|     | `-DeclRefExpr 0x5594f7ba5ff0 <col:3> 'struct dummy':'struct dummy' lvalue Var 0x5594f7ba5bd0 'd2' 'struct dummy':'struct dummy'
+|     `-CallExpr 0x5594f7ba6078 <col:10, col:32> 'int'
+|       `-ImplicitCastExpr 0x5594f7ba6060 <col:10> 'int (*)(void)' <FunctionToPointerDecay>
+|         `-DeclRefExpr 0x5594f7ba6040 <col:10> 'int (void)' Function 0x5594f7ba5768 '__VERIFIER_nondet_int' 'int (void)'
+|-FunctionDecl 0x5594f7ba61e8 <line:20:1, line:23:1> line:20:15 used get_dummy 'struct dummy *()'
+| `-CompoundStmt 0x5594f7bca690 <line:21:1, line:23:1>
+|   `-ReturnStmt 0x5594f7ba64b8 <line:22:3, col:47>
+|     `-ParenExpr 0x5594f7ba6498 <col:10, col:47> 'struct dummy *'
+|       `-ConditionalOperator 0x5594f7ba6468 <col:11, col:45> 'struct dummy *'
+|         |-ImplicitCastExpr 0x5594f7ba6388 <col:11, col:34> 'int' <IntegralCast>
+|         | `-CallExpr 0x5594f7ba62f8 <col:11, col:34> '_Bool'
+|         |   `-ImplicitCastExpr 0x5594f7ba62e0 <col:11> '_Bool (*)(void)' <FunctionToPointerDecay>
+|         |     `-DeclRefExpr 0x5594f7ba6288 <col:11> '_Bool (void)' Function 0x5594f7ba58d0 '__VERIFIER_nondet_bool' '_Bool (void)'
+|         |-UnaryOperator 0x5594f7ba6338 <col:38, col:39> 'struct dummy *' prefix '&' cannot overflow
+|         | `-DeclRefExpr 0x5594f7ba6318 <col:39> 'struct dummy':'struct dummy' lvalue Var 0x5594f7ba5b48 'd1' 'struct dummy':'struct dummy'
+|         `-UnaryOperator 0x5594f7ba6370 <col:44, col:45> 'struct dummy *' prefix '&' cannot overflow
+|           `-DeclRefExpr 0x5594f7ba6350 <col:45> 'struct dummy':'struct dummy' lvalue Var 0x5594f7ba5bd0 'd2' 'struct dummy':'struct dummy'
+|-FunctionDecl 0x5594f7bca878 <line:25:1, line:28:1> line:25:5 used check 'int (struct dummy *, int)'
+| |-ParmVarDecl 0x5594f7bca6d0 <col:11, col:25> col:25 used s1 'struct dummy *'
+| |-ParmVarDecl 0x5594f7bca750 <col:29, col:33> col:33 used i 'int'
+| `-CompoundStmt 0x5594f7bcaa10 <line:26:1, line:28:1>
+|   `-ReturnStmt 0x5594f7bcaa00 <line:27:3, col:19>
+|     `-BinaryOperator 0x5594f7bca9e0 <col:10, col:19> 'int' '=='
+|       |-ImplicitCastExpr 0x5594f7bca9b0 <col:10, col:14> 'int' <LValueToRValue>
+|       | `-MemberExpr 0x5594f7bca960 <col:10, col:14> 'int' lvalue ->a 0x5594f7ba5a30
+|       |   `-ImplicitCastExpr 0x5594f7bca948 <col:10> 'struct dummy *' <LValueToRValue>
+|       |     `-DeclRefExpr 0x5594f7bca928 <col:10> 'struct dummy *' lvalue ParmVar 0x5594f7bca6d0 's1' 'struct dummy *'
+|       `-ImplicitCastExpr 0x5594f7bca9c8 <col:19> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x5594f7bca990 <col:19> 'int' lvalue ParmVar 0x5594f7bca750 'i' 'int'
+`-FunctionDecl 0x5594f7bcaa88 <line:30:1, line:50:1> line:30:5 main 'int ()'
+  `-CompoundStmt 0x5594f7bcc040 <line:31:1, line:50:1>
+    |-CallExpr 0x5594f7bcab98 <line:32:3, col:8> 'void'
+    | `-ImplicitCastExpr 0x5594f7bcab80 <col:3> 'void (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x5594f7bcab28 <col:3> 'void ()' Function 0x5594f7ba5c70 'init' 'void ()'
+    |-DeclStmt 0x5594f7bcaef8 <line:33:3, col:74>
+    | |-VarDecl 0x5594f7bcabe0 <col:3, col:33> col:17 used pd1 'struct dummy *' cinit
+    | | `-CallExpr 0x5594f7bcace8 <col:23, col:33> 'struct dummy *'
+    | |   `-ImplicitCastExpr 0x5594f7bcacd0 <col:23> 'struct dummy *(*)()' <FunctionToPointerDecay>
+    | |     `-DeclRefExpr 0x5594f7bcac48 <col:23> 'struct dummy *()' Function 0x5594f7ba61e8 'get_dummy' 'struct dummy *()'
+    | |-VarDecl 0x5594f7bcad30 <col:3, col:53> col:37 used pd2 'struct dummy *' cinit
+    | | `-CallExpr 0x5594f7bcadd0 <col:43, col:53> 'struct dummy *'
+    | |   `-ImplicitCastExpr 0x5594f7bcadb8 <col:43> 'struct dummy *(*)()' <FunctionToPointerDecay>
+    | |     `-DeclRefExpr 0x5594f7bcad98 <col:43> 'struct dummy *()' Function 0x5594f7ba61e8 'get_dummy' 'struct dummy *()'
+    | `-VarDecl 0x5594f7bcae18 <col:3, col:73> col:57 used pd3 'struct dummy *' cinit
+    |   `-CallExpr 0x5594f7bcaeb8 <col:63, col:73> 'struct dummy *'
+    |     `-ImplicitCastExpr 0x5594f7bcaea0 <col:63> 'struct dummy *(*)()' <FunctionToPointerDecay>
+    |       `-DeclRefExpr 0x5594f7bcae80 <col:63> 'struct dummy *()' Function 0x5594f7ba61e8 'get_dummy' 'struct dummy *()'
+    |-DeclStmt 0x5594f7bcafe8 <line:34:3, col:34>
+    | `-VarDecl 0x5594f7bcaf28 <col:3, col:33> col:7 used i 'int' cinit
+    |   `-CallExpr 0x5594f7bcafc8 <col:11, col:33> 'int'
+    |     `-ImplicitCastExpr 0x5594f7bcafb0 <col:11> 'int (*)(void)' <FunctionToPointerDecay>
+    |       `-DeclRefExpr 0x5594f7bcaf90 <col:11> 'int (void)' Function 0x5594f7ba5768 '__VERIFIER_nondet_int' 'int (void)'
+    |-IfStmt 0x5594f7bcbf28 <line:35:3, line:44:3>
+    | |-BinaryOperator 0x5594f7bcb268 <line:35:7, col:44> 'int' '&&'
+    | | |-BinaryOperator 0x5594f7bcb120 <col:7, col:26> 'int' '&&'
+    | | | |-BinaryOperator 0x5594f7bcb070 <col:7, col:14> 'int' '!='
+    | | | | |-ImplicitCastExpr 0x5594f7bcb040 <col:7> 'struct dummy *' <LValueToRValue>
+    | | | | | `-DeclRefExpr 0x5594f7bcb000 <col:7> 'struct dummy *' lvalue Var 0x5594f7bcabe0 'pd1' 'struct dummy *'
+    | | | | `-ImplicitCastExpr 0x5594f7bcb058 <col:14> 'struct dummy *' <NullToPointer>
+    | | | |   `-IntegerLiteral 0x5594f7bcb020 <col:14> 'int' 0
+    | | | `-BinaryOperator 0x5594f7bcb100 <col:19, col:26> 'int' '=='
+    | | |   |-ImplicitCastExpr 0x5594f7bcb0d0 <col:19> 'struct dummy *' <LValueToRValue>
+    | | |   | `-DeclRefExpr 0x5594f7bcb090 <col:19> 'struct dummy *' lvalue Var 0x5594f7bcabe0 'pd1' 'struct dummy *'
+    | | |   `-ImplicitCastExpr 0x5594f7bcb0e8 <col:26> 'struct dummy *' <LValueToRValue>
+    | | |     `-DeclRefExpr 0x5594f7bcb0b0 <col:26> 'struct dummy *' lvalue Var 0x5594f7bcad30 'pd2' 'struct dummy *'
+    | | `-BinaryOperator 0x5594f7bcb248 <col:33, col:44> 'int' '>'
+    | |   |-ImplicitCastExpr 0x5594f7bcb230 <col:33, col:40> 'int' <LValueToRValue>
+    | |   | `-MemberExpr 0x5594f7bcb1e0 <col:33, col:40> 'int' lvalue .a 0x5594f7ba5a30
+    | |   |   `-ParenExpr 0x5594f7bcb1c0 <col:33, col:38> 'struct dummy':'struct dummy' lvalue
+    | |   |     `-UnaryOperator 0x5594f7bcb1a8 <col:34, col:35> 'struct dummy':'struct dummy' lvalue prefix '*' cannot overflow
+    | |   |       `-ImplicitCastExpr 0x5594f7bcb190 <col:35> 'struct dummy *' <LValueToRValue>
+    | |   |         `-DeclRefExpr 0x5594f7bcb170 <col:35> 'struct dummy *' lvalue Var 0x5594f7bcad30 'pd2' 'struct dummy *'
+    | |   `-IntegerLiteral 0x5594f7bcb210 <col:44> 'int' 0
+    | `-CompoundStmt 0x5594f7bcbef8 <col:47, line:44:3>
+    |   |-DeclStmt 0x5594f7bcb3c0 <line:36:5, col:22>
+    |   | `-VarDecl 0x5594f7bcb2d8 <col:5, col:21> col:10 used pa 'int *' cinit
+    |   |   `-UnaryOperator 0x5594f7bcb3a8 <col:15, col:21> 'int *' prefix '&' cannot overflow
+    |   |     `-MemberExpr 0x5594f7bcb378 <col:16, col:21> 'int' lvalue ->a 0x5594f7ba5a30
+    |   |       `-ImplicitCastExpr 0x5594f7bcb360 <col:16> 'struct dummy *' <LValueToRValue>
+    |   |         `-DeclRefExpr 0x5594f7bcb340 <col:16> 'struct dummy *' lvalue Var 0x5594f7bcabe0 'pd1' 'struct dummy *'
+    |   |-BinaryOperator 0x5594f7bcb4b8 <line:37:5, col:18> 'int' '='
+    |   | |-DeclRefExpr 0x5594f7bcb3d8 <col:5> 'int' lvalue Var 0x5594f7bcaf28 'i' 'int'
+    |   | `-BinaryOperator 0x5594f7bcb498 <col:9, col:18> 'int' '-'
+    |   |   |-ImplicitCastExpr 0x5594f7bcb480 <col:9, col:14> 'int' <LValueToRValue>
+    |   |   | `-MemberExpr 0x5594f7bcb430 <col:9, col:14> 'int' lvalue ->a 0x5594f7ba5a30
+    |   |   |   `-ImplicitCastExpr 0x5594f7bcb418 <col:9> 'struct dummy *' <LValueToRValue>
+    |   |   |     `-DeclRefExpr 0x5594f7bcb3f8 <col:9> 'struct dummy *' lvalue Var 0x5594f7bcae18 'pd3' 'struct dummy *'
+    |   |   `-IntegerLiteral 0x5594f7bcb460 <col:18> 'int' 10
+    |   |-WhileStmt 0x5594f7bcb5e8 <line:38:5, line:40:5>
+    |   | |-BinaryOperator 0x5594f7bcb578 <line:38:12, col:17> 'int' '<'
+    |   | | |-ImplicitCastExpr 0x5594f7bcb548 <col:12> 'int' <LValueToRValue>
+    |   | | | `-DeclRefExpr 0x5594f7bcb4d8 <col:12> 'int' lvalue Var 0x5594f7bcaf28 'i' 'int'
+    |   | | `-ImplicitCastExpr 0x5594f7bcb560 <col:16, col:17> 'int' <LValueToRValue>
+    |   | |   `-UnaryOperator 0x5594f7bcb530 <col:16, col:17> 'int' lvalue prefix '*' cannot overflow
+    |   | |     `-ImplicitCastExpr 0x5594f7bcb518 <col:17> 'int *' <LValueToRValue>
+    |   | |       `-DeclRefExpr 0x5594f7bcb4f8 <col:17> 'int *' lvalue Var 0x5594f7bcb2d8 'pa' 'int *'
+    |   | `-CompoundStmt 0x5594f7bcb5d0 <col:21, line:40:5>
+    |   |   `-UnaryOperator 0x5594f7bcb5b8 <line:39:7, col:9> 'int' prefix '++'
+    |   |     `-DeclRefExpr 0x5594f7bcb598 <col:9> 'int' lvalue Var 0x5594f7bcaf28 'i' 'int'
+    |   `-IfStmt 0x5594f7bcbee0 <line:41:5, line:43:5>
+    |     |-UnaryOperator 0x5594f7bcbe48 <line:41:9, col:22> 'int' prefix '!' cannot overflow
+    |     | `-CallExpr 0x5594f7bcbde8 <col:10, col:22> 'int'
+    |     |   |-ImplicitCastExpr 0x5594f7bcbdd0 <col:10> 'int (*)(struct dummy *, int)' <FunctionToPointerDecay>
+    |     |   | `-DeclRefExpr 0x5594f7bcb600 <col:10> 'int (struct dummy *, int)' Function 0x5594f7bca878 'check' 'int (struct dummy *, int)'
+    |     |   |-ImplicitCastExpr 0x5594f7bcbe18 <col:16> 'struct dummy *' <LValueToRValue>
+    |     |   | `-DeclRefExpr 0x5594f7bcb620 <col:16> 'struct dummy *' lvalue Var 0x5594f7bcad30 'pd2' 'struct dummy *'
+    |     |   `-ImplicitCastExpr 0x5594f7bcbe30 <col:21> 'int' <LValueToRValue>
+    |     |     `-DeclRefExpr 0x5594f7bcb640 <col:21> 'int' lvalue Var 0x5594f7bcaf28 'i' 'int'
+    |     `-CompoundStmt 0x5594f7bcbec8 <col:25, line:43:5>
+    |       `-GotoStmt 0x5594f7bcbeb0 <line:42:7, col:12> 'ERROR' 0x5594f7bcbe60
+    |-ReturnStmt 0x5594f7bcbf60 <line:46:3, col:10>
+    | `-IntegerLiteral 0x5594f7bcbf40 <col:10> 'int' 0
+    |-LabelStmt 0x5594f7bcbff8 <line:48:3, col:27> 'ERROR'
+    | `-CallExpr 0x5594f7bcbfd8 <col:10, col:27> 'void'
+    |   `-ImplicitCastExpr 0x5594f7bcbfc0 <col:10> 'void (*)() __attribute__((noreturn))' <FunctionToPointerDecay>
+    |     `-DeclRefExpr 0x5594f7bcbf70 <col:10> 'void () __attribute__((noreturn))' Function 0x5594f7ba55b0 '__VERIFIER_error' 'void () __attribute__((noreturn))'
+    `-ReturnStmt 0x5594f7bcc030 <line:49:3, col:10>
+      `-IntegerLiteral 0x5594f7bcc010 <col:10> 'int' 1

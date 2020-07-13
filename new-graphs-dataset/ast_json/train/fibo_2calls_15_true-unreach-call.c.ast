@@ -1,0 +1,117 @@
+TranslationUnitDecl 0x55561d6cd4d8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x55561d6cdd98 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x55561d6cda70 '__int128'
+|-TypedefDecl 0x55561d6cde08 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x55561d6cda90 'unsigned __int128'
+|-TypedefDecl 0x55561d6ce110 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x55561d6cdee0 'struct __NSConstantString_tag'
+|   `-Record 0x55561d6cde60 '__NSConstantString_tag'
+|-TypedefDecl 0x55561d6ce1b8 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x55561d6ce170 'char *'
+|   `-BuiltinType 0x55561d6cd570 'char'
+|-TypedefDecl 0x55561d70d470 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x55561d6ce450 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x55561d6ce290 'struct __va_list_tag'
+|     `-Record 0x55561d6ce210 '__va_list_tag'
+|-FunctionDecl 0x55561d70d528 <recursive-simple/fibo_2calls_15_true-unreach-call.c:1:1, col:34> col:12 __VERIFIER_nondet_int 'int ()' extern
+|-FunctionDecl 0x55561d70d660 <line:2:1, col:30> col:13 used __VERIFIER_error 'void ()' extern
+|-FunctionDecl 0x55561d70d7e8 <line:4:1, col:16> col:5 used fibo1 'int (int)'
+| `-ParmVarDecl 0x55561d70d718 <col:11, col:15> col:15 n 'int'
+|-FunctionDecl 0x55561d70d940 <line:5:1, col:16> col:5 used fibo2 'int (int)'
+| `-ParmVarDecl 0x55561d70d8a8 <col:11, col:15> col:15 n 'int'
+|-FunctionDecl 0x55561d70da98 prev 0x55561d70d7e8 <line:7:1, line:15:1> line:7:5 used fibo1 'int (int)'
+| |-ParmVarDecl 0x55561d70da00 <col:11, col:15> col:15 used n 'int'
+| `-CompoundStmt 0x55561d70df40 <col:18, line:15:1>
+|   `-IfStmt 0x55561d70df18 <line:8:5, line:14:5> has_else
+|     |-BinaryOperator 0x55561d70db98 <line:8:9, col:13> 'int' '<'
+|     | |-ImplicitCastExpr 0x55561d70db80 <col:9> 'int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x55561d70db40 <col:9> 'int' lvalue ParmVar 0x55561d70da00 'n' 'int'
+|     | `-IntegerLiteral 0x55561d70db60 <col:13> 'int' 1
+|     |-CompoundStmt 0x55561d70dbe8 <col:16, line:10:5>
+|     | `-ReturnStmt 0x55561d70dbd8 <line:9:9, col:16>
+|     |   `-IntegerLiteral 0x55561d70dbb8 <col:16> 'int' 0
+|     `-IfStmt 0x55561d70def0 <line:10:12, line:14:5> has_else
+|       |-BinaryOperator 0x55561d70dc58 <line:10:16, col:21> 'int' '=='
+|       | |-ImplicitCastExpr 0x55561d70dc40 <col:16> 'int' <LValueToRValue>
+|       | | `-DeclRefExpr 0x55561d70dc00 <col:16> 'int' lvalue ParmVar 0x55561d70da00 'n' 'int'
+|       | `-IntegerLiteral 0x55561d70dc20 <col:21> 'int' 1
+|       |-CompoundStmt 0x55561d70dca8 <col:24, line:12:5>
+|       | `-ReturnStmt 0x55561d70dc98 <line:11:9, col:16>
+|       |   `-IntegerLiteral 0x55561d70dc78 <col:16> 'int' 1
+|       `-CompoundStmt 0x55561d70ded8 <line:12:12, line:14:5>
+|         `-ReturnStmt 0x55561d70dec8 <line:13:9, col:38>
+|           `-BinaryOperator 0x55561d70dea8 <col:16, col:38> 'int' '+'
+|             |-CallExpr 0x55561d70dda8 <col:16, col:25> 'int'
+|             | |-ImplicitCastExpr 0x55561d70dd90 <col:16> 'int (*)(int)' <FunctionToPointerDecay>
+|             | | `-DeclRefExpr 0x55561d70dcc0 <col:16> 'int (int)' Function 0x55561d70d940 'fibo2' 'int (int)'
+|             | `-BinaryOperator 0x55561d70dd38 <col:22, col:24> 'int' '-'
+|             |   |-ImplicitCastExpr 0x55561d70dd20 <col:22> 'int' <LValueToRValue>
+|             |   | `-DeclRefExpr 0x55561d70dce0 <col:22> 'int' lvalue ParmVar 0x55561d70da00 'n' 'int'
+|             |   `-IntegerLiteral 0x55561d70dd00 <col:24> 'int' 1
+|             `-CallExpr 0x55561d70de80 <col:29, col:38> 'int'
+|               |-ImplicitCastExpr 0x55561d70de68 <col:29> 'int (*)(int)' <FunctionToPointerDecay>
+|               | `-DeclRefExpr 0x55561d70ddd0 <col:29> 'int (int)' Function 0x55561d70d940 'fibo2' 'int (int)'
+|               `-BinaryOperator 0x55561d70de48 <col:35, col:37> 'int' '-'
+|                 |-ImplicitCastExpr 0x55561d70de30 <col:35> 'int' <LValueToRValue>
+|                 | `-DeclRefExpr 0x55561d70ddf0 <col:35> 'int' lvalue ParmVar 0x55561d70da00 'n' 'int'
+|                 `-IntegerLiteral 0x55561d70de10 <col:37> 'int' 2
+|-FunctionDecl 0x55561d70e008 prev 0x55561d70d940 <line:17:1, line:25:1> line:17:5 used fibo2 'int (int)'
+| |-ParmVarDecl 0x55561d70df70 <col:11, col:15> col:15 used n 'int'
+| `-CompoundStmt 0x55561d7309b8 <col:18, line:25:1>
+|   `-IfStmt 0x55561d730990 <line:18:5, line:24:5> has_else
+|     |-BinaryOperator 0x55561d70e108 <line:18:9, col:13> 'int' '<'
+|     | |-ImplicitCastExpr 0x55561d70e0f0 <col:9> 'int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x55561d70e0b0 <col:9> 'int' lvalue ParmVar 0x55561d70df70 'n' 'int'
+|     | `-IntegerLiteral 0x55561d70e0d0 <col:13> 'int' 1
+|     |-CompoundStmt 0x55561d70e158 <col:16, line:20:5>
+|     | `-ReturnStmt 0x55561d70e148 <line:19:9, col:16>
+|     |   `-IntegerLiteral 0x55561d70e128 <col:16> 'int' 0
+|     `-IfStmt 0x55561d70e428 <line:20:12, line:24:5> has_else
+|       |-BinaryOperator 0x55561d70e1c8 <line:20:16, col:21> 'int' '=='
+|       | |-ImplicitCastExpr 0x55561d70e1b0 <col:16> 'int' <LValueToRValue>
+|       | | `-DeclRefExpr 0x55561d70e170 <col:16> 'int' lvalue ParmVar 0x55561d70df70 'n' 'int'
+|       | `-IntegerLiteral 0x55561d70e190 <col:21> 'int' 1
+|       |-CompoundStmt 0x55561d70e218 <col:24, line:22:5>
+|       | `-ReturnStmt 0x55561d70e208 <line:21:9, col:16>
+|       |   `-IntegerLiteral 0x55561d70e1e8 <col:16> 'int' 1
+|       `-CompoundStmt 0x55561d70e410 <line:22:12, line:24:5>
+|         `-ReturnStmt 0x55561d70e400 <line:23:9, col:38>
+|           `-BinaryOperator 0x55561d70e3e0 <col:16, col:38> 'int' '+'
+|             |-CallExpr 0x55561d70e2e0 <col:16, col:25> 'int'
+|             | |-ImplicitCastExpr 0x55561d70e2c8 <col:16> 'int (*)(int)' <FunctionToPointerDecay>
+|             | | `-DeclRefExpr 0x55561d70e230 <col:16> 'int (int)' Function 0x55561d70da98 'fibo1' 'int (int)'
+|             | `-BinaryOperator 0x55561d70e2a8 <col:22, col:24> 'int' '-'
+|             |   |-ImplicitCastExpr 0x55561d70e290 <col:22> 'int' <LValueToRValue>
+|             |   | `-DeclRefExpr 0x55561d70e250 <col:22> 'int' lvalue ParmVar 0x55561d70df70 'n' 'int'
+|             |   `-IntegerLiteral 0x55561d70e270 <col:24> 'int' 1
+|             `-CallExpr 0x55561d70e3b8 <col:29, col:38> 'int'
+|               |-ImplicitCastExpr 0x55561d70e3a0 <col:29> 'int (*)(int)' <FunctionToPointerDecay>
+|               | `-DeclRefExpr 0x55561d70e308 <col:29> 'int (int)' Function 0x55561d70da98 'fibo1' 'int (int)'
+|               `-BinaryOperator 0x55561d70e380 <col:35, col:37> 'int' '-'
+|                 |-ImplicitCastExpr 0x55561d70e368 <col:35> 'int' <LValueToRValue>
+|                 | `-DeclRefExpr 0x55561d70e328 <col:35> 'int' lvalue ParmVar 0x55561d70df70 'n' 'int'
+|                 `-IntegerLiteral 0x55561d70e348 <col:37> 'int' 2
+`-FunctionDecl 0x55561d730aa8 <line:35:1, line:42:1> line:35:5 main 'int (void)'
+  `-CompoundStmt 0x55561d730f30 <col:16, line:42:1>
+    |-DeclStmt 0x55561d730c20 <line:36:5, col:15>
+    | `-VarDecl 0x55561d730b98 <col:5, col:13> col:9 used x 'int' cinit
+    |   `-IntegerLiteral 0x55561d730c00 <col:13> 'int' 15
+    |-DeclStmt 0x55561d730d50 <line:37:5, col:26>
+    | `-VarDecl 0x55561d730c50 <col:5, col:25> col:9 used result 'int' cinit
+    |   `-CallExpr 0x55561d730d10 <col:18, col:25> 'int'
+    |     |-ImplicitCastExpr 0x55561d730cf8 <col:18> 'int (*)(int)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x55561d730cb8 <col:18> 'int (int)' Function 0x55561d70da98 'fibo1' 'int (int)'
+    |     `-ImplicitCastExpr 0x55561d730d38 <col:24> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x55561d730cd8 <col:24> 'int' lvalue Var 0x55561d730b98 'x' 'int'
+    |-IfStmt 0x55561d730ee8 <line:38:5, line:40:5>
+    | |-BinaryOperator 0x55561d730dc0 <line:38:9, col:19> 'int' '!='
+    | | |-ImplicitCastExpr 0x55561d730da8 <col:9> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x55561d730d68 <col:9> 'int' lvalue Var 0x55561d730c50 'result' 'int'
+    | | `-IntegerLiteral 0x55561d730d88 <col:19> 'int' 610
+    | `-CompoundStmt 0x55561d730ed0 <col:24, line:40:5>
+    |   `-LabelStmt 0x55561d730eb8 <line:39:9, col:33> 'ERROR'
+    |     `-CallExpr 0x55561d730e48 <col:16, col:33> 'void'
+    |       `-ImplicitCastExpr 0x55561d730e30 <col:16> 'void (*)()' <FunctionToPointerDecay>
+    |         `-DeclRefExpr 0x55561d730de0 <col:16> 'void ()' Function 0x55561d70d660 '__VERIFIER_error' 'void ()'
+    `-ReturnStmt 0x55561d730f20 <line:41:5, col:12>
+      `-IntegerLiteral 0x55561d730f00 <col:12> 'int' 0

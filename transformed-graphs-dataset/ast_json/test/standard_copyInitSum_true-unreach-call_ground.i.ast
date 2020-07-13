@@ -1,0 +1,144 @@
+TranslationUnitDecl 0x5556dc0dddd8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x5556dc0de698 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x5556dc0de370 '__int128'
+|-TypedefDecl 0x5556dc0de708 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x5556dc0de390 'unsigned __int128'
+|-TypedefDecl 0x5556dc0dea10 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x5556dc0de7e0 'struct __NSConstantString_tag'
+|   `-Record 0x5556dc0de760 '__NSConstantString_tag'
+|-TypedefDecl 0x5556dc0deab8 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x5556dc0dea70 'char *'
+|   `-BuiltinType 0x5556dc0dde70 'char'
+|-TypedefDecl 0x5556dc11dc40 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x5556dc0ded50 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x5556dc0deb90 'struct __va_list_tag'
+|     `-Record 0x5556dc0deb10 '__va_list_tag'
+|-FunctionDecl 0x5556dc11dd68 <array-examples/standard_copyInitSum_true-unreach-call_ground.i:1:1, col:38> col:12 used __VERIFIER_nondet_int 'int (void)' extern
+|-FunctionDecl 0x5556dc11ded0 <line:2:1, col:61> col:13 used __VERIFIER_error 'void () __attribute__((noreturn))' extern
+|-FunctionDecl 0x5556dc11e050 <line:3:1, col:79> col:6 used __VERIFIER_assert 'void (int)'
+| |-ParmVarDecl 0x5556dc11df88 <col:24, col:28> col:28 used cond 'int'
+| `-CompoundStmt 0x5556dc11e290 <col:34, col:79>
+|   `-IfStmt 0x5556dc11e278 <col:36, col:77>
+|     |-UnaryOperator 0x5556dc11e150 <col:39, col:45> 'int' prefix '!' cannot overflow
+|     | `-ImplicitCastExpr 0x5556dc11e138 <col:40, col:45> 'int' <LValueToRValue>
+|     |   `-ParenExpr 0x5556dc11e118 <col:40, col:45> 'int' lvalue
+|     |     `-DeclRefExpr 0x5556dc11e0f8 <col:41> 'int' lvalue ParmVar 0x5556dc11df88 'cond' 'int'
+|     `-CompoundStmt 0x5556dc11e260 <col:48, col:77>
+|       `-LabelStmt 0x5556dc11e248 <col:50, col:74> 'ERROR'
+|         `-CallExpr 0x5556dc11e1d8 <col:57, col:74> 'void'
+|           `-ImplicitCastExpr 0x5556dc11e1c0 <col:57> 'void (*)() __attribute__((noreturn))' <FunctionToPointerDecay>
+|             `-DeclRefExpr 0x5556dc11e168 <col:57> 'void () __attribute__((noreturn))' Function 0x5556dc11ded0 '__VERIFIER_error' 'void () __attribute__((noreturn))'
+`-FunctionDecl 0x5556dc11e308 <line:4:1, line:24:1> line:4:5 main 'int ()'
+  `-CompoundStmt 0x5556dc143580 <col:14, line:24:1>
+    |-DeclStmt 0x5556dc11e4b0 <line:5:3, col:17>
+    | `-VarDecl 0x5556dc11e448 <col:3, col:16> col:7 used a 'int [100000]'
+    |-DeclStmt 0x5556dc11e590 <line:6:3, col:17>
+    | `-VarDecl 0x5556dc11e528 <col:3, col:16> col:7 used b 'int [100000]'
+    |-DeclStmt 0x5556dc11e6b8 <line:7:3, col:37>
+    | `-VarDecl 0x5556dc11e5c0 <col:3, col:36> col:7 used incr 'int' cinit
+    |   `-CallExpr 0x5556dc11e698 <col:14, col:36> 'int'
+    |     `-ImplicitCastExpr 0x5556dc11e680 <col:14> 'int (*)(void)' <FunctionToPointerDecay>
+    |       `-DeclRefExpr 0x5556dc11e628 <col:14> 'int (void)' Function 0x5556dc11dd68 '__VERIFIER_nondet_int' 'int (void)'
+    |-DeclStmt 0x5556dc11e770 <line:8:3, col:12>
+    | `-VarDecl 0x5556dc11e6e8 <col:3, col:11> col:7 used i 'int' cinit
+    |   `-IntegerLiteral 0x5556dc11e750 <col:11> 'int' 0
+    |-WhileStmt 0x5556dc11e9d8 <line:9:3, line:12:3>
+    | |-BinaryOperator 0x5556dc11e7e0 <line:9:11, col:15> 'int' '<'
+    | | |-ImplicitCastExpr 0x5556dc11e7c8 <col:11> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x5556dc11e788 <col:11> 'int' lvalue Var 0x5556dc11e6e8 'i' 'int'
+    | | `-IntegerLiteral 0x5556dc11e7a8 <col:15> 'int' 100000
+    | `-CompoundStmt 0x5556dc11e9b8 <col:24, line:12:3>
+    |   |-BinaryOperator 0x5556dc11e8e0 <line:10:5, col:12> 'int' '='
+    |   | |-ArraySubscriptExpr 0x5556dc11e8a0 <col:5, col:8> 'int' lvalue
+    |   | | |-ImplicitCastExpr 0x5556dc11e870 <col:5> 'int *' <ArrayToPointerDecay>
+    |   | | | `-DeclRefExpr 0x5556dc11e800 <col:5> 'int [100000]' lvalue Var 0x5556dc11e448 'a' 'int [100000]'
+    |   | | `-ImplicitCastExpr 0x5556dc11e888 <col:7> 'int' <LValueToRValue>
+    |   | |   `-DeclRefExpr 0x5556dc11e820 <col:7> 'int' lvalue Var 0x5556dc11e6e8 'i' 'int'
+    |   | `-IntegerLiteral 0x5556dc11e8c0 <col:12> 'int' 42
+    |   `-BinaryOperator 0x5556dc11e998 <line:11:5, col:13> 'int' '='
+    |     |-DeclRefExpr 0x5556dc11e900 <col:5> 'int' lvalue Var 0x5556dc11e6e8 'i' 'int'
+    |     `-BinaryOperator 0x5556dc11e978 <col:9, col:13> 'int' '+'
+    |       |-ImplicitCastExpr 0x5556dc11e960 <col:9> 'int' <LValueToRValue>
+    |       | `-DeclRefExpr 0x5556dc11e920 <col:9> 'int' lvalue Var 0x5556dc11e6e8 'i' 'int'
+    |       `-IntegerLiteral 0x5556dc11e940 <col:13> 'int' 1
+    |-ForStmt 0x5556dc142e38 <line:13:3, line:15:3>
+    | |-BinaryOperator 0x5556dc11ea30 <line:13:9, col:13> 'int' '='
+    | | |-DeclRefExpr 0x5556dc11e9f0 <col:9> 'int' lvalue Var 0x5556dc11e6e8 'i' 'int'
+    | | `-IntegerLiteral 0x5556dc11ea10 <col:13> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x5556dc11eaa8 <col:17, col:21> 'int' '<'
+    | | |-ImplicitCastExpr 0x5556dc11ea90 <col:17> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x5556dc11ea50 <col:17> 'int' lvalue Var 0x5556dc11e6e8 'i' 'int'
+    | | `-IntegerLiteral 0x5556dc11ea70 <col:21> 'int' 100000
+    | |-UnaryOperator 0x5556dc11eae8 <col:30, col:31> 'int' postfix '++'
+    | | `-DeclRefExpr 0x5556dc11eac8 <col:30> 'int' lvalue Var 0x5556dc11e6e8 'i' 'int'
+    | `-CompoundStmt 0x5556dc142e20 <col:36, line:15:3>
+    |   `-BinaryOperator 0x5556dc142e00 <line:14:5, col:15> 'int' '='
+    |     |-ArraySubscriptExpr 0x5556dc11eb70 <col:5, col:8> 'int' lvalue
+    |     | |-ImplicitCastExpr 0x5556dc11eb40 <col:5> 'int *' <ArrayToPointerDecay>
+    |     | | `-DeclRefExpr 0x5556dc11eb00 <col:5> 'int [100000]' lvalue Var 0x5556dc11e528 'b' 'int [100000]'
+    |     | `-ImplicitCastExpr 0x5556dc11eb58 <col:7> 'int' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x5556dc11eb20 <col:7> 'int' lvalue Var 0x5556dc11e6e8 'i' 'int'
+    |     `-ImplicitCastExpr 0x5556dc11ec20 <col:12, col:15> 'int' <LValueToRValue>
+    |       `-ArraySubscriptExpr 0x5556dc11ec00 <col:12, col:15> 'int' lvalue
+    |         |-ImplicitCastExpr 0x5556dc11ebd0 <col:12> 'int *' <ArrayToPointerDecay>
+    |         | `-DeclRefExpr 0x5556dc11eb90 <col:12> 'int [100000]' lvalue Var 0x5556dc11e448 'a' 'int [100000]'
+    |         `-ImplicitCastExpr 0x5556dc11ebe8 <col:14> 'int' <LValueToRValue>
+    |           `-DeclRefExpr 0x5556dc11ebb0 <col:14> 'int' lvalue Var 0x5556dc11e6e8 'i' 'int'
+    |-ForStmt 0x5556dc143148 <line:16:3, line:18:3>
+    | |-BinaryOperator 0x5556dc142eb0 <line:16:9, col:13> 'int' '='
+    | | |-DeclRefExpr 0x5556dc142e70 <col:9> 'int' lvalue Var 0x5556dc11e6e8 'i' 'int'
+    | | `-IntegerLiteral 0x5556dc142e90 <col:13> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x5556dc142f28 <col:17, col:21> 'int' '<'
+    | | |-ImplicitCastExpr 0x5556dc142f10 <col:17> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x5556dc142ed0 <col:17> 'int' lvalue Var 0x5556dc11e6e8 'i' 'int'
+    | | `-IntegerLiteral 0x5556dc142ef0 <col:21> 'int' 100000
+    | |-UnaryOperator 0x5556dc142f68 <col:30, col:31> 'int' postfix '++'
+    | | `-DeclRefExpr 0x5556dc142f48 <col:30> 'int' lvalue Var 0x5556dc11e6e8 'i' 'int'
+    | `-CompoundStmt 0x5556dc143130 <col:36, line:18:3>
+    |   `-BinaryOperator 0x5556dc143110 <line:17:5, col:19> 'int' '='
+    |     |-ArraySubscriptExpr 0x5556dc142ff0 <col:5, col:8> 'int' lvalue
+    |     | |-ImplicitCastExpr 0x5556dc142fc0 <col:5> 'int *' <ArrayToPointerDecay>
+    |     | | `-DeclRefExpr 0x5556dc142f80 <col:5> 'int [100000]' lvalue Var 0x5556dc11e528 'b' 'int [100000]'
+    |     | `-ImplicitCastExpr 0x5556dc142fd8 <col:7> 'int' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x5556dc142fa0 <col:7> 'int' lvalue Var 0x5556dc11e6e8 'i' 'int'
+    |     `-BinaryOperator 0x5556dc1430f0 <col:12, col:19> 'int' '+'
+    |       |-ImplicitCastExpr 0x5556dc1430c0 <col:12, col:15> 'int' <LValueToRValue>
+    |       | `-ArraySubscriptExpr 0x5556dc143080 <col:12, col:15> 'int' lvalue
+    |       |   |-ImplicitCastExpr 0x5556dc143050 <col:12> 'int *' <ArrayToPointerDecay>
+    |       |   | `-DeclRefExpr 0x5556dc143010 <col:12> 'int [100000]' lvalue Var 0x5556dc11e528 'b' 'int [100000]'
+    |       |   `-ImplicitCastExpr 0x5556dc143068 <col:14> 'int' <LValueToRValue>
+    |       |     `-DeclRefExpr 0x5556dc143030 <col:14> 'int' lvalue Var 0x5556dc11e6e8 'i' 'int'
+    |       `-ImplicitCastExpr 0x5556dc1430d8 <col:19> 'int' <LValueToRValue>
+    |         `-DeclRefExpr 0x5556dc1430a0 <col:19> 'int' lvalue Var 0x5556dc11e5c0 'incr' 'int'
+    |-DeclStmt 0x5556dc143200 <line:19:3, col:8>
+    | `-VarDecl 0x5556dc143198 <col:3, col:7> col:7 used x 'int'
+    |-ForStmt 0x5556dc143518 <line:20:3, line:22:3>
+    | |-BinaryOperator 0x5556dc143258 <line:20:9, col:13> 'int' '='
+    | | |-DeclRefExpr 0x5556dc143218 <col:9> 'int' lvalue Var 0x5556dc143198 'x' 'int'
+    | | `-IntegerLiteral 0x5556dc143238 <col:13> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x5556dc1432d0 <col:17, col:21> 'int' '<'
+    | | |-ImplicitCastExpr 0x5556dc1432b8 <col:17> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x5556dc143278 <col:17> 'int' lvalue Var 0x5556dc143198 'x' 'int'
+    | | `-IntegerLiteral 0x5556dc143298 <col:21> 'int' 100000
+    | |-UnaryOperator 0x5556dc143310 <col:30, col:31> 'int' postfix '++'
+    | | `-DeclRefExpr 0x5556dc1432f0 <col:30> 'int' lvalue Var 0x5556dc143198 'x' 'int'
+    | `-CompoundStmt 0x5556dc143500 <col:36, line:22:3>
+    |   `-CallExpr 0x5556dc1434d8 <line:21:5, col:42> 'void'
+    |     |-ImplicitCastExpr 0x5556dc1434c0 <col:5> 'void (*)(int)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x5556dc143328 <col:5> 'void (int)' Function 0x5556dc11e050 '__VERIFIER_assert' 'void (int)'
+    |     `-BinaryOperator 0x5556dc143468 <col:24, col:37> 'int' '=='
+    |       |-ImplicitCastExpr 0x5556dc143450 <col:24, col:27> 'int' <LValueToRValue>
+    |       | `-ArraySubscriptExpr 0x5556dc1433b8 <col:24, col:27> 'int' lvalue
+    |       |   |-ImplicitCastExpr 0x5556dc143388 <col:24> 'int *' <ArrayToPointerDecay>
+    |       |   | `-DeclRefExpr 0x5556dc143348 <col:24> 'int [100000]' lvalue Var 0x5556dc11e528 'b' 'int [100000]'
+    |       |   `-ImplicitCastExpr 0x5556dc1433a0 <col:26> 'int' <LValueToRValue>
+    |       |     `-DeclRefExpr 0x5556dc143368 <col:26> 'int' lvalue Var 0x5556dc143198 'x' 'int'
+    |       `-BinaryOperator 0x5556dc143430 <col:32, col:37> 'int' '+'
+    |         |-IntegerLiteral 0x5556dc1433d8 <col:32> 'int' 42
+    |         `-ImplicitCastExpr 0x5556dc143418 <col:37> 'int' <LValueToRValue>
+    |           `-DeclRefExpr 0x5556dc1433f8 <col:37> 'int' lvalue Var 0x5556dc11e5c0 'incr' 'int'
+    `-ReturnStmt 0x5556dc143570 <line:23:3, col:10>
+      `-IntegerLiteral 0x5556dc143550 <col:10> 'int' 0

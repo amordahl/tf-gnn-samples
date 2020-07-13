@@ -1,0 +1,54 @@
+TranslationUnitDecl 0x558664030538 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x558664030df8 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x558664030ad0 '__int128'
+|-TypedefDecl 0x558664030e68 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x558664030af0 'unsigned __int128'
+|-TypedefDecl 0x558664031170 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x558664030f40 'struct __NSConstantString_tag'
+|   `-Record 0x558664030ec0 '__NSConstantString_tag'
+|-TypedefDecl 0x558664031218 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x5586640311d0 'char *'
+|   `-BuiltinType 0x5586640305d0 'char'
+|-TypedefDecl 0x5586640700b0 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x5586640314b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x5586640312f0 'struct __va_list_tag'
+|     `-Record 0x558664031270 '__va_list_tag'
+|-FunctionDecl 0x5586640701d8 <termination-crafted/Collatz_unknown-termination_false-no-overflow.c:8:1, col:38> col:12 used __VERIFIER_nondet_int 'int (void)' extern
+`-FunctionDecl 0x558664070318 <line:10:1, line:21:1> line:10:5 main 'int ()'
+  `-CompoundStmt 0x558664070878 <line:11:1, line:21:1>
+    |-DeclStmt 0x5586640704c8 <line:12:2, col:33>
+    | `-VarDecl 0x5586640703d0 <col:2, col:32> col:6 used y 'int' cinit
+    |   `-CallExpr 0x5586640704a8 <col:10, col:32> 'int'
+    |     `-ImplicitCastExpr 0x558664070490 <col:10> 'int (*)(void)' <FunctionToPointerDecay>
+    |       `-DeclRefExpr 0x558664070438 <col:10> 'int (void)' Function 0x5586640701d8 '__VERIFIER_nondet_int' 'int (void)'
+    |-WhileStmt 0x558664070830 <line:13:2, line:19:2>
+    | |-BinaryOperator 0x558664070538 <line:13:9, col:13> 'int' '>'
+    | | |-ImplicitCastExpr 0x558664070520 <col:9> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x5586640704e0 <col:9> 'int' lvalue Var 0x5586640703d0 'y' 'int'
+    | | `-IntegerLiteral 0x558664070500 <col:13> 'int' 1
+    | `-CompoundStmt 0x558664070818 <col:16, line:19:2>
+    |   `-IfStmt 0x5586640707f0 <line:14:3, line:18:3> has_else
+    |     |-BinaryOperator 0x5586640705f0 <line:14:7, col:16> 'int' '=='
+    |     | |-BinaryOperator 0x5586640705b0 <col:7, col:11> 'int' '%'
+    |     | | |-ImplicitCastExpr 0x558664070598 <col:7> 'int' <LValueToRValue>
+    |     | | | `-DeclRefExpr 0x558664070558 <col:7> 'int' lvalue Var 0x5586640703d0 'y' 'int'
+    |     | | `-IntegerLiteral 0x558664070578 <col:11> 'int' 2
+    |     | `-IntegerLiteral 0x5586640705d0 <col:16> 'int' 0
+    |     |-CompoundStmt 0x5586640706c8 <col:19, line:16:3>
+    |     | `-BinaryOperator 0x5586640706a8 <line:15:4, col:12> 'int' '='
+    |     |   |-DeclRefExpr 0x558664070610 <col:4> 'int' lvalue Var 0x5586640703d0 'y' 'int'
+    |     |   `-BinaryOperator 0x558664070688 <col:8, col:12> 'int' '/'
+    |     |     |-ImplicitCastExpr 0x558664070670 <col:8> 'int' <LValueToRValue>
+    |     |     | `-DeclRefExpr 0x558664070630 <col:8> 'int' lvalue Var 0x5586640703d0 'y' 'int'
+    |     |     `-IntegerLiteral 0x558664070650 <col:12> 'int' 2
+    |     `-CompoundStmt 0x5586640707d8 <line:16:10, line:18:3>
+    |       `-BinaryOperator 0x5586640707b8 <line:17:4, col:14> 'int' '='
+    |         |-DeclRefExpr 0x5586640706e0 <col:4> 'int' lvalue Var 0x5586640703d0 'y' 'int'
+    |         `-BinaryOperator 0x558664070798 <col:8, col:14> 'int' '+'
+    |           |-BinaryOperator 0x558664070758 <col:8, col:10> 'int' '*'
+    |           | |-IntegerLiteral 0x558664070700 <col:8> 'int' 3
+    |           | `-ImplicitCastExpr 0x558664070740 <col:10> 'int' <LValueToRValue>
+    |           |   `-DeclRefExpr 0x558664070720 <col:10> 'int' lvalue Var 0x5586640703d0 'y' 'int'
+    |           `-IntegerLiteral 0x558664070778 <col:14> 'int' 1
+    `-ReturnStmt 0x558664070868 <line:20:2, col:9>
+      `-IntegerLiteral 0x558664070848 <col:9> 'int' 0

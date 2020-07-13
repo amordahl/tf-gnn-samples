@@ -1,0 +1,58 @@
+TranslationUnitDecl 0x55aa11ad7698 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x55aa11ad7f58 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x55aa11ad7c30 '__int128'
+|-TypedefDecl 0x55aa11ad7fc8 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x55aa11ad7c50 'unsigned __int128'
+|-TypedefDecl 0x55aa11ad82d0 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x55aa11ad80a0 'struct __NSConstantString_tag'
+|   `-Record 0x55aa11ad8020 '__NSConstantString_tag'
+|-TypedefDecl 0x55aa11ad8378 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x55aa11ad8330 'char *'
+|   `-BuiltinType 0x55aa11ad7730 'char'
+|-TypedefDecl 0x55aa11b17330 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x55aa11ad8610 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x55aa11ad8450 'struct __va_list_tag'
+|     `-Record 0x55aa11ad83d0 '__va_list_tag'
+|-EnumDecl 0x55aa11b17388 <termination-crafted-lit/ChenFlurMukhopadhyay-SAS2012-Ex1.05_false-no-overflow.c:18:9, col:26> col:9
+| |-EnumConstantDecl 0x55aa11b17458 <col:15> col:15 false 'int'
+| `-EnumConstantDecl 0x55aa11b174a8 <col:22> col:22 true 'int'
+|-TypedefDecl 0x55aa11b17560 <col:1, col:28> col:28 bool 'enum bool':'bool'
+| `-ElaboratedType 0x55aa11b17500 'enum bool' sugar
+|   `-EnumType 0x55aa11b17430 'bool'
+|     `-Enum 0x55aa11b17388 ''
+|-FunctionDecl 0x55aa11b176a8 <line:20:1, col:38> col:12 used __VERIFIER_nondet_int 'int (void)' extern
+`-FunctionDecl 0x55aa11b177e8 <line:22:1, line:30:1> line:22:5 main 'int ()'
+  `-CompoundStmt 0x55aa11b17d68 <col:12, line:30:1>
+    |-DeclStmt 0x55aa11b179a0 <line:23:5, col:16>
+    | |-VarDecl 0x55aa11b178a0 <col:5, col:9> col:9 used x 'int'
+    | `-VarDecl 0x55aa11b17920 <col:5, col:12> col:12 used oldx 'int'
+    |-BinaryOperator 0x55aa11b17a68 <line:24:5, col:31> 'int' '='
+    | |-DeclRefExpr 0x55aa11b179b8 <col:5> 'int' lvalue Var 0x55aa11b178a0 'x' 'int'
+    | `-CallExpr 0x55aa11b17a48 <col:9, col:31> 'int'
+    |   `-ImplicitCastExpr 0x55aa11b17a30 <col:9> 'int (*)(void)' <FunctionToPointerDecay>
+    |     `-DeclRefExpr 0x55aa11b179d8 <col:9> 'int (void)' Function 0x55aa11b176a8 '__VERIFIER_nondet_int' 'int (void)'
+    |-WhileStmt 0x55aa11b17d20 <line:25:5, line:28:5>
+    | |-BinaryOperator 0x55aa11b17bd0 <line:25:12, col:28> 'int' '&&'
+    | | |-BinaryOperator 0x55aa11b17ae0 <col:12, col:16> 'int' '>'
+    | | | |-ImplicitCastExpr 0x55aa11b17ac8 <col:12> 'int' <LValueToRValue>
+    | | | | `-DeclRefExpr 0x55aa11b17a88 <col:12> 'int' lvalue Var 0x55aa11b178a0 'x' 'int'
+    | | | `-IntegerLiteral 0x55aa11b17aa8 <col:16> 'int' 0
+    | | `-BinaryOperator 0x55aa11b17bb0 <col:21, col:28> 'int' '<='
+    | |   |-BinaryOperator 0x55aa11b17b58 <col:21, col:23> 'int' '*'
+    | |   | |-IntegerLiteral 0x55aa11b17b00 <col:21> 'int' 2
+    | |   | `-ImplicitCastExpr 0x55aa11b17b40 <col:23> 'int' <LValueToRValue>
+    | |   |   `-DeclRefExpr 0x55aa11b17b20 <col:23> 'int' lvalue Var 0x55aa11b178a0 'x' 'int'
+    | |   `-ImplicitCastExpr 0x55aa11b17b98 <col:28> 'int' <LValueToRValue>
+    | |     `-DeclRefExpr 0x55aa11b17b78 <col:28> 'int' lvalue Var 0x55aa11b17920 'oldx' 'int'
+    | `-CompoundStmt 0x55aa11b17d00 <col:34, line:28:5>
+    |   |-BinaryOperator 0x55aa11b17c48 <line:26:9, col:16> 'int' '='
+    |   | |-DeclRefExpr 0x55aa11b17bf0 <col:9> 'int' lvalue Var 0x55aa11b17920 'oldx' 'int'
+    |   | `-ImplicitCastExpr 0x55aa11b17c30 <col:16> 'int' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x55aa11b17c10 <col:16> 'int' lvalue Var 0x55aa11b178a0 'x' 'int'
+    |   `-BinaryOperator 0x55aa11b17ce0 <line:27:9, col:35> 'int' '='
+    |     |-DeclRefExpr 0x55aa11b17c68 <col:9> 'int' lvalue Var 0x55aa11b178a0 'x' 'int'
+    |     `-CallExpr 0x55aa11b17cc0 <col:13, col:35> 'int'
+    |       `-ImplicitCastExpr 0x55aa11b17ca8 <col:13> 'int (*)(void)' <FunctionToPointerDecay>
+    |         `-DeclRefExpr 0x55aa11b17c88 <col:13> 'int (void)' Function 0x55aa11b176a8 '__VERIFIER_nondet_int' 'int (void)'
+    `-ReturnStmt 0x55aa11b17d58 <line:29:5, col:12>
+      `-IntegerLiteral 0x55aa11b17d38 <col:12> 'int' 0

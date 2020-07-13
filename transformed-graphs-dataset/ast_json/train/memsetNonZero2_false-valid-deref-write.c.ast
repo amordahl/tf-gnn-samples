@@ -1,0 +1,57 @@
+TranslationUnitDecl 0x5623d82234e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x5623d8223da8 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x5623d8223a80 '__int128'
+|-TypedefDecl 0x5623d8223e18 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x5623d8223aa0 'unsigned __int128'
+|-TypedefDecl 0x5623d8224120 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x5623d8223ef0 'struct __NSConstantString_tag'
+|   `-Record 0x5623d8223e70 '__NSConstantString_tag'
+|-TypedefDecl 0x5623d82241c8 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x5623d8224180 'char *'
+|   `-BuiltinType 0x5623d8223580 'char'
+|-TypedefDecl 0x5623d8263350 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x5623d8224460 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x5623d82242a0 'struct __va_list_tag'
+|     `-Record 0x5623d8224220 '__va_list_tag'
+|-TypedefDecl 0x5623d82633c0 <ldv-memsafety/memsetNonZero2_false-valid-deref-write.c:1:1, col:22> col:22 referenced __kernel_size_t 'unsigned int'
+| `-BuiltinType 0x5623d8223680 'unsigned int'
+|-TypedefDecl 0x5623d8263458 <line:2:1, col:25> col:25 referenced size_t '__kernel_size_t':'unsigned int'
+| `-TypedefType 0x5623d8263420 '__kernel_size_t' sugar
+|   |-Typedef 0x5623d82633c0 '__kernel_size_t'
+|   `-BuiltinType 0x5623d8223680 'unsigned int'
+|-FunctionDecl 0x5623d8263778 <line:4:14> col:14 implicit used memset 'void *(void *, int, unsigned long)' extern
+| |-ParmVarDecl 0x5623d8263818 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x5623d8263880 <<invalid sloc>> <invalid sloc> 'int'
+| `-ParmVarDecl 0x5623d82638e8 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x5623d8263968 prev 0x5623d8263778 <col:1, col:43> col:14 used memset 'void *(void *, int, size_t)' extern
+| |-ParmVarDecl 0x5623d82634c8 <col:21, col:26> col:28 'void *'
+| |-ParmVarDecl 0x5623d8263548 <col:30> col:34 'int'
+| `-ParmVarDecl 0x5623d82635e8 <col:36> col:43 'size_t':'unsigned int'
+|-TypedefDecl 0x5623d8263e80 <line:6:1, col:22> col:22 referenced __u32 'unsigned int'
+| `-BuiltinType 0x5623d8223680 'unsigned int'
+|-RecordDecl 0x5623d8263ed8 <line:8:1, line:18:1> line:8:8 struct compstat definition
+| |-FieldDecl 0x5623d8263fc8 <line:9:4, col:10> col:10 unc_bytes '__u32':'unsigned int'
+| |-FieldDecl 0x5623d8264028 <line:10:4, col:10> col:10 unc_packets '__u32':'unsigned int'
+| |-FieldDecl 0x5623d8264088 <line:11:4, col:10> col:10 comp_bytes '__u32':'unsigned int'
+| |-FieldDecl 0x5623d82640e8 <line:12:4, col:10> col:10 comp_packets '__u32':'unsigned int'
+| |-FieldDecl 0x5623d8264148 <line:13:4, col:10> col:10 inc_bytes '__u32':'unsigned int'
+| |-FieldDecl 0x5623d82641a8 <line:14:4, col:10> col:10 inc_packets '__u32':'unsigned int'
+| |-FieldDecl 0x5623d8264208 <line:15:4, col:10> col:10 in_count '__u32':'unsigned int'
+| |-FieldDecl 0x5623d8264268 <line:16:4, col:10> col:10 bytes_out '__u32':'unsigned int'
+| `-FieldDecl 0x5623d82642d0 <line:17:4, col:11> col:11 ratio 'double'
+`-FunctionDecl 0x5623d8287038 <line:20:1, line:24:1> line:20:5 main 'int ()'
+  `-CompoundStmt 0x5623d8287478 <col:12, line:24:1>
+    |-DeclStmt 0x5623d82871e0 <line:21:3, col:26>
+    | `-VarDecl 0x5623d8287178 <col:3, col:19> col:19 used cstats 'struct compstat':'struct compstat'
+    |-CallExpr 0x5623d82873f8 <line:22:3, col:38> 'void *'
+    | |-ImplicitCastExpr 0x5623d82873e0 <col:3> 'void *(*)(void *, int, size_t)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x5623d82871f8 <col:3> 'void *(void *, int, size_t)' Function 0x5623d8263968 'memset' 'void *(void *, int, size_t)'
+    | |-CStyleCastExpr 0x5623d8287310 <col:10, col:27> 'void *' <BitCast>
+    | | `-ParenExpr 0x5623d82872f0 <col:18, col:27> 'struct compstat *'
+    | |   `-UnaryOperator 0x5623d82872a0 <col:19, col:21> 'struct compstat *' prefix '&' cannot overflow
+    | |     `-DeclRefExpr 0x5623d8287218 <col:21> 'struct compstat':'struct compstat' lvalue Var 0x5623d8287178 'cstats' 'struct compstat':'struct compstat'
+    | |-IntegerLiteral 0x5623d8287338 <col:30> 'int' 10
+    | `-ImplicitCastExpr 0x5623d8287430 <col:34> 'size_t':'unsigned int' <IntegralCast>
+    |   `-IntegerLiteral 0x5623d8287358 <col:34> 'unsigned long' 41
+    `-ReturnStmt 0x5623d8287468 <line:23:3, col:10>
+      `-IntegerLiteral 0x5623d8287448 <col:10> 'int' 0

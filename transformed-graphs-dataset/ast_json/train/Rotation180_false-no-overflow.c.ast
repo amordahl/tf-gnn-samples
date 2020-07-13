@@ -1,0 +1,59 @@
+TranslationUnitDecl 0x56308cd144d8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x56308cd14d98 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x56308cd14a70 '__int128'
+|-TypedefDecl 0x56308cd14e08 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x56308cd14a90 'unsigned __int128'
+|-TypedefDecl 0x56308cd15110 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x56308cd14ee0 'struct __NSConstantString_tag'
+|   `-Record 0x56308cd14e60 '__NSConstantString_tag'
+|-TypedefDecl 0x56308cd151b8 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x56308cd15170 'char *'
+|   `-BuiltinType 0x56308cd14570 'char'
+|-TypedefDecl 0x56308cd542f0 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x56308cd15450 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x56308cd15290 'struct __va_list_tag'
+|     `-Record 0x56308cd15210 '__va_list_tag'
+|-EnumDecl 0x56308cd54348 <termination-crafted/Rotation180_false-no-overflow.c:9:9, col:26> col:9
+| |-EnumConstantDecl 0x56308cd54418 <col:15> col:15 false 'int'
+| `-EnumConstantDecl 0x56308cd54468 <col:22> col:22 referenced true 'int'
+|-TypedefDecl 0x56308cd54520 <col:1, col:28> col:28 bool 'enum bool':'bool'
+| `-ElaboratedType 0x56308cd544c0 'enum bool' sugar
+|   `-EnumType 0x56308cd543f0 'bool'
+|     `-Enum 0x56308cd54348 ''
+|-FunctionDecl 0x56308cd54668 <line:11:1, col:38> col:12 used __VERIFIER_nondet_int 'int (void)' extern
+`-FunctionDecl 0x56308cd547a8 <line:13:1, line:26:1> line:13:5 main 'int ()'
+  `-CompoundStmt 0x56308cd54d80 <line:14:1, line:26:1>
+    |-DeclStmt 0x56308cd548c8 <line:15:5, col:13>
+    | `-VarDecl 0x56308cd54860 <col:5, col:9> col:9 used oldx 'int'
+    |-DeclStmt 0x56308cd54960 <line:16:2, col:7>
+    | `-VarDecl 0x56308cd548f8 <col:2, col:6> col:6 used x 'int'
+    |-DeclStmt 0x56308cd549f8 <line:17:2, col:7>
+    | `-VarDecl 0x56308cd54990 <col:2, col:6> col:6 used y 'int'
+    |-BinaryOperator 0x56308cd54ab8 <line:18:2, col:28> 'int' '='
+    | |-DeclRefExpr 0x56308cd54a10 <col:2> 'int' lvalue Var 0x56308cd548f8 'x' 'int'
+    | `-CallExpr 0x56308cd54a98 <col:6, col:28> 'int'
+    |   `-ImplicitCastExpr 0x56308cd54a80 <col:6> 'int (*)(void)' <FunctionToPointerDecay>
+    |     `-DeclRefExpr 0x56308cd54a30 <col:6> 'int (void)' Function 0x56308cd54668 '__VERIFIER_nondet_int' 'int (void)'
+    |-BinaryOperator 0x56308cd54b50 <line:19:2, col:28> 'int' '='
+    | |-DeclRefExpr 0x56308cd54ad8 <col:2> 'int' lvalue Var 0x56308cd54990 'y' 'int'
+    | `-CallExpr 0x56308cd54b30 <col:6, col:28> 'int'
+    |   `-ImplicitCastExpr 0x56308cd54b18 <col:6> 'int (*)(void)' <FunctionToPointerDecay>
+    |     `-DeclRefExpr 0x56308cd54af8 <col:6> 'int (void)' Function 0x56308cd54668 '__VERIFIER_nondet_int' 'int (void)'
+    |-WhileStmt 0x56308cd54d38 <line:20:2, line:24:2>
+    | |-DeclRefExpr 0x56308cd54b70 <line:20:9> 'int' EnumConstant 0x56308cd54468 'true' 'int'
+    | `-CompoundStmt 0x56308cd54d10 <col:15, line:24:2>
+    |   |-BinaryOperator 0x56308cd54be8 <line:21:9, col:16> 'int' '='
+    |   | |-DeclRefExpr 0x56308cd54b90 <col:9> 'int' lvalue Var 0x56308cd54860 'oldx' 'int'
+    |   | `-ImplicitCastExpr 0x56308cd54bd0 <col:16> 'int' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x56308cd54bb0 <col:16> 'int' lvalue Var 0x56308cd548f8 'x' 'int'
+    |   |-BinaryOperator 0x56308cd54c78 <line:22:3, col:8> 'int' '='
+    |   | |-DeclRefExpr 0x56308cd54c08 <col:3> 'int' lvalue Var 0x56308cd548f8 'x' 'int'
+    |   | `-UnaryOperator 0x56308cd54c60 <col:7, col:8> 'int' prefix '-'
+    |   |   `-ImplicitCastExpr 0x56308cd54c48 <col:8> 'int' <LValueToRValue>
+    |   |     `-DeclRefExpr 0x56308cd54c28 <col:8> 'int' lvalue Var 0x56308cd54990 'y' 'int'
+    |   `-BinaryOperator 0x56308cd54cf0 <line:23:3, col:7> 'int' '='
+    |     |-DeclRefExpr 0x56308cd54c98 <col:3> 'int' lvalue Var 0x56308cd54990 'y' 'int'
+    |     `-ImplicitCastExpr 0x56308cd54cd8 <col:7> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x56308cd54cb8 <col:7> 'int' lvalue Var 0x56308cd54860 'oldx' 'int'
+    `-ReturnStmt 0x56308cd54d70 <line:25:2, col:9>
+      `-IntegerLiteral 0x56308cd54d50 <col:9> 'int' 0

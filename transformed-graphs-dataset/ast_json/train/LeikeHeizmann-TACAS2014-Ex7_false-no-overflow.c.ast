@@ -1,0 +1,60 @@
+TranslationUnitDecl 0x5615e44d7748 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x5615e44d8008 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x5615e44d7ce0 '__int128'
+|-TypedefDecl 0x5615e44d8078 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x5615e44d7d00 'unsigned __int128'
+|-TypedefDecl 0x5615e44d8380 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x5615e44d8150 'struct __NSConstantString_tag'
+|   `-Record 0x5615e44d80d0 '__NSConstantString_tag'
+|-TypedefDecl 0x5615e44d8428 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x5615e44d83e0 'char *'
+|   `-BuiltinType 0x5615e44d77e0 'char'
+|-TypedefDecl 0x5615e4517620 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x5615e44d86c0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x5615e44d8500 'struct __va_list_tag'
+|     `-Record 0x5615e44d8480 '__va_list_tag'
+|-EnumDecl 0x5615e4517678 <termination-crafted-lit/LeikeHeizmann-TACAS2014-Ex7_false-no-overflow.c:16:9, col:26> col:9
+| |-EnumConstantDecl 0x5615e4517748 <col:15> col:15 false 'int'
+| `-EnumConstantDecl 0x5615e4517798 <col:22> col:22 true 'int'
+|-TypedefDecl 0x5615e4517850 <col:1, col:28> col:28 bool 'enum bool':'bool'
+| `-ElaboratedType 0x5615e45177f0 'enum bool' sugar
+|   `-EnumType 0x5615e4517720 'bool'
+|     `-Enum 0x5615e4517678 ''
+|-FunctionDecl 0x5615e4517998 <line:18:1, col:38> col:12 used __VERIFIER_nondet_int 'int (void)' extern
+`-FunctionDecl 0x5615e4517ad8 <line:20:1, line:29:1> line:20:5 main 'int ()'
+  `-CompoundStmt 0x5615e4518090 <col:12, line:29:1>
+    |-DeclStmt 0x5615e4517c90 <line:21:5, col:13>
+    | |-VarDecl 0x5615e4517b90 <col:5, col:9> col:9 used q 'int'
+    | `-VarDecl 0x5615e4517c10 <col:5, col:12> col:12 used z 'int'
+    |-BinaryOperator 0x5615e4517d58 <line:22:2, col:28> 'int' '='
+    | |-DeclRefExpr 0x5615e4517ca8 <col:2> 'int' lvalue Var 0x5615e4517b90 'q' 'int'
+    | `-CallExpr 0x5615e4517d38 <col:6, col:28> 'int'
+    |   `-ImplicitCastExpr 0x5615e4517d20 <col:6> 'int (*)(void)' <FunctionToPointerDecay>
+    |     `-DeclRefExpr 0x5615e4517cc8 <col:6> 'int (void)' Function 0x5615e4517998 '__VERIFIER_nondet_int' 'int (void)'
+    |-BinaryOperator 0x5615e4517df0 <line:23:2, col:28> 'int' '='
+    | |-DeclRefExpr 0x5615e4517d78 <col:2> 'int' lvalue Var 0x5615e4517c10 'z' 'int'
+    | `-CallExpr 0x5615e4517dd0 <col:6, col:28> 'int'
+    |   `-ImplicitCastExpr 0x5615e4517db8 <col:6> 'int (*)(void)' <FunctionToPointerDecay>
+    |     `-DeclRefExpr 0x5615e4517d98 <col:6> 'int (void)' Function 0x5615e4517998 '__VERIFIER_nondet_int' 'int (void)'
+    |-WhileStmt 0x5615e4518048 <line:24:2, line:27:2>
+    | |-BinaryOperator 0x5615e4517e68 <line:24:9, col:13> 'int' '>'
+    | | |-ImplicitCastExpr 0x5615e4517e50 <col:9> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x5615e4517e10 <col:9> 'int' lvalue Var 0x5615e4517b90 'q' 'int'
+    | | `-IntegerLiteral 0x5615e4517e30 <col:13> 'int' 0
+    | `-CompoundStmt 0x5615e4518028 <col:16, line:27:2>
+    |   |-BinaryOperator 0x5615e4517f78 <line:25:3, col:15> 'int' '='
+    |   | |-DeclRefExpr 0x5615e4517e88 <col:3> 'int' lvalue Var 0x5615e4517b90 'q' 'int'
+    |   | `-BinaryOperator 0x5615e4517f58 <col:7, col:15> 'int' '-'
+    |   |   |-BinaryOperator 0x5615e4517f18 <col:7, col:11> 'int' '+'
+    |   |   | |-ImplicitCastExpr 0x5615e4517ee8 <col:7> 'int' <LValueToRValue>
+    |   |   | | `-DeclRefExpr 0x5615e4517ea8 <col:7> 'int' lvalue Var 0x5615e4517b90 'q' 'int'
+    |   |   | `-ImplicitCastExpr 0x5615e4517f00 <col:11> 'int' <LValueToRValue>
+    |   |   |   `-DeclRefExpr 0x5615e4517ec8 <col:11> 'int' lvalue Var 0x5615e4517c10 'z' 'int'
+    |   |   `-IntegerLiteral 0x5615e4517f38 <col:15> 'int' 1
+    |   `-BinaryOperator 0x5615e4518008 <line:26:3, col:8> 'int' '='
+    |     |-DeclRefExpr 0x5615e4517f98 <col:3> 'int' lvalue Var 0x5615e4517c10 'z' 'int'
+    |     `-UnaryOperator 0x5615e4517ff0 <col:7, col:8> 'int' prefix '-'
+    |       `-ImplicitCastExpr 0x5615e4517fd8 <col:8> 'int' <LValueToRValue>
+    |         `-DeclRefExpr 0x5615e4517fb8 <col:8> 'int' lvalue Var 0x5615e4517c10 'z' 'int'
+    `-ReturnStmt 0x5615e4518080 <line:28:2, col:9>
+      `-IntegerLiteral 0x5615e4518060 <col:9> 'int' 0
