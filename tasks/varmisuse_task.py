@@ -19,7 +19,7 @@ ALPHABET_DICT["UNK"] = 1
 USES_SUBTOKEN_EDGE_NAME = "UsesSubtoken"
 SELF_LOOP_EDGE_NAME = "SelfLoop"
 BACKWARD_EDGE_TYPE_NAME_SUFFIX = "_Bkwd"
-__PROGRAM_GRAPH_EDGES_TYPES = ["Child", "NextToken", "LastUse", "LastWrite", "LastLexicalUse", "ComputedFrom",
+__PROGRAM_GRAPH_EDGES_TYPES = ["Supernode", "Child", "NextToken", "LastUse", "LastWrite", "LastLexicalUse", "ComputedFrom",
                                "GuardedByNegation", "GuardedBy", "FormalArgName", "ReturnsTo", USES_SUBTOKEN_EDGE_NAME]
 __PROGRAM_GRAPH_EDGES_TYPES_WITH_BKWD = \
     __PROGRAM_GRAPH_EDGES_TYPES + [edge_type_name + BACKWARD_EDGE_TYPE_NAME_SUFFIX
