@@ -161,8 +161,11 @@ class Sparse_Graph_Model(ABC):
 
     def __build_graph_propagation_model(self) -> tf.Tensor:
         h_dim = self.params['hidden_size']
-        activation_fn = get_activation(self.params['graph_model_activation_function'])
-        if self.task.initial_node_feature_size != self.params['hidden_size']:
+        activation_fn = get_activation(self.params['graph_model_activation_function']) # tanh
+        # if the initial node feature size does not match the hidden size, we create a densely connected layer
+        #  to project the features to the correct size (h_dim). This densely connected layer has
+        #  h_dim nodes, and uses the activation function specified above (tanh).
+        if self.task.initial_node_feature_size != self.params['hidden_size']: # projects features to the specified hidden size
             self.__ops['projected_node_features'] = \
                 tf.keras.layers.Dense(units=h_dim,
                                       use_bias=False,
@@ -175,14 +178,18 @@ class Sparse_Graph_Model(ABC):
         last_residual_representations = tf.zeros_like(cur_node_representations)
         for layer_idx in range(self.params['graph_num_layers']):
             with tf.variable_scope('gnn_layer_%i' % layer_idx):
+                # with some probability, set neurons to zero in current node representations
                 cur_node_representations = \
                     tf.nn.dropout(cur_node_representations, rate=1.0 - self.__placeholders['graph_layer_input_dropout_keep_prob'])
+                # every 10000 layers, we add the previously saved node representation.
+                # this helps address vanishing or exploding gradients
                 if layer_idx % self.params['graph_residual_connection_every_num_layers'] == 0:
                     t = cur_node_representations
                     if layer_idx > 0:
                         cur_node_representations += last_residual_representations
                         cur_node_representations /= 2
                     last_residual_representations = t
+                # finally, we construct the gnn layer.
                 cur_node_representations = \
                     self._apply_gnn_layer(
                         cur_node_representations,
@@ -260,6 +267,7 @@ class Sparse_Graph_Model(ABC):
         self.__ops['train_step'] = optimizer.apply_gradients(clipped_grads)
 
     # -------------------- Training Loop --------------------
+    # this is the actual method that performs the training
     def __run_epoch(self,
                     epoch_name: str,
                     data: Iterable[Any],
@@ -318,7 +326,7 @@ class Sparse_Graph_Model(ABC):
     def train(self, quiet: Optional[bool] = False, tf_summary_path: Optional[str] = None):
         total_time_start = time.time()
         with self.graph.as_default():
-            if tf_summary_path is not None:
+            if tf_summary_path is not None: # in our case this is true
                 os.makedirs(tf_summary_path, exist_ok=True)
                 train_writer = tf.summary.FileWriter(os.path.join(tf_summary_path, "train"), graph=self.graph)
                 valid_writer = tf.summary.FileWriter(os.path.join(tf_summary_path, "valid"))
