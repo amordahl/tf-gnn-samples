@@ -1,0 +1,237 @@
+[Function: main]
+[BB 0x1e545c0]
+  %1 = alloca i32, align 4
+  %2 = alloca float, align 4
+  %3 = alloca float, align 4
+  %4 = alloca float, align 4
+  %5 = alloca i32, align 4
+  store i32 0, i32* %1, align 4
+[Caller:   %6 = call float @__VERIFIER_nondet_float()]
+[Callee: __VERIFIER_nondet_float]
+  store float %6, float* %2, align 4
+  %7 = load float, float* %2, align 4
+  %8 = fpext float %7 to double
+  %9 = fcmp oge double %8, 1.000000e-10
+  br i1 %9, label %10, label %14
+Successor: 0x1e54820
+Successor: 0x1e54e20
+[BB 0x1e54820]
+  %11 = load float, float* %2, align 4
+  %12 = fpext float %11 to double
+  %13 = fcmp ole double %12, 1.000000e+10
+  br label %14
+Successor: 0x1e54e20
+[BB 0x1e54e20]
+  %15 = phi i1 [ false, %0 ], [ %13, %10 ]
+  %16 = zext i1 %15 to i32
+[Caller:   call void @__VERIFIER_assume(i32 %16)]
+[Callee: __VERIFIER_assume]
+  %17 = load float, float* %2, align 4
+[Caller:   %18 = call float @FREXP(float %17, i32* %5)]
+[Callee: FREXP]
+  store float %18, float* %3, align 4
+  %19 = load float, float* %3, align 4
+  %20 = load i32, i32* %5, align 4
+  %21 = sdiv i32 %20, 2
+[Caller:   %22 = call float @LDEXP(float %19, i32 %21)]
+[Callee: LDEXP]
+  store float %22, float* %4, align 4
+  %23 = load float, float* %4, align 4
+  %24 = fcmp oge float %23, 0.000000e+00
+  br i1 %24, label %25, label %29
+Successor: 0x1e55a60
+Successor: 0x1e55ab0
+[BB 0x1e55a60]
+  %26 = load float, float* %4, align 4
+  %27 = fpext float %26 to double
+  %28 = fcmp ole double %27, 1.000000e+06
+  br label %29
+Successor: 0x1e55ab0
+[BB 0x1e55ab0]
+  %30 = phi i1 [ false, %14 ], [ %28, %25 ]
+  %31 = zext i1 %30 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %31)]
+[Callee: __VERIFIER_assert]
+  ret i32 0
+[Function: __VERIFIER_nondet_float]
+[Function: __VERIFIER_assume]
+[Function: FREXP]
+[BB 0x1e50b20]
+  %3 = alloca float, align 4
+  %4 = alloca i32*, align 8
+  %5 = alloca i32, align 4
+  %6 = alloca float, align 4
+  %7 = alloca float, align 4
+  store float %0, float* %3, align 4
+  store i32* %1, i32** %4, align 8
+  %8 = load float, float* %3, align 4
+[Caller:   %9 = call float @FABS(float %8)]
+[Callee: FABS]
+  store float %9, float* %7, align 4
+  %10 = load float, float* %7, align 4
+  %11 = fcmp oge float %10, 1.000000e+00
+  br i1 %11, label %12, label %23
+Successor: 0x1e51270
+Successor: 0x1e51300
+[BB 0x1e51270]
+  store i32 1, i32* %5, align 4
+  store float 2.000000e+00, float* %6, align 4
+  br label %13
+Successor: 0x1e51560
+[BB 0x1e51300]
+  store i32 0, i32* %5, align 4
+  store float 5.000000e-01, float* %6, align 4
+  br label %24
+Successor: 0x1e51e40
+[BB 0x1e51560]
+  %14 = load float, float* %6, align 4
+  %15 = load float, float* %7, align 4
+  %16 = fcmp ole float %14, %15
+  br i1 %16, label %17, label %22
+Successor: 0x1e517d0
+Successor: 0x1e51820
+[BB 0x1e51e40]
+  %25 = load float, float* %6, align 4
+  %26 = load float, float* %7, align 4
+  %27 = fcmp ogt float %25, %26
+  br i1 %27, label %28, label %33
+Successor: 0x1e52070
+Successor: 0x1e520c0
+[BB 0x1e517d0]
+  %18 = load i32, i32* %5, align 4
+  %19 = add nsw i32 %18, 1
+  store i32 %19, i32* %5, align 4
+  %20 = load float, float* %6, align 4
+  %21 = fmul float %20, 2.000000e+00
+  store float %21, float* %6, align 4
+  br label %13
+Successor: 0x1e51560
+[BB 0x1e51820]
+  br label %36
+Successor: 0x1e51c60
+[BB 0x1e52070]
+  %29 = load i32, i32* %5, align 4
+  %30 = add nsw i32 %29, -1
+  store i32 %30, i32* %5, align 4
+  %31 = load float, float* %6, align 4
+  %32 = fdiv float %31, 2.000000e+00
+  store float %32, float* %6, align 4
+  br label %24
+Successor: 0x1e51e40
+[BB 0x1e520c0]
+  %34 = load float, float* %6, align 4
+  %35 = fmul float %34, 2.000000e+00
+  store float %35, float* %6, align 4
+  br label %36
+Successor: 0x1e51c60
+[BB 0x1e51c60]
+  %37 = load i32, i32* %5, align 4
+  %38 = load i32*, i32** %4, align 8
+  store i32 %37, i32* %38, align 4
+  %39 = load float, float* %7, align 4
+  %40 = load float, float* %6, align 4
+  %41 = fdiv float %39, %40
+  ret float %41
+[Function: LDEXP]
+[BB 0x1e52ea0]
+  %3 = alloca float, align 4
+  %4 = alloca i32, align 4
+  %5 = alloca float, align 4
+  store float %0, float* %3, align 4
+  store i32 %1, i32* %4, align 4
+  store float 1.000000e+00, float* %5, align 4
+  %6 = load i32, i32* %4, align 4
+  %7 = icmp sge i32 %6, 0
+  br i1 %7, label %8, label %18
+Successor: 0x1e53370
+Successor: 0x1e533c0
+[BB 0x1e53370]
+  br label %9
+Successor: 0x1e53000
+[BB 0x1e533c0]
+  br label %19
+Successor: 0x1e53bd0
+[BB 0x1e53000]
+  %10 = load i32, i32* %4, align 4
+  %11 = icmp sgt i32 %10, 0
+  br i1 %11, label %12, label %17
+Successor: 0x1e536c0
+Successor: 0x1e53710
+[BB 0x1e53bd0]
+  %20 = load i32, i32* %4, align 4
+  %21 = icmp slt i32 %20, 0
+  br i1 %21, label %22, label %27
+Successor: 0x1e53d90
+Successor: 0x1e53de0
+[BB 0x1e536c0]
+  %13 = load i32, i32* %4, align 4
+  %14 = add nsw i32 %13, -1
+  store i32 %14, i32* %4, align 4
+  %15 = load float, float* %5, align 4
+  %16 = fmul float %15, 2.000000e+00
+  store float %16, float* %5, align 4
+  br label %9
+Successor: 0x1e53000
+[BB 0x1e53710]
+  br label %28
+Successor: 0x1e53b10
+[BB 0x1e53d90]
+  %23 = load i32, i32* %4, align 4
+  %24 = add nsw i32 %23, 1
+  store i32 %24, i32* %4, align 4
+  %25 = load float, float* %5, align 4
+  %26 = fdiv float %25, 2.000000e+00
+  store float %26, float* %5, align 4
+  br label %19
+Successor: 0x1e53bd0
+[BB 0x1e53de0]
+  br label %28
+Successor: 0x1e53b10
+[BB 0x1e53b10]
+  %29 = load float, float* %3, align 4
+  %30 = load float, float* %5, align 4
+  %31 = fmul float %29, %30
+  ret float %31
+[Function: __VERIFIER_assert]
+[BB 0x1e4ea40]
+  %2 = alloca i32, align 4
+  store i32 %0, i32* %2, align 4
+  %3 = load i32, i32* %2, align 4
+  %4 = icmp ne i32 %3, 0
+  br i1 %4, label %7, label %5
+Successor: 0x1e4f270
+Successor: 0x1e4f2c0
+[BB 0x1e4f270]
+  ret void
+[BB 0x1e4f2c0]
+  br label %6
+Successor: 0x1e4f400
+[BB 0x1e4f400]
+[Caller:   call void (...) @__VERIFIER_error() #3]
+[Callee: __VERIFIER_error]
+  unreachable
+[Function: FABS]
+[BB 0x1e4f7f0]
+  %2 = alloca float, align 4
+  %3 = alloca float, align 4
+  store float %0, float* %3, align 4
+  %4 = load float, float* %3, align 4
+  %5 = fcmp oge float %4, 0.000000e+00
+  br i1 %5, label %6, label %8
+Successor: 0x1e50420
+Successor: 0x1e50470
+[BB 0x1e50420]
+  %7 = load float, float* %3, align 4
+  store float %7, float* %2, align 4
+  br label %11
+Successor: 0x1e506b0
+[BB 0x1e50470]
+  %9 = load float, float* %3, align 4
+  %10 = fsub float -0.000000e+00, %9
+  store float %10, float* %2, align 4
+  br label %11
+Successor: 0x1e506b0
+[BB 0x1e506b0]
+  %12 = load float, float* %2, align 4
+  ret float %12
+[Function: __VERIFIER_error]

@@ -1,0 +1,120 @@
+[Function: main]
+[BB 0x232ec20]
+  %1 = alloca i32, align 4
+  %2 = alloca double, align 8
+  %3 = alloca i32, align 4
+  %4 = alloca double, align 8
+  %5 = alloca double, align 8
+  %6 = alloca double, align 8
+  store i32 0, i32* %1, align 4
+[Caller:   %7 = call double (...) @__VERIFIER_nondet_double()]
+[Callee: __VERIFIER_nondet_double]
+  store double %7, double* %2, align 8
+  %8 = load double, double* %2, align 8
+[Caller:   %9 = call i32 @__isinf(double %8) #6]
+[Callee: __isinf]
+  %10 = icmp ne i32 %9, 0
+  %11 = xor i1 %10, true
+  %12 = zext i1 %11 to i32
+[Caller:   call void @__VERIFIER_assume(i32 %12)]
+[Callee: __VERIFIER_assume]
+  %13 = load double, double* %2, align 8
+[Caller:   %14 = call i32 @__isnan(double %13) #6]
+[Callee: __isnan]
+  %15 = icmp ne i32 %14, 0
+  %16 = xor i1 %15, true
+  %17 = zext i1 %16 to i32
+[Caller:   call void @__VERIFIER_assume(i32 %17)]
+[Callee: __VERIFIER_assume]
+[Caller:   %18 = call i32 @fegetround() #7]
+[Callee: fegetround]
+  store i32 %18, i32* %3, align 4
+[Caller:   %19 = call i32 @fesetround(i32 2048) #7]
+[Callee: fesetround]
+  %20 = load double, double* %2, align 8
+[Caller:   %21 = call double @llvm.rint.f64(double %20)]
+[Callee: llvm.rint.f64]
+  store double %21, double* %4, align 8
+  %22 = load i32, i32* %3, align 4
+[Caller:   %23 = call i32 @fesetround(i32 %22) #7]
+[Callee: fesetround]
+  %24 = load double, double* %2, align 8
+[Caller:   %25 = call double @llvm.ceil.f64(double %24)]
+[Callee: llvm.ceil.f64]
+  %26 = load double, double* %4, align 8
+  %27 = fcmp oeq double %25, %26
+  %28 = zext i1 %27 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %28)]
+[Callee: __VERIFIER_assert]
+[Caller:   %29 = call double (...) @__VERIFIER_nondet_double()]
+[Callee: __VERIFIER_nondet_double]
+  store double %29, double* %5, align 8
+  %30 = load double, double* %5, align 8
+[Caller:   %31 = call i32 @__isinf(double %30) #6]
+[Callee: __isinf]
+[Caller:   call void @__VERIFIER_assume(i32 %31)]
+[Callee: __VERIFIER_assume]
+  %32 = load double, double* %5, align 8
+[Caller:   %33 = call double @llvm.ceil.f64(double %32)]
+[Callee: llvm.ceil.f64]
+[Caller:   %34 = call i32 @__isinf(double %33) #6]
+[Callee: __isinf]
+[Caller:   call void @__VERIFIER_assert(i32 %34)]
+[Callee: __VERIFIER_assert]
+[Caller:   %35 = call double (...) @__VERIFIER_nondet_double()]
+[Callee: __VERIFIER_nondet_double]
+  store double %35, double* %6, align 8
+  %36 = load double, double* %6, align 8
+[Caller:   %37 = call i32 @__isinf(double %36) #6]
+[Callee: __isinf]
+[Caller:   call void @__VERIFIER_assume(i32 %37)]
+[Callee: __VERIFIER_assume]
+  %38 = load double, double* %6, align 8
+[Caller:   %39 = call double @llvm.ceil.f64(double %38)]
+[Callee: llvm.ceil.f64]
+[Caller:   %40 = call i32 @__isinf(double %39) #6]
+[Callee: __isinf]
+[Caller:   call void @__VERIFIER_assert(i32 %40)]
+[Callee: __VERIFIER_assert]
+  ret i32 0
+[Function: __VERIFIER_nondet_double]
+[Function: __isinf]
+[Function: __VERIFIER_assume]
+[Function: __isnan]
+[Function: __VERIFIER_assume]
+[Function: fegetround]
+[Function: fesetround]
+[Function: llvm.rint.f64]
+[Function: fesetround]
+[Function: llvm.ceil.f64]
+[Function: __VERIFIER_assert]
+[BB 0x232def0]
+  %2 = alloca i32, align 4
+  store i32 %0, i32* %2, align 4
+  %3 = load i32, i32* %2, align 4
+  %4 = icmp ne i32 %3, 0
+  br i1 %4, label %7, label %5
+Successor: 0x232e720
+Successor: 0x232e770
+[BB 0x232e720]
+  ret void
+[BB 0x232e770]
+  br label %6
+Successor: 0x232e8b0
+[BB 0x232e8b0]
+[Caller:   call void (...) @__VERIFIER_error() #6]
+[Callee: __VERIFIER_error]
+  unreachable
+[Function: __VERIFIER_nondet_double]
+[Function: __isinf]
+[Function: __VERIFIER_assume]
+[Function: llvm.ceil.f64]
+[Function: __isinf]
+[Function: __VERIFIER_assert]
+[Function: __VERIFIER_nondet_double]
+[Function: __isinf]
+[Function: __VERIFIER_assume]
+[Function: llvm.ceil.f64]
+[Function: __isinf]
+[Function: __VERIFIER_assert]
+[Function: __VERIFIER_error]

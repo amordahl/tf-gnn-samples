@@ -1,0 +1,54 @@
+[Function: main]
+[BB 0xae5f60]
+[Caller:   %1 = call double @llvm.minnum.f64(double 2.000000e+00, double 1.000000e+00)]
+[Callee: llvm.minnum.f64]
+  %2 = fcmp oeq double %1, 1.000000e+00
+  %3 = zext i1 %2 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %3)]
+[Callee: __VERIFIER_assert]
+[Caller:   %4 = call double @llvm.minnum.f64(double 0xFFF0000000000000, double 0.000000e+00)]
+[Callee: llvm.minnum.f64]
+  %5 = fcmp oeq double %4, 0xFFF0000000000000
+  %6 = zext i1 %5 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %6)]
+[Callee: __VERIFIER_assert]
+[Caller:   %7 = call double @llvm.minnum.f64(double 0x7FF8000000000000, double -1.000000e+00)]
+[Callee: llvm.minnum.f64]
+  %8 = fcmp oeq double %7, -1.000000e+00
+  %9 = zext i1 %8 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %9)]
+[Callee: __VERIFIER_assert]
+[Caller:   %10 = call double @llvm.minnum.f64(double 0x7FF8000000000000, double 0x7FF8000000000000)]
+[Callee: llvm.minnum.f64]
+  %11 = fcmp oeq double %10, 0x7FF8000000000000
+  %12 = xor i1 %11, true
+  %13 = zext i1 %12 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %13)]
+[Callee: __VERIFIER_assert]
+  ret i32 0
+[Function: llvm.minnum.f64]
+[Function: __VERIFIER_assert]
+[BB 0xae51d0]
+  %2 = alloca i32, align 4
+  store i32 %0, i32* %2, align 4
+  %3 = load i32, i32* %2, align 4
+  %4 = icmp ne i32 %3, 0
+  br i1 %4, label %7, label %5
+Successor: 0xae5a00
+Successor: 0xae5a50
+[BB 0xae5a00]
+  ret void
+[BB 0xae5a50]
+  br label %6
+Successor: 0xae5b90
+[BB 0xae5b90]
+[Caller:   call void (...) @__VERIFIER_error() #3]
+[Callee: __VERIFIER_error]
+  unreachable
+[Function: llvm.minnum.f64]
+[Function: __VERIFIER_assert]
+[Function: llvm.minnum.f64]
+[Function: __VERIFIER_assert]
+[Function: llvm.minnum.f64]
+[Function: __VERIFIER_assert]
+[Function: __VERIFIER_error]

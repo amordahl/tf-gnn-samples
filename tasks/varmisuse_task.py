@@ -231,8 +231,8 @@ class VarMisuse_Task(Sparse_Graph_Task):
         params = super().default_params()
         params.update({
             'max_variable_candidates': 5,
-            'graph_node_label_max_num_chars': 19,
-            'graph_node_label_representation_size': 64,
+            'graph_node_label_max_num_chars': 19, # updated: original was 19
+            'graph_node_label_representation_size': 64, # updated; original was 64
             'slot_score_via_linear_layer': True,
             'loss_function': 'max-likelihood',  # max-likelihood or max-margin
             'max-margin_loss_margin': 0.2,
@@ -357,7 +357,7 @@ class VarMisuse_Task(Sparse_Graph_Task):
                                                 axis=-1)  # Shape: [U, C, A]
 
         # Choose kernel sizes such that there is a single value at the end:
-        char_conv_l1_kernel_size = 5
+        char_conv_l1_kernel_size = 5 # updated: original was 5
         char_conv_l2_kernel_size = \
             self.params['graph_node_label_max_num_chars'] - 2 * (char_conv_l1_kernel_size - 1)
 

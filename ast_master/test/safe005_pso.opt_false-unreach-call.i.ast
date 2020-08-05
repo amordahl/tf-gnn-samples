@@ -1,0 +1,2110 @@
+TranslationUnitDecl 0x55beeda8ae18 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x55beeda8b6d8 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x55beeda8b3b0 '__int128'
+|-TypedefDecl 0x55beeda8b748 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x55beeda8b3d0 'unsigned __int128'
+|-TypedefDecl 0x55beeda8ba50 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x55beeda8b820 'struct __NSConstantString_tag'
+|   `-Record 0x55beeda8b7a0 '__NSConstantString_tag'
+|-TypedefDecl 0x55beeda8baf8 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x55beeda8bab0 'char *'
+|   `-BuiltinType 0x55beeda8aeb0 'char'
+|-TypedefDecl 0x55beedaca650 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x55beeda8bd90 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x55beeda8bbd0 'struct __va_list_tag'
+|     `-Record 0x55beeda8bb50 '__va_list_tag'
+|-FunctionDecl 0x55beedaca770 <./test/safe005_pso.opt_false-unreach-call.i:1:1, col:41> col:14 used __VERIFIER_nondet_bool '_Bool (void)' extern
+|-FunctionDecl 0x55beedaca940 <line:2:1, col:34> col:13 used __VERIFIER_assume 'void (int)' extern
+| `-ParmVarDecl 0x55beedaca870 <col:31> col:34 'int'
+|-FunctionDecl 0x55beedacaab8 <line:3:1, col:45> col:15 used __VERIFIER_nondet_pointer 'void *(void)' extern
+|-FunctionDecl 0x55beedacabe0 <line:4:1, col:61> col:13 used __VERIFIER_error 'void () __attribute__((noreturn))' extern
+|-FunctionDecl 0x55beedacad28 <line:5:1, col:99> col:6 used __VERIFIER_assert 'void (int)'
+| |-ParmVarDecl 0x55beedacac98 <col:24, col:28> col:28 used expression 'int'
+| `-CompoundStmt 0x55beedacaf58 <col:40, col:99>
+|   |-IfStmt 0x55beedacaf28 <col:42, col:88>
+|   | |-UnaryOperator 0x55beedacae08 <col:46, col:47> 'int' prefix '!' cannot overflow
+|   | | `-ImplicitCastExpr 0x55beedacadf0 <col:47> 'int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x55beedacadd0 <col:47> 'int' lvalue ParmVar 0x55beedacac98 'expression' 'int'
+|   | `-CompoundStmt 0x55beedacaf10 <col:59, col:88>
+|   |   `-LabelStmt 0x55beedacaef8 <col:61, col:85> 'ERROR'
+|   |     `-CallExpr 0x55beedacae88 <col:68, col:85> 'void'
+|   |       `-ImplicitCastExpr 0x55beedacae70 <col:68> 'void (*)() __attribute__((noreturn))' <FunctionToPointerDecay>
+|   |         `-DeclRefExpr 0x55beedacae20 <col:68> 'void () __attribute__((noreturn))' Function 0x55beedacabe0 '__VERIFIER_error' 'void () __attribute__((noreturn))'
+|   |-NullStmt 0x55beedacaf40 <col:89>
+|   `-ReturnStmt 0x55beedacaf48 <col:91>
+|-FunctionDecl 0x55beedacafa0 <line:6:1, col:37> col:13 used __VERIFIER_atomic_begin 'void ()' extern
+|-FunctionDecl 0x55beedacb060 <line:7:1, col:35> col:13 used __VERIFIER_atomic_end 'void ()' extern
+|-FunctionDecl 0x55beedacb3e0 <line:9:1, line:11:76> line:9:13 __assert_fail 'void (const char *, const char *, unsigned int, const char *) __attribute__((noreturn))' extern
+| |-ParmVarDecl 0x55beedacb118 <col:28, col:40> col:40 __assertion 'const char *'
+| |-ParmVarDecl 0x55beedacb198 <col:53, col:65> col:65 __file 'const char *'
+| |-ParmVarDecl 0x55beedacb218 <line:10:7, col:20> col:20 __line 'unsigned int'
+| |-ParmVarDecl 0x55beedacb298 <col:28, col:40> col:40 __function 'const char *'
+| `-NoThrowAttr 0x55beedacb4a0 <line:11:22>
+|-FunctionDecl 0x55beedaf1520 <line:12:1, line:14:76> line:12:13 __assert_perror_fail 'void (int, const char *, unsigned int, const char *) __attribute__((noreturn))' extern
+| |-ParmVarDecl 0x55beedacb510 <col:35, col:39> col:39 __errnum 'int'
+| |-ParmVarDecl 0x55beedacb590 <col:49, col:61> col:61 __file 'const char *'
+| |-ParmVarDecl 0x55beedaf1350 <line:13:7, col:20> col:20 __line 'unsigned int'
+| |-ParmVarDecl 0x55beedaf13d0 <col:28, col:40> col:40 __function 'const char *'
+| `-NoThrowAttr 0x55beedaf15e0 <line:14:22>
+|-FunctionDecl 0x55beedaf1890 <line:15:1, line:16:76> line:15:13 __assert 'void (const char *, const char *, int) __attribute__((noreturn))' extern
+| |-ParmVarDecl 0x55beedaf1650 <col:23, col:35> col:35 __assertion 'const char *'
+| |-ParmVarDecl 0x55beedaf16d0 <col:48, col:60> col:60 __file 'const char *'
+| |-ParmVarDecl 0x55beedaf1750 <col:68, col:72> col:72 __line 'int'
+| `-NoThrowAttr 0x55beedaf1948 <line:16:22>
+|-TypedefDecl 0x55beedaf19b8 <line:18:1, col:23> col:23 __u_char 'unsigned char'
+| `-BuiltinType 0x55beeda8af70 'unsigned char'
+|-TypedefDecl 0x55beedaf1a28 <line:19:1, col:28> col:28 __u_short 'unsigned short'
+| `-BuiltinType 0x55beeda8af90 'unsigned short'
+|-TypedefDecl 0x55beedaf1a98 <line:20:1, col:22> col:22 __u_int 'unsigned int'
+| `-BuiltinType 0x55beeda8afb0 'unsigned int'
+|-TypedefDecl 0x55beedaf1b08 <line:21:1, col:27> col:27 __u_long 'unsigned long'
+| `-BuiltinType 0x55beeda8afd0 'unsigned long'
+|-TypedefDecl 0x55beedaf1b78 <line:22:1, col:21> col:21 __int8_t 'signed char'
+| `-BuiltinType 0x55beeda8aed0 'signed char'
+|-TypedefDecl 0x55beedaf1be8 <line:23:1, col:23> col:23 __uint8_t 'unsigned char'
+| `-BuiltinType 0x55beeda8af70 'unsigned char'
+|-TypedefDecl 0x55beedaf1c58 <line:24:1, col:26> col:26 __int16_t 'short'
+| `-BuiltinType 0x55beeda8aef0 'short'
+|-TypedefDecl 0x55beedaf1cc8 <line:25:1, col:28> col:28 __uint16_t 'unsigned short'
+| `-BuiltinType 0x55beeda8af90 'unsigned short'
+|-TypedefDecl 0x55beedaf1d38 <line:26:1, col:20> col:20 __int32_t 'int'
+| `-BuiltinType 0x55beeda8af10 'int'
+|-TypedefDecl 0x55beedaf1da8 <line:27:1, col:22> col:22 __uint32_t 'unsigned int'
+| `-BuiltinType 0x55beeda8afb0 'unsigned int'
+|-TypedefDecl 0x55beedaf1e18 <line:28:1, col:25> col:25 __int64_t 'long'
+| `-BuiltinType 0x55beeda8af30 'long'
+|-TypedefDecl 0x55beedaf1e88 <line:29:1, col:27> col:27 referenced __uint64_t 'unsigned long'
+| `-BuiltinType 0x55beeda8afd0 'unsigned long'
+|-TypedefDecl 0x55beedaf1ef8 <line:30:1, col:18> col:18 referenced __quad_t 'long'
+| `-BuiltinType 0x55beeda8af30 'long'
+|-TypedefDecl 0x55beedaf1f68 <line:31:1, col:27> col:27 __u_quad_t 'unsigned long'
+| `-BuiltinType 0x55beeda8afd0 'unsigned long'
+|-TypedefDecl 0x55beedaf1fd8 <line:32:1, col:27> col:27 __dev_t 'unsigned long'
+| `-BuiltinType 0x55beeda8afd0 'unsigned long'
+|-TypedefDecl 0x55beedaf2048 <line:33:1, col:22> col:22 __uid_t 'unsigned int'
+| `-BuiltinType 0x55beeda8afb0 'unsigned int'
+|-TypedefDecl 0x55beedaf20b8 <line:34:1, col:22> col:22 __gid_t 'unsigned int'
+| `-BuiltinType 0x55beeda8afb0 'unsigned int'
+|-TypedefDecl 0x55beedaf2128 <line:35:1, col:27> col:27 __ino_t 'unsigned long'
+| `-BuiltinType 0x55beeda8afd0 'unsigned long'
+|-TypedefDecl 0x55beedaf2198 <line:36:1, col:27> col:27 __ino64_t 'unsigned long'
+| `-BuiltinType 0x55beeda8afd0 'unsigned long'
+|-TypedefDecl 0x55beedaf2208 <line:37:1, col:22> col:22 __mode_t 'unsigned int'
+| `-BuiltinType 0x55beeda8afb0 'unsigned int'
+|-TypedefDecl 0x55beedaf2278 <line:38:1, col:27> col:27 __nlink_t 'unsigned long'
+| `-BuiltinType 0x55beeda8afd0 'unsigned long'
+|-TypedefDecl 0x55beedaf22e8 <line:39:1, col:18> col:18 __off_t 'long'
+| `-BuiltinType 0x55beeda8af30 'long'
+|-TypedefDecl 0x55beedaf2378 <line:40:1, col:18> col:18 referenced __off64_t 'long'
+| `-BuiltinType 0x55beeda8af30 'long'
+|-TypedefDecl 0x55beedaf23e8 <line:41:1, col:13> col:13 referenced __pid_t 'int'
+| `-BuiltinType 0x55beeda8af10 'int'
+|-RecordDecl 0x55beedaf2440 <line:42:9, col:32> col:9 struct definition
+| `-FieldDecl 0x55beedaf2588 <col:18, col:29> col:22 __val 'int [2]'
+|-TypedefDecl 0x55beedaf2640 <col:1, col:34> col:34 __fsid_t 'struct __fsid_t':'__fsid_t'
+| `-ElaboratedType 0x55beedaf25e0 'struct __fsid_t' sugar
+|   `-RecordType 0x55beedaf24c0 '__fsid_t'
+|     `-Record 0x55beedaf2440 ''
+|-TypedefDecl 0x55beedaf26c8 <line:43:1, col:18> col:18 referenced __clock_t 'long'
+| `-BuiltinType 0x55beeda8af30 'long'
+|-TypedefDecl 0x55beedaf2738 <line:44:1, col:27> col:27 __rlim_t 'unsigned long'
+| `-BuiltinType 0x55beeda8afd0 'unsigned long'
+|-TypedefDecl 0x55beedaf27a8 <line:45:1, col:27> col:27 __rlim64_t 'unsigned long'
+| `-BuiltinType 0x55beeda8afd0 'unsigned long'
+|-TypedefDecl 0x55beedaf2818 <line:46:1, col:22> col:22 __id_t 'unsigned int'
+| `-BuiltinType 0x55beeda8afb0 'unsigned int'
+|-TypedefDecl 0x55beedaf2888 <line:47:1, col:18> col:18 referenced __time_t 'long'
+| `-BuiltinType 0x55beeda8af30 'long'
+|-TypedefDecl 0x55beedaf28f8 <line:48:1, col:22> col:22 __useconds_t 'unsigned int'
+| `-BuiltinType 0x55beeda8afb0 'unsigned int'
+|-TypedefDecl 0x55beedaf2968 <line:49:1, col:18> col:18 __suseconds_t 'long'
+| `-BuiltinType 0x55beeda8af30 'long'
+|-TypedefDecl 0x55beedaf29d8 <line:50:1, col:13> col:13 __daddr_t 'int'
+| `-BuiltinType 0x55beeda8af10 'int'
+|-TypedefDecl 0x55beedaf2a48 <line:51:1, col:13> col:13 __key_t 'int'
+| `-BuiltinType 0x55beeda8af10 'int'
+|-TypedefDecl 0x55beedaf2ab8 <line:52:1, col:13> col:13 referenced __clockid_t 'int'
+| `-BuiltinType 0x55beeda8af10 'int'
+|-TypedefDecl 0x55beedaf2b28 <line:53:1, col:16> col:16 referenced __timer_t 'void *'
+| `-PointerType 0x55beeda8b630 'void *'
+|   `-BuiltinType 0x55beeda8ae70 'void'
+|-TypedefDecl 0x55beedaf2b98 <line:54:1, col:18> col:18 __blksize_t 'long'
+| `-BuiltinType 0x55beeda8af30 'long'
+|-TypedefDecl 0x55beedaf2c08 <line:55:1, col:18> col:18 __blkcnt_t 'long'
+| `-BuiltinType 0x55beeda8af30 'long'
+|-TypedefDecl 0x55beedaf2c78 <line:56:1, col:18> col:18 __blkcnt64_t 'long'
+| `-BuiltinType 0x55beeda8af30 'long'
+|-TypedefDecl 0x55beedaf2ce8 <line:57:1, col:27> col:27 __fsblkcnt_t 'unsigned long'
+| `-BuiltinType 0x55beeda8afd0 'unsigned long'
+|-TypedefDecl 0x55beedaf2d58 <line:58:1, col:27> col:27 __fsblkcnt64_t 'unsigned long'
+| `-BuiltinType 0x55beeda8afd0 'unsigned long'
+|-TypedefDecl 0x55beedaf2dc8 <line:59:1, col:27> col:27 __fsfilcnt_t 'unsigned long'
+| `-BuiltinType 0x55beeda8afd0 'unsigned long'
+|-TypedefDecl 0x55beedaf2e38 <line:60:1, col:27> col:27 __fsfilcnt64_t 'unsigned long'
+| `-BuiltinType 0x55beeda8afd0 'unsigned long'
+|-TypedefDecl 0x55beedaf2ea8 <line:61:1, col:18> col:18 __fsword_t 'long'
+| `-BuiltinType 0x55beeda8af30 'long'
+|-TypedefDecl 0x55beedaf2f18 <line:62:1, col:18> col:18 __ssize_t 'long'
+| `-BuiltinType 0x55beeda8af30 'long'
+|-TypedefDecl 0x55beedaf2f88 <line:63:1, col:18> col:18 referenced __syscall_slong_t 'long'
+| `-BuiltinType 0x55beeda8af30 'long'
+|-TypedefDecl 0x55beedaf2ff8 <line:64:1, col:27> col:27 __syscall_ulong_t 'unsigned long'
+| `-BuiltinType 0x55beeda8afd0 'unsigned long'
+|-TypedefDecl 0x55beedaf3088 <line:65:1, col:19> col:19 __loff_t '__off64_t':'long'
+| `-TypedefType 0x55beedaf3050 '__off64_t' sugar
+|   |-Typedef 0x55beedaf2378 '__off64_t'
+|   `-BuiltinType 0x55beeda8af30 'long'
+|-TypedefDecl 0x55beedaf3180 <line:66:1, col:19> col:19 __qaddr_t '__quad_t *'
+| `-PointerType 0x55beedaf3140 '__quad_t *'
+|   `-TypedefType 0x55beedaf30e0 '__quad_t' sugar
+|     |-Typedef 0x55beedaf1ef8 '__quad_t'
+|     `-BuiltinType 0x55beeda8af30 'long'
+|-TypedefDecl 0x55beedaf31f0 <line:67:1, col:15> col:15 __caddr_t 'char *'
+| `-PointerType 0x55beeda8bab0 'char *'
+|   `-BuiltinType 0x55beeda8aeb0 'char'
+|-TypedefDecl 0x55beedaf3260 <line:68:1, col:18> col:18 __intptr_t 'long'
+| `-BuiltinType 0x55beeda8af30 'long'
+|-TypedefDecl 0x55beedaf32d0 <line:69:1, col:22> col:22 __socklen_t 'unsigned int'
+| `-BuiltinType 0x55beeda8afb0 'unsigned int'
+|-FunctionDecl 0x55beedaf4458 <line:70:1, line:74:1> line:71:1 __bswap_32 'unsigned int (unsigned int)' static inline
+| |-ParmVarDecl 0x55beedaf4380 <col:13, col:26> col:26 used __bsx 'unsigned int'
+| `-CompoundStmt 0x55beedaf4768 <line:72:1, line:74:1>
+|   `-ReturnStmt 0x55beedaf4758 <line:73:3, col:34>
+|     `-CallExpr 0x55beedaf4718 <col:10, col:34> 'unsigned int'
+|       |-ImplicitCastExpr 0x55beedaf4700 <col:10> 'unsigned int (*)(unsigned int)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x55beedaf4690 <col:10> '<builtin fn type>' Function 0x55beedaf4500 '__builtin_bswap32' 'unsigned int (unsigned int)'
+|       `-ImplicitCastExpr 0x55beedaf4740 <col:29> 'unsigned int' <LValueToRValue>
+|         `-DeclRefExpr 0x55beedaf46b0 <col:29> 'unsigned int' lvalue ParmVar 0x55beedaf4380 '__bsx' 'unsigned int'
+|-FunctionDecl 0x55beedaf4500 <col:10> col:10 implicit used __builtin_bswap32 'unsigned int (unsigned int)' extern
+| |-ParmVarDecl 0x55beedaf45a0 <<invalid sloc>> <invalid sloc> 'unsigned int'
+| |-NoThrowAttr 0x55beedaf4610 <col:10> Implicit
+| `-ConstAttr 0x55beedaf4668 <col:10> Implicit
+|-FunctionDecl 0x55beedaf48c0 <line:75:1, line:79:1> line:76:1 __bswap_64 '__uint64_t (__uint64_t)' static inline
+| |-ParmVarDecl 0x55beedaf47b8 <col:13, col:24> col:24 used __bsx '__uint64_t':'unsigned long'
+| `-CompoundStmt 0x55beedaf4bd8 <line:77:1, line:79:1>
+|   `-ReturnStmt 0x55beedaf4bc8 <line:78:3, col:34>
+|     `-CallExpr 0x55beedaf4b88 <col:10, col:34> 'unsigned long'
+|       |-ImplicitCastExpr 0x55beedaf4b70 <col:10> 'unsigned long (*)(unsigned long)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x55beedaf4af8 <col:10> '<builtin fn type>' Function 0x55beedaf4968 '__builtin_bswap64' 'unsigned long (unsigned long)'
+|       `-ImplicitCastExpr 0x55beedaf4bb0 <col:29> '__uint64_t':'unsigned long' <LValueToRValue>
+|         `-DeclRefExpr 0x55beedaf4b18 <col:29> '__uint64_t':'unsigned long' lvalue ParmVar 0x55beedaf47b8 '__bsx' '__uint64_t':'unsigned long'
+|-FunctionDecl 0x55beedaf4968 <col:10> col:10 implicit used __builtin_bswap64 'unsigned long (unsigned long)' extern
+| |-ParmVarDecl 0x55beedaf4a08 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| |-NoThrowAttr 0x55beedaf4a78 <col:10> Implicit
+| `-ConstAttr 0x55beedaf4ad0 <col:10> Implicit
+|-TypedefDecl 0x55beedaf4c08 <line:80:1, col:27> col:27 referenced size_t 'unsigned long'
+| `-BuiltinType 0x55beeda8afd0 'unsigned long'
+|-TypedefDecl 0x55beedaf4c98 <line:82:1, col:18> col:18 referenced time_t '__time_t':'long'
+| `-TypedefType 0x55beedaf4c60 '__time_t' sugar
+|   |-Typedef 0x55beedaf2888 '__time_t'
+|   `-BuiltinType 0x55beeda8af30 'long'
+|-RecordDecl 0x55beedaf4cf0 <line:85:1, line:89:3> line:85:8 struct timespec definition
+| |-FieldDecl 0x55beedaf4da8 <line:87:5, col:14> col:14 tv_sec '__time_t':'long'
+| `-FieldDecl 0x55beedaf4e38 <line:88:5, col:23> col:23 tv_nsec '__syscall_slong_t':'long'
+|-TypedefDecl 0x55beedaf4ec8 <line:90:1, col:17> col:17 referenced pid_t '__pid_t':'int'
+| `-TypedefType 0x55beedaf4e90 '__pid_t' sugar
+|   |-Typedef 0x55beedaf23e8 '__pid_t'
+|   `-BuiltinType 0x55beeda8af10 'int'
+|-RecordDecl 0x55beedaf4f20 <line:91:1, line:94:3> line:91:8 struct sched_param definition
+| `-FieldDecl 0x55beedaf4fe0 <line:93:5, col:9> col:9 __sched_priority 'int'
+|-RecordDecl 0x55beedaf5030 <line:97:1, line:100:3> line:97:8 struct __sched_param definition
+| `-FieldDecl 0x55beedaf50f0 <line:99:5, col:9> col:9 __sched_priority 'int'
+|-TypedefDecl 0x55beedaf5158 <line:101:1, col:27> col:27 referenced __cpu_mask 'unsigned long'
+| `-BuiltinType 0x55beeda8afd0 'unsigned long'
+|-RecordDecl 0x55beedaf51b0 <line:102:9, line:105:1> line:102:9 struct definition
+| `-FieldDecl 0x55beedaf6480 <line:104:3, col:53> col:14 __bits '__cpu_mask [64]'
+|-TypedefDecl 0x55beedaf6530 <line:102:1, line:105:3> col:3 referenced cpu_set_t 'struct cpu_set_t':'cpu_set_t'
+| `-ElaboratedType 0x55beedaf64d0 'struct cpu_set_t' sugar
+|   `-RecordType 0x55beedaf5230 'cpu_set_t'
+|     `-Record 0x55beedaf51b0 ''
+|-FunctionDecl 0x55beedaf6808 <line:107:1, line:108:42> line:107:12 __sched_cpucount 'int (size_t, const cpu_set_t *)' extern
+| |-ParmVarDecl 0x55beedaf65d8 <col:30, col:37> col:37 __setsize 'size_t':'unsigned long'
+| |-ParmVarDecl 0x55beedaf66e0 <col:48, col:65> col:65 __setp 'const cpu_set_t *'
+| `-NoThrowAttr 0x55beedaf68b8 <line:108:19>
+|-FunctionDecl 0x55beedaf6a90 <line:109:1, col:92> col:19 __sched_cpualloc 'cpu_set_t *(size_t)' extern
+| |-ParmVarDecl 0x55beedaf6920 <col:37, col:44> col:44 __count 'size_t':'unsigned long'
+| `-NoThrowAttr 0x55beedaf6b38 <col:69>
+|-FunctionDecl 0x55beedaf6cb0 <line:110:1, col:87> col:13 __sched_cpufree 'void (cpu_set_t *)' extern
+| |-ParmVarDecl 0x55beedaf6ba0 <col:30, col:41> col:41 __set 'cpu_set_t *'
+| `-NoThrowAttr 0x55beedaf6d58 <col:64>
+|-FunctionDecl 0x55beedaf7018 <line:113:1, line:114:45> line:113:12 sched_setparam 'int (__pid_t, const struct sched_param *)' extern
+| |-ParmVarDecl 0x55beedaf6dc0 <col:28, col:36> col:36 __pid '__pid_t':'int'
+| |-ParmVarDecl 0x55beedaf6ef8 <col:43, col:69> col:69 __param 'const struct sched_param *'
+| `-NoThrowAttr 0x55beedaf70c8 <line:114:22>
+|-FunctionDecl 0x55beedaf73b0 <line:115:1, col:111> col:12 sched_getparam 'int (__pid_t, struct sched_param *)' extern
+| |-ParmVarDecl 0x55beedaf7130 <col:28, col:36> col:36 __pid '__pid_t':'int'
+| |-ParmVarDecl 0x55beedaf7228 <col:43, col:63> col:63 __param 'struct sched_param *'
+| `-NoThrowAttr 0x55beedaf7460 <col:88>
+|-FunctionDecl 0x55beedaf7718 <line:116:1, line:117:85> line:116:12 sched_setscheduler 'int (__pid_t, int, const struct sched_param *)' extern
+| |-ParmVarDecl 0x55beedaf74c8 <col:32, col:40> col:40 __pid '__pid_t':'int'
+| |-ParmVarDecl 0x55beedaf7548 <col:47, col:51> col:51 __policy 'int'
+| |-ParmVarDecl 0x55beedaf75d8 <line:117:11, col:37> col:37 __param 'const struct sched_param *'
+| `-NoThrowAttr 0x55beedaf77d0 <col:62>
+|-FunctionDecl 0x55beedaf7948 <line:118:1, col:86> col:12 sched_getscheduler 'int (__pid_t)' extern
+| |-ParmVarDecl 0x55beedaf7838 <col:32, col:40> col:40 __pid '__pid_t':'int'
+| `-NoThrowAttr 0x55beedaf79f0 <col:63>
+|-FunctionDecl 0x55beedaf7b18 <line:119:1, col:70> col:12 sched_yield 'int (void)' extern
+| `-NoThrowAttr 0x55beedaf7bb8 <col:47>
+|-FunctionDecl 0x55beedaf7cc0 <line:120:1, col:92> col:12 sched_get_priority_max 'int (int)' extern
+| |-ParmVarDecl 0x55beedaf7c28 <col:36, col:40> col:40 __algorithm 'int'
+| `-NoThrowAttr 0x55beedaf7d68 <col:69>
+|-FunctionDecl 0x55beedaf7e70 <line:121:1, col:92> col:12 sched_get_priority_min 'int (int)' extern
+| |-ParmVarDecl 0x55beedaf7dd8 <col:36, col:40> col:40 __algorithm 'int'
+| `-NoThrowAttr 0x55beedaf7f18 <col:69>
+|-FunctionDecl 0x55beedaf81d8 <line:122:1, col:111> col:12 sched_rr_get_interval 'int (__pid_t, struct timespec *)' extern
+| |-ParmVarDecl 0x55beedaf7f80 <col:35, col:43> col:43 __pid '__pid_t':'int'
+| |-ParmVarDecl 0x55beedaf80b8 <col:50, col:67> col:67 __t 'struct timespec *'
+| `-NoThrowAttr 0x55beedaf8288 <col:88>
+|-TypedefDecl 0x55beedaf8318 <line:126:1, col:19> col:19 referenced clock_t '__clock_t':'long'
+| `-TypedefType 0x55beedaf82e0 '__clock_t' sugar
+|   |-Typedef 0x55beedaf26c8 '__clock_t'
+|   `-BuiltinType 0x55beeda8af30 'long'
+|-TypedefDecl 0x55beedaf83c0 <line:129:1, col:21> col:21 referenced clockid_t '__clockid_t':'int'
+| `-TypedefType 0x55beedaf8370 '__clockid_t' sugar
+|   |-Typedef 0x55beedaf2ab8 '__clockid_t'
+|   `-BuiltinType 0x55beeda8af10 'int'
+|-TypedefDecl 0x55beedaf8458 <line:130:1, col:19> col:19 referenced timer_t '__timer_t':'void *'
+| `-TypedefType 0x55beedaf8420 '__timer_t' sugar
+|   |-Typedef 0x55beedaf2b28 '__timer_t'
+|   `-PointerType 0x55beeda8b630 'void *'
+|     `-BuiltinType 0x55beeda8ae70 'void'
+|-RecordDecl 0x55beedaf84b0 <line:132:1, line:145:1> line:132:8 struct tm definition
+| |-FieldDecl 0x55beedaf8570 <line:134:3, col:7> col:7 tm_sec 'int'
+| |-FieldDecl 0x55beedaf85d8 <line:135:3, col:7> col:7 tm_min 'int'
+| |-FieldDecl 0x55beedaf8640 <line:136:3, col:7> col:7 tm_hour 'int'
+| |-FieldDecl 0x55beedaf86a8 <line:137:3, col:7> col:7 tm_mday 'int'
+| |-FieldDecl 0x55beedaf8710 <line:138:3, col:7> col:7 tm_mon 'int'
+| |-FieldDecl 0x55beedaf8778 <line:139:3, col:7> col:7 tm_year 'int'
+| |-FieldDecl 0x55beedaf87e0 <line:140:3, col:7> col:7 tm_wday 'int'
+| |-FieldDecl 0x55beedaf8848 <line:141:3, col:7> col:7 tm_yday 'int'
+| |-FieldDecl 0x55beedaf88b0 <line:142:3, col:7> col:7 tm_isdst 'int'
+| |-FieldDecl 0x55beedaf8918 <line:143:3, col:12> col:12 tm_gmtoff 'long'
+| `-FieldDecl 0x55beedaf8980 <line:144:3, col:15> col:15 tm_zone 'const char *'
+|-RecordDecl 0x55beedaf89d0 <line:148:1, line:152:3> line:148:8 struct itimerspec definition
+| |-FieldDecl 0x55beedaf8a98 <line:150:5, col:21> col:21 it_interval 'struct timespec':'struct timespec'
+| `-FieldDecl 0x55beedaf8b08 <line:151:5, col:21> col:21 it_value 'struct timespec':'struct timespec'
+|-RecordDecl 0x55beedaf8bb0 <line:153:1, col:8> col:8 struct sigevent
+|-FunctionDecl 0x55beedaf8d80 <line:155:1, col:68> col:16 clock 'clock_t (void)' extern
+| `-NoThrowAttr 0x55beedaf8e20 <col:45>
+|-FunctionDecl 0x55beedaf9000 <line:156:1, col:77> col:15 time 'time_t (time_t *)' extern
+| |-ParmVarDecl 0x55beedaf8ef0 <col:21, col:29> col:29 __timer 'time_t *'
+| `-NoThrowAttr 0x55beedaf90a8 <col:54>
+|-FunctionDecl 0x55beedaf92a8 <line:157:1, line:158:73> line:157:15 difftime 'double (time_t, time_t)' extern
+| |-ParmVarDecl 0x55beedaf9110 <col:25, col:32> col:32 __time1 'time_t':'long'
+| |-ParmVarDecl 0x55beedaf9188 <col:41, col:48> col:48 __time0 'time_t':'long'
+| |-NoThrowAttr 0x55beedaf9358 <line:158:22>
+| `-ConstAttr 0x55beedaf9ff0 <col:63>
+|-FunctionDecl 0x55beedafa1f0 <line:159:1, col:79> col:15 mktime 'time_t (struct tm *)' extern
+| |-ParmVarDecl 0x55beedafa0e8 <col:23, col:34> col:34 __tp 'struct tm *'
+| `-NoThrowAttr 0x55beedafa298 <col:56>
+|-FunctionDecl 0x55beedafa640 <line:160:1, line:162:77> line:160:15 strftime 'size_t (char *restrict, size_t, const char *restrict, const struct tm *restrict)' extern
+| |-ParmVarDecl 0x55beedafa308 <col:25, col:42> col:42 __s 'char *restrict'
+| |-ParmVarDecl 0x55beedafa380 <col:47, col:54> col:54 __maxsize 'size_t':'unsigned long'
+| |-ParmVarDecl 0x55beedafa400 <line:161:4, col:27> col:27 __format 'const char *restrict'
+| |-ParmVarDecl 0x55beedafa4f8 <line:162:4, col:32> col:32 __tp 'const struct tm *restrict'
+| `-NoThrowAttr 0x55beedafa700 <col:54>
+|-RecordDecl 0x55beedafa758 <line:164:9, line:171:1> line:164:16 struct __locale_struct definition
+| |-RecordDecl 0x55beedafa808 parent 0x55beeda8ae18 <line:166:3, col:10> col:10 struct __locale_data
+| |-FieldDecl 0x55beedafaa68 <col:3, col:37> col:25 __locales 'struct __locale_data *[13]'
+| |-FieldDecl 0x55beedafab08 <line:167:3, col:29> col:29 __ctype_b 'const unsigned short *'
+| |-FieldDecl 0x55beedafab70 <line:168:3, col:14> col:14 __ctype_tolower 'const int *'
+| |-FieldDecl 0x55beedafabd8 <line:169:3, col:14> col:14 __ctype_toupper 'const int *'
+| `-FieldDecl 0x55beedafacc8 <line:170:3, col:25> col:15 __names 'const char *[13]'
+|-TypedefDecl 0x55beedafade8 <line:164:1, line:171:4> col:4 referenced __locale_t 'struct __locale_struct *'
+| `-PointerType 0x55beedafad90 'struct __locale_struct *'
+|   `-ElaboratedType 0x55beedafad20 'struct __locale_struct' sugar
+|     `-RecordType 0x55beedafa7e0 'struct __locale_struct'
+|       `-Record 0x55beedafa758 '__locale_struct'
+|-TypedefDecl 0x55beedafae98 <line:172:1, col:20> col:20 locale_t '__locale_t':'struct __locale_struct *'
+| `-TypedefType 0x55beedafae60 '__locale_t' sugar
+|   |-Typedef 0x55beedafade8 '__locale_t'
+|   `-PointerType 0x55beedafad90 'struct __locale_struct *'
+|     `-ElaboratedType 0x55beedafad20 'struct __locale_struct' sugar
+|       `-RecordType 0x55beedafa7e0 'struct __locale_struct'
+|         `-Record 0x55beedafa758 '__locale_struct'
+|-FunctionDecl 0x55beedafc2a0 <line:173:1, line:176:63> line:173:15 strftime_l 'size_t (char *restrict, size_t, const char *restrict, const struct tm *restrict, __locale_t)' extern
+| |-ParmVarDecl 0x55beedafaf08 <col:27, col:44> col:44 __s 'char *restrict'
+| |-ParmVarDecl 0x55beedafaf80 <col:49, col:56> col:56 __maxsize 'size_t':'unsigned long'
+| |-ParmVarDecl 0x55beedafc028 <line:174:6, col:29> col:29 __format 'const char *restrict'
+| |-ParmVarDecl 0x55beedafc0b8 <line:175:6, col:34> col:34 __tp 'const struct tm *restrict'
+| |-ParmVarDecl 0x55beedafc130 <line:176:6, col:17> col:17 __loc '__locale_t':'struct __locale_struct *'
+| `-NoThrowAttr 0x55beedafc368 <col:40>
+|-FunctionDecl 0x55beedafc558 <line:178:1, col:89> col:19 gmtime 'struct tm *(const time_t *)' extern
+| |-ParmVarDecl 0x55beedafc430 <col:27, col:41> col:41 __timer 'const time_t *'
+| `-NoThrowAttr 0x55beedafc600 <col:66>
+|-FunctionDecl 0x55beedafc710 <line:179:1, col:92> col:19 localtime 'struct tm *(const time_t *)' extern
+| |-ParmVarDecl 0x55beedafc668 <col:30, col:44> col:44 __timer 'const time_t *'
+| `-NoThrowAttr 0x55beedafc7b8 <col:69>
+|-FunctionDecl 0x55beedafc9e8 <line:181:1, line:182:75> line:181:19 gmtime_r 'struct tm *(const time_t *restrict, struct tm *restrict)' extern
+| |-ParmVarDecl 0x55beedafc820 <col:29, col:54> col:54 __timer 'const time_t *restrict'
+| |-ParmVarDecl 0x55beedafc8b0 <line:182:8, col:30> col:30 __tp 'struct tm *restrict'
+| `-NoThrowAttr 0x55beedafca98 <col:52>
+|-FunctionDecl 0x55beedafcc40 <line:183:1, line:184:78> line:183:19 localtime_r 'struct tm *(const time_t *restrict, struct tm *restrict)' extern
+| |-ParmVarDecl 0x55beedafcb00 <col:32, col:57> col:57 __timer 'const time_t *restrict'
+| |-ParmVarDecl 0x55beedafcb90 <line:184:11, col:33> col:33 __tp 'struct tm *restrict'
+| `-NoThrowAttr 0x55beedafccf0 <col:55>
+|-FunctionDecl 0x55beedafce88 <line:186:1, col:85> col:14 asctime 'char *(const struct tm *)' extern
+| |-ParmVarDecl 0x55beedafcd70 <col:23, col:40> col:40 __tp 'const struct tm *'
+| `-NoThrowAttr 0x55beedafcf30 <col:62>
+|-FunctionDecl 0x55beedafd168 <line:187:1, col:83> col:14 ctime 'char *(const time_t *)' extern
+| |-ParmVarDecl 0x55beedafcf98 <col:21, col:35> col:35 __timer 'const time_t *'
+| `-NoThrowAttr 0x55beedafd210 <col:60>
+|-FunctionDecl 0x55beedafd438 <line:189:1, line:190:67> line:189:14 asctime_r 'char *(const struct tm *restrict, char *restrict)' extern
+| |-ParmVarDecl 0x55beedafd290 <col:25, col:53> col:53 __tp 'const struct tm *restrict'
+| |-ParmVarDecl 0x55beedafd310 <line:190:4, col:21> col:21 __buf 'char *restrict'
+| `-NoThrowAttr 0x55beedafd4e8 <col:44>
+|-FunctionDecl 0x55beedafd6f8 <line:191:1, line:192:72> line:191:14 ctime_r 'char *(const time_t *restrict, char *restrict)' extern
+| |-ParmVarDecl 0x55beedafd550 <col:23, col:48> col:48 __timer 'const time_t *restrict'
+| |-ParmVarDecl 0x55beedafd5d0 <line:192:9, col:26> col:26 __buf 'char *restrict'
+| `-NoThrowAttr 0x55beedafd7a8 <col:49>
+|-VarDecl 0x55beedafd8a8 <line:193:1, col:24> col:14 __tzname 'char *[2]' extern
+|-VarDecl 0x55beedafd928 <line:194:1, col:12> col:12 __daylight 'int' extern
+|-VarDecl 0x55beedafd9a8 <line:195:1, col:17> col:17 __timezone 'long' extern
+|-VarDecl 0x55beedafda70 <line:196:1, col:22> col:14 tzname 'char *[2]' extern
+|-FunctionDecl 0x55beedafdba0 <line:197:1, col:65> col:13 tzset 'void (void)' extern
+| `-NoThrowAttr 0x55beedafdc40 <col:42>
+|-VarDecl 0x55beedafdcb0 <line:198:1, col:12> col:12 daylight 'int' extern
+|-VarDecl 0x55beedafdd30 <line:199:1, col:17> col:17 timezone 'long' extern
+|-FunctionDecl 0x55beedafdeb8 <line:200:1, col:80> col:12 stime 'int (const time_t *)' extern
+| |-ParmVarDecl 0x55beedafdda8 <col:19, col:33> col:33 __when 'const time_t *'
+| `-NoThrowAttr 0x55beedafdf60 <col:57>
+|-FunctionDecl 0x55beedafe0d0 <line:201:1, col:79> col:15 timegm 'time_t (struct tm *)' extern
+| |-ParmVarDecl 0x55beedafdfe0 <col:23, col:34> col:34 __tp 'struct tm *'
+| `-NoThrowAttr 0x55beedafe178 <col:56>
+|-FunctionDecl 0x55beedafe288 <line:202:1, col:82> col:15 timelocal 'time_t (struct tm *)' extern
+| |-ParmVarDecl 0x55beedafe1f8 <col:26, col:37> col:37 __tp 'struct tm *'
+| `-NoThrowAttr 0x55beedafe330 <col:59>
+|-FunctionDecl 0x55beedafe438 <line:203:1, col:99> col:12 dysize 'int (int)' extern
+| |-ParmVarDecl 0x55beedafe3a0 <col:20, col:24> col:24 __year 'int'
+| |-NoThrowAttr 0x55beedafe4e0 <col:48>
+| `-ConstAttr 0x55beedafe538 <col:89>
+|-FunctionDecl 0x55beedafe798 <line:204:1, line:205:37> line:204:12 nanosleep 'int (const struct timespec *, struct timespec *)' extern
+| |-ParmVarDecl 0x55beedafe5e8 <col:23, col:46> col:46 __requested_time 'const struct timespec *'
+| `-ParmVarDecl 0x55beedafe678 <line:205:9, col:26> col:26 __remaining 'struct timespec *'
+|-FunctionDecl 0x55beedafe9f8 <line:206:1, col:111> col:12 clock_getres 'int (clockid_t, struct timespec *)' extern
+| |-ParmVarDecl 0x55beedafe888 <col:26, col:36> col:36 __clock_id 'clockid_t':'int'
+| |-ParmVarDecl 0x55beedafe918 <col:48, col:65> col:65 __res 'struct timespec *'
+| `-NoThrowAttr 0x55beedafeaa8 <col:88>
+|-FunctionDecl 0x55beedafec40 <line:207:1, col:111> col:12 clock_gettime 'int (clockid_t, struct timespec *)' extern
+| |-ParmVarDecl 0x55beedafeb10 <col:27, col:37> col:37 __clock_id 'clockid_t':'int'
+| |-ParmVarDecl 0x55beedafeba0 <col:49, col:66> col:66 __tp 'struct timespec *'
+| `-NoThrowAttr 0x55beedafecf0 <col:88>
+|-FunctionDecl 0x55beedafef08 <line:208:1, line:209:45> line:208:12 clock_settime 'int (clockid_t, const struct timespec *)' extern
+| |-ParmVarDecl 0x55beedafed58 <col:27, col:37> col:37 __clock_id 'clockid_t':'int'
+| |-ParmVarDecl 0x55beedafede8 <col:49, col:72> col:72 __tp 'const struct timespec *'
+| `-NoThrowAttr 0x55beedafefb8 <line:209:22>
+|-FunctionDecl 0x55beedaff358 <line:210:1, line:212:30> line:210:12 clock_nanosleep 'int (clockid_t, int, const struct timespec *, struct timespec *)' extern
+| |-ParmVarDecl 0x55beedaff020 <col:29, col:39> col:39 __clock_id 'clockid_t':'int'
+| |-ParmVarDecl 0x55beedaff0e0 <col:51, col:55> col:55 __flags 'int'
+| |-ParmVarDecl 0x55beedaff170 <line:211:8, col:31> col:31 __req 'const struct timespec *'
+| `-ParmVarDecl 0x55beedaff200 <line:212:8, col:25> col:25 __rem 'struct timespec *'
+|-FunctionDecl 0x55beedaff658 <line:213:1, col:108> col:12 clock_getcpuclockid 'int (pid_t, clockid_t *)' extern
+| |-ParmVarDecl 0x55beedaff458 <col:33, col:39> col:39 __pid 'pid_t':'int'
+| |-ParmVarDecl 0x55beedaff530 <col:46, col:57> col:57 __clock_id 'clockid_t *'
+| `-NoThrowAttr 0x55beedaff708 <col:85>
+|-FunctionDecl 0x55beedaffaf8 <line:214:1, line:216:75> line:214:12 timer_create 'int (clockid_t, struct sigevent *restrict, timer_t *restrict)' extern
+| |-ParmVarDecl 0x55beedaff770 <col:26, col:36> col:36 __clock_id 'clockid_t':'int'
+| |-ParmVarDecl 0x55beedaff8a8 <line:215:5, col:33> col:33 __evp 'struct sigevent *restrict'
+| |-ParmVarDecl 0x55beedaff9b0 <line:216:5, col:25> col:25 __timerid 'timer_t *restrict'
+| `-NoThrowAttr 0x55beedaffbb0 <col:52>
+|-FunctionDecl 0x55beedaffd28 <line:217:1, col:84> col:12 timer_delete 'int (timer_t)' extern
+| |-ParmVarDecl 0x55beedaffc18 <col:26, col:34> col:34 __timerid 'timer_t':'void *'
+| `-NoThrowAttr 0x55beedaffdd0 <col:61>
+|-FunctionDecl 0x55beedb00248 <line:218:1, line:220:85> line:218:12 timer_settime 'int (timer_t, int, const struct itimerspec *restrict, struct itimerspec *restrict)' extern
+| |-ParmVarDecl 0x55beedaffe38 <col:27, col:35> col:35 __timerid 'timer_t':'void *'
+| |-ParmVarDecl 0x55beedaffeb8 <col:46, col:50> col:50 __flags 'int'
+| |-ParmVarDecl 0x55beedafffe8 <line:219:6, col:42> col:42 __value 'const struct itimerspec *restrict'
+| |-ParmVarDecl 0x55beedb000f0 <line:220:6, col:36> col:36 __ovalue 'struct itimerspec *restrict'
+| `-NoThrowAttr 0x55beedb00308 <col:62>
+|-FunctionDecl 0x55beedb00528 <line:221:1, line:222:45> line:221:12 timer_gettime 'int (timer_t, struct itimerspec *)' extern
+| |-ParmVarDecl 0x55beedb00370 <col:27, col:35> col:35 __timerid 'timer_t':'void *'
+| |-ParmVarDecl 0x55beedb00400 <col:46, col:65> col:65 __value 'struct itimerspec *'
+| `-NoThrowAttr 0x55beedb005d8 <line:222:22>
+|-FunctionDecl 0x55beedb006d8 <line:223:1, col:88> col:12 timer_getoverrun 'int (timer_t)' extern
+| |-ParmVarDecl 0x55beedb00640 <col:30, col:38> col:38 __timerid 'timer_t':'void *'
+| `-NoThrowAttr 0x55beedb00780 <col:65>
+|-TypedefDecl 0x55beedb007f0 <line:225:1, col:27> col:27 referenced pthread_t 'unsigned long'
+| `-BuiltinType 0x55beeda8afd0 'unsigned long'
+|-RecordDecl 0x55beedb00848 <line:226:1, line:230:1> line:226:7 union pthread_attr_t definition
+| |-FieldDecl 0x55beedb00990 <line:228:3, col:17> col:8 __size 'char [56]'
+| `-FieldDecl 0x55beedb009f8 <line:229:3, col:12> col:12 __align 'long'
+|-TypedefDecl 0x55beedb00aa8 <line:231:1, col:30> col:30 referenced pthread_attr_t 'union pthread_attr_t':'union pthread_attr_t'
+| `-ElaboratedType 0x55beedb00a50 'union pthread_attr_t' sugar
+|   `-RecordType 0x55beedb008d0 'union pthread_attr_t'
+|     `-Record 0x55beedb00848 'pthread_attr_t'
+|-RecordDecl 0x55beedb00b00 <line:232:9, line:236:1> line:232:16 struct __pthread_internal_list definition
+| |-FieldDecl 0x55beedb00c78 <line:234:3, col:35> col:35 __prev 'struct __pthread_internal_list *'
+| `-FieldDecl 0x55beedb00cf0 <line:235:3, col:35> col:35 __next 'struct __pthread_internal_list *'
+|-TypedefDecl 0x55beedb00da0 <line:232:1, line:236:3> col:3 referenced __pthread_list_t 'struct __pthread_internal_list':'struct __pthread_internal_list'
+| `-ElaboratedType 0x55beedb00d40 'struct __pthread_internal_list' sugar
+|   `-RecordType 0x55beedb00b80 'struct __pthread_internal_list'
+|     `-Record 0x55beedb00b00 '__pthread_internal_list'
+|-RecordDecl 0x55beedb00e10 <line:237:9, line:251:1> line:237:9 union definition
+| |-RecordDecl 0x55beedb00eb8 parent 0x55beeda8ae18 <line:239:3, line:248:3> line:239:10 struct __pthread_mutex_s definition
+| | |-FieldDecl 0x55beedb00f90 <line:241:5, col:9> col:9 __lock 'int'
+| | |-FieldDecl 0x55beedb00ff8 <line:242:5, col:18> col:18 __count 'unsigned int'
+| | |-FieldDecl 0x55beedb01060 <line:243:5, col:9> col:9 __owner 'int'
+| | |-FieldDecl 0x55beedb05110 <line:244:5, col:18> col:18 __nusers 'unsigned int'
+| | |-FieldDecl 0x55beedb05178 <line:245:5, col:9> col:9 __kind 'int'
+| | |-FieldDecl 0x55beedb051e0 <line:246:5, col:9> col:9 __spins 'int'
+| | `-FieldDecl 0x55beedb05268 <line:247:5, col:22> col:22 __list '__pthread_list_t':'struct __pthread_internal_list'
+| |-FieldDecl 0x55beedb05320 <line:239:3, line:248:5> col:5 __data 'struct __pthread_mutex_s':'struct __pthread_mutex_s'
+| |-FieldDecl 0x55beedb05410 <line:249:3, col:17> col:8 __size 'char [40]'
+| `-FieldDecl 0x55beedb05478 <line:250:3, col:12> col:12 __align 'long'
+|-TypedefDecl 0x55beedb05600 <line:237:1, line:251:3> col:3 referenced pthread_mutex_t 'union pthread_mutex_t':'pthread_mutex_t'
+| `-ElaboratedType 0x55beedb055a0 'union pthread_mutex_t' sugar
+|   `-RecordType 0x55beedb00e90 'pthread_mutex_t'
+|     `-Record 0x55beedb00e10 ''
+|-RecordDecl 0x55beedb05670 <line:252:9, line:256:1> line:252:9 union definition
+| |-FieldDecl 0x55beedb057b0 <line:254:3, col:16> col:8 __size 'char [4]'
+| `-FieldDecl 0x55beedb05818 <line:255:3, col:7> col:7 __align 'int'
+|-TypedefDecl 0x55beedb058d0 <line:252:1, line:256:3> col:3 referenced pthread_mutexattr_t 'union pthread_mutexattr_t':'pthread_mutexattr_t'
+| `-ElaboratedType 0x55beedb05870 'union pthread_mutexattr_t' sugar
+|   `-RecordType 0x55beedb056f0 'pthread_mutexattr_t'
+|     `-Record 0x55beedb05670 ''
+|-RecordDecl 0x55beedb05940 <line:257:9, line:272:1> line:257:9 union definition
+| |-RecordDecl 0x55beedb059e8 <line:259:3, line:269:3> line:259:3 struct definition
+| | |-FieldDecl 0x55beedb05ab0 <line:261:5, col:9> col:9 __lock 'int'
+| | |-FieldDecl 0x55beedb05b18 <line:262:5, col:18> col:18 __futex 'unsigned int'
+| | |-FieldDecl 0x55beedb05b80 <line:263:19, col:42> col:42 __total_seq 'unsigned long long'
+| | |-FieldDecl 0x55beedb05be8 <line:264:19, col:42> col:42 __wakeup_seq 'unsigned long long'
+| | |-FieldDecl 0x55beedb05c50 <line:265:19, col:42> col:42 __woken_seq 'unsigned long long'
+| | |-FieldDecl 0x55beedb05cb8 <line:266:5, col:11> col:11 __mutex 'void *'
+| | |-FieldDecl 0x55beedb05d20 <line:267:5, col:18> col:18 __nwaiters 'unsigned int'
+| | `-FieldDecl 0x55beedb05d88 <line:268:5, col:18> col:18 __broadcast_seq 'unsigned int'
+| |-FieldDecl 0x55beedb05e40 <line:259:3, line:269:5> col:5 __data 'struct (anonymous struct at ./test/safe005_pso.opt_false-unreach-call.i:259:3)':'struct pthread_cond_t::(anonymous at ./test/safe005_pso.opt_false-unreach-call.i:259:3)'
+| |-FieldDecl 0x55beedb05f30 <line:270:3, col:17> col:8 __size 'char [48]'
+| `-FieldDecl 0x55beedb05f98 <line:271:17, col:31> col:31 __align 'long long'
+|-TypedefDecl 0x55beedb07130 <line:257:1, line:272:3> col:3 referenced pthread_cond_t 'union pthread_cond_t':'pthread_cond_t'
+| `-ElaboratedType 0x55beedb06070 'union pthread_cond_t' sugar
+|   `-RecordType 0x55beedb059c0 'pthread_cond_t'
+|     `-Record 0x55beedb05940 ''
+|-RecordDecl 0x55beedb071a0 <line:273:9, line:277:1> line:273:9 union definition
+| |-FieldDecl 0x55beedb072a0 <line:275:3, col:16> col:8 __size 'char [4]'
+| `-FieldDecl 0x55beedb07308 <line:276:3, col:7> col:7 __align 'int'
+|-TypedefDecl 0x55beedb073c0 <line:273:1, line:277:3> col:3 referenced pthread_condattr_t 'union pthread_condattr_t':'pthread_condattr_t'
+| `-ElaboratedType 0x55beedb07360 'union pthread_condattr_t' sugar
+|   `-RecordType 0x55beedb07220 'pthread_condattr_t'
+|     `-Record 0x55beedb071a0 ''
+|-TypedefDecl 0x55beedb07448 <line:278:1, col:22> col:22 referenced pthread_key_t 'unsigned int'
+| `-BuiltinType 0x55beeda8afb0 'unsigned int'
+|-TypedefDecl 0x55beedb074b8 <line:279:1, col:13> col:13 referenced pthread_once_t 'int'
+| `-BuiltinType 0x55beeda8af10 'int'
+|-RecordDecl 0x55beedb07510 <line:280:9, line:298:1> line:280:9 union definition
+| |-RecordDecl 0x55beedb075b8 <line:282:3, line:295:3> line:282:3 struct definition
+| | |-FieldDecl 0x55beedb07680 <line:284:5, col:9> col:9 __lock 'int'
+| | |-FieldDecl 0x55beedb076e8 <line:285:5, col:18> col:18 __nr_readers 'unsigned int'
+| | |-FieldDecl 0x55beedb07750 <line:286:5, col:18> col:18 __readers_wakeup 'unsigned int'
+| | |-FieldDecl 0x55beedb077b8 <line:287:5, col:18> col:18 __writer_wakeup 'unsigned int'
+| | |-FieldDecl 0x55beedb07820 <line:288:5, col:18> col:18 __nr_readers_queued 'unsigned int'
+| | |-FieldDecl 0x55beedb07888 <line:289:5, col:18> col:18 __nr_writers_queued 'unsigned int'
+| | |-FieldDecl 0x55beedb078f0 <line:290:5, col:9> col:9 __writer 'int'
+| | |-FieldDecl 0x55beedb07958 <line:291:5, col:9> col:9 __shared 'int'
+| | |-FieldDecl 0x55beedb079c0 <line:292:5, col:23> col:23 __pad1 'unsigned long'
+| | |-FieldDecl 0x55beedb07a28 <line:293:5, col:23> col:23 __pad2 'unsigned long'
+| | `-FieldDecl 0x55beedb07a90 <line:294:5, col:18> col:18 __flags 'unsigned int'
+| |-FieldDecl 0x55beedb07b40 <line:282:3, line:295:5> col:5 __data 'struct (anonymous struct at ./test/safe005_pso.opt_false-unreach-call.i:282:3)':'struct pthread_rwlock_t::(anonymous at ./test/safe005_pso.opt_false-unreach-call.i:282:3)'
+| |-FieldDecl 0x55beedb07be8 <line:296:3, col:17> col:8 __size 'char [56]'
+| `-FieldDecl 0x55beedb07c50 <line:297:3, col:12> col:12 __align 'long'
+|-TypedefDecl 0x55beedb07da0 <line:280:1, line:298:3> col:3 referenced pthread_rwlock_t 'union pthread_rwlock_t':'pthread_rwlock_t'
+| `-ElaboratedType 0x55beedb07d40 'union pthread_rwlock_t' sugar
+|   `-RecordType 0x55beedb07590 'pthread_rwlock_t'
+|     `-Record 0x55beedb07510 ''
+|-RecordDecl 0x55beedb07e10 <line:299:9, line:303:1> line:299:9 union definition
+| |-FieldDecl 0x55beedb07f50 <line:301:3, col:16> col:8 __size 'char [8]'
+| `-FieldDecl 0x55beedb07fb8 <line:302:3, col:12> col:12 __align 'long'
+|-TypedefDecl 0x55beedb08070 <line:299:1, line:303:3> col:3 referenced pthread_rwlockattr_t 'union pthread_rwlockattr_t':'pthread_rwlockattr_t'
+| `-ElaboratedType 0x55beedb08010 'union pthread_rwlockattr_t' sugar
+|   `-RecordType 0x55beedb07e90 'pthread_rwlockattr_t'
+|     `-Record 0x55beedb07e10 ''
+|-TypedefDecl 0x55beedb09140 <line:304:1, col:22> col:22 referenced pthread_spinlock_t 'volatile int'
+| `-QualType 0x55beeda8af14 'volatile int' volatile
+|   `-BuiltinType 0x55beeda8af10 'int'
+|-RecordDecl 0x55beedb09198 <line:305:9, line:309:1> line:305:9 union definition
+| |-FieldDecl 0x55beedb092e0 <line:307:3, col:17> col:8 __size 'char [32]'
+| `-FieldDecl 0x55beedb09348 <line:308:3, col:12> col:12 __align 'long'
+|-TypedefDecl 0x55beedb09400 <line:305:1, line:309:3> col:3 referenced pthread_barrier_t 'union pthread_barrier_t':'pthread_barrier_t'
+| `-ElaboratedType 0x55beedb093a0 'union pthread_barrier_t' sugar
+|   `-RecordType 0x55beedb09220 'pthread_barrier_t'
+|     `-Record 0x55beedb09198 ''
+|-RecordDecl 0x55beedb09470 <line:310:9, line:314:1> line:310:9 union definition
+| |-FieldDecl 0x55beedb09570 <line:312:3, col:16> col:8 __size 'char [4]'
+| `-FieldDecl 0x55beedb095d8 <line:313:3, col:7> col:7 __align 'int'
+|-TypedefDecl 0x55beedb09690 <line:310:1, line:314:3> col:3 referenced pthread_barrierattr_t 'union pthread_barrierattr_t':'pthread_barrierattr_t'
+| `-ElaboratedType 0x55beedb09630 'union pthread_barrierattr_t' sugar
+|   `-RecordType 0x55beedb094f0 'pthread_barrierattr_t'
+|     `-Record 0x55beedb09470 ''
+|-TypedefDecl 0x55beedb097a8 <line:315:1, col:29> col:18 referenced __jmp_buf 'long [8]'
+| `-ConstantArrayType 0x55beedb09740 'long [8]' 8 
+|   `-BuiltinType 0x55beeda8af30 'long'
+|-EnumDecl 0x55beedb09800 <line:316:1, line:320:1> line:316:1
+| |-EnumConstantDecl 0x55beedb098c8 <line:318:3> col:3 PTHREAD_CREATE_JOINABLE 'int'
+| `-EnumConstantDecl 0x55beedb09918 <line:319:3> col:3 PTHREAD_CREATE_DETACHED 'int'
+|-EnumDecl 0x55beedb09968 <line:321:1, line:332:1> line:321:1
+| |-EnumConstantDecl 0x55beedb09a38 <line:323:3> col:3 referenced PTHREAD_MUTEX_TIMED_NP 'int'
+| |-EnumConstantDecl 0x55beedb09a88 <line:324:3> col:3 referenced PTHREAD_MUTEX_RECURSIVE_NP 'int'
+| |-EnumConstantDecl 0x55beedb09ad8 <line:325:3> col:3 referenced PTHREAD_MUTEX_ERRORCHECK_NP 'int'
+| |-EnumConstantDecl 0x55beedb09b28 <line:326:3> col:3 PTHREAD_MUTEX_ADAPTIVE_NP 'int'
+| |-EnumConstantDecl 0x55beedb09bb0 <line:328:3, col:26> col:3 referenced PTHREAD_MUTEX_NORMAL 'int'
+| | `-ConstantExpr 0x55beedb09b98 <col:26> 'int'
+| |   `-DeclRefExpr 0x55beedb09b78 <col:26> 'int' EnumConstant 0x55beedb09a38 'PTHREAD_MUTEX_TIMED_NP' 'int'
+| |-EnumConstantDecl 0x55beedb09c38 <line:329:3, col:29> col:3 PTHREAD_MUTEX_RECURSIVE 'int'
+| | `-ConstantExpr 0x55beedb09c20 <col:29> 'int'
+| |   `-DeclRefExpr 0x55beedb09c00 <col:29> 'int' EnumConstant 0x55beedb09a88 'PTHREAD_MUTEX_RECURSIVE_NP' 'int'
+| |-EnumConstantDecl 0x55beedb09cc0 <line:330:3, col:30> col:3 PTHREAD_MUTEX_ERRORCHECK 'int'
+| | `-ConstantExpr 0x55beedb09ca8 <col:30> 'int'
+| |   `-DeclRefExpr 0x55beedb09c88 <col:30> 'int' EnumConstant 0x55beedb09ad8 'PTHREAD_MUTEX_ERRORCHECK_NP' 'int'
+| `-EnumConstantDecl 0x55beedb09d48 <line:331:3, col:27> col:3 PTHREAD_MUTEX_DEFAULT 'int'
+|   `-ConstantExpr 0x55beedb09d30 <col:27> 'int'
+|     `-DeclRefExpr 0x55beedb09d10 <col:27> 'int' EnumConstant 0x55beedb09bb0 'PTHREAD_MUTEX_NORMAL' 'int'
+|-EnumDecl 0x55beedb09d98 <line:333:1, line:339:1> line:333:1
+| |-EnumConstantDecl 0x55beedb09e68 <line:335:3> col:3 referenced PTHREAD_MUTEX_STALLED 'int'
+| |-EnumConstantDecl 0x55beedb09ef0 <line:336:3, col:30> col:3 PTHREAD_MUTEX_STALLED_NP 'int'
+| | `-ConstantExpr 0x55beedb09ed8 <col:30> 'int'
+| |   `-DeclRefExpr 0x55beedb09eb8 <col:30> 'int' EnumConstant 0x55beedb09e68 'PTHREAD_MUTEX_STALLED' 'int'
+| |-EnumConstantDecl 0x55beedb09f40 <line:337:3> col:3 referenced PTHREAD_MUTEX_ROBUST 'int'
+| `-EnumConstantDecl 0x55beedb09fc8 <line:338:3, col:29> col:3 PTHREAD_MUTEX_ROBUST_NP 'int'
+|   `-ConstantExpr 0x55beedb09fb0 <col:29> 'int'
+|     `-DeclRefExpr 0x55beedb09f90 <col:29> 'int' EnumConstant 0x55beedb09f40 'PTHREAD_MUTEX_ROBUST' 'int'
+|-EnumDecl 0x55beedb0a018 <line:340:1, line:345:1> line:340:1
+| |-EnumConstantDecl 0x55beedb0a0e8 <line:342:3> col:3 PTHREAD_PRIO_NONE 'int'
+| |-EnumConstantDecl 0x55beedb0a150 <line:343:3> col:3 PTHREAD_PRIO_INHERIT 'int'
+| `-EnumConstantDecl 0x55beedb0a1a0 <line:344:3> col:3 PTHREAD_PRIO_PROTECT 'int'
+|-EnumDecl 0x55beedb0a1f0 <line:346:1, line:352:1> line:346:1
+| |-EnumConstantDecl 0x55beedb0a2b8 <line:348:3> col:3 referenced PTHREAD_RWLOCK_PREFER_READER_NP 'int'
+| |-EnumConstantDecl 0x55beedb0a308 <line:349:3> col:3 PTHREAD_RWLOCK_PREFER_WRITER_NP 'int'
+| |-EnumConstantDecl 0x55beedb0a358 <line:350:3> col:3 PTHREAD_RWLOCK_PREFER_WRITER_NONRECURSIVE_NP 'int'
+| `-EnumConstantDecl 0x55beedb0a3e0 <line:351:3, col:31> col:3 PTHREAD_RWLOCK_DEFAULT_NP 'int'
+|   `-ConstantExpr 0x55beedb0a3c8 <col:31> 'int'
+|     `-DeclRefExpr 0x55beedb0a3a8 <col:31> 'int' EnumConstant 0x55beedb0a2b8 'PTHREAD_RWLOCK_PREFER_READER_NP' 'int'
+|-EnumDecl 0x55beedb0a430 <line:353:1, line:357:1> line:353:1
+| |-EnumConstantDecl 0x55beedb0a4f8 <line:355:3> col:3 PTHREAD_INHERIT_SCHED 'int'
+| `-EnumConstantDecl 0x55beedb0a548 <line:356:3> col:3 PTHREAD_EXPLICIT_SCHED 'int'
+|-EnumDecl 0x55beedb0a598 <line:358:1, line:362:1> line:358:1
+| |-EnumConstantDecl 0x55beedb0a668 <line:360:3> col:3 PTHREAD_SCOPE_SYSTEM 'int'
+| `-EnumConstantDecl 0x55beedb0a6b8 <line:361:3> col:3 PTHREAD_SCOPE_PROCESS 'int'
+|-EnumDecl 0x55beedb0a708 <line:363:1, line:367:1> line:363:1
+| |-EnumConstantDecl 0x55beedb0a7d8 <line:365:3> col:3 PTHREAD_PROCESS_PRIVATE 'int'
+| `-EnumConstantDecl 0x55beedb0a828 <line:366:3> col:3 PTHREAD_PROCESS_SHARED 'int'
+|-RecordDecl 0x55beedb0a878 <line:368:1, line:374:1> line:368:8 struct _pthread_cleanup_buffer definition
+| |-FieldDecl 0x55beedb0aab8 <line:370:3, col:28> col:10 __routine 'void (*)(void *)'
+| |-FieldDecl 0x55beedb0ab20 <line:371:3, col:9> col:9 __arg 'void *'
+| |-FieldDecl 0x55beedb0ab88 <line:372:3, col:7> col:7 __canceltype 'int'
+| `-FieldDecl 0x55beedb0aca8 <line:373:3, col:35> col:35 __prev 'struct _pthread_cleanup_buffer *'
+|-EnumDecl 0x55beedb0acf8 <line:375:1, line:379:1> line:375:1
+| |-EnumConstantDecl 0x55beedb0adc8 <line:377:3> col:3 PTHREAD_CANCEL_ENABLE 'int'
+| `-EnumConstantDecl 0x55beedb0ae18 <line:378:3> col:3 PTHREAD_CANCEL_DISABLE 'int'
+|-EnumDecl 0x55beedb0ae68 <line:380:1, line:384:1> line:380:1
+| |-EnumConstantDecl 0x55beedb0af38 <line:382:3> col:3 PTHREAD_CANCEL_DEFERRED 'int'
+| `-EnumConstantDecl 0x55beedb0af88 <line:383:3> col:3 PTHREAD_CANCEL_ASYNCHRONOUS 'int'
+|-FunctionDecl 0x55beedb0b5b8 <line:386:1, line:389:96> line:386:12 used pthread_create 'int (pthread_t *restrict, const pthread_attr_t *restrict, void *(*)(void *), void *restrict)' extern
+| |-ParmVarDecl 0x55beedb0b080 <col:28, col:50> col:50 __newthread 'pthread_t *restrict'
+| |-ParmVarDecl 0x55beedb0b1a0 <line:387:7, col:40> col:40 __attr 'const pthread_attr_t *restrict'
+| |-ParmVarDecl 0x55beedb0b3a0 <line:388:7, col:39> col:15 __start_routine 'void *(*)(void *)'
+| |-ParmVarDecl 0x55beedb0b420 <line:389:7, col:24> col:24 __arg 'void *restrict'
+| |-NoThrowAttr 0x55beedb0b678 <col:47>
+| |-NonNullAttr 0x55beedb0b6d0 <col:77, col:94> 1 3
+| `-CallbackAttr 0x55beedb0b708 <line:386:12> Implicit 2 3
+|-FunctionDecl 0x55beedb0b830 <line:390:1, col:72> col:13 pthread_exit 'void (void *) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x55beedb0b760 <col:27, col:33> col:33 __retval 'void *'
+|-FunctionDecl 0x55beedb0ba88 <line:391:1, col:64> col:12 pthread_join 'int (pthread_t, void **)' extern
+| |-ParmVarDecl 0x55beedb0b8e8 <col:26, col:36> col:36 __th 'pthread_t':'unsigned long'
+| `-ParmVarDecl 0x55beedb0b968 <col:42, col:49> col:49 __thread_return 'void **'
+|-FunctionDecl 0x55beedb0bc58 <line:392:1, col:83> col:12 pthread_detach 'int (pthread_t)' extern
+| |-ParmVarDecl 0x55beedb0bb48 <col:28, col:38> col:38 __th 'pthread_t':'unsigned long'
+| `-NoThrowAttr 0x55beedb0bd00 <col:60>
+|-FunctionDecl 0x55beedb0be50 <line:393:1, col:105> col:18 pthread_self 'pthread_t (void)' extern
+| |-NoThrowAttr 0x55beedb0bef0 <col:54>
+| `-ConstAttr 0x55beedb0bf48 <col:95>
+|-FunctionDecl 0x55beedb0d990 <line:394:1, line:395:70> line:394:12 pthread_equal 'int (pthread_t, pthread_t)' extern
+| |-ParmVarDecl 0x55beedb0bf80 <col:27, col:37> col:37 __thread1 'pthread_t':'unsigned long'
+| |-ParmVarDecl 0x55beedb0bff8 <col:48, col:58> col:58 __thread2 'pthread_t':'unsigned long'
+| |-NoThrowAttr 0x55beedb0da40 <line:395:19>
+| `-ConstAttr 0x55beedb0da98 <col:60>
+|-FunctionDecl 0x55beedb0dc68 <line:396:1, col:128> col:12 pthread_attr_init 'int (pthread_attr_t *)' extern
+| |-ParmVarDecl 0x55beedb0db30 <col:31, col:47> col:47 __attr 'pthread_attr_t *'
+| |-NoThrowAttr 0x55beedb0dd10 <col:71>
+| `-NonNullAttr 0x55beedb0dd68 <col:112, col:126> 1
+|-FunctionDecl 0x55beedb0de70 <line:397:1, line:398:79> line:397:12 pthread_attr_destroy 'int (pthread_attr_t *)' extern
+| |-ParmVarDecl 0x55beedb0ddb8 <col:34, col:50> col:50 __attr 'pthread_attr_t *'
+| |-NoThrowAttr 0x55beedb0df18 <line:398:22>
+| `-NonNullAttr 0x55beedb0df70 <col:63, col:77> 1
+|-FunctionDecl 0x55beedb0e198 <line:399:1, line:401:82> line:399:12 pthread_attr_getdetachstate 'int (const pthread_attr_t *, int *)' extern
+| |-ParmVarDecl 0x55beedb0dfb8 <col:41, col:63> col:63 __attr 'const pthread_attr_t *'
+| |-ParmVarDecl 0x55beedb0e038 <line:400:6, col:11> col:11 __detachstate 'int *'
+| |-NoThrowAttr 0x55beedb0e248 <line:401:22>
+| `-NonNullAttr 0x55beedb0e2a0 <col:63, col:80> 1 2
+|-FunctionDecl 0x55beedb0e4a8 <line:402:1, line:404:79> line:402:12 pthread_attr_setdetachstate 'int (pthread_attr_t *, int)' extern
+| |-ParmVarDecl 0x55beedb0e2e8 <col:41, col:57> col:57 __attr 'pthread_attr_t *'
+| |-ParmVarDecl 0x55beedb0e368 <line:403:6, col:10> col:10 __detachstate 'int'
+| |-NoThrowAttr 0x55beedb0e558 <line:404:22>
+| `-NonNullAttr 0x55beedb0e5b0 <col:63, col:77> 1
+|-FunctionDecl 0x55beedb0e808 <line:405:1, line:407:82> line:405:12 pthread_attr_getguardsize 'int (const pthread_attr_t *, size_t *)' extern
+| |-ParmVarDecl 0x55beedb0e5f8 <col:39, col:61> col:61 __attr 'const pthread_attr_t *'
+| |-ParmVarDecl 0x55beedb0e6a0 <line:406:11, col:19> col:19 __guardsize 'size_t *'
+| |-NoThrowAttr 0x55beedb0e8b8 <line:407:22>
+| `-NonNullAttr 0x55beedb0e910 <col:63, col:80> 1 2
+|-FunctionDecl 0x55beedb0fb68 <line:408:1, line:410:79> line:408:12 pthread_attr_setguardsize 'int (pthread_attr_t *, size_t)' extern
+| |-ParmVarDecl 0x55beedb0f9b0 <col:39, col:55> col:55 __attr 'pthread_attr_t *'
+| |-ParmVarDecl 0x55beedb0fa28 <line:409:11, col:18> col:18 __guardsize 'size_t':'unsigned long'
+| |-NoThrowAttr 0x55beedb0fc18 <line:410:22>
+| `-NonNullAttr 0x55beedb0fc70 <col:63, col:77> 1
+|-FunctionDecl 0x55beedb0fea8 <line:411:1, line:413:82> line:411:12 pthread_attr_getschedparam 'int (const pthread_attr_t *restrict, struct sched_param *restrict)' extern
+| |-ParmVarDecl 0x55beedb0fcb8 <col:40, col:73> col:73 __attr 'const pthread_attr_t *restrict'
+| |-ParmVarDecl 0x55beedb0fd48 <line:412:12, col:43> col:43 __param 'struct sched_param *restrict'
+| |-NoThrowAttr 0x55beedb0ff58 <line:413:22>
+| `-NonNullAttr 0x55beedb0ffb0 <col:63, col:80> 1 2
+|-FunctionDecl 0x55beedb101e8 <line:414:1, line:416:97> line:414:12 pthread_attr_setschedparam 'int (pthread_attr_t *restrict, const struct sched_param *restrict)' extern
+| |-ParmVarDecl 0x55beedb0fff8 <col:40, col:67> col:67 __attr 'pthread_attr_t *restrict'
+| |-ParmVarDecl 0x55beedb10088 <line:415:12, line:416:12> col:12 __param 'const struct sched_param *restrict'
+| |-NoThrowAttr 0x55beedb10298 <col:37>
+| `-NonNullAttr 0x55beedb102f0 <col:78, col:95> 1 2
+|-FunctionDecl 0x55beedb104d8 <line:417:1, line:419:82> line:417:12 pthread_attr_getschedpolicy 'int (const pthread_attr_t *restrict, int *restrict)' extern
+| |-ParmVarDecl 0x55beedb10338 <col:41, line:418:6> col:6 __attr 'const pthread_attr_t *restrict'
+| |-ParmVarDecl 0x55beedb103b8 <col:14, col:30> col:30 __policy 'int *restrict'
+| |-NoThrowAttr 0x55beedb10588 <line:419:22>
+| `-NonNullAttr 0x55beedb105e0 <col:63, col:80> 1 2
+|-FunctionDecl 0x55beedb10768 <line:420:1, line:421:79> line:420:12 pthread_attr_setschedpolicy 'int (pthread_attr_t *, int)' extern
+| |-ParmVarDecl 0x55beedb10628 <col:41, col:57> col:57 __attr 'pthread_attr_t *'
+| |-ParmVarDecl 0x55beedb106a8 <col:65, col:69> col:69 __policy 'int'
+| |-NoThrowAttr 0x55beedb10818 <line:421:22>
+| `-NonNullAttr 0x55beedb10870 <col:63, col:77> 1
+|-FunctionDecl 0x55beedb10a38 <line:422:1, line:424:82> line:422:12 pthread_attr_getinheritsched 'int (const pthread_attr_t *restrict, int *restrict)' extern
+| |-ParmVarDecl 0x55beedb108b8 <col:42, line:423:7> col:7 __attr 'const pthread_attr_t *restrict'
+| |-ParmVarDecl 0x55beedb10938 <col:15, col:31> col:31 __inherit 'int *restrict'
+| |-NoThrowAttr 0x55beedb10ae8 <line:424:22>
+| `-NonNullAttr 0x55beedb10b40 <col:63, col:80> 1 2
+|-FunctionDecl 0x55beedb10cc8 <line:425:1, line:427:79> line:425:12 pthread_attr_setinheritsched 'int (pthread_attr_t *, int)' extern
+| |-ParmVarDecl 0x55beedb10b88 <col:42, col:58> col:58 __attr 'pthread_attr_t *'
+| |-ParmVarDecl 0x55beedb10c08 <line:426:7, col:11> col:11 __inherit 'int'
+| |-NoThrowAttr 0x55beedb10d78 <line:427:22>
+| `-NonNullAttr 0x55beedb10dd0 <col:63, col:77> 1
+|-FunctionDecl 0x55beedb10f78 <line:428:1, line:430:82> line:428:12 pthread_attr_getscope 'int (const pthread_attr_t *restrict, int *restrict)' extern
+| |-ParmVarDecl 0x55beedb10e18 <col:35, col:68> col:68 __attr 'const pthread_attr_t *restrict'
+| |-ParmVarDecl 0x55beedb10e98 <line:429:7, col:23> col:23 __scope 'int *restrict'
+| |-NoThrowAttr 0x55beedb11028 <line:430:22>
+| `-NonNullAttr 0x55beedb11080 <col:63, col:80> 1 2
+|-FunctionDecl 0x55beedb11208 <line:431:1, line:432:79> line:431:12 pthread_attr_setscope 'int (pthread_attr_t *, int)' extern
+| |-ParmVarDecl 0x55beedb110c8 <col:35, col:51> col:51 __attr 'pthread_attr_t *'
+| |-ParmVarDecl 0x55beedb11148 <col:59, col:63> col:63 __scope 'int'
+| |-NoThrowAttr 0x55beedb112b8 <line:432:22>
+| `-NonNullAttr 0x55beedb11310 <col:63, col:77> 1
+|-FunctionDecl 0x55beedb11538 <line:433:1, line:435:115> line:433:12 pthread_attr_getstackaddr 'int (const pthread_attr_t *restrict, void **restrict)' extern
+| |-ParmVarDecl 0x55beedb11358 <col:39, line:434:11> col:11 __attr 'const pthread_attr_t *restrict'
+| |-ParmVarDecl 0x55beedb113d8 <col:19, col:37> col:37 __stackaddr 'void **restrict'
+| |-NoThrowAttr 0x55beedb115e8 <line:435:22>
+| |-NonNullAttr 0x55beedb11640 <col:63, col:80> 1 2
+| `-DeprecatedAttr 0x55beedb11678 <col:100> "" ""
+|-FunctionDecl 0x55beedb11888 <line:436:1, line:438:112> line:436:12 pthread_attr_setstackaddr 'int (pthread_attr_t *, void *)' extern
+| |-ParmVarDecl 0x55beedb116c8 <col:39, col:55> col:55 __attr 'pthread_attr_t *'
+| |-ParmVarDecl 0x55beedb11748 <line:437:11, col:17> col:17 __stackaddr 'void *'
+| |-NoThrowAttr 0x55beedb11938 <line:438:22>
+| |-NonNullAttr 0x55beedb11990 <col:63, col:77> 1
+| `-DeprecatedAttr 0x55beedb119d8 <col:97> "" ""
+|-FunctionDecl 0x55beedb11bc8 <line:439:1, line:441:82> line:439:12 pthread_attr_getstacksize 'int (const pthread_attr_t *restrict, size_t *restrict)' extern
+| |-ParmVarDecl 0x55beedb11a28 <col:39, line:440:11> col:11 __attr 'const pthread_attr_t *restrict'
+| |-ParmVarDecl 0x55beedb11aa0 <col:19, col:38> col:38 __stacksize 'size_t *restrict'
+| |-NoThrowAttr 0x55beedb11c78 <line:441:22>
+| `-NonNullAttr 0x55beedb11cd0 <col:63, col:80> 1 2
+|-FunctionDecl 0x55beedb11e50 <line:442:1, line:444:79> line:442:12 pthread_attr_setstacksize 'int (pthread_attr_t *, size_t)' extern
+| |-ParmVarDecl 0x55beedb11d18 <col:39, col:55> col:55 __attr 'pthread_attr_t *'
+| |-ParmVarDecl 0x55beedb11d90 <line:443:11, col:18> col:18 __stacksize 'size_t':'unsigned long'
+| |-NoThrowAttr 0x55beedb11f00 <line:444:22>
+| `-NonNullAttr 0x55beedb11f58 <col:63, col:77> 1
+|-FunctionDecl 0x55beedb12248 <line:445:1, line:448:85> line:445:12 pthread_attr_getstack 'int (const pthread_attr_t *restrict, void **restrict, size_t *restrict)' extern
+| |-ParmVarDecl 0x55beedb11fa8 <col:35, col:68> col:68 __attr 'const pthread_attr_t *restrict'
+| |-ParmVarDecl 0x55beedb12028 <line:446:7, col:25> col:25 __stackaddr 'void **restrict'
+| |-ParmVarDecl 0x55beedb120a0 <line:447:7, col:26> col:26 __stacksize 'size_t *restrict'
+| |-NoThrowAttr 0x55beedb12300 <line:448:22>
+| `-NonNullAttr 0x55beedb12358 <col:63, col:83> 1 2 3
+|-FunctionDecl 0x55beedb12608 <line:449:1, line:450:100> line:449:12 pthread_attr_setstack 'int (pthread_attr_t *, void *, size_t)' extern
+| |-ParmVarDecl 0x55beedb123b0 <col:35, col:51> col:51 __attr 'pthread_attr_t *'
+| |-ParmVarDecl 0x55beedb12430 <col:59, col:65> col:65 __stackaddr 'void *'
+| |-ParmVarDecl 0x55beedb124a8 <line:450:7, col:14> col:14 __stacksize 'size_t':'unsigned long'
+| |-NoThrowAttr 0x55beedb126c0 <col:43>
+| `-NonNullAttr 0x55beedb12718 <col:84, col:98> 1
+|-FunctionDecl 0x55beedb12a20 <line:451:1, line:453:79> line:451:12 pthread_setschedparam 'int (pthread_t, int, const struct sched_param *)' extern
+| |-ParmVarDecl 0x55beedb12768 <col:35, col:45> col:45 __target_thread 'pthread_t':'unsigned long'
+| |-ParmVarDecl 0x55beedb127e8 <col:62, col:66> col:66 __policy 'int'
+| |-ParmVarDecl 0x55beedb12878 <line:452:7, col:33> col:33 __param 'const struct sched_param *'
+| |-NoThrowAttr 0x55beedb12ad8 <line:453:22>
+| `-NonNullAttr 0x55beedb12b30 <col:63, col:77> 3
+|-FunctionDecl 0x55beedb12e08 <line:454:1, line:457:82> line:454:12 pthread_getschedparam 'int (pthread_t, int *restrict, struct sched_param *restrict)' extern
+| |-ParmVarDecl 0x55beedb12b78 <col:35, col:45> col:45 __target_thread 'pthread_t':'unsigned long'
+| |-ParmVarDecl 0x55beedb12bf8 <line:455:7, col:23> col:23 __policy 'int *restrict'
+| |-ParmVarDecl 0x55beedb12c88 <line:456:7, col:38> col:38 __param 'struct sched_param *restrict'
+| |-NoThrowAttr 0x55beedb12ec0 <line:457:22>
+| `-NonNullAttr 0x55beedb12f18 <col:63, col:80> 2 3
+|-FunctionDecl 0x55beedb13108 <line:458:1, line:459:45> line:458:12 pthread_setschedprio 'int (pthread_t, int)' extern
+| |-ParmVarDecl 0x55beedb12f68 <col:34, col:44> col:44 __target_thread 'pthread_t':'unsigned long'
+| |-ParmVarDecl 0x55beedb12fe8 <col:61, col:65> col:65 __prio 'int'
+| `-NoThrowAttr 0x55beedb131b8 <line:459:22>
+|-FunctionDecl 0x55beedb13588 <line:460:1, line:461:71> line:460:12 pthread_once 'int (pthread_once_t *, void (*)(void))' extern
+| |-ParmVarDecl 0x55beedb13280 <col:26, col:42> col:42 __once_control 'pthread_once_t *'
+| |-ParmVarDecl 0x55beedb13420 <line:461:5, col:33> col:12 __init_routine 'void (*)(void)'
+| `-NonNullAttr 0x55beedb13638 <col:52, col:69> 1 2
+|-FunctionDecl 0x55beedb137e0 <line:462:1, col:64> col:12 pthread_setcancelstate 'int (int, int *)' extern
+| |-ParmVarDecl 0x55beedb136c0 <col:36, col:40> col:40 __state 'int'
+| `-ParmVarDecl 0x55beedb13740 <col:49, col:54> col:54 __oldstate 'int *'
+|-FunctionDecl 0x55beedb139f0 <line:463:1, col:61> col:12 pthread_setcanceltype 'int (int, int *)' extern
+| |-ParmVarDecl 0x55beedb138a8 <col:35, col:39> col:39 __type 'int'
+| `-ParmVarDecl 0x55beedb13928 <col:47, col:52> col:52 __oldtype 'int *'
+|-FunctionDecl 0x55beedb13b48 <line:464:1, col:42> col:12 pthread_cancel 'int (pthread_t)' extern
+| `-ParmVarDecl 0x55beedb13ab0 <col:28, col:38> col:38 __th 'pthread_t':'unsigned long'
+|-FunctionDecl 0x55beedb13c88 <line:465:1, col:37> col:13 pthread_testcancel 'void (void)' extern
+|-RecordDecl 0x55beedb13d28 <line:466:9, line:474:1> line:466:9 struct definition
+| |-RecordDecl 0x55beedb13dd8 <line:468:3, line:472:3> line:468:3 struct definition
+| | |-FieldDecl 0x55beedb13ec8 <line:470:5, col:15> col:15 __cancel_jmp_buf '__jmp_buf':'long [8]'
+| | `-FieldDecl 0x55beedb13f30 <line:471:5, col:9> col:9 __mask_was_saved 'int'
+| |-FieldDecl 0x55beedb14100 <line:468:3, line:472:23> col:5 __cancel_jmp_buf 'struct (anonymous struct at ./test/safe005_pso.opt_false-unreach-call.i:468:3) [1]'
+| `-FieldDecl 0x55beedb141f8 <line:473:3, col:16> col:9 __pad 'void *[4]'
+|-TypedefDecl 0x55beedb142b0 <line:466:1, line:474:3> col:3 referenced __pthread_unwind_buf_t 'struct __pthread_unwind_buf_t':'__pthread_unwind_buf_t'
+| |-ElaboratedType 0x55beedb14250 'struct __pthread_unwind_buf_t' sugar
+| | `-RecordType 0x55beedb13db0 '__pthread_unwind_buf_t'
+| |   `-Record 0x55beedb13d28 ''
+| `-AlignedAttr 0x55beedb14308 <col:42> aligned
+|   `-<<<NULL>>>
+|-RecordDecl 0x55beedb14380 <line:475:1, line:481:1> line:475:8 struct __pthread_cleanup_frame definition
+| |-FieldDecl 0x55beedb144e0 <line:477:3, col:35> col:10 __cancel_routine 'void (*)(void *)'
+| |-FieldDecl 0x55beedb14548 <line:478:3, col:9> col:9 __cancel_arg 'void *'
+| |-FieldDecl 0x55beedb145b0 <line:479:3, col:7> col:7 __do_it 'int'
+| `-FieldDecl 0x55beedb14618 <line:480:3, col:7> col:7 __cancel_type 'int'
+|-FunctionDecl 0x55beedb14820 <line:482:1, col:69> col:13 __pthread_register_cancel 'void (__pthread_unwind_buf_t *)' extern
+| `-ParmVarDecl 0x55beedb14710 <col:40, col:64> col:64 __buf '__pthread_unwind_buf_t *'
+|-FunctionDecl 0x55beedb14a00 <line:484:1, col:71> col:13 __pthread_unregister_cancel 'void (__pthread_unwind_buf_t *)' extern
+| `-ParmVarDecl 0x55beedb148d8 <col:42, col:66> col:66 __buf '__pthread_unwind_buf_t *'
+|-FunctionDecl 0x55beedb14bc0 <line:486:1, line:488:31> line:486:13 __pthread_unwind_next 'void (__pthread_unwind_buf_t *) __attribute__((noreturn))' extern
+| |-ParmVarDecl 0x55beedb14ab8 <col:36, col:60> col:60 __buf '__pthread_unwind_buf_t *'
+| `-WeakAttr 0x55beedb14c68 <line:488:22>
+|-RecordDecl 0x55beedb14cc0 <line:490:1, col:8> col:8 struct __jmp_buf_tag
+|-FunctionDecl 0x55beedb14fd8 <line:491:1, col:98> col:12 __sigsetjmp 'int (struct __jmp_buf_tag *, int)' extern
+| |-ParmVarDecl 0x55beedb14e38 <col:25, col:47> col:47 __env 'struct __jmp_buf_tag *'
+| |-ParmVarDecl 0x55beedb14eb8 <col:54, col:58> col:58 __savemask 'int'
+| |-NoThrowAttr 0x55beedb15088 <col:86>
+| `-ReturnsTwiceAttr 0x55beedb150e0 <col:12> Implicit
+|-FunctionDecl 0x55beedb15408 <line:492:1, line:494:79> line:492:12 pthread_mutex_init 'int (pthread_mutex_t *, const pthread_mutexattr_t *)' extern
+| |-ParmVarDecl 0x55beedb151b0 <col:32, col:49> col:49 __mutex 'pthread_mutex_t *'
+| |-ParmVarDecl 0x55beedb152c0 <line:493:11, col:38> col:38 __mutexattr 'const pthread_mutexattr_t *'
+| |-NoThrowAttr 0x55beedb154b8 <line:494:22>
+| `-NonNullAttr 0x55beedb15510 <col:63, col:77> 1
+|-FunctionDecl 0x55beedb15688 <line:495:1, line:496:79> line:495:12 pthread_mutex_destroy 'int (pthread_mutex_t *)' extern
+| |-ParmVarDecl 0x55beedb15558 <col:35, col:52> col:52 __mutex 'pthread_mutex_t *'
+| |-NoThrowAttr 0x55beedb15730 <line:496:22>
+| `-NonNullAttr 0x55beedb15788 <col:63, col:77> 1
+|-FunctionDecl 0x55beedb15890 <line:497:1, line:498:68> line:497:12 pthread_mutex_trylock 'int (pthread_mutex_t *)' extern
+| |-ParmVarDecl 0x55beedb157d8 <col:35, col:52> col:52 __mutex 'pthread_mutex_t *'
+| |-NoThrowAttr 0x55beedb15938 <line:498:22>
+| `-NonNullAttr 0x55beedb15990 <col:52, col:66> 1
+|-FunctionDecl 0x55beedb16ad8 <line:499:1, line:500:68> line:499:12 pthread_mutex_lock 'int (pthread_mutex_t *)' extern
+| |-ParmVarDecl 0x55beedb16a20 <col:32, col:49> col:49 __mutex 'pthread_mutex_t *'
+| |-NoThrowAttr 0x55beedb16b80 <line:500:22>
+| `-NonNullAttr 0x55beedb16bd8 <col:52, col:66> 1
+|-FunctionDecl 0x55beedb16e18 <line:501:1, line:503:85> line:501:12 pthread_mutex_timedlock 'int (pthread_mutex_t *restrict, const struct timespec *restrict)' extern
+| |-ParmVarDecl 0x55beedb16c28 <col:37, col:65> col:65 __mutex 'pthread_mutex_t *restrict'
+| |-ParmVarDecl 0x55beedb16cb8 <line:502:9, line:503:9> col:9 __abstime 'const struct timespec *restrict'
+| |-NoThrowAttr 0x55beedb16ec8 <col:36>
+| `-NonNullAttr 0x55beedb16f20 <col:66, col:83> 1 2
+|-FunctionDecl 0x55beedb17020 <line:504:1, line:505:68> line:504:12 pthread_mutex_unlock 'int (pthread_mutex_t *)' extern
+| |-ParmVarDecl 0x55beedb16f68 <col:34, col:51> col:51 __mutex 'pthread_mutex_t *'
+| |-NoThrowAttr 0x55beedb170c8 <line:505:22>
+| `-NonNullAttr 0x55beedb17120 <col:52, col:66> 1
+|-FunctionDecl 0x55beedb173b8 <line:506:1, line:509:82> line:506:12 pthread_mutex_getprioceiling 'int (const pthread_mutex_t *restrict, int *restrict)' extern
+| |-ParmVarDecl 0x55beedb171d0 <col:42, line:507:18> col:18 __mutex 'const pthread_mutex_t *restrict'
+| |-ParmVarDecl 0x55beedb17250 <line:508:7, col:23> col:23 __prioceiling 'int *restrict'
+| |-NoThrowAttr 0x55beedb17468 <line:509:22>
+| `-NonNullAttr 0x55beedb174c0 <col:63, col:80> 1 2
+|-FunctionDecl 0x55beedb17788 <line:510:1, line:513:82> line:510:12 pthread_mutex_setprioceiling 'int (pthread_mutex_t *restrict, int, int *restrict)' extern
+| |-ParmVarDecl 0x55beedb17508 <col:42, col:70> col:70 __mutex 'pthread_mutex_t *restrict'
+| |-ParmVarDecl 0x55beedb17588 <line:511:7, col:11> col:11 __prioceiling 'int'
+| |-ParmVarDecl 0x55beedb17608 <line:512:7, col:23> col:23 __old_ceiling 'int *restrict'
+| |-NoThrowAttr 0x55beedb17840 <line:513:22>
+| `-NonNullAttr 0x55beedb17898 <col:63, col:80> 1 3
+|-FunctionDecl 0x55beedb17a30 <line:514:1, line:515:79> line:514:12 pthread_mutex_consistent 'int (pthread_mutex_t *)' extern
+| |-ParmVarDecl 0x55beedb178e8 <col:38, col:55> col:55 __mutex 'pthread_mutex_t *'
+| |-NoThrowAttr 0x55beedb17ad8 <line:515:22>
+| `-NonNullAttr 0x55beedb17b30 <col:63, col:77> 1
+|-FunctionDecl 0x55beedb17d18 <line:516:1, line:517:79> line:516:12 pthread_mutexattr_init 'int (pthread_mutexattr_t *)' extern
+| |-ParmVarDecl 0x55beedb17be0 <col:36, col:57> col:57 __attr 'pthread_mutexattr_t *'
+| |-NoThrowAttr 0x55beedb17dc0 <line:517:22>
+| `-NonNullAttr 0x55beedb17e18 <col:63, col:77> 1
+|-FunctionDecl 0x55beedb17f20 <line:518:1, line:519:79> line:518:12 pthread_mutexattr_destroy 'int (pthread_mutexattr_t *)' extern
+| |-ParmVarDecl 0x55beedb17e68 <col:39, col:60> col:60 __attr 'pthread_mutexattr_t *'
+| |-NoThrowAttr 0x55beedb17fc8 <line:519:22>
+| `-NonNullAttr 0x55beedb18020 <col:63, col:77> 1
+|-FunctionDecl 0x55beedb18248 <line:520:1, line:523:82> line:520:12 pthread_mutexattr_getpshared 'int (const pthread_mutexattr_t *restrict, int *restrict)' extern
+| |-ParmVarDecl 0x55beedb18068 <col:42, line:521:18> col:18 __attr 'const pthread_mutexattr_t *restrict'
+| |-ParmVarDecl 0x55beedb180e8 <line:522:7, col:23> col:23 __pshared 'int *restrict'
+| |-NoThrowAttr 0x55beedb182f8 <line:523:22>
+| `-NonNullAttr 0x55beedb18350 <col:63, col:80> 1 2
+|-FunctionDecl 0x55beedb18558 <line:524:1, line:526:79> line:524:12 pthread_mutexattr_setpshared 'int (pthread_mutexattr_t *, int)' extern
+| |-ParmVarDecl 0x55beedb18398 <col:42, col:63> col:63 __attr 'pthread_mutexattr_t *'
+| |-ParmVarDecl 0x55beedb18418 <line:525:7, col:11> col:11 __pshared 'int'
+| |-NoThrowAttr 0x55beedb18608 <line:526:22>
+| `-NonNullAttr 0x55beedb18660 <col:63, col:77> 1
+|-FunctionDecl 0x55beedb18808 <line:527:1, line:529:82> line:527:12 pthread_mutexattr_gettype 'int (const pthread_mutexattr_t *restrict, int *restrict)' extern
+| |-ParmVarDecl 0x55beedb186a8 <col:39, line:528:11> col:11 __attr 'const pthread_mutexattr_t *restrict'
+| |-ParmVarDecl 0x55beedb18728 <col:19, col:35> col:35 __kind 'int *restrict'
+| |-NoThrowAttr 0x55beedb188b8 <line:529:22>
+| `-NonNullAttr 0x55beedb18910 <col:63, col:80> 1 2
+|-FunctionDecl 0x55beedb18b00 <line:530:1, line:531:79> line:530:12 pthread_mutexattr_settype 'int (pthread_mutexattr_t *, int)' extern
+| |-ParmVarDecl 0x55beedb18958 <col:39, col:60> col:60 __attr 'pthread_mutexattr_t *'
+| |-ParmVarDecl 0x55beedb18a40 <col:68, col:72> col:72 __kind 'int'
+| |-NoThrowAttr 0x55beedb18bb0 <line:531:22>
+| `-NonNullAttr 0x55beedb18c08 <col:63, col:77> 1
+|-FunctionDecl 0x55beedb18db8 <line:532:1, line:535:82> line:532:12 pthread_mutexattr_getprotocol 'int (const pthread_mutexattr_t *restrict, int *restrict)' extern
+| |-ParmVarDecl 0x55beedb18c58 <col:43, line:533:19> col:19 __attr 'const pthread_mutexattr_t *restrict'
+| |-ParmVarDecl 0x55beedb18cd8 <line:534:8, col:24> col:24 __protocol 'int *restrict'
+| |-NoThrowAttr 0x55beedb18e68 <line:535:22>
+| `-NonNullAttr 0x55beedb18ec0 <col:63, col:80> 1 2
+|-FunctionDecl 0x55beedb19048 <line:536:1, line:538:79> line:536:12 pthread_mutexattr_setprotocol 'int (pthread_mutexattr_t *, int)' extern
+| |-ParmVarDecl 0x55beedb18f08 <col:43, col:64> col:64 __attr 'pthread_mutexattr_t *'
+| |-ParmVarDecl 0x55beedb18f88 <line:537:8, col:12> col:12 __protocol 'int'
+| |-NoThrowAttr 0x55beedb190f8 <line:538:22>
+| `-NonNullAttr 0x55beedb19150 <col:63, col:77> 1
+|-FunctionDecl 0x55beedb192f8 <line:539:1, line:542:82> line:539:12 pthread_mutexattr_getprioceiling 'int (const pthread_mutexattr_t *restrict, int *restrict)' extern
+| |-ParmVarDecl 0x55beedb19198 <col:46, line:540:22> col:22 __attr 'const pthread_mutexattr_t *restrict'
+| |-ParmVarDecl 0x55beedb19218 <line:541:11, col:27> col:27 __prioceiling 'int *restrict'
+| |-NoThrowAttr 0x55beedb193a8 <line:542:22>
+| `-NonNullAttr 0x55beedb19400 <col:63, col:80> 1 2
+|-FunctionDecl 0x55beedb19588 <line:543:1, line:545:79> line:543:12 pthread_mutexattr_setprioceiling 'int (pthread_mutexattr_t *, int)' extern
+| |-ParmVarDecl 0x55beedb19448 <col:46, col:67> col:67 __attr 'pthread_mutexattr_t *'
+| |-ParmVarDecl 0x55beedb194c8 <line:544:11, col:15> col:15 __prioceiling 'int'
+| |-NoThrowAttr 0x55beedb19638 <line:545:22>
+| `-NonNullAttr 0x55beedb19690 <col:63, col:77> 1
+|-FunctionDecl 0x55beedb19878 <line:546:1, line:548:82> line:546:12 pthread_mutexattr_getrobust 'int (const pthread_mutexattr_t *, int *)' extern
+| |-ParmVarDecl 0x55beedb196d8 <col:41, col:68> col:68 __attr 'const pthread_mutexattr_t *'
+| |-ParmVarDecl 0x55beedb19758 <line:547:6, col:11> col:11 __robustness 'int *'
+| |-NoThrowAttr 0x55beedb19928 <line:548:22>
+| `-NonNullAttr 0x55beedb19980 <col:63, col:80> 1 2
+|-FunctionDecl 0x55beedb1ab38 <line:549:1, line:551:79> line:549:12 pthread_mutexattr_setrobust 'int (pthread_mutexattr_t *, int)' extern
+| |-ParmVarDecl 0x55beedb199c8 <col:41, col:62> col:62 __attr 'pthread_mutexattr_t *'
+| |-ParmVarDecl 0x55beedb1aa78 <line:550:6, col:10> col:10 __robustness 'int'
+| |-NoThrowAttr 0x55beedb1abe8 <line:551:22>
+| `-NonNullAttr 0x55beedb1ac40 <col:63, col:77> 1
+|-FunctionDecl 0x55beedb1af78 <line:552:1, line:554:86> line:552:12 pthread_rwlock_init 'int (pthread_rwlock_t *restrict, const pthread_rwlockattr_t *restrict)' extern
+| |-ParmVarDecl 0x55beedb1ad20 <col:33, col:62> col:62 __rwlock 'pthread_rwlock_t *restrict'
+| |-ParmVarDecl 0x55beedb1ae30 <line:553:5, line:554:5> col:5 __attr 'const pthread_rwlockattr_t *restrict'
+| |-NoThrowAttr 0x55beedb1b028 <col:29>
+| `-NonNullAttr 0x55beedb1b080 <col:70, col:84> 1
+|-FunctionDecl 0x55beedb1b1f8 <line:555:1, line:556:79> line:555:12 pthread_rwlock_destroy 'int (pthread_rwlock_t *)' extern
+| |-ParmVarDecl 0x55beedb1b0c8 <col:36, col:54> col:54 __rwlock 'pthread_rwlock_t *'
+| |-NoThrowAttr 0x55beedb1b2a0 <line:556:22>
+| `-NonNullAttr 0x55beedb1b2f8 <col:63, col:77> 1
+|-FunctionDecl 0x55beedb1b400 <line:557:1, line:558:68> line:557:12 pthread_rwlock_rdlock 'int (pthread_rwlock_t *)' extern
+| |-ParmVarDecl 0x55beedb1b348 <col:35, col:53> col:53 __rwlock 'pthread_rwlock_t *'
+| |-NoThrowAttr 0x55beedb1b4a8 <line:558:22>
+| `-NonNullAttr 0x55beedb1b500 <col:52, col:66> 1
+|-FunctionDecl 0x55beedb1b600 <line:559:1, line:560:65> line:559:12 pthread_rwlock_tryrdlock 'int (pthread_rwlock_t *)' extern
+| |-ParmVarDecl 0x55beedb1b548 <col:38, col:56> col:56 __rwlock 'pthread_rwlock_t *'
+| |-NoThrowAttr 0x55beedb1b6a8 <line:560:19>
+| `-NonNullAttr 0x55beedb1b700 <col:49, col:63> 1
+|-FunctionDecl 0x55beedb1b938 <line:561:1, line:563:88> line:561:12 pthread_rwlock_timedrdlock 'int (pthread_rwlock_t *restrict, const struct timespec *restrict)' extern
+| |-ParmVarDecl 0x55beedb1b748 <col:40, col:69> col:69 __rwlock 'pthread_rwlock_t *restrict'
+| |-ParmVarDecl 0x55beedb1b7d8 <line:562:12, line:563:12> col:12 __abstime 'const struct timespec *restrict'
+| |-NoThrowAttr 0x55beedb1b9e8 <col:39>
+| `-NonNullAttr 0x55beedb1ba70 <col:69, col:86> 1 2
+|-FunctionDecl 0x55beedb1bb70 <line:564:1, line:565:68> line:564:12 pthread_rwlock_wrlock 'int (pthread_rwlock_t *)' extern
+| |-ParmVarDecl 0x55beedb1bab8 <col:35, col:53> col:53 __rwlock 'pthread_rwlock_t *'
+| |-NoThrowAttr 0x55beedb1bc18 <line:565:22>
+| `-NonNullAttr 0x55beedb1bc70 <col:52, col:66> 1
+|-FunctionDecl 0x55beedb1bd70 <line:566:1, line:567:68> line:566:12 pthread_rwlock_trywrlock 'int (pthread_rwlock_t *)' extern
+| |-ParmVarDecl 0x55beedb1bcb8 <col:38, col:56> col:56 __rwlock 'pthread_rwlock_t *'
+| |-NoThrowAttr 0x55beedb1be18 <line:567:22>
+| `-NonNullAttr 0x55beedb1be70 <col:52, col:66> 1
+|-FunctionDecl 0x55beedb1c028 <line:568:1, line:570:88> line:568:12 pthread_rwlock_timedwrlock 'int (pthread_rwlock_t *restrict, const struct timespec *restrict)' extern
+| |-ParmVarDecl 0x55beedb1beb8 <col:40, col:69> col:69 __rwlock 'pthread_rwlock_t *restrict'
+| |-ParmVarDecl 0x55beedb1bf48 <line:569:12, line:570:12> col:12 __abstime 'const struct timespec *restrict'
+| |-NoThrowAttr 0x55beedb1c0d8 <col:39>
+| `-NonNullAttr 0x55beedb1c130 <col:69, col:86> 1 2
+|-FunctionDecl 0x55beedb1c230 <line:571:1, line:572:68> line:571:12 pthread_rwlock_unlock 'int (pthread_rwlock_t *)' extern
+| |-ParmVarDecl 0x55beedb1c178 <col:35, col:53> col:53 __rwlock 'pthread_rwlock_t *'
+| |-NoThrowAttr 0x55beedb1c2d8 <line:572:22>
+| `-NonNullAttr 0x55beedb1c330 <col:52, col:66> 1
+|-FunctionDecl 0x55beedb1c518 <line:573:1, line:574:79> line:573:12 pthread_rwlockattr_init 'int (pthread_rwlockattr_t *)' extern
+| |-ParmVarDecl 0x55beedb1c3e0 <col:37, col:59> col:59 __attr 'pthread_rwlockattr_t *'
+| |-NoThrowAttr 0x55beedb1c5c0 <line:574:22>
+| `-NonNullAttr 0x55beedb1c618 <col:63, col:77> 1
+|-FunctionDecl 0x55beedb1c720 <line:575:1, line:576:79> line:575:12 pthread_rwlockattr_destroy 'int (pthread_rwlockattr_t *)' extern
+| |-ParmVarDecl 0x55beedb1c668 <col:40, col:62> col:62 __attr 'pthread_rwlockattr_t *'
+| |-NoThrowAttr 0x55beedb1c7c8 <line:576:22>
+| `-NonNullAttr 0x55beedb1c820 <col:63, col:77> 1
+|-FunctionDecl 0x55beedb1ca80 <line:577:1, line:580:82> line:577:12 pthread_rwlockattr_getpshared 'int (const pthread_rwlockattr_t *restrict, int *restrict)' extern
+| |-ParmVarDecl 0x55beedb1c868 <col:43, line:578:19> col:19 __attr 'const pthread_rwlockattr_t *restrict'
+| |-ParmVarDecl 0x55beedb1c8e8 <line:579:8, col:24> col:24 __pshared 'int *restrict'
+| |-NoThrowAttr 0x55beedb1cb30 <line:580:22>
+| `-NonNullAttr 0x55beedb1cb88 <col:63, col:80> 1 2
+|-FunctionDecl 0x55beedb1cd98 <line:581:1, line:583:79> line:581:12 pthread_rwlockattr_setpshared 'int (pthread_rwlockattr_t *, int)' extern
+| |-ParmVarDecl 0x55beedb1cbd8 <col:43, col:65> col:65 __attr 'pthread_rwlockattr_t *'
+| |-ParmVarDecl 0x55beedb1cc58 <line:582:8, col:12> col:12 __pshared 'int'
+| |-NoThrowAttr 0x55beedb1ce48 <line:583:22>
+| `-NonNullAttr 0x55beedb1cea0 <col:63, col:77> 1
+|-FunctionDecl 0x55beedb1d048 <line:584:1, line:587:82> line:584:12 pthread_rwlockattr_getkind_np 'int (const pthread_rwlockattr_t *restrict, int *restrict)' extern
+| |-ParmVarDecl 0x55beedb1cee8 <col:43, line:585:19> col:19 __attr 'const pthread_rwlockattr_t *restrict'
+| |-ParmVarDecl 0x55beedb1cf68 <line:586:8, col:24> col:24 __pref 'int *restrict'
+| |-NoThrowAttr 0x55beedb1d0f8 <line:587:22>
+| `-NonNullAttr 0x55beedb1d150 <col:63, col:80> 1 2
+|-FunctionDecl 0x55beedb1d2d8 <line:588:1, line:589:93> line:588:12 pthread_rwlockattr_setkind_np 'int (pthread_rwlockattr_t *, int)' extern
+| |-ParmVarDecl 0x55beedb1d198 <col:43, col:65> col:65 __attr 'pthread_rwlockattr_t *'
+| |-ParmVarDecl 0x55beedb1d218 <line:589:8, col:12> col:12 __pref 'int'
+| |-NoThrowAttr 0x55beedb1d388 <col:36>
+| `-NonNullAttr 0x55beedb1d3e0 <col:77, col:91> 1
+|-FunctionDecl 0x55beedb1d718 <line:590:1, line:592:79> line:590:12 pthread_cond_init 'int (pthread_cond_t *restrict, const pthread_condattr_t *restrict)' extern
+| |-ParmVarDecl 0x55beedb1d4c0 <col:31, col:58> col:58 __cond 'pthread_cond_t *restrict'
+| |-ParmVarDecl 0x55beedb1d5d0 <line:591:10, col:47> col:47 __cond_attr 'const pthread_condattr_t *restrict'
+| |-NoThrowAttr 0x55beedb1d7c8 <line:592:22>
+| `-NonNullAttr 0x55beedb1d820 <col:63, col:77> 1
+|-FunctionDecl 0x55beedb1d998 <line:593:1, line:594:79> line:593:12 pthread_cond_destroy 'int (pthread_cond_t *)' extern
+| |-ParmVarDecl 0x55beedb1d868 <col:34, col:50> col:50 __cond 'pthread_cond_t *'
+| |-NoThrowAttr 0x55beedb1da40 <line:594:22>
+| `-NonNullAttr 0x55beedb1dac0 <col:63, col:77> 1
+|-FunctionDecl 0x55beedb1dbc0 <line:595:1, line:596:68> line:595:12 pthread_cond_signal 'int (pthread_cond_t *)' extern
+| |-ParmVarDecl 0x55beedb1db08 <col:33, col:49> col:49 __cond 'pthread_cond_t *'
+| |-NoThrowAttr 0x55beedb1dc68 <line:596:22>
+| `-NonNullAttr 0x55beedb1dcc0 <col:52, col:66> 1
+|-FunctionDecl 0x55beedb1ddc0 <line:597:1, line:598:68> line:597:12 pthread_cond_broadcast 'int (pthread_cond_t *)' extern
+| |-ParmVarDecl 0x55beedb1dd08 <col:36, col:52> col:52 __cond 'pthread_cond_t *'
+| |-NoThrowAttr 0x55beedb1de68 <line:598:22>
+| `-NonNullAttr 0x55beedb1dec0 <col:52, col:66> 1
+|-FunctionDecl 0x55beedb1e0e8 <line:599:1, line:601:41> line:599:12 pthread_cond_wait 'int (pthread_cond_t *restrict, pthread_mutex_t *restrict)' extern
+| |-ParmVarDecl 0x55beedb1df08 <col:31, col:58> col:58 __cond 'pthread_cond_t *restrict'
+| |-ParmVarDecl 0x55beedb1df80 <line:600:10, col:38> col:38 __mutex 'pthread_mutex_t *restrict'
+| `-NonNullAttr 0x55beedb1e198 <line:601:22, col:39> 1 2
+|-FunctionDecl 0x55beedb1e4c8 <line:602:1, line:605:44> line:602:12 pthread_cond_timedwait 'int (pthread_cond_t *restrict, pthread_mutex_t *restrict, const struct timespec *restrict)' extern
+| |-ParmVarDecl 0x55beedb1e218 <col:36, col:63> col:63 __cond 'pthread_cond_t *restrict'
+| |-ParmVarDecl 0x55beedb1e290 <line:603:8, col:36> col:36 __mutex 'pthread_mutex_t *restrict'
+| |-ParmVarDecl 0x55beedb1e320 <line:604:8, col:42> col:42 __abstime 'const struct timespec *restrict'
+| `-NonNullAttr 0x55beedb1e580 <line:605:22, col:42> 1 2 3
+|-FunctionDecl 0x55beedb1e798 <line:606:1, line:607:79> line:606:12 pthread_condattr_init 'int (pthread_condattr_t *)' extern
+| |-ParmVarDecl 0x55beedb1e660 <col:35, col:55> col:55 __attr 'pthread_condattr_t *'
+| |-NoThrowAttr 0x55beedb1e840 <line:607:22>
+| `-NonNullAttr 0x55beedb1e898 <col:63, col:77> 1
+|-FunctionDecl 0x55beedb1e9a0 <line:608:1, line:609:79> line:608:12 pthread_condattr_destroy 'int (pthread_condattr_t *)' extern
+| |-ParmVarDecl 0x55beedb1e8e8 <col:38, col:58> col:58 __attr 'pthread_condattr_t *'
+| |-NoThrowAttr 0x55beedb1ea48 <line:609:22>
+| `-NonNullAttr 0x55beedb1ead0 <col:63, col:77> 1
+|-FunctionDecl 0x55beedb1ecf8 <line:610:1, line:613:82> line:610:12 pthread_condattr_getpshared 'int (const pthread_condattr_t *restrict, int *restrict)' extern
+| |-ParmVarDecl 0x55beedb1eb18 <col:41, line:611:17> col:17 __attr 'const pthread_condattr_t *restrict'
+| |-ParmVarDecl 0x55beedb1eb98 <line:612:6, col:22> col:22 __pshared 'int *restrict'
+| |-NoThrowAttr 0x55beedb1eda8 <line:613:22>
+| `-NonNullAttr 0x55beedb1ee00 <col:63, col:80> 1 2
+|-FunctionDecl 0x55beedb1f008 <line:614:1, line:615:94> line:614:12 pthread_condattr_setpshared 'int (pthread_condattr_t *, int)' extern
+| |-ParmVarDecl 0x55beedb1ee48 <col:41, col:61> col:61 __attr 'pthread_condattr_t *'
+| |-ParmVarDecl 0x55beedb1eec8 <line:615:6, col:10> col:10 __pshared 'int'
+| |-NoThrowAttr 0x55beedb1f0b8 <col:37>
+| `-NonNullAttr 0x55beedb1f110 <col:78, col:92> 1
+|-FunctionDecl 0x55beedb1f328 <line:616:1, line:619:82> line:616:12 pthread_condattr_getclock 'int (const pthread_condattr_t *restrict, __clockid_t *restrict)' extern
+| |-ParmVarDecl 0x55beedb1f158 <col:39, line:617:22> col:22 __attr 'const pthread_condattr_t *restrict'
+| |-ParmVarDecl 0x55beedb1f200 <line:618:11, col:35> col:35 __clock_id '__clockid_t *restrict'
+| |-NoThrowAttr 0x55beedb1f3d8 <line:619:22>
+| `-NonNullAttr 0x55beedb1f430 <col:63, col:80> 1 2
+|-FunctionDecl 0x55beedb1f5f8 <line:620:1, line:622:79> line:620:12 pthread_condattr_setclock 'int (pthread_condattr_t *, __clockid_t)' extern
+| |-ParmVarDecl 0x55beedb1f478 <col:39, col:59> col:59 __attr 'pthread_condattr_t *'
+| |-ParmVarDecl 0x55beedb1f4f0 <line:621:11, col:23> col:23 __clock_id '__clockid_t':'int'
+| |-NoThrowAttr 0x55beedb1f6a8 <line:622:22>
+| `-NonNullAttr 0x55beedb1f700 <col:63, col:77> 1
+|-FunctionDecl 0x55beedb1f9a8 <line:623:1, line:624:79> line:623:12 pthread_spin_init 'int (pthread_spinlock_t *, int)' extern
+| |-ParmVarDecl 0x55beedb1f7e0 <col:31, col:51> col:51 __lock 'pthread_spinlock_t *'
+| |-ParmVarDecl 0x55beedb1f860 <col:59, col:63> col:63 __pshared 'int'
+| |-NoThrowAttr 0x55beedb1fa58 <line:624:22>
+| `-NonNullAttr 0x55beedb1fae0 <col:63, col:77> 1
+|-FunctionDecl 0x55beedb1fc58 <line:625:1, line:626:79> line:625:12 pthread_spin_destroy 'int (pthread_spinlock_t *)' extern
+| |-ParmVarDecl 0x55beedb1fb28 <col:34, col:54> col:54 __lock 'pthread_spinlock_t *'
+| |-NoThrowAttr 0x55beedb1fd00 <line:626:22>
+| `-NonNullAttr 0x55beedb1fd58 <col:63, col:77> 1
+|-FunctionDecl 0x55beedb1fe60 <line:627:1, line:628:68> line:627:12 pthread_spin_lock 'int (pthread_spinlock_t *)' extern
+| |-ParmVarDecl 0x55beedb1fda8 <col:31, col:51> col:51 __lock 'pthread_spinlock_t *'
+| |-NoThrowAttr 0x55beedb1ff08 <line:628:22>
+| `-NonNullAttr 0x55beedb1ff60 <col:52, col:66> 1
+|-FunctionDecl 0x55beedb20060 <line:629:1, line:630:68> line:629:12 pthread_spin_trylock 'int (pthread_spinlock_t *)' extern
+| |-ParmVarDecl 0x55beedb1ffa8 <col:34, col:54> col:54 __lock 'pthread_spinlock_t *'
+| |-NoThrowAttr 0x55beedb20108 <line:630:22>
+| `-NonNullAttr 0x55beedb20160 <col:52, col:66> 1
+|-FunctionDecl 0x55beedb20260 <line:631:1, line:632:68> line:631:12 pthread_spin_unlock 'int (pthread_spinlock_t *)' extern
+| |-ParmVarDecl 0x55beedb201a8 <col:33, col:53> col:53 __lock 'pthread_spinlock_t *'
+| |-NoThrowAttr 0x55beedb20308 <line:632:22>
+| `-NonNullAttr 0x55beedb20360 <col:52, col:66> 1
+|-FunctionDecl 0x55beedb20738 <line:633:1, line:636:79> line:633:12 pthread_barrier_init 'int (pthread_barrier_t *restrict, const pthread_barrierattr_t *restrict, unsigned int)' extern
+| |-ParmVarDecl 0x55beedb20440 <col:34, col:64> col:64 __barrier 'pthread_barrier_t *restrict'
+| |-ParmVarDecl 0x55beedb20550 <line:634:6, line:635:6> col:6 __attr 'const pthread_barrierattr_t *restrict'
+| |-ParmVarDecl 0x55beedb205d0 <col:14, col:27> col:27 __count 'unsigned int'
+| |-NoThrowAttr 0x55beedb207f0 <line:636:22>
+| `-NonNullAttr 0x55beedb20848 <col:63, col:77> 1
+|-FunctionDecl 0x55beedb209c8 <line:637:1, line:638:79> line:637:12 pthread_barrier_destroy 'int (pthread_barrier_t *)' extern
+| |-ParmVarDecl 0x55beedb20898 <col:37, col:56> col:56 __barrier 'pthread_barrier_t *'
+| |-NoThrowAttr 0x55beedb20a70 <line:638:22>
+| `-NonNullAttr 0x55beedb21b00 <col:63, col:77> 1
+|-FunctionDecl 0x55beedb21c00 <line:639:1, line:640:68> line:639:12 pthread_barrier_wait 'int (pthread_barrier_t *)' extern
+| |-ParmVarDecl 0x55beedb21b48 <col:34, col:53> col:53 __barrier 'pthread_barrier_t *'
+| |-NoThrowAttr 0x55beedb21ca8 <line:640:22>
+| `-NonNullAttr 0x55beedb21d00 <col:52, col:66> 1
+|-FunctionDecl 0x55beedb21ee8 <line:641:1, line:642:79> line:641:12 pthread_barrierattr_init 'int (pthread_barrierattr_t *)' extern
+| |-ParmVarDecl 0x55beedb21db0 <col:38, col:61> col:61 __attr 'pthread_barrierattr_t *'
+| |-NoThrowAttr 0x55beedb21f90 <line:642:22>
+| `-NonNullAttr 0x55beedb21fe8 <col:63, col:77> 1
+|-FunctionDecl 0x55beedb220f0 <line:643:1, line:644:79> line:643:12 pthread_barrierattr_destroy 'int (pthread_barrierattr_t *)' extern
+| |-ParmVarDecl 0x55beedb22038 <col:41, col:64> col:64 __attr 'pthread_barrierattr_t *'
+| |-NoThrowAttr 0x55beedb22198 <line:644:22>
+| `-NonNullAttr 0x55beedb221f0 <col:63, col:77> 1
+|-FunctionDecl 0x55beedb22418 <line:645:1, line:648:82> line:645:12 pthread_barrierattr_getpshared 'int (const pthread_barrierattr_t *restrict, int *restrict)' extern
+| |-ParmVarDecl 0x55beedb22238 <col:44, line:646:20> col:20 __attr 'const pthread_barrierattr_t *restrict'
+| |-ParmVarDecl 0x55beedb222b8 <line:647:9, col:25> col:25 __pshared 'int *restrict'
+| |-NoThrowAttr 0x55beedb224c8 <line:648:22>
+| `-NonNullAttr 0x55beedb22520 <col:63, col:80> 1 2
+|-FunctionDecl 0x55beedb22728 <line:649:1, line:651:79> line:649:12 pthread_barrierattr_setpshared 'int (pthread_barrierattr_t *, int)' extern
+| |-ParmVarDecl 0x55beedb22568 <col:44, col:67> col:67 __attr 'pthread_barrierattr_t *'
+| |-ParmVarDecl 0x55beedb225e8 <line:650:9, col:13> col:13 __pshared 'int'
+| |-NoThrowAttr 0x55beedb227d8 <line:651:22>
+| `-NonNullAttr 0x55beedb22830 <col:63, col:77> 1
+|-FunctionDecl 0x55beedb22b98 <line:652:1, line:654:79> line:652:12 pthread_key_create 'int (pthread_key_t *, void (*)(void *))' extern
+| |-ParmVarDecl 0x55beedb22910 <col:32, col:47> col:47 __key 'pthread_key_t *'
+| |-ParmVarDecl 0x55beedb22a30 <line:653:11, col:43> col:18 __destr_function 'void (*)(void *)'
+| |-NoThrowAttr 0x55beedb22c48 <line:654:22>
+| `-NonNullAttr 0x55beedb22ca0 <col:63, col:77> 1
+|-FunctionDecl 0x55beedb22df8 <line:655:1, col:92> col:12 pthread_key_delete 'int (pthread_key_t)' extern
+| |-ParmVarDecl 0x55beedb22ce8 <col:32, col:46> col:46 __key 'pthread_key_t':'unsigned int'
+| `-NoThrowAttr 0x55beedb22ea0 <col:69>
+|-FunctionDecl 0x55beedb23018 <line:656:1, col:95> col:14 pthread_getspecific 'void *(pthread_key_t)' extern
+| |-ParmVarDecl 0x55beedb22f08 <col:35, col:49> col:49 __key 'pthread_key_t':'unsigned int'
+| `-NoThrowAttr 0x55beedb230c0 <col:72>
+|-FunctionDecl 0x55beedb232f8 <line:657:1, line:658:67> line:657:12 pthread_setspecific 'int (pthread_key_t, const void *)' extern
+| |-ParmVarDecl 0x55beedb23128 <col:33, col:47> col:47 __key 'pthread_key_t':'unsigned int'
+| |-ParmVarDecl 0x55beedb231d8 <line:658:5, col:17> col:17 __pointer 'const void *'
+| `-NoThrowAttr 0x55beedb233a8 <col:44>
+|-FunctionDecl 0x55beedb235c8 <line:659:1, line:661:79> line:659:12 pthread_getcpuclockid 'int (pthread_t, __clockid_t *)' extern
+| |-ParmVarDecl 0x55beedb23410 <col:35, col:45> col:45 __thread_id 'pthread_t':'unsigned long'
+| |-ParmVarDecl 0x55beedb23488 <line:660:7, col:20> col:20 __clock_id '__clockid_t *'
+| |-NoThrowAttr 0x55beedb23678 <line:661:22>
+| `-NonNullAttr 0x55beedb236d0 <col:63, col:77> 2
+|-FunctionDecl 0x55beedb23b30 <line:662:1, line:664:70> line:662:12 pthread_atfork 'int (void (*)(void), void (*)(void), void (*)(void))' extern
+| |-ParmVarDecl 0x55beedb237b0 <col:28, col:51> col:35 __prepare 'void (*)(void)'
+| |-ParmVarDecl 0x55beedb238c0 <line:663:7, col:29> col:14 __parent 'void (*)(void)'
+| |-ParmVarDecl 0x55beedb239d0 <line:664:7, col:28> col:14 __child 'void (*)(void)'
+| `-NoThrowAttr 0x55beedb23be8 <col:47>
+|-FunctionDecl 0x55beedb23cf0 <line:666:1, col:20> col:8 used P0 'void *(void *)'
+| `-ParmVarDecl 0x55beedb23c58 <col:11, col:17> col:17 arg 'void *'
+|-FunctionDecl 0x55beedb23e48 <line:667:1, col:20> col:8 used P1 'void *(void *)'
+| `-ParmVarDecl 0x55beedb23db0 <col:11, col:17> col:17 arg 'void *'
+|-FunctionDecl 0x55beedb23fa0 <line:668:1, col:20> col:8 used P2 'void *(void *)'
+| `-ParmVarDecl 0x55beedb23f08 <col:11, col:17> col:17 arg 'void *'
+|-FunctionDecl 0x55beedb24068 <line:669:1, col:12> col:6 fence 'void ()'
+|-FunctionDecl 0x55beedb24128 <line:670:1, col:12> col:6 isync 'void ()'
+|-FunctionDecl 0x55beedb241e8 <line:671:1, col:14> col:6 lwfence 'void ()'
+|-VarDecl 0x55beedb242a0 <line:672:1, col:5> col:5 used __unbuffered_cnt 'int'
+|-VarDecl 0x55beedb24320 prev 0x55beedb242a0 <line:673:1, col:24> col:5 used __unbuffered_cnt 'int' cinit
+| `-IntegerLiteral 0x55beedb24388 <col:24> 'int' 0
+|-VarDecl 0x55beedb243c0 <line:674:1, col:5> col:5 used __unbuffered_p0_EAX 'int'
+|-VarDecl 0x55beedb24440 prev 0x55beedb243c0 <line:675:1, col:27> col:5 used __unbuffered_p0_EAX 'int' cinit
+| `-IntegerLiteral 0x55beedb244a8 <col:27> 'int' 0
+|-VarDecl 0x55beedb244e0 <line:676:1, col:5> col:5 used __unbuffered_p2_EAX 'int'
+|-VarDecl 0x55beedb24560 prev 0x55beedb244e0 <line:677:1, col:27> col:5 used __unbuffered_p2_EAX 'int' cinit
+| `-IntegerLiteral 0x55beedb245c8 <col:27> 'int' 0
+|-VarDecl 0x55beedb24600 <line:678:1, col:5> col:5 used __unbuffered_p2_EBX 'int'
+|-VarDecl 0x55beedb24680 prev 0x55beedb24600 <line:679:1, col:27> col:5 used __unbuffered_p2_EBX 'int' cinit
+| `-IntegerLiteral 0x55beedb246e8 <col:27> 'int' 0
+|-VarDecl 0x55beedb24718 <line:680:1, col:7> col:7 used main$tmp_guard0 '_Bool'
+|-VarDecl 0x55beedb24790 <line:681:1, col:7> col:7 used main$tmp_guard1 '_Bool'
+|-VarDecl 0x55beedb24810 <line:682:1, col:5> col:5 used x 'int'
+|-VarDecl 0x55beedb24890 prev 0x55beedb24810 <line:683:1, col:9> col:5 used x 'int' cinit
+| `-IntegerLiteral 0x55beedb248f8 <col:9> 'int' 0
+|-VarDecl 0x55beedb24928 <line:684:1, col:7> col:7 used x$flush_delayed '_Bool'
+|-VarDecl 0x55beedb249a8 <line:685:1, col:5> col:5 used x$mem_tmp 'int'
+|-VarDecl 0x55beedb24a20 <line:686:1, col:7> col:7 used x$r_buff0_thd0 '_Bool'
+|-VarDecl 0x55beedb24b00 <line:687:1, col:7> col:7 used x$r_buff0_thd1 '_Bool'
+|-VarDecl 0x55beedb24b78 <line:688:1, col:7> col:7 used x$r_buff0_thd2 '_Bool'
+|-VarDecl 0x55beedb24bf0 <line:689:1, col:7> col:7 used x$r_buff0_thd3 '_Bool'
+|-VarDecl 0x55beedb24c68 <line:690:1, col:7> col:7 used x$r_buff1_thd0 '_Bool'
+|-VarDecl 0x55beedb24ce0 <line:691:1, col:7> col:7 used x$r_buff1_thd1 '_Bool'
+|-VarDecl 0x55beedb24d58 <line:692:1, col:7> col:7 used x$r_buff1_thd2 '_Bool'
+|-VarDecl 0x55beedb24dd0 <line:693:1, col:7> col:7 used x$r_buff1_thd3 '_Bool'
+|-VarDecl 0x55beedb24e48 <line:694:1, col:7> col:7 x$read_delayed '_Bool'
+|-VarDecl 0x55beedb24ec8 <line:695:1, col:6> col:6 x$read_delayed_var 'int *'
+|-VarDecl 0x55beedb24f48 <line:696:1, col:5> col:5 used x$w_buff0 'int'
+|-VarDecl 0x55beedb24fc0 <line:697:1, col:7> col:7 used x$w_buff0_used '_Bool'
+|-VarDecl 0x55beedb25040 <line:698:1, col:5> col:5 used x$w_buff1 'int'
+|-VarDecl 0x55beedb250b8 <line:699:1, col:7> col:7 used x$w_buff1_used '_Bool'
+|-VarDecl 0x55beedb25138 <line:700:1, col:5> col:5 used y 'int'
+|-VarDecl 0x55beedb251b8 prev 0x55beedb25138 <line:701:1, col:9> col:5 used y 'int' cinit
+| `-IntegerLiteral 0x55beedb25220 <col:9> 'int' 0
+|-VarDecl 0x55beedb25250 <line:702:1, col:7> col:7 used weak$$choice0 '_Bool'
+|-VarDecl 0x55beedb252c8 <line:703:1, col:7> col:7 used weak$$choice2 '_Bool'
+|-FunctionDecl 0x55beedb253e0 prev 0x55beedb23cf0 <line:704:1, line:733:1> line:704:8 used P0 'void *(void *)'
+| |-ParmVarDecl 0x55beedb25348 <col:11, col:17> col:17 arg 'void *'
+| `-CompoundStmt 0x55beedb28418 <line:705:1, line:733:1>
+|   |-CallExpr 0x55beedb254f8 <line:706:3, col:27> 'void'
+|   | `-ImplicitCastExpr 0x55beedb254e0 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x55beedb25488 <col:3> 'void ()' Function 0x55beedacafa0 '__VERIFIER_atomic_begin' 'void ()'
+|   |-BinaryOperator 0x55beedb25558 <line:707:3, col:7> 'int' '='
+|   | |-DeclRefExpr 0x55beedb25518 <col:3> 'int' lvalue Var 0x55beedb251b8 'y' 'int'
+|   | `-IntegerLiteral 0x55beedb25538 <col:7> 'int' 2
+|   |-CallExpr 0x55beedb255b0 <line:708:3, col:25> 'void'
+|   | `-ImplicitCastExpr 0x55beedb25598 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x55beedb25578 <col:3> 'void ()' Function 0x55beedacb060 '__VERIFIER_atomic_end' 'void ()'
+|   |-CallExpr 0x55beedb25608 <line:709:3, col:27> 'void'
+|   | `-ImplicitCastExpr 0x55beedb255f0 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x55beedb255d0 <col:3> 'void ()' Function 0x55beedacafa0 '__VERIFIER_atomic_begin' 'void ()'
+|   |-CallExpr 0x55beedb25660 <line:710:3, col:25> 'void'
+|   | `-ImplicitCastExpr 0x55beedb25648 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x55beedb25628 <col:3> 'void ()' Function 0x55beedacb060 '__VERIFIER_atomic_end' 'void ()'
+|   |-CallExpr 0x55beedb256b8 <line:711:3, col:27> 'void'
+|   | `-ImplicitCastExpr 0x55beedb256a0 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x55beedb25680 <col:3> 'void ()' Function 0x55beedacafa0 '__VERIFIER_atomic_begin' 'void ()'
+|   |-BinaryOperator 0x55beedb25788 <line:712:3, col:42> '_Bool' '='
+|   | |-DeclRefExpr 0x55beedb256d8 <col:3> '_Bool' lvalue Var 0x55beedb25250 'weak$$choice0' '_Bool'
+|   | `-CallExpr 0x55beedb25768 <col:19, col:42> '_Bool'
+|   |   `-ImplicitCastExpr 0x55beedb25750 <col:19> '_Bool (*)(void)' <FunctionToPointerDecay>
+|   |     `-DeclRefExpr 0x55beedb256f8 <col:19> '_Bool (void)' Function 0x55beedaca770 '__VERIFIER_nondet_bool' '_Bool (void)'
+|   |-BinaryOperator 0x55beedb25820 <line:713:3, col:42> '_Bool' '='
+|   | |-DeclRefExpr 0x55beedb257a8 <col:3> '_Bool' lvalue Var 0x55beedb252c8 'weak$$choice2' '_Bool'
+|   | `-CallExpr 0x55beedb25800 <col:19, col:42> '_Bool'
+|   |   `-ImplicitCastExpr 0x55beedb257e8 <col:19> '_Bool (*)(void)' <FunctionToPointerDecay>
+|   |     `-DeclRefExpr 0x55beedb257c8 <col:19> '_Bool (void)' Function 0x55beedaca770 '__VERIFIER_nondet_bool' '_Bool (void)'
+|   |-BinaryOperator 0x55beedb25898 <line:714:3, col:21> '_Bool' '='
+|   | |-DeclRefExpr 0x55beedb25840 <col:3> '_Bool' lvalue Var 0x55beedb24928 'x$flush_delayed' '_Bool'
+|   | `-ImplicitCastExpr 0x55beedb25880 <col:21> '_Bool' <LValueToRValue>
+|   |   `-DeclRefExpr 0x55beedb25860 <col:21> '_Bool' lvalue Var 0x55beedb252c8 'weak$$choice2' '_Bool'
+|   |-BinaryOperator 0x55beedb25910 <line:715:3, col:15> 'int' '='
+|   | |-DeclRefExpr 0x55beedb258b8 <col:3> 'int' lvalue Var 0x55beedb249a8 'x$mem_tmp' 'int'
+|   | `-ImplicitCastExpr 0x55beedb258f8 <col:15> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x55beedb258d8 <col:15> 'int' lvalue Var 0x55beedb24890 'x' 'int'
+|   |-BinaryOperator 0x55beedb25d68 <line:716:3, col:162> 'int' '='
+|   | |-DeclRefExpr 0x55beedb25930 <col:3> 'int' lvalue Var 0x55beedb24890 'x' 'int'
+|   | `-ConditionalOperator 0x55beedb25d38 <col:7, col:162> 'int'
+|   |   |-BinaryOperator 0x55beedb25b60 <col:7, col:84> 'int' '||'
+|   |   | |-BinaryOperator 0x55beedb25a60 <col:7, col:46> 'int' '||'
+|   |   | | |-UnaryOperator 0x55beedb25988 <col:7, col:8> 'int' prefix '!' cannot overflow
+|   |   | | | `-ImplicitCastExpr 0x55beedb25970 <col:8> '_Bool' <LValueToRValue>
+|   |   | | |   `-DeclRefExpr 0x55beedb25950 <col:8> '_Bool' lvalue Var 0x55beedb24fc0 'x$w_buff0_used' '_Bool'
+|   |   | | `-BinaryOperator 0x55beedb25a40 <col:26, col:46> 'int' '&&'
+|   |   | |   |-UnaryOperator 0x55beedb259d8 <col:26, col:27> 'int' prefix '!' cannot overflow
+|   |   | |   | `-ImplicitCastExpr 0x55beedb259c0 <col:27> '_Bool' <LValueToRValue>
+|   |   | |   |   `-DeclRefExpr 0x55beedb259a0 <col:27> '_Bool' lvalue Var 0x55beedb24b00 'x$r_buff0_thd1' '_Bool'
+|   |   | |   `-UnaryOperator 0x55beedb25a28 <col:45, col:46> 'int' prefix '!' cannot overflow
+|   |   | |     `-ImplicitCastExpr 0x55beedb25a10 <col:46> '_Bool' <LValueToRValue>
+|   |   | |       `-DeclRefExpr 0x55beedb259f0 <col:46> '_Bool' lvalue Var 0x55beedb250b8 'x$w_buff1_used' '_Bool'
+|   |   | `-BinaryOperator 0x55beedb25b40 <col:64, col:84> 'int' '&&'
+|   |   |   |-UnaryOperator 0x55beedb25ab8 <col:64, col:65> 'int' prefix '!' cannot overflow
+|   |   |   | `-ImplicitCastExpr 0x55beedb25aa0 <col:65> '_Bool' <LValueToRValue>
+|   |   |   |   `-DeclRefExpr 0x55beedb25a80 <col:65> '_Bool' lvalue Var 0x55beedb24b00 'x$r_buff0_thd1' '_Bool'
+|   |   |   `-UnaryOperator 0x55beedb25b28 <col:83, col:84> 'int' prefix '!' cannot overflow
+|   |   |     `-ImplicitCastExpr 0x55beedb25b10 <col:84> '_Bool' <LValueToRValue>
+|   |   |       `-DeclRefExpr 0x55beedb25ad0 <col:84> '_Bool' lvalue Var 0x55beedb24ce0 'x$r_buff1_thd1' '_Bool'
+|   |   |-ImplicitCastExpr 0x55beedb25d20 <col:101> 'int' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x55beedb25b80 <col:101> 'int' lvalue Var 0x55beedb24890 'x' 'int'
+|   |   `-ParenExpr 0x55beedb25d00 <col:105, col:162> 'int'
+|   |     `-ConditionalOperator 0x55beedb25cd0 <col:106, col:153> 'int'
+|   |       |-BinaryOperator 0x55beedb25c40 <col:106, col:124> 'int' '&&'
+|   |       | |-ImplicitCastExpr 0x55beedb25bf8 <col:106> 'int' <IntegralCast>
+|   |       | | `-ImplicitCastExpr 0x55beedb25be0 <col:106> '_Bool' <LValueToRValue>
+|   |       | |   `-DeclRefExpr 0x55beedb25ba0 <col:106> '_Bool' lvalue Var 0x55beedb24fc0 'x$w_buff0_used' '_Bool'
+|   |       | `-ImplicitCastExpr 0x55beedb25c28 <col:124> 'int' <IntegralCast>
+|   |       |   `-ImplicitCastExpr 0x55beedb25c10 <col:124> '_Bool' <LValueToRValue>
+|   |       |     `-DeclRefExpr 0x55beedb25bc0 <col:124> '_Bool' lvalue Var 0x55beedb24b00 'x$r_buff0_thd1' '_Bool'
+|   |       |-ImplicitCastExpr 0x55beedb25ca0 <col:141> 'int' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x55beedb25c60 <col:141> 'int' lvalue Var 0x55beedb24f48 'x$w_buff0' 'int'
+|   |       `-ImplicitCastExpr 0x55beedb25cb8 <col:153> 'int' <LValueToRValue>
+|   |         `-DeclRefExpr 0x55beedb25c80 <col:153> 'int' lvalue Var 0x55beedb25040 'x$w_buff1' 'int'
+|   |-BinaryOperator 0x55beedb26278 <line:717:3, col:208> 'int' '='
+|   | |-DeclRefExpr 0x55beedb25d88 <col:3> 'int' lvalue Var 0x55beedb24f48 'x$w_buff0' 'int'
+|   | `-ConditionalOperator 0x55beedb26248 <col:15, col:208> 'int'
+|   |   |-ImplicitCastExpr 0x55beedb26218 <col:15> 'int' <IntegralCast>
+|   |   | `-ImplicitCastExpr 0x55beedb26200 <col:15> '_Bool' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x55beedb25da8 <col:15> '_Bool' lvalue Var 0x55beedb252c8 'weak$$choice2' '_Bool'
+|   |   |-ImplicitCastExpr 0x55beedb26230 <col:31> 'int' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x55beedb25dc8 <col:31> 'int' lvalue Var 0x55beedb24f48 'x$w_buff0' 'int'
+|   |   `-ParenExpr 0x55beedb261e0 <col:43, col:208> 'int'
+|   |     `-ConditionalOperator 0x55beedb261b0 <col:44, col:207> 'int'
+|   |       |-BinaryOperator 0x55beedb25fd8 <col:44, col:121> 'int' '||'
+|   |       | |-BinaryOperator 0x55beedb25ef8 <col:44, col:83> 'int' '||'
+|   |       | | |-UnaryOperator 0x55beedb25e20 <col:44, col:45> 'int' prefix '!' cannot overflow
+|   |       | | | `-ImplicitCastExpr 0x55beedb25e08 <col:45> '_Bool' <LValueToRValue>
+|   |       | | |   `-DeclRefExpr 0x55beedb25de8 <col:45> '_Bool' lvalue Var 0x55beedb24fc0 'x$w_buff0_used' '_Bool'
+|   |       | | `-BinaryOperator 0x55beedb25ed8 <col:63, col:83> 'int' '&&'
+|   |       | |   |-UnaryOperator 0x55beedb25e70 <col:63, col:64> 'int' prefix '!' cannot overflow
+|   |       | |   | `-ImplicitCastExpr 0x55beedb25e58 <col:64> '_Bool' <LValueToRValue>
+|   |       | |   |   `-DeclRefExpr 0x55beedb25e38 <col:64> '_Bool' lvalue Var 0x55beedb24b00 'x$r_buff0_thd1' '_Bool'
+|   |       | |   `-UnaryOperator 0x55beedb25ec0 <col:82, col:83> 'int' prefix '!' cannot overflow
+|   |       | |     `-ImplicitCastExpr 0x55beedb25ea8 <col:83> '_Bool' <LValueToRValue>
+|   |       | |       `-DeclRefExpr 0x55beedb25e88 <col:83> '_Bool' lvalue Var 0x55beedb250b8 'x$w_buff1_used' '_Bool'
+|   |       | `-BinaryOperator 0x55beedb25fb8 <col:101, col:121> 'int' '&&'
+|   |       |   |-UnaryOperator 0x55beedb25f50 <col:101, col:102> 'int' prefix '!' cannot overflow
+|   |       |   | `-ImplicitCastExpr 0x55beedb25f38 <col:102> '_Bool' <LValueToRValue>
+|   |       |   |   `-DeclRefExpr 0x55beedb25f18 <col:102> '_Bool' lvalue Var 0x55beedb24b00 'x$r_buff0_thd1' '_Bool'
+|   |       |   `-UnaryOperator 0x55beedb25fa0 <col:120, col:121> 'int' prefix '!' cannot overflow
+|   |       |     `-ImplicitCastExpr 0x55beedb25f88 <col:121> '_Bool' <LValueToRValue>
+|   |       |       `-DeclRefExpr 0x55beedb25f68 <col:121> '_Bool' lvalue Var 0x55beedb24ce0 'x$r_buff1_thd1' '_Bool'
+|   |       |-ImplicitCastExpr 0x55beedb26198 <col:138> 'int' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x55beedb25ff8 <col:138> 'int' lvalue Var 0x55beedb24f48 'x$w_buff0' 'int'
+|   |       `-ParenExpr 0x55beedb26178 <col:150, col:207> 'int'
+|   |         `-ConditionalOperator 0x55beedb26148 <col:151, col:198> 'int'
+|   |           |-BinaryOperator 0x55beedb260b8 <col:151, col:169> 'int' '&&'
+|   |           | |-ImplicitCastExpr 0x55beedb26070 <col:151> 'int' <IntegralCast>
+|   |           | | `-ImplicitCastExpr 0x55beedb26058 <col:151> '_Bool' <LValueToRValue>
+|   |           | |   `-DeclRefExpr 0x55beedb26018 <col:151> '_Bool' lvalue Var 0x55beedb24fc0 'x$w_buff0_used' '_Bool'
+|   |           | `-ImplicitCastExpr 0x55beedb260a0 <col:169> 'int' <IntegralCast>
+|   |           |   `-ImplicitCastExpr 0x55beedb26088 <col:169> '_Bool' <LValueToRValue>
+|   |           |     `-DeclRefExpr 0x55beedb26038 <col:169> '_Bool' lvalue Var 0x55beedb24b00 'x$r_buff0_thd1' '_Bool'
+|   |           |-ImplicitCastExpr 0x55beedb26118 <col:186> 'int' <LValueToRValue>
+|   |           | `-DeclRefExpr 0x55beedb260d8 <col:186> 'int' lvalue Var 0x55beedb24f48 'x$w_buff0' 'int'
+|   |           `-ImplicitCastExpr 0x55beedb26130 <col:198> 'int' <LValueToRValue>
+|   |             `-DeclRefExpr 0x55beedb260f8 <col:198> 'int' lvalue Var 0x55beedb24f48 'x$w_buff0' 'int'
+|   |-BinaryOperator 0x55beedb26788 <line:718:3, col:208> 'int' '='
+|   | |-DeclRefExpr 0x55beedb26298 <col:3> 'int' lvalue Var 0x55beedb25040 'x$w_buff1' 'int'
+|   | `-ConditionalOperator 0x55beedb26758 <col:15, col:208> 'int'
+|   |   |-ImplicitCastExpr 0x55beedb26728 <col:15> 'int' <IntegralCast>
+|   |   | `-ImplicitCastExpr 0x55beedb26710 <col:15> '_Bool' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x55beedb262b8 <col:15> '_Bool' lvalue Var 0x55beedb252c8 'weak$$choice2' '_Bool'
+|   |   |-ImplicitCastExpr 0x55beedb26740 <col:31> 'int' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x55beedb262d8 <col:31> 'int' lvalue Var 0x55beedb25040 'x$w_buff1' 'int'
+|   |   `-ParenExpr 0x55beedb266f0 <col:43, col:208> 'int'
+|   |     `-ConditionalOperator 0x55beedb266c0 <col:44, col:207> 'int'
+|   |       |-BinaryOperator 0x55beedb264e8 <col:44, col:121> 'int' '||'
+|   |       | |-BinaryOperator 0x55beedb26408 <col:44, col:83> 'int' '||'
+|   |       | | |-UnaryOperator 0x55beedb26330 <col:44, col:45> 'int' prefix '!' cannot overflow
+|   |       | | | `-ImplicitCastExpr 0x55beedb26318 <col:45> '_Bool' <LValueToRValue>
+|   |       | | |   `-DeclRefExpr 0x55beedb262f8 <col:45> '_Bool' lvalue Var 0x55beedb24fc0 'x$w_buff0_used' '_Bool'
+|   |       | | `-BinaryOperator 0x55beedb263e8 <col:63, col:83> 'int' '&&'
+|   |       | |   |-UnaryOperator 0x55beedb26380 <col:63, col:64> 'int' prefix '!' cannot overflow
+|   |       | |   | `-ImplicitCastExpr 0x55beedb26368 <col:64> '_Bool' <LValueToRValue>
+|   |       | |   |   `-DeclRefExpr 0x55beedb26348 <col:64> '_Bool' lvalue Var 0x55beedb24b00 'x$r_buff0_thd1' '_Bool'
+|   |       | |   `-UnaryOperator 0x55beedb263d0 <col:82, col:83> 'int' prefix '!' cannot overflow
+|   |       | |     `-ImplicitCastExpr 0x55beedb263b8 <col:83> '_Bool' <LValueToRValue>
+|   |       | |       `-DeclRefExpr 0x55beedb26398 <col:83> '_Bool' lvalue Var 0x55beedb250b8 'x$w_buff1_used' '_Bool'
+|   |       | `-BinaryOperator 0x55beedb264c8 <col:101, col:121> 'int' '&&'
+|   |       |   |-UnaryOperator 0x55beedb26460 <col:101, col:102> 'int' prefix '!' cannot overflow
+|   |       |   | `-ImplicitCastExpr 0x55beedb26448 <col:102> '_Bool' <LValueToRValue>
+|   |       |   |   `-DeclRefExpr 0x55beedb26428 <col:102> '_Bool' lvalue Var 0x55beedb24b00 'x$r_buff0_thd1' '_Bool'
+|   |       |   `-UnaryOperator 0x55beedb264b0 <col:120, col:121> 'int' prefix '!' cannot overflow
+|   |       |     `-ImplicitCastExpr 0x55beedb26498 <col:121> '_Bool' <LValueToRValue>
+|   |       |       `-DeclRefExpr 0x55beedb26478 <col:121> '_Bool' lvalue Var 0x55beedb24ce0 'x$r_buff1_thd1' '_Bool'
+|   |       |-ImplicitCastExpr 0x55beedb266a8 <col:138> 'int' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x55beedb26508 <col:138> 'int' lvalue Var 0x55beedb25040 'x$w_buff1' 'int'
+|   |       `-ParenExpr 0x55beedb26688 <col:150, col:207> 'int'
+|   |         `-ConditionalOperator 0x55beedb26658 <col:151, col:198> 'int'
+|   |           |-BinaryOperator 0x55beedb265c8 <col:151, col:169> 'int' '&&'
+|   |           | |-ImplicitCastExpr 0x55beedb26580 <col:151> 'int' <IntegralCast>
+|   |           | | `-ImplicitCastExpr 0x55beedb26568 <col:151> '_Bool' <LValueToRValue>
+|   |           | |   `-DeclRefExpr 0x55beedb26528 <col:151> '_Bool' lvalue Var 0x55beedb24fc0 'x$w_buff0_used' '_Bool'
+|   |           | `-ImplicitCastExpr 0x55beedb265b0 <col:169> 'int' <IntegralCast>
+|   |           |   `-ImplicitCastExpr 0x55beedb26598 <col:169> '_Bool' <LValueToRValue>
+|   |           |     `-DeclRefExpr 0x55beedb26548 <col:169> '_Bool' lvalue Var 0x55beedb24b00 'x$r_buff0_thd1' '_Bool'
+|   |           |-ImplicitCastExpr 0x55beedb26628 <col:186> 'int' <LValueToRValue>
+|   |           | `-DeclRefExpr 0x55beedb265e8 <col:186> 'int' lvalue Var 0x55beedb25040 'x$w_buff1' 'int'
+|   |           `-ImplicitCastExpr 0x55beedb26640 <col:198> 'int' <LValueToRValue>
+|   |             `-DeclRefExpr 0x55beedb26608 <col:198> 'int' lvalue Var 0x55beedb25040 'x$w_buff1' 'int'
+|   |-BinaryOperator 0x55beedb26d58 <line:719:3, col:227> '_Bool' '='
+|   | |-DeclRefExpr 0x55beedb267a8 <col:3> '_Bool' lvalue Var 0x55beedb24fc0 'x$w_buff0_used' '_Bool'
+|   | `-ImplicitCastExpr 0x55beedb26d40 <col:20, col:227> '_Bool' <IntegralToBoolean>
+|   |   `-ConditionalOperator 0x55beedb26d10 <col:20, col:227> 'int'
+|   |     |-ImplicitCastExpr 0x55beedb26cc8 <col:20> 'int' <IntegralCast>
+|   |     | `-ImplicitCastExpr 0x55beedb26cb0 <col:20> '_Bool' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x55beedb267c8 <col:20> '_Bool' lvalue Var 0x55beedb252c8 'weak$$choice2' '_Bool'
+|   |     |-ImplicitCastExpr 0x55beedb26cf8 <col:36> 'int' <IntegralCast>
+|   |     | `-ImplicitCastExpr 0x55beedb26ce0 <col:36> '_Bool' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x55beedb267e8 <col:36> '_Bool' lvalue Var 0x55beedb24fc0 'x$w_buff0_used' '_Bool'
+|   |     `-ParenExpr 0x55beedb26c90 <col:53, col:227> 'int'
+|   |       `-ConditionalOperator 0x55beedb26c60 <col:54, col:226> 'int'
+|   |         |-BinaryOperator 0x55beedb269f8 <col:54, col:131> 'int' '||'
+|   |         | |-BinaryOperator 0x55beedb26918 <col:54, col:93> 'int' '||'
+|   |         | | |-UnaryOperator 0x55beedb26840 <col:54, col:55> 'int' prefix '!' cannot overflow
+|   |         | | | `-ImplicitCastExpr 0x55beedb26828 <col:55> '_Bool' <LValueToRValue>
+|   |         | | |   `-DeclRefExpr 0x55beedb26808 <col:55> '_Bool' lvalue Var 0x55beedb24fc0 'x$w_buff0_used' '_Bool'
+|   |         | | `-BinaryOperator 0x55beedb268f8 <col:73, col:93> 'int' '&&'
+|   |         | |   |-UnaryOperator 0x55beedb26890 <col:73, col:74> 'int' prefix '!' cannot overflow
+|   |         | |   | `-ImplicitCastExpr 0x55beedb26878 <col:74> '_Bool' <LValueToRValue>
+|   |         | |   |   `-DeclRefExpr 0x55beedb26858 <col:74> '_Bool' lvalue Var 0x55beedb24b00 'x$r_buff0_thd1' '_Bool'
+|   |         | |   `-UnaryOperator 0x55beedb268e0 <col:92, col:93> 'int' prefix '!' cannot overflow
+|   |         | |     `-ImplicitCastExpr 0x55beedb268c8 <col:93> '_Bool' <LValueToRValue>
+|   |         | |       `-DeclRefExpr 0x55beedb268a8 <col:93> '_Bool' lvalue Var 0x55beedb250b8 'x$w_buff1_used' '_Bool'
+|   |         | `-BinaryOperator 0x55beedb269d8 <col:111, col:131> 'int' '&&'
+|   |         |   |-UnaryOperator 0x55beedb26970 <col:111, col:112> 'int' prefix '!' cannot overflow
+|   |         |   | `-ImplicitCastExpr 0x55beedb26958 <col:112> '_Bool' <LValueToRValue>
+|   |         |   |   `-DeclRefExpr 0x55beedb26938 <col:112> '_Bool' lvalue Var 0x55beedb24b00 'x$r_buff0_thd1' '_Bool'
+|   |         |   `-UnaryOperator 0x55beedb269c0 <col:130, col:131> 'int' prefix '!' cannot overflow
+|   |         |     `-ImplicitCastExpr 0x55beedb269a8 <col:131> '_Bool' <LValueToRValue>
+|   |         |       `-DeclRefExpr 0x55beedb26988 <col:131> '_Bool' lvalue Var 0x55beedb24ce0 'x$r_buff1_thd1' '_Bool'
+|   |         |-ImplicitCastExpr 0x55beedb26c48 <col:148> 'int' <IntegralCast>
+|   |         | `-ImplicitCastExpr 0x55beedb26c30 <col:148> '_Bool' <LValueToRValue>
+|   |         |   `-DeclRefExpr 0x55beedb26a18 <col:148> '_Bool' lvalue Var 0x55beedb24fc0 'x$w_buff0_used' '_Bool'
+|   |         `-ParenExpr 0x55beedb26c10 <col:165, col:226> 'int'
+|   |           `-ConditionalOperator 0x55beedb26be0 <col:166, col:212> 'int'
+|   |             |-BinaryOperator 0x55beedb26ad8 <col:166, col:184> 'int' '&&'
+|   |             | |-ImplicitCastExpr 0x55beedb26a90 <col:166> 'int' <IntegralCast>
+|   |             | | `-ImplicitCastExpr 0x55beedb26a78 <col:166> '_Bool' <LValueToRValue>
+|   |             | |   `-DeclRefExpr 0x55beedb26a38 <col:166> '_Bool' lvalue Var 0x55beedb24fc0 'x$w_buff0_used' '_Bool'
+|   |             | `-ImplicitCastExpr 0x55beedb26ac0 <col:184> 'int' <IntegralCast>
+|   |             |   `-ImplicitCastExpr 0x55beedb26aa8 <col:184> '_Bool' <LValueToRValue>
+|   |             |     `-DeclRefExpr 0x55beedb26a58 <col:184> '_Bool' lvalue Var 0x55beedb24b00 'x$r_buff0_thd1' '_Bool'
+|   |             |-ImplicitCastExpr 0x55beedb26b98 <col:201, col:208> 'int' <IntegralCast>
+|   |             | `-CStyleCastExpr 0x55beedb26b50 <col:201, col:208> '_Bool' <IntegralToBoolean>
+|   |             |   `-IntegerLiteral 0x55beedb26b20 <col:208> 'int' 0
+|   |             `-ImplicitCastExpr 0x55beedb26bc8 <col:212> 'int' <IntegralCast>
+|   |               `-ImplicitCastExpr 0x55beedb26bb0 <col:212> '_Bool' <LValueToRValue>
+|   |                 `-DeclRefExpr 0x55beedb26b78 <col:212> '_Bool' lvalue Var 0x55beedb24fc0 'x$w_buff0_used' '_Bool'
+|   |-BinaryOperator 0x55beedb27320 <line:720:3, col:221> '_Bool' '='
+|   | |-DeclRefExpr 0x55beedb26d78 <col:3> '_Bool' lvalue Var 0x55beedb250b8 'x$w_buff1_used' '_Bool'
+|   | `-ImplicitCastExpr 0x55beedb27308 <col:20, col:221> '_Bool' <IntegralToBoolean>
+|   |   `-ConditionalOperator 0x55beedb272d8 <col:20, col:221> 'int'
+|   |     |-ImplicitCastExpr 0x55beedb27290 <col:20> 'int' <IntegralCast>
+|   |     | `-ImplicitCastExpr 0x55beedb27278 <col:20> '_Bool' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x55beedb26d98 <col:20> '_Bool' lvalue Var 0x55beedb252c8 'weak$$choice2' '_Bool'
+|   |     |-ImplicitCastExpr 0x55beedb272c0 <col:36> 'int' <IntegralCast>
+|   |     | `-ImplicitCastExpr 0x55beedb272a8 <col:36> '_Bool' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x55beedb26db8 <col:36> '_Bool' lvalue Var 0x55beedb250b8 'x$w_buff1_used' '_Bool'
+|   |     `-ParenExpr 0x55beedb27258 <col:53, col:221> 'int'
+|   |       `-ConditionalOperator 0x55beedb27228 <col:54, col:220> 'int'
+|   |         |-BinaryOperator 0x55beedb26fc8 <col:54, col:131> 'int' '||'
+|   |         | |-BinaryOperator 0x55beedb26ee8 <col:54, col:93> 'int' '||'
+|   |         | | |-UnaryOperator 0x55beedb26e10 <col:54, col:55> 'int' prefix '!' cannot overflow
+|   |         | | | `-ImplicitCastExpr 0x55beedb26df8 <col:55> '_Bool' <LValueToRValue>
+|   |         | | |   `-DeclRefExpr 0x55beedb26dd8 <col:55> '_Bool' lvalue Var 0x55beedb24fc0 'x$w_buff0_used' '_Bool'
+|   |         | | `-BinaryOperator 0x55beedb26ec8 <col:73, col:93> 'int' '&&'
+|   |         | |   |-UnaryOperator 0x55beedb26e60 <col:73, col:74> 'int' prefix '!' cannot overflow
+|   |         | |   | `-ImplicitCastExpr 0x55beedb26e48 <col:74> '_Bool' <LValueToRValue>
+|   |         | |   |   `-DeclRefExpr 0x55beedb26e28 <col:74> '_Bool' lvalue Var 0x55beedb24b00 'x$r_buff0_thd1' '_Bool'
+|   |         | |   `-UnaryOperator 0x55beedb26eb0 <col:92, col:93> 'int' prefix '!' cannot overflow
+|   |         | |     `-ImplicitCastExpr 0x55beedb26e98 <col:93> '_Bool' <LValueToRValue>
+|   |         | |       `-DeclRefExpr 0x55beedb26e78 <col:93> '_Bool' lvalue Var 0x55beedb250b8 'x$w_buff1_used' '_Bool'
+|   |         | `-BinaryOperator 0x55beedb26fa8 <col:111, col:131> 'int' '&&'
+|   |         |   |-UnaryOperator 0x55beedb26f40 <col:111, col:112> 'int' prefix '!' cannot overflow
+|   |         |   | `-ImplicitCastExpr 0x55beedb26f28 <col:112> '_Bool' <LValueToRValue>
+|   |         |   |   `-DeclRefExpr 0x55beedb26f08 <col:112> '_Bool' lvalue Var 0x55beedb24b00 'x$r_buff0_thd1' '_Bool'
+|   |         |   `-UnaryOperator 0x55beedb26f90 <col:130, col:131> 'int' prefix '!' cannot overflow
+|   |         |     `-ImplicitCastExpr 0x55beedb26f78 <col:131> '_Bool' <LValueToRValue>
+|   |         |       `-DeclRefExpr 0x55beedb26f58 <col:131> '_Bool' lvalue Var 0x55beedb24ce0 'x$r_buff1_thd1' '_Bool'
+|   |         |-ImplicitCastExpr 0x55beedb27210 <col:148> 'int' <IntegralCast>
+|   |         | `-ImplicitCastExpr 0x55beedb271f8 <col:148> '_Bool' <LValueToRValue>
+|   |         |   `-DeclRefExpr 0x55beedb26fe8 <col:148> '_Bool' lvalue Var 0x55beedb250b8 'x$w_buff1_used' '_Bool'
+|   |         `-ParenExpr 0x55beedb271d8 <col:165, col:220> 'int'
+|   |           `-ConditionalOperator 0x55beedb271a8 <col:166, col:219> 'int'
+|   |             |-BinaryOperator 0x55beedb270a8 <col:166, col:184> 'int' '&&'
+|   |             | |-ImplicitCastExpr 0x55beedb27060 <col:166> 'int' <IntegralCast>
+|   |             | | `-ImplicitCastExpr 0x55beedb27048 <col:166> '_Bool' <LValueToRValue>
+|   |             | |   `-DeclRefExpr 0x55beedb27008 <col:166> '_Bool' lvalue Var 0x55beedb24fc0 'x$w_buff0_used' '_Bool'
+|   |             | `-ImplicitCastExpr 0x55beedb27090 <col:184> 'int' <IntegralCast>
+|   |             |   `-ImplicitCastExpr 0x55beedb27078 <col:184> '_Bool' <LValueToRValue>
+|   |             |     `-DeclRefExpr 0x55beedb27028 <col:184> '_Bool' lvalue Var 0x55beedb24b00 'x$r_buff0_thd1' '_Bool'
+|   |             |-ImplicitCastExpr 0x55beedb27178 <col:201, col:208> 'int' <IntegralCast>
+|   |             | `-CStyleCastExpr 0x55beedb270f8 <col:201, col:208> '_Bool' <IntegralToBoolean>
+|   |             |   `-IntegerLiteral 0x55beedb270c8 <col:208> 'int' 0
+|   |             `-ImplicitCastExpr 0x55beedb27190 <col:212, col:219> 'int' <IntegralCast>
+|   |               `-CStyleCastExpr 0x55beedb27150 <col:212, col:219> '_Bool' <IntegralToBoolean>
+|   |                 `-IntegerLiteral 0x55beedb27120 <col:219> 'int' 0
+|   |-BinaryOperator 0x55beedb278c8 <line:721:3, col:227> '_Bool' '='
+|   | |-DeclRefExpr 0x55beedb27340 <col:3> '_Bool' lvalue Var 0x55beedb24b00 'x$r_buff0_thd1' '_Bool'
+|   | `-ImplicitCastExpr 0x55beedb278b0 <col:20, col:227> '_Bool' <IntegralToBoolean>
+|   |   `-ConditionalOperator 0x55beedb27880 <col:20, col:227> 'int'
+|   |     |-ImplicitCastExpr 0x55beedb27838 <col:20> 'int' <IntegralCast>
+|   |     | `-ImplicitCastExpr 0x55beedb27820 <col:20> '_Bool' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x55beedb27360 <col:20> '_Bool' lvalue Var 0x55beedb252c8 'weak$$choice2' '_Bool'
+|   |     |-ImplicitCastExpr 0x55beedb27868 <col:36> 'int' <IntegralCast>
+|   |     | `-ImplicitCastExpr 0x55beedb27850 <col:36> '_Bool' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x55beedb27380 <col:36> '_Bool' lvalue Var 0x55beedb24b00 'x$r_buff0_thd1' '_Bool'
+|   |     `-ParenExpr 0x55beedb27800 <col:53, col:227> 'int'
+|   |       `-ConditionalOperator 0x55beedb277d0 <col:54, col:226> 'int'
+|   |         |-BinaryOperator 0x55beedb27590 <col:54, col:131> 'int' '||'
+|   |         | |-BinaryOperator 0x55beedb274b0 <col:54, col:93> 'int' '||'
+|   |         | | |-UnaryOperator 0x55beedb273d8 <col:54, col:55> 'int' prefix '!' cannot overflow
+|   |         | | | `-ImplicitCastExpr 0x55beedb273c0 <col:55> '_Bool' <LValueToRValue>
+|   |         | | |   `-DeclRefExpr 0x55beedb273a0 <col:55> '_Bool' lvalue Var 0x55beedb24fc0 'x$w_buff0_used' '_Bool'
+|   |         | | `-BinaryOperator 0x55beedb27490 <col:73, col:93> 'int' '&&'
+|   |         | |   |-UnaryOperator 0x55beedb27428 <col:73, col:74> 'int' prefix '!' cannot overflow
+|   |         | |   | `-ImplicitCastExpr 0x55beedb27410 <col:74> '_Bool' <LValueToRValue>
+|   |         | |   |   `-DeclRefExpr 0x55beedb273f0 <col:74> '_Bool' lvalue Var 0x55beedb24b00 'x$r_buff0_thd1' '_Bool'
+|   |         | |   `-UnaryOperator 0x55beedb27478 <col:92, col:93> 'int' prefix '!' cannot overflow
+|   |         | |     `-ImplicitCastExpr 0x55beedb27460 <col:93> '_Bool' <LValueToRValue>
+|   |         | |       `-DeclRefExpr 0x55beedb27440 <col:93> '_Bool' lvalue Var 0x55beedb250b8 'x$w_buff1_used' '_Bool'
+|   |         | `-BinaryOperator 0x55beedb27570 <col:111, col:131> 'int' '&&'
+|   |         |   |-UnaryOperator 0x55beedb27508 <col:111, col:112> 'int' prefix '!' cannot overflow
+|   |         |   | `-ImplicitCastExpr 0x55beedb274f0 <col:112> '_Bool' <LValueToRValue>
+|   |         |   |   `-DeclRefExpr 0x55beedb274d0 <col:112> '_Bool' lvalue Var 0x55beedb24b00 'x$r_buff0_thd1' '_Bool'
+|   |         |   `-UnaryOperator 0x55beedb27558 <col:130, col:131> 'int' prefix '!' cannot overflow
+|   |         |     `-ImplicitCastExpr 0x55beedb27540 <col:131> '_Bool' <LValueToRValue>
+|   |         |       `-DeclRefExpr 0x55beedb27520 <col:131> '_Bool' lvalue Var 0x55beedb24ce0 'x$r_buff1_thd1' '_Bool'
+|   |         |-ImplicitCastExpr 0x55beedb277b8 <col:148> 'int' <IntegralCast>
+|   |         | `-ImplicitCastExpr 0x55beedb277a0 <col:148> '_Bool' <LValueToRValue>
+|   |         |   `-DeclRefExpr 0x55beedb275b0 <col:148> '_Bool' lvalue Var 0x55beedb24b00 'x$r_buff0_thd1' '_Bool'
+|   |         `-ParenExpr 0x55beedb27780 <col:165, col:226> 'int'
+|   |           `-ConditionalOperator 0x55beedb27750 <col:166, col:212> 'int'
+|   |             |-BinaryOperator 0x55beedb27670 <col:166, col:184> 'int' '&&'
+|   |             | |-ImplicitCastExpr 0x55beedb27628 <col:166> 'int' <IntegralCast>
+|   |             | | `-ImplicitCastExpr 0x55beedb27610 <col:166> '_Bool' <LValueToRValue>
+|   |             | |   `-DeclRefExpr 0x55beedb275d0 <col:166> '_Bool' lvalue Var 0x55beedb24fc0 'x$w_buff0_used' '_Bool'
+|   |             | `-ImplicitCastExpr 0x55beedb27658 <col:184> 'int' <IntegralCast>
+|   |             |   `-ImplicitCastExpr 0x55beedb27640 <col:184> '_Bool' <LValueToRValue>
+|   |             |     `-DeclRefExpr 0x55beedb275f0 <col:184> '_Bool' lvalue Var 0x55beedb24b00 'x$r_buff0_thd1' '_Bool'
+|   |             |-ImplicitCastExpr 0x55beedb27708 <col:201, col:208> 'int' <IntegralCast>
+|   |             | `-CStyleCastExpr 0x55beedb276c0 <col:201, col:208> '_Bool' <IntegralToBoolean>
+|   |             |   `-IntegerLiteral 0x55beedb27690 <col:208> 'int' 0
+|   |             `-ImplicitCastExpr 0x55beedb27738 <col:212> 'int' <IntegralCast>
+|   |               `-ImplicitCastExpr 0x55beedb27720 <col:212> '_Bool' <LValueToRValue>
+|   |                 `-DeclRefExpr 0x55beedb276e8 <col:212> '_Bool' lvalue Var 0x55beedb24b00 'x$r_buff0_thd1' '_Bool'
+|   |-BinaryOperator 0x55beedb27ea8 <line:722:3, col:221> '_Bool' '='
+|   | |-DeclRefExpr 0x55beedb278e8 <col:3> '_Bool' lvalue Var 0x55beedb24ce0 'x$r_buff1_thd1' '_Bool'
+|   | `-ImplicitCastExpr 0x55beedb27e90 <col:20, col:221> '_Bool' <IntegralToBoolean>
+|   |   `-ConditionalOperator 0x55beedb27e60 <col:20, col:221> 'int'
+|   |     |-ImplicitCastExpr 0x55beedb27e18 <col:20> 'int' <IntegralCast>
+|   |     | `-ImplicitCastExpr 0x55beedb27e00 <col:20> '_Bool' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x55beedb27908 <col:20> '_Bool' lvalue Var 0x55beedb252c8 'weak$$choice2' '_Bool'
+|   |     |-ImplicitCastExpr 0x55beedb27e48 <col:36> 'int' <IntegralCast>
+|   |     | `-ImplicitCastExpr 0x55beedb27e30 <col:36> '_Bool' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x55beedb27928 <col:36> '_Bool' lvalue Var 0x55beedb24ce0 'x$r_buff1_thd1' '_Bool'
+|   |     `-ParenExpr 0x55beedb27de0 <col:53, col:221> 'int'
+|   |       `-ConditionalOperator 0x55beedb27db0 <col:54, col:220> 'int'
+|   |         |-BinaryOperator 0x55beedb27b50 <col:54, col:131> 'int' '||'
+|   |         | |-BinaryOperator 0x55beedb27a58 <col:54, col:93> 'int' '||'
+|   |         | | |-UnaryOperator 0x55beedb27980 <col:54, col:55> 'int' prefix '!' cannot overflow
+|   |         | | | `-ImplicitCastExpr 0x55beedb27968 <col:55> '_Bool' <LValueToRValue>
+|   |         | | |   `-DeclRefExpr 0x55beedb27948 <col:55> '_Bool' lvalue Var 0x55beedb24fc0 'x$w_buff0_used' '_Bool'
+|   |         | | `-BinaryOperator 0x55beedb27a38 <col:73, col:93> 'int' '&&'
+|   |         | |   |-UnaryOperator 0x55beedb279d0 <col:73, col:74> 'int' prefix '!' cannot overflow
+|   |         | |   | `-ImplicitCastExpr 0x55beedb279b8 <col:74> '_Bool' <LValueToRValue>
+|   |         | |   |   `-DeclRefExpr 0x55beedb27998 <col:74> '_Bool' lvalue Var 0x55beedb24b00 'x$r_buff0_thd1' '_Bool'
+|   |         | |   `-UnaryOperator 0x55beedb27a20 <col:92, col:93> 'int' prefix '!' cannot overflow
+|   |         | |     `-ImplicitCastExpr 0x55beedb27a08 <col:93> '_Bool' <LValueToRValue>
+|   |         | |       `-DeclRefExpr 0x55beedb279e8 <col:93> '_Bool' lvalue Var 0x55beedb250b8 'x$w_buff1_used' '_Bool'
+|   |         | `-BinaryOperator 0x55beedb27b30 <col:111, col:131> 'int' '&&'
+|   |         |   |-UnaryOperator 0x55beedb27ab0 <col:111, col:112> 'int' prefix '!' cannot overflow
+|   |         |   | `-ImplicitCastExpr 0x55beedb27a98 <col:112> '_Bool' <LValueToRValue>
+|   |         |   |   `-DeclRefExpr 0x55beedb27a78 <col:112> '_Bool' lvalue Var 0x55beedb24b00 'x$r_buff0_thd1' '_Bool'
+|   |         |   `-UnaryOperator 0x55beedb27b00 <col:130, col:131> 'int' prefix '!' cannot overflow
+|   |         |     `-ImplicitCastExpr 0x55beedb27ae8 <col:131> '_Bool' <LValueToRValue>
+|   |         |       `-DeclRefExpr 0x55beedb27ac8 <col:131> '_Bool' lvalue Var 0x55beedb24ce0 'x$r_buff1_thd1' '_Bool'
+|   |         |-ImplicitCastExpr 0x55beedb27d98 <col:148> 'int' <IntegralCast>
+|   |         | `-ImplicitCastExpr 0x55beedb27d80 <col:148> '_Bool' <LValueToRValue>
+|   |         |   `-DeclRefExpr 0x55beedb27b70 <col:148> '_Bool' lvalue Var 0x55beedb24ce0 'x$r_buff1_thd1' '_Bool'
+|   |         `-ParenExpr 0x55beedb27d60 <col:165, col:220> 'int'
+|   |           `-ConditionalOperator 0x55beedb27d30 <col:166, col:219> 'int'
+|   |             |-BinaryOperator 0x55beedb27c30 <col:166, col:184> 'int' '&&'
+|   |             | |-ImplicitCastExpr 0x55beedb27be8 <col:166> 'int' <IntegralCast>
+|   |             | | `-ImplicitCastExpr 0x55beedb27bd0 <col:166> '_Bool' <LValueToRValue>
+|   |             | |   `-DeclRefExpr 0x55beedb27b90 <col:166> '_Bool' lvalue Var 0x55beedb24fc0 'x$w_buff0_used' '_Bool'
+|   |             | `-ImplicitCastExpr 0x55beedb27c18 <col:184> 'int' <IntegralCast>
+|   |             |   `-ImplicitCastExpr 0x55beedb27c00 <col:184> '_Bool' <LValueToRValue>
+|   |             |     `-DeclRefExpr 0x55beedb27bb0 <col:184> '_Bool' lvalue Var 0x55beedb24b00 'x$r_buff0_thd1' '_Bool'
+|   |             |-ImplicitCastExpr 0x55beedb27d00 <col:201, col:208> 'int' <IntegralCast>
+|   |             | `-CStyleCastExpr 0x55beedb27c80 <col:201, col:208> '_Bool' <IntegralToBoolean>
+|   |             |   `-IntegerLiteral 0x55beedb27c50 <col:208> 'int' 0
+|   |             `-ImplicitCastExpr 0x55beedb27d18 <col:212, col:219> 'int' <IntegralCast>
+|   |               `-CStyleCastExpr 0x55beedb27cd8 <col:212, col:219> '_Bool' <IntegralToBoolean>
+|   |                 `-IntegerLiteral 0x55beedb27ca8 <col:219> 'int' 0
+|   |-BinaryOperator 0x55beedb27f20 <line:723:3, col:25> 'int' '='
+|   | |-DeclRefExpr 0x55beedb27ec8 <col:3> 'int' lvalue Var 0x55beedb24440 '__unbuffered_p0_EAX' 'int'
+|   | `-ImplicitCastExpr 0x55beedb27f08 <col:25> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x55beedb27ee8 <col:25> 'int' lvalue Var 0x55beedb24890 'x' 'int'
+|   |-BinaryOperator 0x55beedb28050 <line:724:3, col:37> 'int' '='
+|   | |-DeclRefExpr 0x55beedb27f40 <col:3> 'int' lvalue Var 0x55beedb24890 'x' 'int'
+|   | `-ConditionalOperator 0x55beedb28020 <col:7, col:37> 'int'
+|   |   |-ImplicitCastExpr 0x55beedb27fd8 <col:7> 'int' <IntegralCast>
+|   |   | `-ImplicitCastExpr 0x55beedb27fc0 <col:7> '_Bool' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x55beedb27f60 <col:7> '_Bool' lvalue Var 0x55beedb24928 'x$flush_delayed' '_Bool'
+|   |   |-ImplicitCastExpr 0x55beedb27ff0 <col:25> 'int' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x55beedb27f80 <col:25> 'int' lvalue Var 0x55beedb249a8 'x$mem_tmp' 'int'
+|   |   `-ImplicitCastExpr 0x55beedb28008 <col:37> 'int' <LValueToRValue>
+|   |     `-DeclRefExpr 0x55beedb27fa0 <col:37> 'int' lvalue Var 0x55beedb24890 'x' 'int'
+|   |-BinaryOperator 0x55beedb280e8 <line:725:3, col:28> '_Bool' '='
+|   | |-DeclRefExpr 0x55beedb28070 <col:3> '_Bool' lvalue Var 0x55beedb24928 'x$flush_delayed' '_Bool'
+|   | `-CStyleCastExpr 0x55beedb280c0 <col:21, col:28> '_Bool' <IntegralToBoolean>
+|   |   `-IntegerLiteral 0x55beedb28090 <col:28> 'int' 0
+|   |-CallExpr 0x55beedb28140 <line:726:3, col:25> 'void'
+|   | `-ImplicitCastExpr 0x55beedb28128 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x55beedb28108 <col:3> 'void ()' Function 0x55beedacb060 '__VERIFIER_atomic_end' 'void ()'
+|   |-CallExpr 0x55beedb28198 <line:727:3, col:27> 'void'
+|   | `-ImplicitCastExpr 0x55beedb28180 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x55beedb28160 <col:3> 'void ()' Function 0x55beedacafa0 '__VERIFIER_atomic_begin' 'void ()'
+|   |-CallExpr 0x55beedb281f0 <line:728:3, col:25> 'void'
+|   | `-ImplicitCastExpr 0x55beedb281d8 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x55beedb281b8 <col:3> 'void ()' Function 0x55beedacb060 '__VERIFIER_atomic_end' 'void ()'
+|   |-CallExpr 0x55beedb28248 <line:729:3, col:27> 'void'
+|   | `-ImplicitCastExpr 0x55beedb28230 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x55beedb28210 <col:3> 'void ()' Function 0x55beedacafa0 '__VERIFIER_atomic_begin' 'void ()'
+|   |-BinaryOperator 0x55beedb28300 <line:730:3, col:41> 'int' '='
+|   | |-DeclRefExpr 0x55beedb28268 <col:3> 'int' lvalue Var 0x55beedb24320 '__unbuffered_cnt' 'int'
+|   | `-BinaryOperator 0x55beedb282e0 <col:22, col:41> 'int' '+'
+|   |   |-ImplicitCastExpr 0x55beedb282c8 <col:22> 'int' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x55beedb28288 <col:22> 'int' lvalue Var 0x55beedb24320 '__unbuffered_cnt' 'int'
+|   |   `-IntegerLiteral 0x55beedb282a8 <col:41> 'int' 1
+|   |-CallExpr 0x55beedb28358 <line:731:3, col:25> 'void'
+|   | `-ImplicitCastExpr 0x55beedb28340 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x55beedb28320 <col:3> 'void ()' Function 0x55beedacb060 '__VERIFIER_atomic_end' 'void ()'
+|   `-ReturnStmt 0x55beedb28408 <line:732:3, col:36>
+|     `-CallExpr 0x55beedb283e8 <col:10, col:36> 'void *'
+|       `-ImplicitCastExpr 0x55beedb283d0 <col:10> 'void *(*)(void)' <FunctionToPointerDecay>
+|         `-DeclRefExpr 0x55beedb28378 <col:10> 'void *(void)' Function 0x55beedacaab8 '__VERIFIER_nondet_pointer' 'void *(void)'
+|-FunctionDecl 0x55beedb285b0 prev 0x55beedb23e48 <line:734:1, line:762:1> line:734:8 used P1 'void *(void *)'
+| |-ParmVarDecl 0x55beedb28518 <col:11, col:17> col:17 arg 'void *'
+| `-CompoundStmt 0x55beedb29d78 <line:735:1, line:762:1>
+|   |-CallExpr 0x55beedb28690 <line:736:3, col:27> 'void'
+|   | `-ImplicitCastExpr 0x55beedb28678 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x55beedb28658 <col:3> 'void ()' Function 0x55beedacafa0 '__VERIFIER_atomic_begin' 'void ()'
+|   |-BinaryOperator 0x55beedb28708 <line:737:3, col:15> 'int' '='
+|   | |-DeclRefExpr 0x55beedb286b0 <col:3> 'int' lvalue Var 0x55beedb25040 'x$w_buff1' 'int'
+|   | `-ImplicitCastExpr 0x55beedb286f0 <col:15> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x55beedb286d0 <col:15> 'int' lvalue Var 0x55beedb24f48 'x$w_buff0' 'int'
+|   |-BinaryOperator 0x55beedb28768 <line:738:3, col:15> 'int' '='
+|   | |-DeclRefExpr 0x55beedb28728 <col:3> 'int' lvalue Var 0x55beedb24f48 'x$w_buff0' 'int'
+|   | `-IntegerLiteral 0x55beedb28748 <col:15> 'int' 1
+|   |-BinaryOperator 0x55beedb287e0 <line:739:3, col:20> '_Bool' '='
+|   | |-DeclRefExpr 0x55beedb28788 <col:3> '_Bool' lvalue Var 0x55beedb250b8 'x$w_buff1_used' '_Bool'
+|   | `-ImplicitCastExpr 0x55beedb287c8 <col:20> '_Bool' <LValueToRValue>
+|   |   `-DeclRefExpr 0x55beedb287a8 <col:20> '_Bool' lvalue Var 0x55beedb24fc0 'x$w_buff0_used' '_Bool'
+|   |-BinaryOperator 0x55beedb28878 <line:740:3, col:27> '_Bool' '='
+|   | |-DeclRefExpr 0x55beedb28800 <col:3> '_Bool' lvalue Var 0x55beedb24fc0 'x$w_buff0_used' '_Bool'
+|   | `-CStyleCastExpr 0x55beedb28850 <col:20, col:27> '_Bool' <IntegralToBoolean>
+|   |   `-IntegerLiteral 0x55beedb28820 <col:27> 'int' 1
+|   |-CallExpr 0x55beedb289f8 <line:741:3, col:56> 'void'
+|   | |-ImplicitCastExpr 0x55beedb289e0 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x55beedb28898 <col:3> 'void (int)' Function 0x55beedacad28 '__VERIFIER_assert' 'void (int)'
+|   | `-UnaryOperator 0x55beedb28998 <col:21, col:55> 'int' prefix '!' cannot overflow
+|   |   `-ParenExpr 0x55beedb28978 <col:22, col:55> 'int'
+|   |     `-BinaryOperator 0x55beedb28958 <col:23, col:41> 'int' '&&'
+|   |       |-ImplicitCastExpr 0x55beedb28910 <col:23> 'int' <IntegralCast>
+|   |       | `-ImplicitCastExpr 0x55beedb288f8 <col:23> '_Bool' <LValueToRValue>
+|   |       |   `-DeclRefExpr 0x55beedb288b8 <col:23> '_Bool' lvalue Var 0x55beedb250b8 'x$w_buff1_used' '_Bool'
+|   |       `-ImplicitCastExpr 0x55beedb28940 <col:41> 'int' <IntegralCast>
+|   |         `-ImplicitCastExpr 0x55beedb28928 <col:41> '_Bool' <LValueToRValue>
+|   |           `-DeclRefExpr 0x55beedb288d8 <col:41> '_Bool' lvalue Var 0x55beedb24fc0 'x$w_buff0_used' '_Bool'
+|   |-BinaryOperator 0x55beedb28a78 <line:742:3, col:20> '_Bool' '='
+|   | |-DeclRefExpr 0x55beedb28a20 <col:3> '_Bool' lvalue Var 0x55beedb24c68 'x$r_buff1_thd0' '_Bool'
+|   | `-ImplicitCastExpr 0x55beedb28a60 <col:20> '_Bool' <LValueToRValue>
+|   |   `-DeclRefExpr 0x55beedb28a40 <col:20> '_Bool' lvalue Var 0x55beedb24a20 'x$r_buff0_thd0' '_Bool'
+|   |-BinaryOperator 0x55beedb28af0 <line:743:3, col:20> '_Bool' '='
+|   | |-DeclRefExpr 0x55beedb28a98 <col:3> '_Bool' lvalue Var 0x55beedb24ce0 'x$r_buff1_thd1' '_Bool'
+|   | `-ImplicitCastExpr 0x55beedb28ad8 <col:20> '_Bool' <LValueToRValue>
+|   |   `-DeclRefExpr 0x55beedb28ab8 <col:20> '_Bool' lvalue Var 0x55beedb24b00 'x$r_buff0_thd1' '_Bool'
+|   |-BinaryOperator 0x55beedb28b78 <line:744:3, col:20> '_Bool' '='
+|   | |-DeclRefExpr 0x55beedb28b10 <col:3> '_Bool' lvalue Var 0x55beedb24d58 'x$r_buff1_thd2' '_Bool'
+|   | `-ImplicitCastExpr 0x55beedb28b60 <col:20> '_Bool' <LValueToRValue>
+|   |   `-DeclRefExpr 0x55beedb28b40 <col:20> '_Bool' lvalue Var 0x55beedb24b78 'x$r_buff0_thd2' '_Bool'
+|   |-BinaryOperator 0x55beedb28bf0 <line:745:3, col:20> '_Bool' '='
+|   | |-DeclRefExpr 0x55beedb28b98 <col:3> '_Bool' lvalue Var 0x55beedb24dd0 'x$r_buff1_thd3' '_Bool'
+|   | `-ImplicitCastExpr 0x55beedb28bd8 <col:20> '_Bool' <LValueToRValue>
+|   |   `-DeclRefExpr 0x55beedb28bb8 <col:20> '_Bool' lvalue Var 0x55beedb24bf0 'x$r_buff0_thd3' '_Bool'
+|   |-BinaryOperator 0x55beedb28c88 <line:746:3, col:27> '_Bool' '='
+|   | |-DeclRefExpr 0x55beedb28c10 <col:3> '_Bool' lvalue Var 0x55beedb24b78 'x$r_buff0_thd2' '_Bool'
+|   | `-CStyleCastExpr 0x55beedb28c60 <col:20, col:27> '_Bool' <IntegralToBoolean>
+|   |   `-IntegerLiteral 0x55beedb28c30 <col:27> 'int' 1
+|   |-CallExpr 0x55beedb28ce0 <line:747:3, col:25> 'void'
+|   | `-ImplicitCastExpr 0x55beedb28cc8 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x55beedb28ca8 <col:3> 'void ()' Function 0x55beedacb060 '__VERIFIER_atomic_end' 'void ()'
+|   |-CallExpr 0x55beedb28d38 <line:748:3, col:27> 'void'
+|   | `-ImplicitCastExpr 0x55beedb28d20 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x55beedb28d00 <col:3> 'void ()' Function 0x55beedacafa0 '__VERIFIER_atomic_begin' 'void ()'
+|   |-BinaryOperator 0x55beedb28d98 <line:749:3, col:7> 'int' '='
+|   | |-DeclRefExpr 0x55beedb28d58 <col:3> 'int' lvalue Var 0x55beedb251b8 'y' 'int'
+|   | `-IntegerLiteral 0x55beedb28d78 <col:7> 'int' 1
+|   |-CallExpr 0x55beedb28df0 <line:750:3, col:25> 'void'
+|   | `-ImplicitCastExpr 0x55beedb28dd8 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x55beedb28db8 <col:3> 'void ()' Function 0x55beedacb060 '__VERIFIER_atomic_end' 'void ()'
+|   |-CallExpr 0x55beedb28e48 <line:751:3, col:27> 'void'
+|   | `-ImplicitCastExpr 0x55beedb28e30 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x55beedb28e10 <col:3> 'void ()' Function 0x55beedacafa0 '__VERIFIER_atomic_begin' 'void ()'
+|   |-BinaryOperator 0x55beedb29130 <line:752:3, col:103> 'int' '='
+|   | |-DeclRefExpr 0x55beedb28e68 <col:3> 'int' lvalue Var 0x55beedb24890 'x' 'int'
+|   | `-ConditionalOperator 0x55beedb29100 <col:7, col:103> 'int'
+|   |   |-BinaryOperator 0x55beedb28f28 <col:7, col:25> 'int' '&&'
+|   |   | |-ImplicitCastExpr 0x55beedb28ee0 <col:7> 'int' <IntegralCast>
+|   |   | | `-ImplicitCastExpr 0x55beedb28ec8 <col:7> '_Bool' <LValueToRValue>
+|   |   | |   `-DeclRefExpr 0x55beedb28e88 <col:7> '_Bool' lvalue Var 0x55beedb24fc0 'x$w_buff0_used' '_Bool'
+|   |   | `-ImplicitCastExpr 0x55beedb28f10 <col:25> 'int' <IntegralCast>
+|   |   |   `-ImplicitCastExpr 0x55beedb28ef8 <col:25> '_Bool' <LValueToRValue>
+|   |   |     `-DeclRefExpr 0x55beedb28ea8 <col:25> '_Bool' lvalue Var 0x55beedb24b78 'x$r_buff0_thd2' '_Bool'
+|   |   |-ImplicitCastExpr 0x55beedb290e8 <col:42> 'int' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x55beedb28f48 <col:42> 'int' lvalue Var 0x55beedb24f48 'x$w_buff0' 'int'
+|   |   `-ParenExpr 0x55beedb290c8 <col:54, col:103> 'int'
+|   |     `-ConditionalOperator 0x55beedb29098 <col:55, col:102> 'int'
+|   |       |-BinaryOperator 0x55beedb29008 <col:55, col:73> 'int' '&&'
+|   |       | |-ImplicitCastExpr 0x55beedb28fc0 <col:55> 'int' <IntegralCast>
+|   |       | | `-ImplicitCastExpr 0x55beedb28fa8 <col:55> '_Bool' <LValueToRValue>
+|   |       | |   `-DeclRefExpr 0x55beedb28f68 <col:55> '_Bool' lvalue Var 0x55beedb250b8 'x$w_buff1_used' '_Bool'
+|   |       | `-ImplicitCastExpr 0x55beedb28ff0 <col:73> 'int' <IntegralCast>
+|   |       |   `-ImplicitCastExpr 0x55beedb28fd8 <col:73> '_Bool' <LValueToRValue>
+|   |       |     `-DeclRefExpr 0x55beedb28f88 <col:73> '_Bool' lvalue Var 0x55beedb24d58 'x$r_buff1_thd2' '_Bool'
+|   |       |-ImplicitCastExpr 0x55beedb29068 <col:90> 'int' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x55beedb29028 <col:90> 'int' lvalue Var 0x55beedb25040 'x$w_buff1' 'int'
+|   |       `-ImplicitCastExpr 0x55beedb29080 <col:102> 'int' <LValueToRValue>
+|   |         `-DeclRefExpr 0x55beedb29048 <col:102> 'int' lvalue Var 0x55beedb24890 'x' 'int'
+|   |-BinaryOperator 0x55beedb29338 <line:753:3, col:66> '_Bool' '='
+|   | |-DeclRefExpr 0x55beedb29150 <col:3> '_Bool' lvalue Var 0x55beedb24fc0 'x$w_buff0_used' '_Bool'
+|   | `-ImplicitCastExpr 0x55beedb29320 <col:20, col:66> '_Bool' <IntegralToBoolean>
+|   |   `-ConditionalOperator 0x55beedb292f0 <col:20, col:66> 'int'
+|   |     |-BinaryOperator 0x55beedb29210 <col:20, col:38> 'int' '&&'
+|   |     | |-ImplicitCastExpr 0x55beedb291c8 <col:20> 'int' <IntegralCast>
+|   |     | | `-ImplicitCastExpr 0x55beedb291b0 <col:20> '_Bool' <LValueToRValue>
+|   |     | |   `-DeclRefExpr 0x55beedb29170 <col:20> '_Bool' lvalue Var 0x55beedb24fc0 'x$w_buff0_used' '_Bool'
+|   |     | `-ImplicitCastExpr 0x55beedb291f8 <col:38> 'int' <IntegralCast>
+|   |     |   `-ImplicitCastExpr 0x55beedb291e0 <col:38> '_Bool' <LValueToRValue>
+|   |     |     `-DeclRefExpr 0x55beedb29190 <col:38> '_Bool' lvalue Var 0x55beedb24b78 'x$r_buff0_thd2' '_Bool'
+|   |     |-ImplicitCastExpr 0x55beedb292a8 <col:55, col:62> 'int' <IntegralCast>
+|   |     | `-CStyleCastExpr 0x55beedb29260 <col:55, col:62> '_Bool' <IntegralToBoolean>
+|   |     |   `-IntegerLiteral 0x55beedb29230 <col:62> 'int' 0
+|   |     `-ImplicitCastExpr 0x55beedb292d8 <col:66> 'int' <IntegralCast>
+|   |       `-ImplicitCastExpr 0x55beedb292c0 <col:66> '_Bool' <LValueToRValue>
+|   |         `-DeclRefExpr 0x55beedb29288 <col:66> '_Bool' lvalue Var 0x55beedb24fc0 'x$w_buff0_used' '_Bool'
+|   |-BinaryOperator 0x55beedb29620 <line:754:3, col:102> '_Bool' '='
+|   | |-DeclRefExpr 0x55beedb29358 <col:3> '_Bool' lvalue Var 0x55beedb250b8 'x$w_buff1_used' '_Bool'
+|   | `-ImplicitCastExpr 0x55beedb29608 <col:20, col:102> '_Bool' <IntegralToBoolean>
+|   |   `-ConditionalOperator 0x55beedb295d8 <col:20, col:102> 'int'
+|   |     |-BinaryOperator 0x55beedb294f8 <col:20, col:74> 'int' '||'
+|   |     | |-BinaryOperator 0x55beedb29418 <col:20, col:38> 'int' '&&'
+|   |     | | |-ImplicitCastExpr 0x55beedb293d0 <col:20> 'int' <IntegralCast>
+|   |     | | | `-ImplicitCastExpr 0x55beedb293b8 <col:20> '_Bool' <LValueToRValue>
+|   |     | | |   `-DeclRefExpr 0x55beedb29378 <col:20> '_Bool' lvalue Var 0x55beedb24fc0 'x$w_buff0_used' '_Bool'
+|   |     | | `-ImplicitCastExpr 0x55beedb29400 <col:38> 'int' <IntegralCast>
+|   |     | |   `-ImplicitCastExpr 0x55beedb293e8 <col:38> '_Bool' <LValueToRValue>
+|   |     | |     `-DeclRefExpr 0x55beedb29398 <col:38> '_Bool' lvalue Var 0x55beedb24b78 'x$r_buff0_thd2' '_Bool'
+|   |     | `-BinaryOperator 0x55beedb294d8 <col:56, col:74> 'int' '&&'
+|   |     |   |-ImplicitCastExpr 0x55beedb29490 <col:56> 'int' <IntegralCast>
+|   |     |   | `-ImplicitCastExpr 0x55beedb29478 <col:56> '_Bool' <LValueToRValue>
+|   |     |   |   `-DeclRefExpr 0x55beedb29438 <col:56> '_Bool' lvalue Var 0x55beedb250b8 'x$w_buff1_used' '_Bool'
+|   |     |   `-ImplicitCastExpr 0x55beedb294c0 <col:74> 'int' <IntegralCast>
+|   |     |     `-ImplicitCastExpr 0x55beedb294a8 <col:74> '_Bool' <LValueToRValue>
+|   |     |       `-DeclRefExpr 0x55beedb29458 <col:74> '_Bool' lvalue Var 0x55beedb24d58 'x$r_buff1_thd2' '_Bool'
+|   |     |-ImplicitCastExpr 0x55beedb29590 <col:91, col:98> 'int' <IntegralCast>
+|   |     | `-CStyleCastExpr 0x55beedb29548 <col:91, col:98> '_Bool' <IntegralToBoolean>
+|   |     |   `-IntegerLiteral 0x55beedb29518 <col:98> 'int' 0
+|   |     `-ImplicitCastExpr 0x55beedb295c0 <col:102> 'int' <IntegralCast>
+|   |       `-ImplicitCastExpr 0x55beedb295a8 <col:102> '_Bool' <LValueToRValue>
+|   |         `-DeclRefExpr 0x55beedb29570 <col:102> '_Bool' lvalue Var 0x55beedb250b8 'x$w_buff1_used' '_Bool'
+|   |-BinaryOperator 0x55beedb29828 <line:755:3, col:66> '_Bool' '='
+|   | |-DeclRefExpr 0x55beedb29640 <col:3> '_Bool' lvalue Var 0x55beedb24b78 'x$r_buff0_thd2' '_Bool'
+|   | `-ImplicitCastExpr 0x55beedb29810 <col:20, col:66> '_Bool' <IntegralToBoolean>
+|   |   `-ConditionalOperator 0x55beedb297e0 <col:20, col:66> 'int'
+|   |     |-BinaryOperator 0x55beedb29700 <col:20, col:38> 'int' '&&'
+|   |     | |-ImplicitCastExpr 0x55beedb296b8 <col:20> 'int' <IntegralCast>
+|   |     | | `-ImplicitCastExpr 0x55beedb296a0 <col:20> '_Bool' <LValueToRValue>
+|   |     | |   `-DeclRefExpr 0x55beedb29660 <col:20> '_Bool' lvalue Var 0x55beedb24fc0 'x$w_buff0_used' '_Bool'
+|   |     | `-ImplicitCastExpr 0x55beedb296e8 <col:38> 'int' <IntegralCast>
+|   |     |   `-ImplicitCastExpr 0x55beedb296d0 <col:38> '_Bool' <LValueToRValue>
+|   |     |     `-DeclRefExpr 0x55beedb29680 <col:38> '_Bool' lvalue Var 0x55beedb24b78 'x$r_buff0_thd2' '_Bool'
+|   |     |-ImplicitCastExpr 0x55beedb29798 <col:55, col:62> 'int' <IntegralCast>
+|   |     | `-CStyleCastExpr 0x55beedb29750 <col:55, col:62> '_Bool' <IntegralToBoolean>
+|   |     |   `-IntegerLiteral 0x55beedb29720 <col:62> 'int' 0
+|   |     `-ImplicitCastExpr 0x55beedb297c8 <col:66> 'int' <IntegralCast>
+|   |       `-ImplicitCastExpr 0x55beedb297b0 <col:66> '_Bool' <LValueToRValue>
+|   |         `-DeclRefExpr 0x55beedb29778 <col:66> '_Bool' lvalue Var 0x55beedb24b78 'x$r_buff0_thd2' '_Bool'
+|   |-BinaryOperator 0x55beedb29b10 <line:756:3, col:102> '_Bool' '='
+|   | |-DeclRefExpr 0x55beedb29848 <col:3> '_Bool' lvalue Var 0x55beedb24d58 'x$r_buff1_thd2' '_Bool'
+|   | `-ImplicitCastExpr 0x55beedb29af8 <col:20, col:102> '_Bool' <IntegralToBoolean>
+|   |   `-ConditionalOperator 0x55beedb29ac8 <col:20, col:102> 'int'
+|   |     |-BinaryOperator 0x55beedb299e8 <col:20, col:74> 'int' '||'
+|   |     | |-BinaryOperator 0x55beedb29908 <col:20, col:38> 'int' '&&'
+|   |     | | |-ImplicitCastExpr 0x55beedb298c0 <col:20> 'int' <IntegralCast>
+|   |     | | | `-ImplicitCastExpr 0x55beedb298a8 <col:20> '_Bool' <LValueToRValue>
+|   |     | | |   `-DeclRefExpr 0x55beedb29868 <col:20> '_Bool' lvalue Var 0x55beedb24fc0 'x$w_buff0_used' '_Bool'
+|   |     | | `-ImplicitCastExpr 0x55beedb298f0 <col:38> 'int' <IntegralCast>
+|   |     | |   `-ImplicitCastExpr 0x55beedb298d8 <col:38> '_Bool' <LValueToRValue>
+|   |     | |     `-DeclRefExpr 0x55beedb29888 <col:38> '_Bool' lvalue Var 0x55beedb24b78 'x$r_buff0_thd2' '_Bool'
+|   |     | `-BinaryOperator 0x55beedb299c8 <col:56, col:74> 'int' '&&'
+|   |     |   |-ImplicitCastExpr 0x55beedb29980 <col:56> 'int' <IntegralCast>
+|   |     |   | `-ImplicitCastExpr 0x55beedb29968 <col:56> '_Bool' <LValueToRValue>
+|   |     |   |   `-DeclRefExpr 0x55beedb29928 <col:56> '_Bool' lvalue Var 0x55beedb250b8 'x$w_buff1_used' '_Bool'
+|   |     |   `-ImplicitCastExpr 0x55beedb299b0 <col:74> 'int' <IntegralCast>
+|   |     |     `-ImplicitCastExpr 0x55beedb29998 <col:74> '_Bool' <LValueToRValue>
+|   |     |       `-DeclRefExpr 0x55beedb29948 <col:74> '_Bool' lvalue Var 0x55beedb24d58 'x$r_buff1_thd2' '_Bool'
+|   |     |-ImplicitCastExpr 0x55beedb29a80 <col:91, col:98> 'int' <IntegralCast>
+|   |     | `-CStyleCastExpr 0x55beedb29a38 <col:91, col:98> '_Bool' <IntegralToBoolean>
+|   |     |   `-IntegerLiteral 0x55beedb29a08 <col:98> 'int' 0
+|   |     `-ImplicitCastExpr 0x55beedb29ab0 <col:102> 'int' <IntegralCast>
+|   |       `-ImplicitCastExpr 0x55beedb29a98 <col:102> '_Bool' <LValueToRValue>
+|   |         `-DeclRefExpr 0x55beedb29a60 <col:102> '_Bool' lvalue Var 0x55beedb24d58 'x$r_buff1_thd2' '_Bool'
+|   |-CallExpr 0x55beedb29b88 <line:757:3, col:25> 'void'
+|   | `-ImplicitCastExpr 0x55beedb29b70 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x55beedb29b50 <col:3> 'void ()' Function 0x55beedacb060 '__VERIFIER_atomic_end' 'void ()'
+|   |-CallExpr 0x55beedb29be0 <line:758:3, col:27> 'void'
+|   | `-ImplicitCastExpr 0x55beedb29bc8 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x55beedb29ba8 <col:3> 'void ()' Function 0x55beedacafa0 '__VERIFIER_atomic_begin' 'void ()'
+|   |-BinaryOperator 0x55beedb29c98 <line:759:3, col:41> 'int' '='
+|   | |-DeclRefExpr 0x55beedb29c00 <col:3> 'int' lvalue Var 0x55beedb24320 '__unbuffered_cnt' 'int'
+|   | `-BinaryOperator 0x55beedb29c78 <col:22, col:41> 'int' '+'
+|   |   |-ImplicitCastExpr 0x55beedb29c60 <col:22> 'int' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x55beedb29c20 <col:22> 'int' lvalue Var 0x55beedb24320 '__unbuffered_cnt' 'int'
+|   |   `-IntegerLiteral 0x55beedb29c40 <col:41> 'int' 1
+|   |-CallExpr 0x55beedb29cf0 <line:760:3, col:25> 'void'
+|   | `-ImplicitCastExpr 0x55beedb29cd8 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x55beedb29cb8 <col:3> 'void ()' Function 0x55beedacb060 '__VERIFIER_atomic_end' 'void ()'
+|   `-ReturnStmt 0x55beedb29d68 <line:761:3, col:36>
+|     `-CallExpr 0x55beedb29d48 <col:10, col:36> 'void *'
+|       `-ImplicitCastExpr 0x55beedb29d30 <col:10> 'void *(*)(void)' <FunctionToPointerDecay>
+|         `-DeclRefExpr 0x55beedb29d10 <col:10> 'void *(void)' Function 0x55beedacaab8 '__VERIFIER_nondet_pointer' 'void *(void)'
+|-FunctionDecl 0x55beedb29f08 prev 0x55beedb23fa0 <line:763:1, line:782:1> line:763:8 used P2 'void *(void *)'
+| |-ParmVarDecl 0x55beedb29e70 <col:11, col:17> col:17 arg 'void *'
+| `-CompoundStmt 0x55beedb2b168 <line:764:1, line:782:1>
+|   |-CallExpr 0x55beedb29fe8 <line:765:3, col:27> 'void'
+|   | `-ImplicitCastExpr 0x55beedb29fd0 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x55beedb29fb0 <col:3> 'void ()' Function 0x55beedacafa0 '__VERIFIER_atomic_begin' 'void ()'
+|   |-BinaryOperator 0x55beedb2a060 <line:766:3, col:25> 'int' '='
+|   | |-DeclRefExpr 0x55beedb2a008 <col:3> 'int' lvalue Var 0x55beedb24560 '__unbuffered_p2_EAX' 'int'
+|   | `-ImplicitCastExpr 0x55beedb2a048 <col:25> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x55beedb2a028 <col:25> 'int' lvalue Var 0x55beedb251b8 'y' 'int'
+|   |-CallExpr 0x55beedb2a0b8 <line:767:3, col:25> 'void'
+|   | `-ImplicitCastExpr 0x55beedb2a0a0 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x55beedb2a080 <col:3> 'void ()' Function 0x55beedacb060 '__VERIFIER_atomic_end' 'void ()'
+|   |-CallExpr 0x55beedb2a110 <line:768:3, col:27> 'void'
+|   | `-ImplicitCastExpr 0x55beedb2a0f8 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x55beedb2a0d8 <col:3> 'void ()' Function 0x55beedacafa0 '__VERIFIER_atomic_begin' 'void ()'
+|   |-BinaryOperator 0x55beedb2a188 <line:769:3, col:25> 'int' '='
+|   | |-DeclRefExpr 0x55beedb2a130 <col:3> 'int' lvalue Var 0x55beedb24680 '__unbuffered_p2_EBX' 'int'
+|   | `-ImplicitCastExpr 0x55beedb2a170 <col:25> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x55beedb2a150 <col:25> 'int' lvalue Var 0x55beedb251b8 'y' 'int'
+|   |-CallExpr 0x55beedb2a1e0 <line:770:3, col:25> 'void'
+|   | `-ImplicitCastExpr 0x55beedb2a1c8 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x55beedb2a1a8 <col:3> 'void ()' Function 0x55beedacb060 '__VERIFIER_atomic_end' 'void ()'
+|   |-CallExpr 0x55beedb2a238 <line:771:3, col:27> 'void'
+|   | `-ImplicitCastExpr 0x55beedb2a220 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x55beedb2a200 <col:3> 'void ()' Function 0x55beedacafa0 '__VERIFIER_atomic_begin' 'void ()'
+|   |-BinaryOperator 0x55beedb2a520 <line:772:3, col:103> 'int' '='
+|   | |-DeclRefExpr 0x55beedb2a258 <col:3> 'int' lvalue Var 0x55beedb24890 'x' 'int'
+|   | `-ConditionalOperator 0x55beedb2a4f0 <col:7, col:103> 'int'
+|   |   |-BinaryOperator 0x55beedb2a318 <col:7, col:25> 'int' '&&'
+|   |   | |-ImplicitCastExpr 0x55beedb2a2d0 <col:7> 'int' <IntegralCast>
+|   |   | | `-ImplicitCastExpr 0x55beedb2a2b8 <col:7> '_Bool' <LValueToRValue>
+|   |   | |   `-DeclRefExpr 0x55beedb2a278 <col:7> '_Bool' lvalue Var 0x55beedb24fc0 'x$w_buff0_used' '_Bool'
+|   |   | `-ImplicitCastExpr 0x55beedb2a300 <col:25> 'int' <IntegralCast>
+|   |   |   `-ImplicitCastExpr 0x55beedb2a2e8 <col:25> '_Bool' <LValueToRValue>
+|   |   |     `-DeclRefExpr 0x55beedb2a298 <col:25> '_Bool' lvalue Var 0x55beedb24bf0 'x$r_buff0_thd3' '_Bool'
+|   |   |-ImplicitCastExpr 0x55beedb2a4d8 <col:42> 'int' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x55beedb2a338 <col:42> 'int' lvalue Var 0x55beedb24f48 'x$w_buff0' 'int'
+|   |   `-ParenExpr 0x55beedb2a4b8 <col:54, col:103> 'int'
+|   |     `-ConditionalOperator 0x55beedb2a488 <col:55, col:102> 'int'
+|   |       |-BinaryOperator 0x55beedb2a3f8 <col:55, col:73> 'int' '&&'
+|   |       | |-ImplicitCastExpr 0x55beedb2a3b0 <col:55> 'int' <IntegralCast>
+|   |       | | `-ImplicitCastExpr 0x55beedb2a398 <col:55> '_Bool' <LValueToRValue>
+|   |       | |   `-DeclRefExpr 0x55beedb2a358 <col:55> '_Bool' lvalue Var 0x55beedb250b8 'x$w_buff1_used' '_Bool'
+|   |       | `-ImplicitCastExpr 0x55beedb2a3e0 <col:73> 'int' <IntegralCast>
+|   |       |   `-ImplicitCastExpr 0x55beedb2a3c8 <col:73> '_Bool' <LValueToRValue>
+|   |       |     `-DeclRefExpr 0x55beedb2a378 <col:73> '_Bool' lvalue Var 0x55beedb24dd0 'x$r_buff1_thd3' '_Bool'
+|   |       |-ImplicitCastExpr 0x55beedb2a458 <col:90> 'int' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x55beedb2a418 <col:90> 'int' lvalue Var 0x55beedb25040 'x$w_buff1' 'int'
+|   |       `-ImplicitCastExpr 0x55beedb2a470 <col:102> 'int' <LValueToRValue>
+|   |         `-DeclRefExpr 0x55beedb2a438 <col:102> 'int' lvalue Var 0x55beedb24890 'x' 'int'
+|   |-BinaryOperator 0x55beedb2a728 <line:773:3, col:66> '_Bool' '='
+|   | |-DeclRefExpr 0x55beedb2a540 <col:3> '_Bool' lvalue Var 0x55beedb24fc0 'x$w_buff0_used' '_Bool'
+|   | `-ImplicitCastExpr 0x55beedb2a710 <col:20, col:66> '_Bool' <IntegralToBoolean>
+|   |   `-ConditionalOperator 0x55beedb2a6e0 <col:20, col:66> 'int'
+|   |     |-BinaryOperator 0x55beedb2a600 <col:20, col:38> 'int' '&&'
+|   |     | |-ImplicitCastExpr 0x55beedb2a5b8 <col:20> 'int' <IntegralCast>
+|   |     | | `-ImplicitCastExpr 0x55beedb2a5a0 <col:20> '_Bool' <LValueToRValue>
+|   |     | |   `-DeclRefExpr 0x55beedb2a560 <col:20> '_Bool' lvalue Var 0x55beedb24fc0 'x$w_buff0_used' '_Bool'
+|   |     | `-ImplicitCastExpr 0x55beedb2a5e8 <col:38> 'int' <IntegralCast>
+|   |     |   `-ImplicitCastExpr 0x55beedb2a5d0 <col:38> '_Bool' <LValueToRValue>
+|   |     |     `-DeclRefExpr 0x55beedb2a580 <col:38> '_Bool' lvalue Var 0x55beedb24bf0 'x$r_buff0_thd3' '_Bool'
+|   |     |-ImplicitCastExpr 0x55beedb2a698 <col:55, col:62> 'int' <IntegralCast>
+|   |     | `-CStyleCastExpr 0x55beedb2a650 <col:55, col:62> '_Bool' <IntegralToBoolean>
+|   |     |   `-IntegerLiteral 0x55beedb2a620 <col:62> 'int' 0
+|   |     `-ImplicitCastExpr 0x55beedb2a6c8 <col:66> 'int' <IntegralCast>
+|   |       `-ImplicitCastExpr 0x55beedb2a6b0 <col:66> '_Bool' <LValueToRValue>
+|   |         `-DeclRefExpr 0x55beedb2a678 <col:66> '_Bool' lvalue Var 0x55beedb24fc0 'x$w_buff0_used' '_Bool'
+|   |-BinaryOperator 0x55beedb2aa10 <line:774:3, col:102> '_Bool' '='
+|   | |-DeclRefExpr 0x55beedb2a748 <col:3> '_Bool' lvalue Var 0x55beedb250b8 'x$w_buff1_used' '_Bool'
+|   | `-ImplicitCastExpr 0x55beedb2a9f8 <col:20, col:102> '_Bool' <IntegralToBoolean>
+|   |   `-ConditionalOperator 0x55beedb2a9c8 <col:20, col:102> 'int'
+|   |     |-BinaryOperator 0x55beedb2a8e8 <col:20, col:74> 'int' '||'
+|   |     | |-BinaryOperator 0x55beedb2a808 <col:20, col:38> 'int' '&&'
+|   |     | | |-ImplicitCastExpr 0x55beedb2a7c0 <col:20> 'int' <IntegralCast>
+|   |     | | | `-ImplicitCastExpr 0x55beedb2a7a8 <col:20> '_Bool' <LValueToRValue>
+|   |     | | |   `-DeclRefExpr 0x55beedb2a768 <col:20> '_Bool' lvalue Var 0x55beedb24fc0 'x$w_buff0_used' '_Bool'
+|   |     | | `-ImplicitCastExpr 0x55beedb2a7f0 <col:38> 'int' <IntegralCast>
+|   |     | |   `-ImplicitCastExpr 0x55beedb2a7d8 <col:38> '_Bool' <LValueToRValue>
+|   |     | |     `-DeclRefExpr 0x55beedb2a788 <col:38> '_Bool' lvalue Var 0x55beedb24bf0 'x$r_buff0_thd3' '_Bool'
+|   |     | `-BinaryOperator 0x55beedb2a8c8 <col:56, col:74> 'int' '&&'
+|   |     |   |-ImplicitCastExpr 0x55beedb2a880 <col:56> 'int' <IntegralCast>
+|   |     |   | `-ImplicitCastExpr 0x55beedb2a868 <col:56> '_Bool' <LValueToRValue>
+|   |     |   |   `-DeclRefExpr 0x55beedb2a828 <col:56> '_Bool' lvalue Var 0x55beedb250b8 'x$w_buff1_used' '_Bool'
+|   |     |   `-ImplicitCastExpr 0x55beedb2a8b0 <col:74> 'int' <IntegralCast>
+|   |     |     `-ImplicitCastExpr 0x55beedb2a898 <col:74> '_Bool' <LValueToRValue>
+|   |     |       `-DeclRefExpr 0x55beedb2a848 <col:74> '_Bool' lvalue Var 0x55beedb24dd0 'x$r_buff1_thd3' '_Bool'
+|   |     |-ImplicitCastExpr 0x55beedb2a980 <col:91, col:98> 'int' <IntegralCast>
+|   |     | `-CStyleCastExpr 0x55beedb2a938 <col:91, col:98> '_Bool' <IntegralToBoolean>
+|   |     |   `-IntegerLiteral 0x55beedb2a908 <col:98> 'int' 0
+|   |     `-ImplicitCastExpr 0x55beedb2a9b0 <col:102> 'int' <IntegralCast>
+|   |       `-ImplicitCastExpr 0x55beedb2a998 <col:102> '_Bool' <LValueToRValue>
+|   |         `-DeclRefExpr 0x55beedb2a960 <col:102> '_Bool' lvalue Var 0x55beedb250b8 'x$w_buff1_used' '_Bool'
+|   |-BinaryOperator 0x55beedb2ac38 <line:775:3, col:66> '_Bool' '='
+|   | |-DeclRefExpr 0x55beedb2aa30 <col:3> '_Bool' lvalue Var 0x55beedb24bf0 'x$r_buff0_thd3' '_Bool'
+|   | `-ImplicitCastExpr 0x55beedb2ac20 <col:20, col:66> '_Bool' <IntegralToBoolean>
+|   |   `-ConditionalOperator 0x55beedb2abf0 <col:20, col:66> 'int'
+|   |     |-BinaryOperator 0x55beedb2aaf0 <col:20, col:38> 'int' '&&'
+|   |     | |-ImplicitCastExpr 0x55beedb2aaa8 <col:20> 'int' <IntegralCast>
+|   |     | | `-ImplicitCastExpr 0x55beedb2aa90 <col:20> '_Bool' <LValueToRValue>
+|   |     | |   `-DeclRefExpr 0x55beedb2aa50 <col:20> '_Bool' lvalue Var 0x55beedb24fc0 'x$w_buff0_used' '_Bool'
+|   |     | `-ImplicitCastExpr 0x55beedb2aad8 <col:38> 'int' <IntegralCast>
+|   |     |   `-ImplicitCastExpr 0x55beedb2aac0 <col:38> '_Bool' <LValueToRValue>
+|   |     |     `-DeclRefExpr 0x55beedb2aa70 <col:38> '_Bool' lvalue Var 0x55beedb24bf0 'x$r_buff0_thd3' '_Bool'
+|   |     |-ImplicitCastExpr 0x55beedb2aba8 <col:55, col:62> 'int' <IntegralCast>
+|   |     | `-CStyleCastExpr 0x55beedb2ab60 <col:55, col:62> '_Bool' <IntegralToBoolean>
+|   |     |   `-IntegerLiteral 0x55beedb2ab10 <col:62> 'int' 0
+|   |     `-ImplicitCastExpr 0x55beedb2abd8 <col:66> 'int' <IntegralCast>
+|   |       `-ImplicitCastExpr 0x55beedb2abc0 <col:66> '_Bool' <LValueToRValue>
+|   |         `-DeclRefExpr 0x55beedb2ab88 <col:66> '_Bool' lvalue Var 0x55beedb24bf0 'x$r_buff0_thd3' '_Bool'
+|   |-BinaryOperator 0x55beedb2af20 <line:776:3, col:102> '_Bool' '='
+|   | |-DeclRefExpr 0x55beedb2ac58 <col:3> '_Bool' lvalue Var 0x55beedb24dd0 'x$r_buff1_thd3' '_Bool'
+|   | `-ImplicitCastExpr 0x55beedb2af08 <col:20, col:102> '_Bool' <IntegralToBoolean>
+|   |   `-ConditionalOperator 0x55beedb2aed8 <col:20, col:102> 'int'
+|   |     |-BinaryOperator 0x55beedb2adf8 <col:20, col:74> 'int' '||'
+|   |     | |-BinaryOperator 0x55beedb2ad18 <col:20, col:38> 'int' '&&'
+|   |     | | |-ImplicitCastExpr 0x55beedb2acd0 <col:20> 'int' <IntegralCast>
+|   |     | | | `-ImplicitCastExpr 0x55beedb2acb8 <col:20> '_Bool' <LValueToRValue>
+|   |     | | |   `-DeclRefExpr 0x55beedb2ac78 <col:20> '_Bool' lvalue Var 0x55beedb24fc0 'x$w_buff0_used' '_Bool'
+|   |     | | `-ImplicitCastExpr 0x55beedb2ad00 <col:38> 'int' <IntegralCast>
+|   |     | |   `-ImplicitCastExpr 0x55beedb2ace8 <col:38> '_Bool' <LValueToRValue>
+|   |     | |     `-DeclRefExpr 0x55beedb2ac98 <col:38> '_Bool' lvalue Var 0x55beedb24bf0 'x$r_buff0_thd3' '_Bool'
+|   |     | `-BinaryOperator 0x55beedb2add8 <col:56, col:74> 'int' '&&'
+|   |     |   |-ImplicitCastExpr 0x55beedb2ad90 <col:56> 'int' <IntegralCast>
+|   |     |   | `-ImplicitCastExpr 0x55beedb2ad78 <col:56> '_Bool' <LValueToRValue>
+|   |     |   |   `-DeclRefExpr 0x55beedb2ad38 <col:56> '_Bool' lvalue Var 0x55beedb250b8 'x$w_buff1_used' '_Bool'
+|   |     |   `-ImplicitCastExpr 0x55beedb2adc0 <col:74> 'int' <IntegralCast>
+|   |     |     `-ImplicitCastExpr 0x55beedb2ada8 <col:74> '_Bool' <LValueToRValue>
+|   |     |       `-DeclRefExpr 0x55beedb2ad58 <col:74> '_Bool' lvalue Var 0x55beedb24dd0 'x$r_buff1_thd3' '_Bool'
+|   |     |-ImplicitCastExpr 0x55beedb2ae90 <col:91, col:98> 'int' <IntegralCast>
+|   |     | `-CStyleCastExpr 0x55beedb2ae48 <col:91, col:98> '_Bool' <IntegralToBoolean>
+|   |     |   `-IntegerLiteral 0x55beedb2ae18 <col:98> 'int' 0
+|   |     `-ImplicitCastExpr 0x55beedb2aec0 <col:102> 'int' <IntegralCast>
+|   |       `-ImplicitCastExpr 0x55beedb2aea8 <col:102> '_Bool' <LValueToRValue>
+|   |         `-DeclRefExpr 0x55beedb2ae70 <col:102> '_Bool' lvalue Var 0x55beedb24dd0 'x$r_buff1_thd3' '_Bool'
+|   |-CallExpr 0x55beedb2af78 <line:777:3, col:25> 'void'
+|   | `-ImplicitCastExpr 0x55beedb2af60 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x55beedb2af40 <col:3> 'void ()' Function 0x55beedacb060 '__VERIFIER_atomic_end' 'void ()'
+|   |-CallExpr 0x55beedb2afd0 <line:778:3, col:27> 'void'
+|   | `-ImplicitCastExpr 0x55beedb2afb8 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x55beedb2af98 <col:3> 'void ()' Function 0x55beedacafa0 '__VERIFIER_atomic_begin' 'void ()'
+|   |-BinaryOperator 0x55beedb2b088 <line:779:3, col:41> 'int' '='
+|   | |-DeclRefExpr 0x55beedb2aff0 <col:3> 'int' lvalue Var 0x55beedb24320 '__unbuffered_cnt' 'int'
+|   | `-BinaryOperator 0x55beedb2b068 <col:22, col:41> 'int' '+'
+|   |   |-ImplicitCastExpr 0x55beedb2b050 <col:22> 'int' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x55beedb2b010 <col:22> 'int' lvalue Var 0x55beedb24320 '__unbuffered_cnt' 'int'
+|   |   `-IntegerLiteral 0x55beedb2b030 <col:41> 'int' 1
+|   |-CallExpr 0x55beedb2b0e0 <line:780:3, col:25> 'void'
+|   | `-ImplicitCastExpr 0x55beedb2b0c8 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x55beedb2b0a8 <col:3> 'void ()' Function 0x55beedacb060 '__VERIFIER_atomic_end' 'void ()'
+|   `-ReturnStmt 0x55beedb2b158 <line:781:3, col:36>
+|     `-CallExpr 0x55beedb2b138 <col:10, col:36> 'void *'
+|       `-ImplicitCastExpr 0x55beedb2b120 <col:10> 'void *(*)(void)' <FunctionToPointerDecay>
+|         `-DeclRefExpr 0x55beedb2b100 <col:10> 'void *(void)' Function 0x55beedacaab8 '__VERIFIER_nondet_pointer' 'void *(void)'
+|-FunctionDecl 0x55beedb2b220 prev 0x55beedb24068 <line:783:1, line:785:1> line:783:6 fence 'void ()'
+| `-CompoundStmt 0x55beedb2b2c0 <line:784:1, line:785:1>
+|-FunctionDecl 0x55beedb2b2f0 prev 0x55beedb24128 <line:786:1, line:788:1> line:786:6 isync 'void ()'
+| `-CompoundStmt 0x55beedb2b390 <line:787:1, line:788:1>
+|-FunctionDecl 0x55beedb2b3c0 prev 0x55beedb241e8 <line:789:1, line:791:1> line:789:6 lwfence 'void ()'
+| `-CompoundStmt 0x55beedb2b460 <line:790:1, line:791:1>
+`-FunctionDecl 0x55beedb2b4c8 <line:792:1, line:816:1> line:792:5 main 'int ()'
+  `-CompoundStmt 0x55beedb2d1a0 <line:793:1, line:816:1>
+    |-DeclStmt 0x55beedb2b5e0 <line:794:3, col:18>
+    | `-VarDecl 0x55beedb2b578 <col:3, col:13> col:13 used t1908 'pthread_t':'unsigned long'
+    |-CallExpr 0x55beedb2b7e8 <line:795:3, col:54> 'int'
+    | |-ImplicitCastExpr 0x55beedb2b7d0 <col:3> 'int (*)(pthread_t *restrict, const pthread_attr_t *restrict, void *(*)(void *), void *restrict)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x55beedb2b5f8 <col:3> 'int (pthread_t *restrict, const pthread_attr_t *restrict, void *(*)(void *), void *restrict)' Function 0x55beedb0b5b8 'pthread_create' 'int (pthread_t *restrict, const pthread_attr_t *restrict, void *(*)(void *), void *restrict)'
+    | |-UnaryOperator 0x55beedb2b638 <col:18, col:19> 'pthread_t *' prefix '&' cannot overflow
+    | | `-DeclRefExpr 0x55beedb2b618 <col:19> 'pthread_t':'unsigned long' lvalue Var 0x55beedb2b578 't1908' 'pthread_t':'unsigned long'
+    | |-ImplicitCastExpr 0x55beedb2b828 <col:26, col:36> 'const pthread_attr_t *' <NullToPointer>
+    | | `-ParenExpr 0x55beedb2b6b0 <col:26, col:36> 'void *'
+    | |   `-CStyleCastExpr 0x55beedb2b688 <col:27, col:35> 'void *' <NullToPointer>
+    | |     `-IntegerLiteral 0x55beedb2b650 <col:35> 'int' 0
+    | |-ImplicitCastExpr 0x55beedb2b840 <col:39> 'void *(*)(void *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x55beedb2b6d0 <col:39> 'void *(void *)' Function 0x55beedb253e0 'P0' 'void *(void *)'
+    | `-ParenExpr 0x55beedb2b750 <col:43, col:53> 'void *'
+    |   `-CStyleCastExpr 0x55beedb2b728 <col:44, col:52> 'void *' <NullToPointer>
+    |     `-IntegerLiteral 0x55beedb2b6f0 <col:52> 'int' 0
+    |-DeclStmt 0x55beedb2b8d0 <line:796:3, col:18>
+    | `-VarDecl 0x55beedb2b868 <col:3, col:13> col:13 used t1909 'pthread_t':'unsigned long'
+    |-CallExpr 0x55beedb2ba78 <line:797:3, col:54> 'int'
+    | |-ImplicitCastExpr 0x55beedb2ba60 <col:3> 'int (*)(pthread_t *restrict, const pthread_attr_t *restrict, void *(*)(void *), void *restrict)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x55beedb2b8e8 <col:3> 'int (pthread_t *restrict, const pthread_attr_t *restrict, void *(*)(void *), void *restrict)' Function 0x55beedb0b5b8 'pthread_create' 'int (pthread_t *restrict, const pthread_attr_t *restrict, void *(*)(void *), void *restrict)'
+    | |-UnaryOperator 0x55beedb2b928 <col:18, col:19> 'pthread_t *' prefix '&' cannot overflow
+    | | `-DeclRefExpr 0x55beedb2b908 <col:19> 'pthread_t':'unsigned long' lvalue Var 0x55beedb2b868 't1909' 'pthread_t':'unsigned long'
+    | |-ImplicitCastExpr 0x55beedb2bab8 <col:26, col:36> 'const pthread_attr_t *' <NullToPointer>
+    | | `-ParenExpr 0x55beedb2b9a0 <col:26, col:36> 'void *'
+    | |   `-CStyleCastExpr 0x55beedb2b978 <col:27, col:35> 'void *' <NullToPointer>
+    | |     `-IntegerLiteral 0x55beedb2b940 <col:35> 'int' 0
+    | |-ImplicitCastExpr 0x55beedb2bad0 <col:39> 'void *(*)(void *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x55beedb2b9c0 <col:39> 'void *(void *)' Function 0x55beedb285b0 'P1' 'void *(void *)'
+    | `-ParenExpr 0x55beedb2ba40 <col:43, col:53> 'void *'
+    |   `-CStyleCastExpr 0x55beedb2ba18 <col:44, col:52> 'void *' <NullToPointer>
+    |     `-IntegerLiteral 0x55beedb2b9e0 <col:52> 'int' 0
+    |-DeclStmt 0x55beedb2bb70 <line:798:3, col:18>
+    | `-VarDecl 0x55beedb2baf8 <col:3, col:13> col:13 used t1910 'pthread_t':'unsigned long'
+    |-CallExpr 0x55beedb2bd18 <line:799:3, col:54> 'int'
+    | |-ImplicitCastExpr 0x55beedb2bd00 <col:3> 'int (*)(pthread_t *restrict, const pthread_attr_t *restrict, void *(*)(void *), void *restrict)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x55beedb2bb88 <col:3> 'int (pthread_t *restrict, const pthread_attr_t *restrict, void *(*)(void *), void *restrict)' Function 0x55beedb0b5b8 'pthread_create' 'int (pthread_t *restrict, const pthread_attr_t *restrict, void *(*)(void *), void *restrict)'
+    | |-UnaryOperator 0x55beedb2bbc8 <col:18, col:19> 'pthread_t *' prefix '&' cannot overflow
+    | | `-DeclRefExpr 0x55beedb2bba8 <col:19> 'pthread_t':'unsigned long' lvalue Var 0x55beedb2baf8 't1910' 'pthread_t':'unsigned long'
+    | |-ImplicitCastExpr 0x55beedb2bd58 <col:26, col:36> 'const pthread_attr_t *' <NullToPointer>
+    | | `-ParenExpr 0x55beedb2bc40 <col:26, col:36> 'void *'
+    | |   `-CStyleCastExpr 0x55beedb2bc18 <col:27, col:35> 'void *' <NullToPointer>
+    | |     `-IntegerLiteral 0x55beedb2bbe0 <col:35> 'int' 0
+    | |-ImplicitCastExpr 0x55beedb2bd70 <col:39> 'void *(*)(void *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x55beedb2bc60 <col:39> 'void *(void *)' Function 0x55beedb29f08 'P2' 'void *(void *)'
+    | `-ParenExpr 0x55beedb2bce0 <col:43, col:53> 'void *'
+    |   `-CStyleCastExpr 0x55beedb2bcb8 <col:44, col:52> 'void *' <NullToPointer>
+    |     `-IntegerLiteral 0x55beedb2bc80 <col:52> 'int' 0
+    |-CallExpr 0x55beedb2bdc0 <line:800:3, col:27> 'void'
+    | `-ImplicitCastExpr 0x55beedb2bda8 <col:3> 'void (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x55beedb2bd88 <col:3> 'void ()' Function 0x55beedacafa0 '__VERIFIER_atomic_begin' 'void ()'
+    |-BinaryOperator 0x55beedb2be90 <line:801:3, col:41> '_Bool' '='
+    | |-DeclRefExpr 0x55beedb2bde0 <col:3> '_Bool' lvalue Var 0x55beedb24718 'main$tmp_guard0' '_Bool'
+    | `-ImplicitCastExpr 0x55beedb2be78 <col:21, col:41> '_Bool' <IntegralToBoolean>
+    |   `-BinaryOperator 0x55beedb2be58 <col:21, col:41> 'int' '=='
+    |     |-ImplicitCastExpr 0x55beedb2be40 <col:21> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x55beedb2be00 <col:21> 'int' lvalue Var 0x55beedb24320 '__unbuffered_cnt' 'int'
+    |     `-IntegerLiteral 0x55beedb2be20 <col:41> 'int' 3
+    |-CallExpr 0x55beedb2bee8 <line:802:3, col:25> 'void'
+    | `-ImplicitCastExpr 0x55beedb2bed0 <col:3> 'void (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x55beedb2beb0 <col:3> 'void ()' Function 0x55beedacb060 '__VERIFIER_atomic_end' 'void ()'
+    |-CallExpr 0x55beedb2bf60 <line:803:3, col:36> 'void'
+    | |-ImplicitCastExpr 0x55beedb2bf48 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x55beedb2bf08 <col:3> 'void (int)' Function 0x55beedaca940 '__VERIFIER_assume' 'void (int)'
+    | `-ImplicitCastExpr 0x55beedb2bfa0 <col:21> 'int' <IntegralCast>
+    |   `-ImplicitCastExpr 0x55beedb2bf88 <col:21> '_Bool' <LValueToRValue>
+    |     `-DeclRefExpr 0x55beedb2bf28 <col:21> '_Bool' lvalue Var 0x55beedb24718 'main$tmp_guard0' '_Bool'
+    |-CallExpr 0x55beedb2bff0 <line:804:3, col:27> 'void'
+    | `-ImplicitCastExpr 0x55beedb2bfd8 <col:3> 'void (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x55beedb2bfb8 <col:3> 'void ()' Function 0x55beedacafa0 '__VERIFIER_atomic_begin' 'void ()'
+    |-BinaryOperator 0x55beedb2c2d8 <line:805:3, col:103> 'int' '='
+    | |-DeclRefExpr 0x55beedb2c010 <col:3> 'int' lvalue Var 0x55beedb24890 'x' 'int'
+    | `-ConditionalOperator 0x55beedb2c2a8 <col:7, col:103> 'int'
+    |   |-BinaryOperator 0x55beedb2c0d0 <col:7, col:25> 'int' '&&'
+    |   | |-ImplicitCastExpr 0x55beedb2c088 <col:7> 'int' <IntegralCast>
+    |   | | `-ImplicitCastExpr 0x55beedb2c070 <col:7> '_Bool' <LValueToRValue>
+    |   | |   `-DeclRefExpr 0x55beedb2c030 <col:7> '_Bool' lvalue Var 0x55beedb24fc0 'x$w_buff0_used' '_Bool'
+    |   | `-ImplicitCastExpr 0x55beedb2c0b8 <col:25> 'int' <IntegralCast>
+    |   |   `-ImplicitCastExpr 0x55beedb2c0a0 <col:25> '_Bool' <LValueToRValue>
+    |   |     `-DeclRefExpr 0x55beedb2c050 <col:25> '_Bool' lvalue Var 0x55beedb24a20 'x$r_buff0_thd0' '_Bool'
+    |   |-ImplicitCastExpr 0x55beedb2c290 <col:42> 'int' <LValueToRValue>
+    |   | `-DeclRefExpr 0x55beedb2c0f0 <col:42> 'int' lvalue Var 0x55beedb24f48 'x$w_buff0' 'int'
+    |   `-ParenExpr 0x55beedb2c270 <col:54, col:103> 'int'
+    |     `-ConditionalOperator 0x55beedb2c240 <col:55, col:102> 'int'
+    |       |-BinaryOperator 0x55beedb2c1b0 <col:55, col:73> 'int' '&&'
+    |       | |-ImplicitCastExpr 0x55beedb2c168 <col:55> 'int' <IntegralCast>
+    |       | | `-ImplicitCastExpr 0x55beedb2c150 <col:55> '_Bool' <LValueToRValue>
+    |       | |   `-DeclRefExpr 0x55beedb2c110 <col:55> '_Bool' lvalue Var 0x55beedb250b8 'x$w_buff1_used' '_Bool'
+    |       | `-ImplicitCastExpr 0x55beedb2c198 <col:73> 'int' <IntegralCast>
+    |       |   `-ImplicitCastExpr 0x55beedb2c180 <col:73> '_Bool' <LValueToRValue>
+    |       |     `-DeclRefExpr 0x55beedb2c130 <col:73> '_Bool' lvalue Var 0x55beedb24c68 'x$r_buff1_thd0' '_Bool'
+    |       |-ImplicitCastExpr 0x55beedb2c210 <col:90> 'int' <LValueToRValue>
+    |       | `-DeclRefExpr 0x55beedb2c1d0 <col:90> 'int' lvalue Var 0x55beedb25040 'x$w_buff1' 'int'
+    |       `-ImplicitCastExpr 0x55beedb2c228 <col:102> 'int' <LValueToRValue>
+    |         `-DeclRefExpr 0x55beedb2c1f0 <col:102> 'int' lvalue Var 0x55beedb24890 'x' 'int'
+    |-BinaryOperator 0x55beedb2c4e0 <line:806:3, col:66> '_Bool' '='
+    | |-DeclRefExpr 0x55beedb2c2f8 <col:3> '_Bool' lvalue Var 0x55beedb24fc0 'x$w_buff0_used' '_Bool'
+    | `-ImplicitCastExpr 0x55beedb2c4c8 <col:20, col:66> '_Bool' <IntegralToBoolean>
+    |   `-ConditionalOperator 0x55beedb2c498 <col:20, col:66> 'int'
+    |     |-BinaryOperator 0x55beedb2c3b8 <col:20, col:38> 'int' '&&'
+    |     | |-ImplicitCastExpr 0x55beedb2c370 <col:20> 'int' <IntegralCast>
+    |     | | `-ImplicitCastExpr 0x55beedb2c358 <col:20> '_Bool' <LValueToRValue>
+    |     | |   `-DeclRefExpr 0x55beedb2c318 <col:20> '_Bool' lvalue Var 0x55beedb24fc0 'x$w_buff0_used' '_Bool'
+    |     | `-ImplicitCastExpr 0x55beedb2c3a0 <col:38> 'int' <IntegralCast>
+    |     |   `-ImplicitCastExpr 0x55beedb2c388 <col:38> '_Bool' <LValueToRValue>
+    |     |     `-DeclRefExpr 0x55beedb2c338 <col:38> '_Bool' lvalue Var 0x55beedb24a20 'x$r_buff0_thd0' '_Bool'
+    |     |-ImplicitCastExpr 0x55beedb2c450 <col:55, col:62> 'int' <IntegralCast>
+    |     | `-CStyleCastExpr 0x55beedb2c408 <col:55, col:62> '_Bool' <IntegralToBoolean>
+    |     |   `-IntegerLiteral 0x55beedb2c3d8 <col:62> 'int' 0
+    |     `-ImplicitCastExpr 0x55beedb2c480 <col:66> 'int' <IntegralCast>
+    |       `-ImplicitCastExpr 0x55beedb2c468 <col:66> '_Bool' <LValueToRValue>
+    |         `-DeclRefExpr 0x55beedb2c430 <col:66> '_Bool' lvalue Var 0x55beedb24fc0 'x$w_buff0_used' '_Bool'
+    |-BinaryOperator 0x55beedb2c7c8 <line:807:3, col:102> '_Bool' '='
+    | |-DeclRefExpr 0x55beedb2c500 <col:3> '_Bool' lvalue Var 0x55beedb250b8 'x$w_buff1_used' '_Bool'
+    | `-ImplicitCastExpr 0x55beedb2c7b0 <col:20, col:102> '_Bool' <IntegralToBoolean>
+    |   `-ConditionalOperator 0x55beedb2c780 <col:20, col:102> 'int'
+    |     |-BinaryOperator 0x55beedb2c6a0 <col:20, col:74> 'int' '||'
+    |     | |-BinaryOperator 0x55beedb2c5c0 <col:20, col:38> 'int' '&&'
+    |     | | |-ImplicitCastExpr 0x55beedb2c578 <col:20> 'int' <IntegralCast>
+    |     | | | `-ImplicitCastExpr 0x55beedb2c560 <col:20> '_Bool' <LValueToRValue>
+    |     | | |   `-DeclRefExpr 0x55beedb2c520 <col:20> '_Bool' lvalue Var 0x55beedb24fc0 'x$w_buff0_used' '_Bool'
+    |     | | `-ImplicitCastExpr 0x55beedb2c5a8 <col:38> 'int' <IntegralCast>
+    |     | |   `-ImplicitCastExpr 0x55beedb2c590 <col:38> '_Bool' <LValueToRValue>
+    |     | |     `-DeclRefExpr 0x55beedb2c540 <col:38> '_Bool' lvalue Var 0x55beedb24a20 'x$r_buff0_thd0' '_Bool'
+    |     | `-BinaryOperator 0x55beedb2c680 <col:56, col:74> 'int' '&&'
+    |     |   |-ImplicitCastExpr 0x55beedb2c638 <col:56> 'int' <IntegralCast>
+    |     |   | `-ImplicitCastExpr 0x55beedb2c620 <col:56> '_Bool' <LValueToRValue>
+    |     |   |   `-DeclRefExpr 0x55beedb2c5e0 <col:56> '_Bool' lvalue Var 0x55beedb250b8 'x$w_buff1_used' '_Bool'
+    |     |   `-ImplicitCastExpr 0x55beedb2c668 <col:74> 'int' <IntegralCast>
+    |     |     `-ImplicitCastExpr 0x55beedb2c650 <col:74> '_Bool' <LValueToRValue>
+    |     |       `-DeclRefExpr 0x55beedb2c600 <col:74> '_Bool' lvalue Var 0x55beedb24c68 'x$r_buff1_thd0' '_Bool'
+    |     |-ImplicitCastExpr 0x55beedb2c738 <col:91, col:98> 'int' <IntegralCast>
+    |     | `-CStyleCastExpr 0x55beedb2c6f0 <col:91, col:98> '_Bool' <IntegralToBoolean>
+    |     |   `-IntegerLiteral 0x55beedb2c6c0 <col:98> 'int' 0
+    |     `-ImplicitCastExpr 0x55beedb2c768 <col:102> 'int' <IntegralCast>
+    |       `-ImplicitCastExpr 0x55beedb2c750 <col:102> '_Bool' <LValueToRValue>
+    |         `-DeclRefExpr 0x55beedb2c718 <col:102> '_Bool' lvalue Var 0x55beedb250b8 'x$w_buff1_used' '_Bool'
+    |-BinaryOperator 0x55beedb2c9d0 <line:808:3, col:66> '_Bool' '='
+    | |-DeclRefExpr 0x55beedb2c7e8 <col:3> '_Bool' lvalue Var 0x55beedb24a20 'x$r_buff0_thd0' '_Bool'
+    | `-ImplicitCastExpr 0x55beedb2c9b8 <col:20, col:66> '_Bool' <IntegralToBoolean>
+    |   `-ConditionalOperator 0x55beedb2c988 <col:20, col:66> 'int'
+    |     |-BinaryOperator 0x55beedb2c8a8 <col:20, col:38> 'int' '&&'
+    |     | |-ImplicitCastExpr 0x55beedb2c860 <col:20> 'int' <IntegralCast>
+    |     | | `-ImplicitCastExpr 0x55beedb2c848 <col:20> '_Bool' <LValueToRValue>
+    |     | |   `-DeclRefExpr 0x55beedb2c808 <col:20> '_Bool' lvalue Var 0x55beedb24fc0 'x$w_buff0_used' '_Bool'
+    |     | `-ImplicitCastExpr 0x55beedb2c890 <col:38> 'int' <IntegralCast>
+    |     |   `-ImplicitCastExpr 0x55beedb2c878 <col:38> '_Bool' <LValueToRValue>
+    |     |     `-DeclRefExpr 0x55beedb2c828 <col:38> '_Bool' lvalue Var 0x55beedb24a20 'x$r_buff0_thd0' '_Bool'
+    |     |-ImplicitCastExpr 0x55beedb2c940 <col:55, col:62> 'int' <IntegralCast>
+    |     | `-CStyleCastExpr 0x55beedb2c8f8 <col:55, col:62> '_Bool' <IntegralToBoolean>
+    |     |   `-IntegerLiteral 0x55beedb2c8c8 <col:62> 'int' 0
+    |     `-ImplicitCastExpr 0x55beedb2c970 <col:66> 'int' <IntegralCast>
+    |       `-ImplicitCastExpr 0x55beedb2c958 <col:66> '_Bool' <LValueToRValue>
+    |         `-DeclRefExpr 0x55beedb2c920 <col:66> '_Bool' lvalue Var 0x55beedb24a20 'x$r_buff0_thd0' '_Bool'
+    |-BinaryOperator 0x55beedb2ccc8 <line:809:3, col:102> '_Bool' '='
+    | |-DeclRefExpr 0x55beedb2c9f0 <col:3> '_Bool' lvalue Var 0x55beedb24c68 'x$r_buff1_thd0' '_Bool'
+    | `-ImplicitCastExpr 0x55beedb2ccb0 <col:20, col:102> '_Bool' <IntegralToBoolean>
+    |   `-ConditionalOperator 0x55beedb2cc80 <col:20, col:102> 'int'
+    |     |-BinaryOperator 0x55beedb2cba0 <col:20, col:74> 'int' '||'
+    |     | |-BinaryOperator 0x55beedb2cab0 <col:20, col:38> 'int' '&&'
+    |     | | |-ImplicitCastExpr 0x55beedb2ca68 <col:20> 'int' <IntegralCast>
+    |     | | | `-ImplicitCastExpr 0x55beedb2ca50 <col:20> '_Bool' <LValueToRValue>
+    |     | | |   `-DeclRefExpr 0x55beedb2ca10 <col:20> '_Bool' lvalue Var 0x55beedb24fc0 'x$w_buff0_used' '_Bool'
+    |     | | `-ImplicitCastExpr 0x55beedb2ca98 <col:38> 'int' <IntegralCast>
+    |     | |   `-ImplicitCastExpr 0x55beedb2ca80 <col:38> '_Bool' <LValueToRValue>
+    |     | |     `-DeclRefExpr 0x55beedb2ca30 <col:38> '_Bool' lvalue Var 0x55beedb24a20 'x$r_buff0_thd0' '_Bool'
+    |     | `-BinaryOperator 0x55beedb2cb80 <col:56, col:74> 'int' '&&'
+    |     |   |-ImplicitCastExpr 0x55beedb2cb28 <col:56> 'int' <IntegralCast>
+    |     |   | `-ImplicitCastExpr 0x55beedb2cb10 <col:56> '_Bool' <LValueToRValue>
+    |     |   |   `-DeclRefExpr 0x55beedb2cad0 <col:56> '_Bool' lvalue Var 0x55beedb250b8 'x$w_buff1_used' '_Bool'
+    |     |   `-ImplicitCastExpr 0x55beedb2cb58 <col:74> 'int' <IntegralCast>
+    |     |     `-ImplicitCastExpr 0x55beedb2cb40 <col:74> '_Bool' <LValueToRValue>
+    |     |       `-DeclRefExpr 0x55beedb2caf0 <col:74> '_Bool' lvalue Var 0x55beedb24c68 'x$r_buff1_thd0' '_Bool'
+    |     |-ImplicitCastExpr 0x55beedb2cc38 <col:91, col:98> 'int' <IntegralCast>
+    |     | `-CStyleCastExpr 0x55beedb2cbf0 <col:91, col:98> '_Bool' <IntegralToBoolean>
+    |     |   `-IntegerLiteral 0x55beedb2cbc0 <col:98> 'int' 0
+    |     `-ImplicitCastExpr 0x55beedb2cc68 <col:102> 'int' <IntegralCast>
+    |       `-ImplicitCastExpr 0x55beedb2cc50 <col:102> '_Bool' <LValueToRValue>
+    |         `-DeclRefExpr 0x55beedb2cc18 <col:102> '_Bool' lvalue Var 0x55beedb24c68 'x$r_buff1_thd0' '_Bool'
+    |-CallExpr 0x55beedb2cd20 <line:810:3, col:25> 'void'
+    | `-ImplicitCastExpr 0x55beedb2cd08 <col:3> 'void (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x55beedb2cce8 <col:3> 'void ()' Function 0x55beedacb060 '__VERIFIER_atomic_end' 'void ()'
+    |-CallExpr 0x55beedb2cd78 <line:811:3, col:27> 'void'
+    | `-ImplicitCastExpr 0x55beedb2cd60 <col:3> 'void (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x55beedb2cd40 <col:3> 'void ()' Function 0x55beedacafa0 '__VERIFIER_atomic_begin' 'void ()'
+    |-BinaryOperator 0x55beedb2d048 <line:812:3, col:113> '_Bool' '='
+    | |-DeclRefExpr 0x55beedb2cd98 <col:3> '_Bool' lvalue Var 0x55beedb24790 'main$tmp_guard1' '_Bool'
+    | `-ImplicitCastExpr 0x55beedb2d030 <col:21, col:113> '_Bool' <IntegralToBoolean>
+    |   `-UnaryOperator 0x55beedb2d018 <col:21, col:113> 'int' prefix '!' cannot overflow
+    |     `-ParenExpr 0x55beedb2cff8 <col:22, col:113> 'int'
+    |       `-BinaryOperator 0x55beedb2cfd8 <col:23, col:112> 'int' '&&'
+    |         |-BinaryOperator 0x55beedb2cf40 <col:23, col:84> 'int' '&&'
+    |         | |-BinaryOperator 0x55beedb2cea8 <col:23, col:56> 'int' '&&'
+    |         | | |-BinaryOperator 0x55beedb2ce10 <col:23, col:28> 'int' '=='
+    |         | | | |-ImplicitCastExpr 0x55beedb2cdf8 <col:23> 'int' <LValueToRValue>
+    |         | | | | `-DeclRefExpr 0x55beedb2cdb8 <col:23> 'int' lvalue Var 0x55beedb251b8 'y' 'int'
+    |         | | | `-IntegerLiteral 0x55beedb2cdd8 <col:28> 'int' 2
+    |         | | `-BinaryOperator 0x55beedb2ce88 <col:33, col:56> 'int' '=='
+    |         | |   |-ImplicitCastExpr 0x55beedb2ce70 <col:33> 'int' <LValueToRValue>
+    |         | |   | `-DeclRefExpr 0x55beedb2ce30 <col:33> 'int' lvalue Var 0x55beedb24440 '__unbuffered_p0_EAX' 'int'
+    |         | |   `-IntegerLiteral 0x55beedb2ce50 <col:56> 'int' 0
+    |         | `-BinaryOperator 0x55beedb2cf20 <col:61, col:84> 'int' '=='
+    |         |   |-ImplicitCastExpr 0x55beedb2cf08 <col:61> 'int' <LValueToRValue>
+    |         |   | `-DeclRefExpr 0x55beedb2cec8 <col:61> 'int' lvalue Var 0x55beedb24560 '__unbuffered_p2_EAX' 'int'
+    |         |   `-IntegerLiteral 0x55beedb2cee8 <col:84> 'int' 1
+    |         `-BinaryOperator 0x55beedb2cfb8 <col:89, col:112> 'int' '=='
+    |           |-ImplicitCastExpr 0x55beedb2cfa0 <col:89> 'int' <LValueToRValue>
+    |           | `-DeclRefExpr 0x55beedb2cf60 <col:89> 'int' lvalue Var 0x55beedb24680 '__unbuffered_p2_EBX' 'int'
+    |           `-IntegerLiteral 0x55beedb2cf80 <col:112> 'int' 1
+    |-CallExpr 0x55beedb2d0a0 <line:813:3, col:25> 'void'
+    | `-ImplicitCastExpr 0x55beedb2d088 <col:3> 'void (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x55beedb2d068 <col:3> 'void ()' Function 0x55beedacb060 '__VERIFIER_atomic_end' 'void ()'
+    |-CallExpr 0x55beedb2d118 <line:814:3, col:36> 'void'
+    | |-ImplicitCastExpr 0x55beedb2d100 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x55beedb2d0c0 <col:3> 'void (int)' Function 0x55beedacad28 '__VERIFIER_assert' 'void (int)'
+    | `-ImplicitCastExpr 0x55beedb2d158 <col:21> 'int' <IntegralCast>
+    |   `-ImplicitCastExpr 0x55beedb2d140 <col:21> '_Bool' <LValueToRValue>
+    |     `-DeclRefExpr 0x55beedb2d0e0 <col:21> '_Bool' lvalue Var 0x55beedb24790 'main$tmp_guard1' '_Bool'
+    `-ReturnStmt 0x55beedb2d190 <line:815:3, col:10>
+      `-IntegerLiteral 0x55beedb2d170 <col:10> 'int' 0

@@ -1,0 +1,90 @@
+[Function: main]
+[BB 0x1860790]
+  %1 = alloca i32, align 4
+  %2 = alloca i64, align 8
+  %3 = alloca i64, align 8
+  %4 = alloca i64, align 8
+  store i32 0, i32* %1, align 4
+[Caller:   %5 = call i32 @pthread_create(i64* %2, %union.pthread_attr_t* null, i8* (i8*)* @P0, i8* null) #4]
+[Callee: pthread_create]
+[Caller:   %6 = call i32 @pthread_create(i64* %3, %union.pthread_attr_t* null, i8* (i8*)* @P1, i8* null) #4]
+[Callee: pthread_create]
+[Caller:   %7 = call i32 @pthread_create(i64* %4, %union.pthread_attr_t* null, i8* (i8*)* @P2, i8* null) #4]
+[Callee: pthread_create]
+[Caller:   call void (...) @__VERIFIER_atomic_begin()]
+[Callee: __VERIFIER_atomic_begin]
+  %8 = load i32, i32* @__unbuffered_cnt, align 4
+  %9 = icmp eq i32 %8, 3
+  %10 = zext i1 %9 to i8
+  store i8 %10, i8* @"main$tmp_guard0", align 1
+[Caller:   call void (...) @__VERIFIER_atomic_end()]
+[Callee: __VERIFIER_atomic_end]
+  %11 = load i8, i8* @"main$tmp_guard0", align 1
+  %12 = trunc i8 %11 to i1
+  %13 = zext i1 %12 to i32
+[Caller:   call void @__VERIFIER_assume(i32 %13)]
+[Callee: __VERIFIER_assume]
+[Caller:   call void (...) @__VERIFIER_atomic_begin()]
+[Callee: __VERIFIER_atomic_begin]
+[Caller:   call void (...) @__VERIFIER_atomic_end()]
+[Callee: __VERIFIER_atomic_end]
+[Caller:   call void (...) @__VERIFIER_atomic_begin()]
+[Callee: __VERIFIER_atomic_begin]
+  %14 = load i32, i32* @z, align 4
+  %15 = icmp eq i32 %14, 2
+  br i1 %15, label %16, label %22
+Successor: 0x1861f40
+Successor: 0x1861f90
+[BB 0x1861f40]
+  %17 = load i32, i32* @__unbuffered_p0_EAX, align 4
+  %18 = icmp eq i32 %17, 0
+  br i1 %18, label %19, label %22
+Successor: 0x1862140
+Successor: 0x1861f90
+[BB 0x1861f90]
+  %23 = phi i1 [ false, %16 ], [ false, %0 ], [ %21, %19 ]
+  %24 = xor i1 %23, true
+  %25 = zext i1 %24 to i8
+  store i8 %25, i8* @"main$tmp_guard1", align 1
+[Caller:   call void (...) @__VERIFIER_atomic_end()]
+[Callee: __VERIFIER_atomic_end]
+  %26 = load i8, i8* @"main$tmp_guard1", align 1
+  %27 = trunc i8 %26 to i1
+  %28 = zext i1 %27 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %28)]
+[Callee: __VERIFIER_assert]
+  ret i32 0
+[BB 0x1862140]
+  %20 = load i32, i32* @__unbuffered_p2_EAX, align 4
+  %21 = icmp eq i32 %20, 1
+  br label %22
+Successor: 0x1861f90
+[Function: pthread_create]
+[Function: pthread_create]
+[Function: pthread_create]
+[Function: __VERIFIER_atomic_begin]
+[Function: __VERIFIER_atomic_end]
+[Function: __VERIFIER_assume]
+[Function: __VERIFIER_atomic_begin]
+[Function: __VERIFIER_atomic_end]
+[Function: __VERIFIER_atomic_begin]
+[Function: __VERIFIER_atomic_end]
+[Function: __VERIFIER_assert]
+[BB 0x185cb60]
+  %2 = alloca i32, align 4
+  store i32 %0, i32* %2, align 4
+  %3 = load i32, i32* %2, align 4
+  %4 = icmp ne i32 %3, 0
+  br i1 %4, label %7, label %5
+Successor: 0x185cd50
+Successor: 0x185cda0
+[BB 0x185cd50]
+  ret void
+[BB 0x185cda0]
+  br label %6
+Successor: 0x185cee0
+[BB 0x185cee0]
+[Caller:   call void (...) @__VERIFIER_error() #4]
+[Callee: __VERIFIER_error]
+  unreachable
+[Function: __VERIFIER_error]

@@ -1,0 +1,201 @@
+[Function: main]
+[BB 0x12a2140]
+  %1 = alloca i32, align 4
+  %2 = alloca double, align 8
+  store i32 0, i32* %1, align 4
+[Caller:   %3 = call double @llvm.round.f64(double 2.300000e+00)]
+[Callee: llvm.round.f64]
+  %4 = fcmp oeq double %3, 2.000000e+00
+  %5 = zext i1 %4 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %5)]
+[Callee: __VERIFIER_assert]
+[Caller:   %6 = call double @llvm.round.f64(double 2.500000e+00)]
+[Callee: llvm.round.f64]
+  %7 = fcmp oeq double %6, 3.000000e+00
+  %8 = zext i1 %7 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %8)]
+[Callee: __VERIFIER_assert]
+[Caller:   %9 = call double @llvm.round.f64(double 2.700000e+00)]
+[Callee: llvm.round.f64]
+  %10 = fcmp oeq double %9, 3.000000e+00
+  %11 = zext i1 %10 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %11)]
+[Callee: __VERIFIER_assert]
+[Caller:   %12 = call double @llvm.round.f64(double -2.300000e+00)]
+[Callee: llvm.round.f64]
+  %13 = fcmp oeq double %12, -2.000000e+00
+  %14 = zext i1 %13 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %14)]
+[Callee: __VERIFIER_assert]
+[Caller:   %15 = call double @llvm.round.f64(double -2.500000e+00)]
+[Callee: llvm.round.f64]
+  %16 = fcmp oeq double %15, -3.000000e+00
+  %17 = zext i1 %16 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %17)]
+[Callee: __VERIFIER_assert]
+[Caller:   %18 = call double @llvm.round.f64(double -2.700000e+00)]
+[Callee: llvm.round.f64]
+  %19 = fcmp oeq double %18, -3.000000e+00
+  %20 = zext i1 %19 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %20)]
+[Callee: __VERIFIER_assert]
+[Caller:   %21 = call double @llvm.round.f64(double -0.000000e+00)]
+[Callee: llvm.round.f64]
+  store double %21, double* %2, align 8
+  %22 = load double, double* %2, align 8
+  %23 = fcmp oeq double %22, -0.000000e+00
+  br i1 %23, label %24, label %28
+Successor: 0x12a4390
+Successor: 0x12a4420
+[BB 0x12a4390]
+  %25 = load double, double* %2, align 8
+[Caller:   %26 = call i32 @__signbit(double %25) #5]
+[Callee: __signbit]
+  %27 = icmp ne i32 %26, 0
+  br label %28
+Successor: 0x12a4420
+[BB 0x12a4420]
+  %29 = phi i1 [ false, %0 ], [ %27, %24 ]
+  %30 = zext i1 %29 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %30)]
+[Callee: __VERIFIER_assert]
+[Caller:   %31 = call double @llvm.round.f64(double 0xFFF0000000000000)]
+[Callee: llvm.round.f64]
+  store double %31, double* %2, align 8
+  br i1 true, label %32, label %35
+Successor: 0x12a4cd0
+Successor: 0x12a4d20
+[BB 0x12a4cd0]
+[Caller:   %33 = call i32 @__isinff(float 0x7FF0000000000000) #5]
+[Callee: __isinff]
+  %34 = icmp ne i32 %33, 0
+  br i1 %34, label %42, label %46
+Successor: 0x12a5330
+Successor: 0x12a53c0
+[BB 0x12a4d20]
+  br i1 false, label %36, label %39
+Successor: 0x12a5500
+Successor: 0x12a5550
+[BB 0x12a5330]
+  %43 = load double, double* %2, align 8
+[Caller:   %44 = call i32 @__signbit(double %43) #5]
+[Callee: __signbit]
+  %45 = icmp ne i32 %44, 0
+  br label %46
+Successor: 0x12a53c0
+[BB 0x12a53c0]
+  %47 = phi i1 [ false, %39 ], [ false, %36 ], [ false, %32 ], [ %45, %42 ]
+  %48 = zext i1 %47 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %48)]
+[Callee: __VERIFIER_assert]
+[Caller:   %49 = call i64 @lround(double 2.300000e+00) #6]
+[Callee: lround]
+  %50 = icmp eq i64 %49, 2
+  %51 = zext i1 %50 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %51)]
+[Callee: __VERIFIER_assert]
+[Caller:   %52 = call i64 @lround(double 2.500000e+00) #6]
+[Callee: lround]
+  %53 = icmp eq i64 %52, 3
+  %54 = zext i1 %53 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %54)]
+[Callee: __VERIFIER_assert]
+[Caller:   %55 = call i64 @lround(double 2.700000e+00) #6]
+[Callee: lround]
+  %56 = icmp eq i64 %55, 3
+  %57 = zext i1 %56 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %57)]
+[Callee: __VERIFIER_assert]
+[Caller:   %58 = call i64 @lround(double -2.300000e+00) #6]
+[Callee: lround]
+  %59 = icmp eq i64 %58, -2
+  %60 = zext i1 %59 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %60)]
+[Callee: __VERIFIER_assert]
+[Caller:   %61 = call i64 @lround(double -2.500000e+00) #6]
+[Callee: lround]
+  %62 = icmp eq i64 %61, -3
+  %63 = zext i1 %62 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %63)]
+[Callee: __VERIFIER_assert]
+[Caller:   %64 = call i64 @lround(double -2.700000e+00) #6]
+[Callee: lround]
+  %65 = icmp eq i64 %64, -3
+  %66 = zext i1 %65 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %66)]
+[Callee: __VERIFIER_assert]
+[Caller:   %67 = call i64 @lround(double -0.000000e+00) #6]
+[Callee: lround]
+  %68 = icmp eq i64 %67, 0
+  %69 = zext i1 %68 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %69)]
+[Callee: __VERIFIER_assert]
+  %70 = load i32, i32* %1, align 4
+  ret i32 %70
+[BB 0x12a5500]
+[Caller:   %37 = call i32 @__isinf(double 0x7FF0000000000000) #5]
+[Callee: __isinf]
+  %38 = icmp ne i32 %37, 0
+  br i1 %38, label %42, label %46
+Successor: 0x12a5330
+Successor: 0x12a53c0
+[BB 0x12a5550]
+[Caller:   %40 = call i32 @__isinfl(x86_fp80 0xK7FFF8000000000000000) #5]
+[Callee: __isinfl]
+  %41 = icmp ne i32 %40, 0
+  br i1 %41, label %42, label %46
+Successor: 0x12a5330
+Successor: 0x12a53c0
+[Function: llvm.round.f64]
+[Function: __VERIFIER_assert]
+[BB 0x12a13b0]
+  %2 = alloca i32, align 4
+  store i32 %0, i32* %2, align 4
+  %3 = load i32, i32* %2, align 4
+  %4 = icmp ne i32 %3, 0
+  br i1 %4, label %7, label %5
+Successor: 0x12a1be0
+Successor: 0x12a1c30
+[BB 0x12a1be0]
+  ret void
+[BB 0x12a1c30]
+  br label %6
+Successor: 0x12a1d70
+[BB 0x12a1d70]
+[Caller:   call void (...) @__VERIFIER_error() #5]
+[Callee: __VERIFIER_error]
+  unreachable
+[Function: llvm.round.f64]
+[Function: __VERIFIER_assert]
+[Function: llvm.round.f64]
+[Function: __VERIFIER_assert]
+[Function: llvm.round.f64]
+[Function: __VERIFIER_assert]
+[Function: llvm.round.f64]
+[Function: __VERIFIER_assert]
+[Function: llvm.round.f64]
+[Function: __VERIFIER_assert]
+[Function: llvm.round.f64]
+[Function: __signbit]
+[Function: __VERIFIER_assert]
+[Function: llvm.round.f64]
+[Function: __isinff]
+[Function: __signbit]
+[Function: __VERIFIER_assert]
+[Function: lround]
+[Function: __VERIFIER_assert]
+[Function: lround]
+[Function: __VERIFIER_assert]
+[Function: lround]
+[Function: __VERIFIER_assert]
+[Function: lround]
+[Function: __VERIFIER_assert]
+[Function: lround]
+[Function: __VERIFIER_assert]
+[Function: lround]
+[Function: __VERIFIER_assert]
+[Function: lround]
+[Function: __VERIFIER_assert]
+[Function: __isinf]
+[Function: __isinfl]
+[Function: __VERIFIER_error]

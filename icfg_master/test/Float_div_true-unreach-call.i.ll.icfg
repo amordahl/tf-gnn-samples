@@ -1,0 +1,53 @@
+[Function: main]
+[BB 0x1004fc0]
+  %1 = alloca i32, align 4
+  %2 = alloca float, align 4
+  %3 = alloca float, align 4
+  store i32 0, i32* %1, align 4
+  store float 1.000000e+00, float* %2, align 4
+  %4 = load float, float* %2, align 4
+  %5 = fdiv float %4, 2.500000e+00
+  store float %5, float* %3, align 4
+  br label %6
+Successor: 0x1005d70
+[BB 0x1005d70]
+  %7 = load float, float* %3, align 4
+  %8 = load float, float* %2, align 4
+  %9 = fcmp une float %7, %8
+  br i1 %9, label %10, label %14
+Successor: 0x1005c00
+Successor: 0x1006070
+[BB 0x1005c00]
+  %11 = load float, float* %3, align 4
+  store float %11, float* %2, align 4
+  %12 = load float, float* %2, align 4
+  %13 = fdiv float %12, 2.500000e+00
+  store float %13, float* %3, align 4
+  br label %6
+Successor: 0x1005d70
+[BB 0x1006070]
+  %15 = load float, float* %2, align 4
+  %16 = fcmp oeq float %15, 0.000000e+00
+  %17 = zext i1 %16 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %17)]
+[Callee: __VERIFIER_assert]
+  ret i32 0
+[Function: __VERIFIER_assert]
+[BB 0x1004230]
+  %2 = alloca i32, align 4
+  store i32 %0, i32* %2, align 4
+  %3 = load i32, i32* %2, align 4
+  %4 = icmp ne i32 %3, 0
+  br i1 %4, label %7, label %5
+Successor: 0x1004a60
+Successor: 0x1004ab0
+[BB 0x1004a60]
+  ret void
+[BB 0x1004ab0]
+  br label %6
+Successor: 0x1004bf0
+[BB 0x1004bf0]
+[Caller:   call void (...) @__VERIFIER_error() #2]
+[Callee: __VERIFIER_error]
+  unreachable
+[Function: __VERIFIER_error]

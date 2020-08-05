@@ -1,0 +1,100 @@
+[Function: main]
+[BB 0x179f500]
+  %1 = alloca i32, align 4
+  %2 = alloca i32, align 4
+  %3 = alloca i32, align 4
+  store i32 0, i32* %1, align 4
+[Caller:   %4 = call i32 @__VERIFIER_nondet_int()]
+[Callee: __VERIFIER_nondet_int]
+  store i32 %4, i32* %3, align 4
+  store i32 0, i32* %2, align 4
+  br label %5
+Successor: 0x179f990
+[BB 0x179f990]
+  %6 = load i32, i32* %2, align 4
+  %7 = icmp slt i32 %6, 100000
+  br i1 %7, label %8, label %20
+Successor: 0x179fb50
+Successor: 0x179fba0
+[BB 0x179fb50]
+  %9 = load i32, i32* %3, align 4
+  %10 = icmp sgt i32 %9, 5
+  br i1 %10, label %11, label %12
+Successor: 0x179f820
+Successor: 0x179fe30
+[BB 0x179fba0]
+  store i32 0, i32* %2, align 4
+  br label %21
+Successor: 0x17a05f0
+[BB 0x179f820]
+  br label %20
+Successor: 0x179fba0
+[BB 0x179fe30]
+  %13 = load i32, i32* %2, align 4
+  %14 = sext i32 %13 to i64
+  %15 = getelementptr inbounds [100000 x %struct.S], [100000 x %struct.S]* @s, i64 0, i64 %14
+  %16 = getelementptr inbounds %struct.S, %struct.S* %15, i32 0, i32 0
+  store i32 10, i32* %16, align 4
+  br label %17
+Successor: 0x17a02a0
+[BB 0x17a05f0]
+  %22 = load i32, i32* %2, align 4
+  %23 = icmp slt i32 %22, 100000
+  br i1 %23, label %24, label %39
+Successor: 0x17a07b0
+Successor: 0x17a0800
+[BB 0x17a02a0]
+  %18 = load i32, i32* %2, align 4
+  %19 = add nsw i32 %18, 1
+  store i32 %19, i32* %2, align 4
+  br label %5
+Successor: 0x179f990
+[BB 0x17a07b0]
+  %25 = load i32, i32* %3, align 4
+  %26 = icmp sle i32 %25, 5
+  br i1 %26, label %27, label %35
+Successor: 0x17a0a00
+Successor: 0x17a0a50
+[BB 0x17a0800]
+  ret i32 0
+[BB 0x17a0a00]
+  %28 = load i32, i32* %2, align 4
+  %29 = sext i32 %28 to i64
+  %30 = getelementptr inbounds [100000 x %struct.S], [100000 x %struct.S]* @s, i64 0, i64 %29
+  %31 = getelementptr inbounds %struct.S, %struct.S* %30, i32 0, i32 0
+  %32 = load i32, i32* %31, align 4
+  %33 = icmp eq i32 %32, 10
+  %34 = zext i1 %33 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %34)]
+[Callee: __VERIFIER_assert]
+  br label %35
+Successor: 0x17a0a50
+[BB 0x17a0a50]
+  br label %36
+Successor: 0x17a12f0
+[BB 0x17a12f0]
+  %37 = load i32, i32* %2, align 4
+  %38 = add nsw i32 %37, 1
+  store i32 %38, i32* %2, align 4
+  br label %21
+Successor: 0x17a05f0
+[Function: __VERIFIER_nondet_int]
+[Function: __VERIFIER_assert]
+[BB 0x179e7d0]
+  %2 = alloca i32, align 4
+  store i32 %0, i32* %2, align 4
+  %3 = load i32, i32* %2, align 4
+  %4 = icmp ne i32 %3, 0
+  br i1 %4, label %7, label %5
+Successor: 0x179f000
+Successor: 0x179f050
+[BB 0x179f000]
+  ret void
+[BB 0x179f050]
+  br label %6
+Successor: 0x179f190
+[BB 0x179f190]
+[Caller:   call void (...) @__VERIFIER_error() #3]
+[Callee: __VERIFIER_error]
+  unreachable
+[Function: __VERIFIER_error]

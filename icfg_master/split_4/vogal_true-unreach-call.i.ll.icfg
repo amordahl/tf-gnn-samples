@@ -1,0 +1,227 @@
+[Function: main]
+[BB 0xe39f80]
+  %1 = alloca i32, align 4
+  %2 = alloca [5 x i8], align 1
+  %3 = alloca [11 x i8], align 1
+  %4 = alloca i32, align 4
+  %5 = alloca i32, align 4
+  %6 = alloca i32, align 4
+  %7 = alloca i32, align 4
+  %8 = alloca i32, align 4
+  %9 = alloca i32, align 4
+  store i32 0, i32* %1, align 4
+  %10 = bitcast [11 x i8]* %3 to i8*
+[Caller:   call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 1 %10, i8* align 1 getelementptr inbounds ([11 x i8], [11 x i8]* @__const.main.vogal_array, i32 0, i32 0), i64 11, i1 false)]
+[Callee: llvm.memcpy.p0i8.p0i8.i64]
+  store i32 0, i32* %4, align 4
+  br label %11
+Successor: 0xe3ab50
+[BB 0xe3ab50]
+  %12 = load i32, i32* %4, align 4
+  %13 = icmp ult i32 %12, 5
+  br i1 %13, label %14, label %22
+Successor: 0xe3ad50
+Successor: 0xe3ada0
+[BB 0xe3ad50]
+[Caller:   %15 = call signext i8 (...) @__VERIFIER_nondet_char()]
+[Callee: __VERIFIER_nondet_char]
+  %16 = load i32, i32* %4, align 4
+  %17 = zext i32 %16 to i64
+  %18 = getelementptr inbounds [5 x i8], [5 x i8]* %2, i64 0, i64 %17
+  store i8 %15, i8* %18, align 1
+  br label %19
+Successor: 0xe3b2d0
+[BB 0xe3ada0]
+  %23 = getelementptr inbounds [5 x i8], [5 x i8]* %2, i64 0, i64 4
+  %24 = load i8, i8* %23, align 1
+  %25 = sext i8 %24 to i32
+  %26 = icmp eq i32 %25, 0
+  br i1 %26, label %28, label %27
+Successor: 0xe3b830
+Successor: 0xe3b880
+[BB 0xe3b2d0]
+  %20 = load i32, i32* %4, align 4
+  %21 = add i32 %20, 1
+  store i32 %21, i32* %4, align 4
+  br label %11
+Successor: 0xe3ab50
+[BB 0xe3b830]
+  store i32 0, i32* %8, align 4
+  br label %29
+Successor: 0xe3bb60
+[BB 0xe3b880]
+  store i32 0, i32* %1, align 4
+  br label %110
+Successor: 0xe3ba10
+[BB 0xe3bb60]
+  %30 = load i32, i32* %8, align 4
+  %31 = zext i32 %30 to i64
+  %32 = getelementptr inbounds [5 x i8], [5 x i8]* %2, i64 0, i64 %31
+  %33 = load i8, i8* %32, align 1
+  %34 = sext i8 %33 to i32
+  %35 = icmp ne i32 %34, 0
+  br i1 %35, label %36, label %39
+Successor: 0xe3c140
+Successor: 0xe3c190
+[BB 0xe3ba10]
+  %111 = load i32, i32* %1, align 4
+  ret i32 %111
+[BB 0xe3c140]
+  %37 = load i32, i32* %8, align 4
+  %38 = add i32 %37, 1
+  store i32 %38, i32* %8, align 4
+  br label %29
+Successor: 0xe3bb60
+[BB 0xe3c190]
+  store i32 0, i32* %6, align 4
+  store i32 0, i32* %4, align 4
+  br label %40
+Successor: 0xe3c5f0
+[BB 0xe3c5f0]
+  %41 = load i32, i32* %4, align 4
+  %42 = load i32, i32* %8, align 4
+  %43 = icmp ult i32 %41, %42
+  br i1 %43, label %44, label %71
+Successor: 0xe3c820
+Successor: 0xe3c870
+[BB 0xe3c820]
+  store i32 0, i32* %5, align 4
+  br label %45
+Successor: 0xe3ca00
+[BB 0xe3c870]
+  store i32 0, i32* %4, align 4
+  store i32 0, i32* %9, align 4
+  br label %72
+Successor: 0xe3e150
+[BB 0xe3ca00]
+  %46 = load i32, i32* %5, align 4
+  %47 = icmp ult i32 %46, 2
+  br i1 %47, label %48, label %67
+Successor: 0xe3cbf0
+Successor: 0xe3cc40
+[BB 0xe3e150]
+  %73 = load i32, i32* %4, align 4
+  %74 = zext i32 %73 to i64
+  %75 = getelementptr inbounds [5 x i8], [5 x i8]* %2, i64 0, i64 %74
+  %76 = load i8, i8* %75, align 1
+  %77 = sext i8 %76 to i32
+  %78 = icmp ne i32 %77, 0
+  br i1 %78, label %79, label %105
+Successor: 0xe3e520
+Successor: 0xe3e570
+[BB 0xe3cbf0]
+  %49 = load i32, i32* %4, align 4
+  %50 = zext i32 %49 to i64
+  %51 = getelementptr inbounds [5 x i8], [5 x i8]* %2, i64 0, i64 %50
+  %52 = load i8, i8* %51, align 1
+  %53 = sext i8 %52 to i32
+  %54 = load i32, i32* %5, align 4
+  %55 = zext i32 %54 to i64
+  %56 = getelementptr inbounds [11 x i8], [11 x i8]* %3, i64 0, i64 %55
+  %57 = load i8, i8* %56, align 1
+  %58 = sext i8 %57 to i32
+  %59 = icmp eq i32 %53, %58
+  br i1 %59, label %60, label %63
+Successor: 0xe3d310
+Successor: 0xe3d360
+[BB 0xe3cc40]
+  br label %68
+Successor: 0xe3dd70
+[BB 0xe3e520]
+  store i32 0, i32* %5, align 4
+  br label %80
+Successor: 0xe3e700
+[BB 0xe3e570]
+  %106 = load i32, i32* %9, align 4
+  %107 = load i32, i32* %6, align 4
+  %108 = icmp eq i32 %106, %107
+  %109 = zext i1 %108 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %109)]
+[Callee: __VERIFIER_assert]
+  store i32 0, i32* %1, align 4
+  br label %110
+Successor: 0xe3ba10
+[BB 0xe3d310]
+  %61 = load i32, i32* %6, align 4
+  %62 = add i32 %61, 1
+  store i32 %62, i32* %6, align 4
+  br label %63
+Successor: 0xe3d360
+[BB 0xe3d360]
+  br label %64
+Successor: 0xe3d6a0
+[BB 0xe3dd70]
+  %69 = load i32, i32* %4, align 4
+  %70 = add i32 %69, 1
+  store i32 %70, i32* %4, align 4
+  br label %40
+Successor: 0xe3c5f0
+[BB 0xe3e700]
+  %81 = load i32, i32* %5, align 4
+  %82 = icmp ult i32 %81, 2
+  br i1 %82, label %83, label %102
+Successor: 0xe3e8c0
+Successor: 0xe3e910
+[BB 0xe3d6a0]
+  %65 = load i32, i32* %5, align 4
+  %66 = add i32 %65, 1
+  store i32 %66, i32* %5, align 4
+  br label %45
+Successor: 0xe3ca00
+[BB 0xe3e8c0]
+  %84 = load i32, i32* %4, align 4
+  %85 = zext i32 %84 to i64
+  %86 = getelementptr inbounds [5 x i8], [5 x i8]* %2, i64 0, i64 %85
+  %87 = load i8, i8* %86, align 1
+  %88 = sext i8 %87 to i32
+  %89 = load i32, i32* %5, align 4
+  %90 = zext i32 %89 to i64
+  %91 = getelementptr inbounds [11 x i8], [11 x i8]* %3, i64 0, i64 %90
+  %92 = load i8, i8* %91, align 1
+  %93 = sext i8 %92 to i32
+  %94 = icmp eq i32 %88, %93
+  br i1 %94, label %95, label %98
+Successor: 0xe3efa0
+Successor: 0xe3eff0
+[BB 0xe3e910]
+  %103 = load i32, i32* %4, align 4
+  %104 = add i32 %103, 1
+  store i32 %104, i32* %4, align 4
+  br label %72
+Successor: 0xe3e150
+[BB 0xe3efa0]
+  %96 = load i32, i32* %9, align 4
+  %97 = add nsw i32 %96, 1
+  store i32 %97, i32* %9, align 4
+  br label %98
+Successor: 0xe3eff0
+[BB 0xe3eff0]
+  br label %99
+Successor: 0xe3f2f0
+[BB 0xe3f2f0]
+  %100 = load i32, i32* %5, align 4
+  %101 = add i32 %100, 1
+  store i32 %101, i32* %5, align 4
+  br label %80
+Successor: 0xe3e700
+[Function: llvm.memcpy.p0i8.p0i8.i64]
+[Function: __VERIFIER_nondet_char]
+[Function: __VERIFIER_assert]
+[BB 0xe391f0]
+  %2 = alloca i32, align 4
+  store i32 %0, i32* %2, align 4
+  %3 = load i32, i32* %2, align 4
+  %4 = icmp ne i32 %3, 0
+  br i1 %4, label %7, label %5
+Successor: 0xe39a20
+Successor: 0xe39a70
+[BB 0xe39a20]
+  ret void
+[BB 0xe39a70]
+  br label %6
+Successor: 0xe39bb0
+[BB 0xe39bb0]
+[Caller:   call void (...) @__VERIFIER_error() #4]
+[Callee: __VERIFIER_error]
+  unreachable
+[Function: __VERIFIER_error]

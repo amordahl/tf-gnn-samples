@@ -1,0 +1,121 @@
+[Function: main]
+[BB 0x1adda80]
+  %1 = alloca i32, align 4
+  %2 = alloca double, align 8
+  store i32 0, i32* %1, align 4
+[Caller:   %3 = call double @remainder(double 0x4014666660000000, double 3.000000e+00) #4]
+[Callee: remainder]
+  %4 = fcmp oeq double %3, 0xBFECCCCD00000000
+  %5 = zext i1 %4 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %5)]
+[Callee: __VERIFIER_assert]
+[Caller:   %6 = call double @remainder(double 0x4014666660000000, double -3.000000e+00) #4]
+[Callee: remainder]
+  %7 = fcmp oeq double %6, 0xBFECCCCD00000000
+  %8 = zext i1 %7 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %8)]
+[Callee: __VERIFIER_assert]
+[Caller:   %9 = call double @remainder(double 0xC014666660000000, double -3.000000e+00) #4]
+[Callee: remainder]
+  %10 = fcmp oeq double %9, 0x3FECCCCD00000000
+  %11 = zext i1 %10 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %11)]
+[Callee: __VERIFIER_assert]
+[Caller:   %12 = call double @remainder(double 0xC014666660000000, double 3.000000e+00) #4]
+[Callee: remainder]
+  %13 = fcmp oeq double %12, 0x3FECCCCD00000000
+  %14 = zext i1 %13 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %14)]
+[Callee: __VERIFIER_assert]
+[Caller:   %15 = call double @remainder(double 0.000000e+00, double 1.000000e+00) #4]
+[Callee: remainder]
+  store double %15, double* %2, align 8
+  %16 = load double, double* %2, align 8
+  %17 = fcmp oeq double %16, 0.000000e+00
+  br i1 %17, label %18, label %23
+Successor: 0x1adf730
+Successor: 0x1adf7c0
+[BB 0x1adf730]
+  %19 = load double, double* %2, align 8
+[Caller:   %20 = call i32 @__signbit(double %19) #5]
+[Callee: __signbit]
+  %21 = icmp ne i32 %20, 0
+  %22 = xor i1 %21, true
+  br label %23
+Successor: 0x1adf7c0
+[BB 0x1adf7c0]
+  %24 = phi i1 [ false, %0 ], [ %22, %18 ]
+  %25 = zext i1 %24 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %25)]
+[Callee: __VERIFIER_assert]
+[Caller:   %26 = call double @remainder(double -0.000000e+00, double 1.000000e+00) #4]
+[Callee: remainder]
+  store double %26, double* %2, align 8
+  %27 = load double, double* %2, align 8
+  %28 = fcmp oeq double %27, 0.000000e+00
+  br i1 %28, label %29, label %33
+Successor: 0x1ae0290
+Successor: 0x1ae02e0
+[BB 0x1ae0290]
+  %30 = load double, double* %2, align 8
+[Caller:   %31 = call i32 @__signbit(double %30) #5]
+[Callee: __signbit]
+  %32 = icmp ne i32 %31, 0
+  br label %33
+Successor: 0x1ae02e0
+[BB 0x1ae02e0]
+  %34 = phi i1 [ false, %23 ], [ %32, %29 ]
+  %35 = zext i1 %34 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %35)]
+[Callee: __VERIFIER_assert]
+[Caller:   %36 = call double @remainder(double 5.100000e+00, double 0.000000e+00) #4]
+[Callee: remainder]
+[Caller:   %37 = call i32 @__isnan(double %36) #5]
+[Callee: __isnan]
+[Caller:   call void @__VERIFIER_assert(i32 %37)]
+[Callee: __VERIFIER_assert]
+[Caller:   %38 = call double @remainder(double 5.100000e+00, double 0x7FF0000000000000) #4]
+[Callee: remainder]
+  %39 = fcmp oeq double %38, 5.100000e+00
+  %40 = zext i1 %39 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %40)]
+[Callee: __VERIFIER_assert]
+  %41 = load i32, i32* %1, align 4
+  ret i32 %41
+[Function: remainder]
+[Function: __VERIFIER_assert]
+[BB 0x1adccf0]
+  %2 = alloca i32, align 4
+  store i32 %0, i32* %2, align 4
+  %3 = load i32, i32* %2, align 4
+  %4 = icmp ne i32 %3, 0
+  br i1 %4, label %7, label %5
+Successor: 0x1add520
+Successor: 0x1add570
+[BB 0x1add520]
+  ret void
+[BB 0x1add570]
+  br label %6
+Successor: 0x1add6b0
+[BB 0x1add6b0]
+[Caller:   call void (...) @__VERIFIER_error() #4]
+[Callee: __VERIFIER_error]
+  unreachable
+[Function: remainder]
+[Function: __VERIFIER_assert]
+[Function: remainder]
+[Function: __VERIFIER_assert]
+[Function: remainder]
+[Function: __VERIFIER_assert]
+[Function: remainder]
+[Function: __signbit]
+[Function: __VERIFIER_assert]
+[Function: remainder]
+[Function: __signbit]
+[Function: __VERIFIER_assert]
+[Function: remainder]
+[Function: __isnan]
+[Function: __VERIFIER_assert]
+[Function: remainder]
+[Function: __VERIFIER_assert]
+[Function: __VERIFIER_error]

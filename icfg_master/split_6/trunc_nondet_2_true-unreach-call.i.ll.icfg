@@ -1,0 +1,79 @@
+[Function: main]
+[BB 0x1c07720]
+  %1 = alloca i32, align 4
+  %2 = alloca double, align 8
+  %3 = alloca double, align 8
+  store i32 0, i32* %1, align 4
+[Caller:   %4 = call double (...) @__VERIFIER_nondet_double()]
+[Callee: __VERIFIER_nondet_double]
+  store double %4, double* %2, align 8
+  %5 = load double, double* %2, align 8
+[Caller:   %6 = call i32 @__isinf(double %5) #5]
+[Callee: __isinf]
+  %7 = icmp ne i32 %6, 0
+  %8 = xor i1 %7, true
+  %9 = zext i1 %8 to i32
+[Caller:   call void @__VERIFIER_assume(i32 %9)]
+[Callee: __VERIFIER_assume]
+  %10 = load double, double* %2, align 8
+[Caller:   %11 = call i32 @__isnan(double %10) #5]
+[Callee: __isnan]
+  %12 = icmp ne i32 %11, 0
+  %13 = xor i1 %12, true
+  %14 = zext i1 %13 to i32
+[Caller:   call void @__VERIFIER_assume(i32 %14)]
+[Callee: __VERIFIER_assume]
+  %15 = load double, double* %2, align 8
+  %16 = fcmp olt double %15, 0x43E0000000000000
+  br i1 %16, label %17, label %20
+Successor: 0x1c09270
+Successor: 0x1c09300
+[BB 0x1c09270]
+  %18 = load double, double* %2, align 8
+  %19 = fcmp ogt double %18, 0xC3E0000000000000
+  br label %20
+Successor: 0x1c09300
+[BB 0x1c09300]
+  %21 = phi i1 [ false, %0 ], [ %19, %17 ]
+  %22 = zext i1 %21 to i32
+[Caller:   call void @__VERIFIER_assume(i32 %22)]
+[Callee: __VERIFIER_assume]
+  %23 = load double, double* %2, align 8
+  %24 = fptosi double %23 to i64
+  %25 = sitofp i64 %24 to double
+  store double %25, double* %3, align 8
+  %26 = load double, double* %2, align 8
+[Caller:   %27 = call double @llvm.trunc.f64(double %26)]
+[Callee: llvm.trunc.f64]
+  %28 = load double, double* %3, align 8
+  %29 = fcmp oeq double %27, %28
+  %30 = zext i1 %29 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %30)]
+[Callee: __VERIFIER_assert]
+  ret i32 0
+[Function: __VERIFIER_nondet_double]
+[Function: __isinf]
+[Function: __VERIFIER_assume]
+[Function: __isnan]
+[Function: __VERIFIER_assume]
+[Function: __VERIFIER_assume]
+[Function: llvm.trunc.f64]
+[Function: __VERIFIER_assert]
+[BB 0x1c069f0]
+  %2 = alloca i32, align 4
+  store i32 %0, i32* %2, align 4
+  %3 = load i32, i32* %2, align 4
+  %4 = icmp ne i32 %3, 0
+  br i1 %4, label %7, label %5
+Successor: 0x1c07220
+Successor: 0x1c07270
+[BB 0x1c07220]
+  ret void
+[BB 0x1c07270]
+  br label %6
+Successor: 0x1c073b0
+[BB 0x1c073b0]
+[Caller:   call void (...) @__VERIFIER_error() #5]
+[Callee: __VERIFIER_error]
+  unreachable
+[Function: __VERIFIER_error]

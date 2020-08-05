@@ -1,0 +1,49 @@
+[Function: main]
+[BB 0x2568ed0]
+  %1 = alloca i32, align 4
+  %2 = alloca i32, align 4
+  store i32 0, i32* %1, align 4
+  store i32 268435440, i32* %2, align 4
+  br label %3
+Successor: 0x2569050
+[BB 0x2569050]
+  %4 = load i32, i32* %2, align 4
+  %5 = icmp ugt i32 %4, 0
+  br i1 %5, label %6, label %9
+Successor: 0x2569260
+Successor: 0x25692b0
+[BB 0x2569260]
+  %7 = load i32, i32* %2, align 4
+  %8 = sub i32 %7, 2
+  store i32 %8, i32* %2, align 4
+  br label %3
+Successor: 0x2569050
+[BB 0x25692b0]
+  %10 = load i32, i32* %2, align 4
+  %11 = urem i32 %10, 2
+  %12 = icmp ne i32 %11, 0
+  %13 = xor i1 %12, true
+  %14 = zext i1 %13 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %14)]
+[Callee: __VERIFIER_assert]
+  %15 = load i32, i32* %1, align 4
+  ret i32 %15
+[Function: __VERIFIER_assert]
+[BB 0x2568140]
+  %2 = alloca i32, align 4
+  store i32 %0, i32* %2, align 4
+  %3 = load i32, i32* %2, align 4
+  %4 = icmp ne i32 %3, 0
+  br i1 %4, label %7, label %5
+Successor: 0x2568970
+Successor: 0x25689c0
+[BB 0x2568970]
+  ret void
+[BB 0x25689c0]
+  br label %6
+Successor: 0x2568b00
+[BB 0x2568b00]
+[Caller:   call void (...) @__VERIFIER_error() #2]
+[Callee: __VERIFIER_error]
+  unreachable
+[Function: __VERIFIER_error]

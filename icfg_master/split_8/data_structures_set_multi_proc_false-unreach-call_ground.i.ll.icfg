@@ -1,0 +1,252 @@
+[Function: main]
+[BB 0x875640]
+  %1 = alloca i32, align 4
+  %2 = alloca i32, align 4
+  %3 = alloca [100000 x i32], align 16
+  %4 = alloca i32, align 4
+  %5 = alloca i32, align 4
+  %6 = alloca [100000 x i32], align 16
+  %7 = alloca i32, align 4
+  store i32 0, i32* %1, align 4
+  store i32 0, i32* %2, align 4
+  store i32 0, i32* %4, align 4
+  br label %8
+Successor: 0x876200
+[BB 0x876200]
+  %9 = load i32, i32* %4, align 4
+  %10 = load i32, i32* %2, align 4
+  %11 = icmp slt i32 %9, %10
+  br i1 %11, label %12, label %37
+Successor: 0x875eb0
+Successor: 0x8764c0
+[BB 0x875eb0]
+  %13 = load i32, i32* %4, align 4
+  %14 = add nsw i32 %13, 1
+  store i32 %14, i32* %5, align 4
+  br label %15
+Successor: 0x876750
+[BB 0x8764c0]
+  store i32 0, i32* %7, align 4
+  br label %38
+Successor: 0x8778d0
+[BB 0x876750]
+  %16 = load i32, i32* %5, align 4
+  %17 = load i32, i32* %2, align 4
+  %18 = icmp slt i32 %16, %17
+  br i1 %18, label %19, label %33
+Successor: 0x8768f0
+Successor: 0x876940
+[BB 0x8778d0]
+  %39 = load i32, i32* %7, align 4
+  %40 = icmp slt i32 %39, 100000
+  br i1 %40, label %41, label %62
+Successor: 0x877a90
+Successor: 0x877ae0
+[BB 0x8768f0]
+  %20 = load i32, i32* %4, align 4
+  %21 = sext i32 %20 to i64
+  %22 = getelementptr inbounds [100000 x i32], [100000 x i32]* %3, i64 0, i64 %21
+  %23 = load i32, i32* %22, align 4
+  %24 = load i32, i32* %5, align 4
+  %25 = sext i32 %24 to i64
+  %26 = getelementptr inbounds [100000 x i32], [100000 x i32]* %3, i64 0, i64 %25
+  %27 = load i32, i32* %26, align 4
+  %28 = icmp ne i32 %23, %27
+  %29 = zext i1 %28 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %29)]
+[Callee: __VERIFIER_assert]
+  br label %30
+Successor: 0x8770b0
+[BB 0x876940]
+  br label %34
+Successor: 0x877580
+[BB 0x877a90]
+  %42 = getelementptr inbounds [100000 x i32], [100000 x i32]* %3, i32 0, i32 0
+  %43 = load i32, i32* %2, align 4
+  %44 = load i32, i32* %7, align 4
+  %45 = sext i32 %44 to i64
+  %46 = getelementptr inbounds [100000 x i32], [100000 x i32]* %6, i64 0, i64 %45
+  %47 = load i32, i32* %46, align 4
+[Caller:   %48 = call i32 @elem_exists(i32* %42, i32 %43, i32 %47)]
+[Callee: elem_exists]
+  %49 = icmp ne i32 %48, 0
+  br i1 %49, label %58, label %50
+Successor: 0x878000
+Successor: 0x878050
+[BB 0x877ae0]
+  store i32 0, i32* %4, align 4
+  br label %63
+Successor: 0x878930
+[BB 0x8770b0]
+  %31 = load i32, i32* %5, align 4
+  %32 = add nsw i32 %31, 1
+  store i32 %32, i32* %5, align 4
+  br label %15
+Successor: 0x876750
+[BB 0x877580]
+  %35 = load i32, i32* %4, align 4
+  %36 = add nsw i32 %35, 1
+  store i32 %36, i32* %4, align 4
+  br label %8
+Successor: 0x876200
+[BB 0x878000]
+  br label %59
+Successor: 0x8785e0
+[BB 0x878050]
+  %51 = getelementptr inbounds [100000 x i32], [100000 x i32]* %3, i32 0, i32 0
+  %52 = load i32, i32* %2, align 4
+  %53 = load i32, i32* %7, align 4
+  %54 = sext i32 %53 to i64
+  %55 = getelementptr inbounds [100000 x i32], [100000 x i32]* %6, i64 0, i64 %54
+  %56 = load i32, i32* %55, align 4
+[Caller:   %57 = call i32 @insert(i32* %51, i32 %52, i32 %56)]
+[Callee: insert]
+  store i32 %57, i32* %2, align 4
+  br label %58
+Successor: 0x878000
+[BB 0x878930]
+  %64 = load i32, i32* %4, align 4
+  %65 = load i32, i32* %2, align 4
+  %66 = icmp slt i32 %64, %65
+  br i1 %66, label %67, label %92
+Successor: 0x878f70
+Successor: 0x878fc0
+[BB 0x8785e0]
+  %60 = load i32, i32* %7, align 4
+  %61 = add nsw i32 %60, 1
+  store i32 %61, i32* %7, align 4
+  br label %38
+Successor: 0x8778d0
+[BB 0x878f70]
+  %68 = load i32, i32* %4, align 4
+  %69 = add nsw i32 %68, 1
+  store i32 %69, i32* %5, align 4
+  br label %70
+Successor: 0x879250
+[BB 0x878fc0]
+  ret i32 0
+[BB 0x879250]
+  %71 = load i32, i32* %5, align 4
+  %72 = load i32, i32* %2, align 4
+  %73 = icmp slt i32 %71, %72
+  br i1 %73, label %74, label %88
+Successor: 0x879480
+Successor: 0x8794d0
+[BB 0x879480]
+  %75 = load i32, i32* %4, align 4
+  %76 = sext i32 %75 to i64
+  %77 = getelementptr inbounds [100000 x i32], [100000 x i32]* %3, i64 0, i64 %76
+  %78 = load i32, i32* %77, align 4
+  %79 = load i32, i32* %5, align 4
+  %80 = sext i32 %79 to i64
+  %81 = getelementptr inbounds [100000 x i32], [100000 x i32]* %3, i64 0, i64 %80
+  %82 = load i32, i32* %81, align 4
+  %83 = icmp ne i32 %78, %82
+  %84 = zext i1 %83 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %84)]
+[Callee: __VERIFIER_assert]
+  br label %85
+Successor: 0x879c10
+[BB 0x8794d0]
+  br label %89
+Successor: 0x879ed0
+[BB 0x879c10]
+  %86 = load i32, i32* %5, align 4
+  %87 = add nsw i32 %86, 1
+  store i32 %87, i32* %5, align 4
+  br label %70
+Successor: 0x879250
+[BB 0x879ed0]
+  %90 = load i32, i32* %4, align 4
+  %91 = add nsw i32 %90, 1
+  store i32 %91, i32* %4, align 4
+  br label %63
+Successor: 0x878930
+[Function: __VERIFIER_assert]
+[BB 0x872b60]
+  %2 = alloca i32, align 4
+  store i32 %0, i32* %2, align 4
+  %3 = load i32, i32* %2, align 4
+  %4 = icmp ne i32 %3, 0
+  br i1 %4, label %7, label %5
+Successor: 0x873320
+Successor: 0x873370
+[BB 0x873320]
+  ret void
+[BB 0x873370]
+  br label %6
+Successor: 0x8734b0
+[BB 0x8734b0]
+[Caller:   call void (...) @__VERIFIER_error() #2]
+[Callee: __VERIFIER_error]
+  unreachable
+[Function: elem_exists]
+[BB 0x874220]
+  %4 = alloca i32, align 4
+  %5 = alloca i32*, align 8
+  %6 = alloca i32, align 4
+  %7 = alloca i32, align 4
+  %8 = alloca i32, align 4
+  store i32* %0, i32** %5, align 8
+  store i32 %1, i32* %6, align 4
+  store i32 %2, i32* %7, align 4
+  store i32 0, i32* %8, align 4
+  br label %9
+Successor: 0x8742e0
+[BB 0x8742e0]
+  %10 = load i32, i32* %8, align 4
+  %11 = load i32, i32* %6, align 4
+  %12 = icmp slt i32 %10, %11
+  br i1 %12, label %13, label %26
+Successor: 0x8749a0
+Successor: 0x8749f0
+[BB 0x8749a0]
+  %14 = load i32*, i32** %5, align 8
+  %15 = load i32, i32* %8, align 4
+  %16 = sext i32 %15 to i64
+  %17 = getelementptr inbounds i32, i32* %14, i64 %16
+  %18 = load i32, i32* %17, align 4
+  %19 = load i32, i32* %7, align 4
+  %20 = icmp eq i32 %18, %19
+  br i1 %20, label %21, label %22
+Successor: 0x874dc0
+Successor: 0x874e10
+[BB 0x8749f0]
+  store i32 0, i32* %4, align 4
+  br label %27
+Successor: 0x874fe0
+[BB 0x874dc0]
+  store i32 0, i32* %4, align 4
+  br label %27
+Successor: 0x874fe0
+[BB 0x874e10]
+  br label %23
+Successor: 0x8750a0
+[BB 0x874fe0]
+  %28 = load i32, i32* %4, align 4
+  ret i32 %28
+[BB 0x8750a0]
+  %24 = load i32, i32* %8, align 4
+  %25 = add nsw i32 %24, 1
+  store i32 %25, i32* %8, align 4
+  br label %9
+Successor: 0x8742e0
+[Function: insert]
+[BB 0x873920]
+  %4 = alloca i32*, align 8
+  %5 = alloca i32, align 4
+  %6 = alloca i32, align 4
+  store i32* %0, i32** %4, align 8
+  store i32 %1, i32* %5, align 4
+  store i32 %2, i32* %6, align 4
+  %7 = load i32, i32* %6, align 4
+  %8 = load i32*, i32** %4, align 8
+  %9 = load i32, i32* %5, align 4
+  %10 = sext i32 %9 to i64
+  %11 = getelementptr inbounds i32, i32* %8, i64 %10
+  store i32 %7, i32* %11, align 4
+  %12 = load i32, i32* %5, align 4
+  %13 = add nsw i32 %12, 1
+  ret i32 %13
+[Function: __VERIFIER_assert]
+[Function: __VERIFIER_error]

@@ -1,0 +1,233 @@
+[Function: main]
+[BB 0x251ba60]
+  %1 = alloca i32, align 4
+  %2 = alloca double, align 8
+  %3 = alloca double, align 8
+  %4 = alloca double, align 8
+  %5 = alloca double, align 8
+  store i32 0, i32* %1, align 4
+  store double 1.000000e-08, double* %5, align 8
+  store double 1.000000e+00, double* %2, align 8
+  br label %6
+Successor: 0x251bf30
+[BB 0x251bf30]
+  %7 = load double, double* %2, align 8
+  %8 = fcmp ole double %7, 2.000000e+01
+  br i1 %8, label %9, label %38
+Successor: 0x251bcc0
+Successor: 0x251c180
+[BB 0x251bcc0]
+[Caller:   %10 = call double (...) @__VERIFIER_nondet_double()]
+[Callee: __VERIFIER_nondet_double]
+  store double %10, double* %3, align 8
+  %11 = load double, double* %3, align 8
+  %12 = load double, double* %2, align 8
+  %13 = load double, double* %5, align 8
+  %14 = fsub double %12, %13
+  %15 = fcmp oge double %11, %14
+  br i1 %15, label %16, label %22
+Successor: 0x251c7e0
+Successor: 0x251c870
+[BB 0x251c180]
+  ret i32 0
+[BB 0x251c7e0]
+  %17 = load double, double* %3, align 8
+  %18 = load double, double* %2, align 8
+  %19 = load double, double* %5, align 8
+  %20 = fadd double %18, %19
+  %21 = fcmp ole double %17, %20
+  br label %22
+Successor: 0x251c870
+[BB 0x251c870]
+  %23 = phi i1 [ false, %9 ], [ %21, %16 ]
+  %24 = zext i1 %23 to i32
+[Caller:   call void @__VERIFIER_assume(i32 %24)]
+[Callee: __VERIFIER_assume]
+  %25 = load double, double* %3, align 8
+[Caller:   %26 = call double @SqrtR(double %25)]
+[Callee: SqrtR]
+  store double %26, double* %4, align 8
+  %27 = load double, double* %4, align 8
+  %28 = fcmp oge double %27, 9.000000e-01
+  br i1 %28, label %29, label %32
+Successor: 0x251d280
+Successor: 0x251d2d0
+[BB 0x251d280]
+  %30 = load double, double* %4, align 8
+  %31 = fcmp ole double %30, 5.000000e+00
+  br label %32
+Successor: 0x251d2d0
+[BB 0x251d2d0]
+  %33 = phi i1 [ false, %22 ], [ %31, %29 ]
+  %34 = zext i1 %33 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %34)]
+[Callee: __VERIFIER_assert]
+  br label %35
+Successor: 0x251d7c0
+[BB 0x251d7c0]
+  %36 = load double, double* %2, align 8
+  %37 = fadd double %36, 1.000000e+00
+  store double %37, double* %2, align 8
+  br label %6
+Successor: 0x251bf30
+[Function: __VERIFIER_nondet_double]
+[Function: __VERIFIER_assume]
+[Function: SqrtR]
+[BB 0x2517530]
+  %2 = alloca double, align 8
+  %3 = alloca double, align 8
+  %4 = alloca double, align 8
+  %5 = alloca double, align 8
+  %6 = alloca double, align 8
+  %7 = alloca double, align 8
+  %8 = alloca i32, align 4
+  %9 = alloca i32, align 4
+  %10 = alloca double, align 8
+  store double %0, double* %2, align 8
+  %11 = load double, double* %2, align 8
+  %12 = fcmp ole double %11, 1.000000e+00
+  br i1 %12, label %13, label %14
+Successor: 0x2517700
+Successor: 0x2517af0
+[BB 0x2517700]
+  store double 1.000000e+00, double* %3, align 8
+  br label %17
+Successor: 0x2517cc0
+[BB 0x2517af0]
+  %15 = load double, double* %2, align 8
+  %16 = fdiv double 1.000000e+00, %15
+  store double %16, double* %3, align 8
+  br label %17
+Successor: 0x2517cc0
+[BB 0x2517cc0]
+  %18 = load double, double* %3, align 8
+  store double %18, double* %4, align 8
+  %19 = load double, double* @_EPS, align 8
+  %20 = fmul double 2.000000e+00, %19
+  %21 = load double, double* %3, align 8
+  %22 = load double, double* %4, align 8
+  %23 = fadd double %21, %22
+  %24 = fmul double %20, %23
+  store double %24, double* %5, align 8
+  %25 = load double, double* @_EPS, align 8
+  %26 = load double, double* %3, align 8
+  %27 = load double, double* %4, align 8
+  %28 = fadd double %26, %27
+  %29 = fmul double %25, %28
+  store double %29, double* %6, align 8
+  %30 = load double, double* %6, align 8
+  %31 = fsub double -0.000000e+00, %30
+  store double %31, double* %7, align 8
+  %32 = load double, double* %5, align 8
+  %33 = load double, double* %6, align 8
+  %34 = fcmp ogt double %32, %33
+  br i1 %34, label %39, label %35
+Successor: 0x2518b90
+Successor: 0x2518c20
+[BB 0x2518b90]
+  %40 = phi i1 [ true, %17 ], [ %38, %35 ]
+  %41 = zext i1 %40 to i32
+  store i32 %41, i32* %9, align 4
+  store i32 0, i32* %8, align 4
+  br label %42
+Successor: 0x2519120
+[BB 0x2518c20]
+  %36 = load double, double* %5, align 8
+  %37 = load double, double* %7, align 8
+  %38 = fcmp olt double %36, %37
+  br label %39
+Successor: 0x2518b90
+[BB 0x2519120]
+  %43 = load i32, i32* %9, align 4
+  %44 = icmp ne i32 %43, 0
+  br i1 %44, label %45, label %95
+Successor: 0x25192e0
+Successor: 0x2519330
+[BB 0x25192e0]
+  %46 = load double, double* %2, align 8
+  %47 = load double, double* %3, align 8
+  %48 = fmul double %46, %47
+  %49 = load double, double* %3, align 8
+  %50 = fmul double %48, %49
+  %51 = fsub double 1.000000e+00, %50
+  store double %51, double* %10, align 8
+  %52 = load double, double* %3, align 8
+  %53 = load double, double* %3, align 8
+  %54 = load double, double* %10, align 8
+  %55 = fmul double 8.000000e+00, %54
+  %56 = load double, double* %10, align 8
+  %57 = fmul double 6.000000e+00, %56
+  %58 = load double, double* %10, align 8
+  %59 = fmul double %57, %58
+  %60 = fadd double %55, %59
+  %61 = load double, double* %10, align 8
+  %62 = fmul double 5.000000e+00, %61
+  %63 = load double, double* %10, align 8
+  %64 = fmul double %62, %63
+  %65 = load double, double* %10, align 8
+  %66 = fmul double %64, %65
+  %67 = fadd double %60, %66
+  %68 = fmul double %53, %67
+  %69 = fdiv double %68, 1.600000e+01
+  %70 = fadd double %52, %69
+  store double %70, double* %4, align 8
+  %71 = load double, double* %4, align 8
+  %72 = load double, double* %3, align 8
+  %73 = fsub double %71, %72
+  %74 = fmul double 2.000000e+00, %73
+  store double %74, double* %5, align 8
+  %75 = load double, double* %4, align 8
+  store double %75, double* %3, align 8
+  %76 = load double, double* @_EPS, align 8
+  %77 = load double, double* %3, align 8
+  %78 = load double, double* %4, align 8
+  %79 = fadd double %77, %78
+  %80 = fmul double %76, %79
+  store double %80, double* %6, align 8
+  %81 = load double, double* %6, align 8
+  %82 = fsub double -0.000000e+00, %81
+  store double %82, double* %7, align 8
+  %83 = load double, double* %5, align 8
+  %84 = load double, double* %6, align 8
+  %85 = fcmp ogt double %83, %84
+  br i1 %85, label %90, label %86
+Successor: 0x251b060
+Successor: 0x251b0f0
+[BB 0x2519330]
+  %96 = load double, double* %4, align 8
+  %97 = fdiv double 1.000000e+00, %96
+  ret double %97
+[BB 0x251b060]
+  %91 = phi i1 [ true, %45 ], [ %89, %86 ]
+  %92 = zext i1 %91 to i32
+  store i32 %92, i32* %9, align 4
+  %93 = load i32, i32* %8, align 4
+  %94 = add nsw i32 %93, 1
+  store i32 %94, i32* %8, align 4
+  br label %42
+Successor: 0x2519120
+[BB 0x251b0f0]
+  %87 = load double, double* %5, align 8
+  %88 = load double, double* %7, align 8
+  %89 = fcmp olt double %87, %88
+  br label %90
+Successor: 0x251b060
+[Function: __VERIFIER_assert]
+[BB 0x25167f0]
+  %2 = alloca i32, align 4
+  store i32 %0, i32* %2, align 4
+  %3 = load i32, i32* %2, align 4
+  %4 = icmp ne i32 %3, 0
+  br i1 %4, label %7, label %5
+Successor: 0x2516fb0
+Successor: 0x2517000
+[BB 0x2516fb0]
+  ret void
+[BB 0x2517000]
+  br label %6
+Successor: 0x2517140
+[BB 0x2517140]
+[Caller:   call void (...) @__VERIFIER_error() #3]
+[Callee: __VERIFIER_error]
+  unreachable
+[Function: __VERIFIER_error]

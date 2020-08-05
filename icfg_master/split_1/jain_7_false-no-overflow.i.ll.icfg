@@ -1,0 +1,66 @@
+[Function: main]
+[BB 0xdf72d0]
+  %1 = alloca i32, align 4
+  %2 = alloca i32, align 4
+  %3 = alloca i32, align 4
+  %4 = alloca i32, align 4
+  store i32 0, i32* %1, align 4
+  store i32 0, i32* %2, align 4
+  store i32 0, i32* %3, align 4
+  store i32 0, i32* %4, align 4
+  br label %5
+Successor: 0xdf7670
+[BB 0xdf7670]
+  %6 = load i32, i32* %2, align 4
+[Caller:   %7 = call i32 @__VERIFIER_nondet_int()]
+[Callee: __VERIFIER_nondet_int]
+  %8 = mul nsw i32 1048576, %7
+  %9 = add nsw i32 %6, %8
+  store i32 %9, i32* %2, align 4
+  %10 = load i32, i32* %3, align 4
+[Caller:   %11 = call i32 @__VERIFIER_nondet_int()]
+[Callee: __VERIFIER_nondet_int]
+  %12 = mul nsw i32 2097152, %11
+  %13 = add nsw i32 %10, %12
+  store i32 %13, i32* %3, align 4
+  %14 = load i32, i32* %4, align 4
+[Caller:   %15 = call i32 @__VERIFIER_nondet_int()]
+[Callee: __VERIFIER_nondet_int]
+  %16 = mul nsw i32 4194304, %15
+  %17 = add nsw i32 %14, %16
+  store i32 %17, i32* %4, align 4
+  %18 = load i32, i32* %2, align 4
+  %19 = mul nsw i32 4, %18
+  %20 = load i32, i32* %3, align 4
+  %21 = mul nsw i32 2, %20
+  %22 = sub nsw i32 %19, %21
+  %23 = load i32, i32* %4, align 4
+  %24 = add nsw i32 %22, %23
+  %25 = icmp ne i32 %24, 1048576
+  %26 = zext i1 %25 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %26)]
+[Callee: __VERIFIER_assert]
+  br label %5
+Successor: 0xdf7670
+[Function: __VERIFIER_nondet_int]
+[Function: __VERIFIER_nondet_int]
+[Function: __VERIFIER_nondet_int]
+[Function: __VERIFIER_assert]
+[BB 0xdf6540]
+  %2 = alloca i32, align 4
+  store i32 %0, i32* %2, align 4
+  %3 = load i32, i32* %2, align 4
+  %4 = icmp ne i32 %3, 0
+  br i1 %4, label %7, label %5
+Successor: 0xdf6d70
+Successor: 0xdf6dc0
+[BB 0xdf6d70]
+  ret void
+[BB 0xdf6dc0]
+  br label %6
+Successor: 0xdf6f00
+[BB 0xdf6f00]
+[Caller:   call void (...) @__VERIFIER_error() #3]
+[Callee: __VERIFIER_error]
+  unreachable
+[Function: __VERIFIER_error]

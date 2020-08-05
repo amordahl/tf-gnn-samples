@@ -1,0 +1,293 @@
+[Function: main]
+[BB 0x13a76e0]
+  %1 = alloca i32, align 4
+  %2 = alloca i64, align 8
+  %3 = alloca i64, align 8
+  %4 = alloca i64, align 8
+  store i32 0, i32* %1, align 4
+[Caller:   %5 = call i32 @pthread_create(i64* %2, %union.pthread_attr_t* null, i8* (i8*)* @P0, i8* null) #4]
+[Callee: pthread_create]
+[Caller:   %6 = call i32 @pthread_create(i64* %3, %union.pthread_attr_t* null, i8* (i8*)* @P1, i8* null) #4]
+[Callee: pthread_create]
+[Caller:   %7 = call i32 @pthread_create(i64* %4, %union.pthread_attr_t* null, i8* (i8*)* @P2, i8* null) #4]
+[Callee: pthread_create]
+[Caller:   call void (...) @__VERIFIER_atomic_begin()]
+[Callee: __VERIFIER_atomic_begin]
+  %8 = load i32, i32* @__unbuffered_cnt, align 4
+  %9 = icmp eq i32 %8, 3
+  %10 = zext i1 %9 to i8
+  store i8 %10, i8* @"main$tmp_guard0", align 1
+[Caller:   call void (...) @__VERIFIER_atomic_end()]
+[Callee: __VERIFIER_atomic_end]
+  %11 = load i8, i8* @"main$tmp_guard0", align 1
+  %12 = trunc i8 %11 to i1
+  %13 = zext i1 %12 to i32
+[Caller:   call void @__VERIFIER_assume(i32 %13)]
+[Callee: __VERIFIER_assume]
+[Caller:   call void (...) @__VERIFIER_atomic_begin()]
+[Callee: __VERIFIER_atomic_begin]
+  %14 = load i8, i8* @"x$w_buff0_used", align 1
+  %15 = trunc i8 %14 to i1
+  br i1 %15, label %16, label %21
+Successor: 0x13a8960
+Successor: 0x13a89b0
+[BB 0x13a8960]
+  %17 = load i8, i8* @"x$r_buff0_thd0", align 1
+  %18 = trunc i8 %17 to i1
+  br i1 %18, label %19, label %21
+Successor: 0x13a8b90
+Successor: 0x13a89b0
+[BB 0x13a89b0]
+  %22 = load i8, i8* @"x$w_buff1_used", align 1
+  %23 = trunc i8 %22 to i1
+  br i1 %23, label %24, label %29
+Successor: 0x13a8ea0
+Successor: 0x13a8ef0
+[BB 0x13a8b90]
+  %20 = load i32, i32* @"x$w_buff0", align 4
+  br label %33
+Successor: 0x13a8d00
+[BB 0x13a8ea0]
+  %25 = load i8, i8* @"x$r_buff1_thd0", align 1
+  %26 = trunc i8 %25 to i1
+  br i1 %26, label %27, label %29
+Successor: 0x13a90d0
+Successor: 0x13a8ef0
+[BB 0x13a8ef0]
+  %30 = load i32, i32* @x, align 4
+  br label %31
+Successor: 0x13a9240
+[BB 0x13a8d00]
+  %34 = phi i32 [ %20, %19 ], [ %32, %31 ]
+  store i32 %34, i32* @x, align 4
+  %35 = load i8, i8* @"x$w_buff0_used", align 1
+  %36 = trunc i8 %35 to i1
+  br i1 %36, label %37, label %41
+Successor: 0x13a9690
+Successor: 0x13a96e0
+[BB 0x13a90d0]
+  %28 = load i32, i32* @"x$w_buff1", align 4
+  br label %31
+Successor: 0x13a9240
+[BB 0x13a9240]
+  %32 = phi i32 [ %28, %27 ], [ %30, %29 ]
+  br label %33
+Successor: 0x13a8d00
+[BB 0x13a9690]
+  %38 = load i8, i8* @"x$r_buff0_thd0", align 1
+  %39 = trunc i8 %38 to i1
+  br i1 %39, label %40, label %41
+Successor: 0x13a98c0
+Successor: 0x13a96e0
+[BB 0x13a96e0]
+  %42 = load i8, i8* @"x$w_buff0_used", align 1
+  %43 = trunc i8 %42 to i1
+  %44 = zext i1 %43 to i32
+  br label %45
+Successor: 0x13a99c0
+[BB 0x13a98c0]
+  br label %45
+Successor: 0x13a99c0
+[BB 0x13a99c0]
+  %46 = phi i32 [ 0, %40 ], [ %44, %41 ]
+  %47 = icmp ne i32 %46, 0
+  %48 = zext i1 %47 to i8
+  store i8 %48, i8* @"x$w_buff0_used", align 1
+  %49 = load i8, i8* @"x$w_buff0_used", align 1
+  %50 = trunc i8 %49 to i1
+  br i1 %50, label %51, label %54
+Successor: 0x13a9f60
+Successor: 0x13a9fb0
+[BB 0x13a9f60]
+  %52 = load i8, i8* @"x$r_buff0_thd0", align 1
+  %53 = trunc i8 %52 to i1
+  br i1 %53, label %60, label %54
+Successor: 0x13aa190
+Successor: 0x13a9fb0
+[BB 0x13a9fb0]
+  %55 = load i8, i8* @"x$w_buff1_used", align 1
+  %56 = trunc i8 %55 to i1
+  br i1 %56, label %57, label %61
+Successor: 0x13aa370
+Successor: 0x13aa3c0
+[BB 0x13aa190]
+  br label %65
+Successor: 0x13aa650
+[BB 0x13aa370]
+  %58 = load i8, i8* @"x$r_buff1_thd0", align 1
+  %59 = trunc i8 %58 to i1
+  br i1 %59, label %60, label %61
+Successor: 0x13aa190
+Successor: 0x13aa3c0
+[BB 0x13aa3c0]
+  %62 = load i8, i8* @"x$w_buff1_used", align 1
+  %63 = trunc i8 %62 to i1
+  %64 = zext i1 %63 to i32
+  br label %65
+Successor: 0x13aa650
+[BB 0x13aa650]
+  %66 = phi i32 [ 0, %60 ], [ %64, %61 ]
+  %67 = icmp ne i32 %66, 0
+  %68 = zext i1 %67 to i8
+  store i8 %68, i8* @"x$w_buff1_used", align 1
+  %69 = load i8, i8* @"x$w_buff0_used", align 1
+  %70 = trunc i8 %69 to i1
+  br i1 %70, label %71, label %75
+Successor: 0x13aabf0
+Successor: 0x13aac40
+[BB 0x13aabf0]
+  %72 = load i8, i8* @"x$r_buff0_thd0", align 1
+  %73 = trunc i8 %72 to i1
+  br i1 %73, label %74, label %75
+Successor: 0x13aae20
+Successor: 0x13aac40
+[BB 0x13aac40]
+  %76 = load i8, i8* @"x$r_buff0_thd0", align 1
+  %77 = trunc i8 %76 to i1
+  %78 = zext i1 %77 to i32
+  br label %79
+Successor: 0x13aaf20
+[BB 0x13aae20]
+  br label %79
+Successor: 0x13aaf20
+[BB 0x13aaf20]
+  %80 = phi i32 [ 0, %74 ], [ %78, %75 ]
+  %81 = icmp ne i32 %80, 0
+  %82 = zext i1 %81 to i8
+  store i8 %82, i8* @"x$r_buff0_thd0", align 1
+  %83 = load i8, i8* @"x$w_buff0_used", align 1
+  %84 = trunc i8 %83 to i1
+  br i1 %84, label %85, label %88
+Successor: 0x13ab4c0
+Successor: 0x13ab510
+[BB 0x13ab4c0]
+  %86 = load i8, i8* @"x$r_buff0_thd0", align 1
+  %87 = trunc i8 %86 to i1
+  br i1 %87, label %94, label %88
+Successor: 0x13ab6f0
+Successor: 0x13ab510
+[BB 0x13ab510]
+  %89 = load i8, i8* @"x$w_buff1_used", align 1
+  %90 = trunc i8 %89 to i1
+  br i1 %90, label %91, label %95
+Successor: 0x13ab8d0
+Successor: 0x13ab920
+[BB 0x13ab6f0]
+  br label %99
+Successor: 0x13abbb0
+[BB 0x13ab8d0]
+  %92 = load i8, i8* @"x$r_buff1_thd0", align 1
+  %93 = trunc i8 %92 to i1
+  br i1 %93, label %94, label %95
+Successor: 0x13ab6f0
+Successor: 0x13ab920
+[BB 0x13ab920]
+  %96 = load i8, i8* @"x$r_buff1_thd0", align 1
+  %97 = trunc i8 %96 to i1
+  %98 = zext i1 %97 to i32
+  br label %99
+Successor: 0x13abbb0
+[BB 0x13abbb0]
+  %100 = phi i32 [ 0, %94 ], [ %98, %95 ]
+  %101 = icmp ne i32 %100, 0
+  %102 = zext i1 %101 to i8
+  store i8 %102, i8* @"x$r_buff1_thd0", align 1
+[Caller:   call void (...) @__VERIFIER_atomic_end()]
+[Callee: __VERIFIER_atomic_end]
+[Caller:   call void (...) @__VERIFIER_atomic_begin()]
+[Callee: __VERIFIER_atomic_begin]
+[Caller:   %103 = call i8* @__VERIFIER_nondet_pointer()]
+[Callee: __VERIFIER_nondet_pointer]
+  %104 = icmp ne i8* %103, null
+  %105 = zext i1 %104 to i8
+  store i8 %105, i8* @"weak$$choice1", align 1
+  %106 = load i8, i8* @"__unbuffered_p1_EAX$read_delayed", align 1
+  %107 = trunc i8 %106 to i1
+  br i1 %107, label %108, label %118
+Successor: 0x13ac550
+Successor: 0x13ac5a0
+[BB 0x13ac550]
+  %109 = load i8, i8* @"weak$$choice1", align 1
+  %110 = trunc i8 %109 to i1
+  br i1 %110, label %111, label %114
+Successor: 0x13ac780
+Successor: 0x13ac7d0
+[BB 0x13ac5a0]
+  %119 = load i32, i32* @__unbuffered_p1_EAX, align 4
+  br label %120
+Successor: 0x13acc00
+[BB 0x13ac780]
+  %112 = load i32*, i32** @"__unbuffered_p1_EAX$read_delayed_var", align 8
+  %113 = load i32, i32* %112, align 4
+  br label %116
+Successor: 0x13ac9b0
+[BB 0x13ac7d0]
+  %115 = load i32, i32* @__unbuffered_p1_EAX, align 4
+  br label %116
+Successor: 0x13ac9b0
+[BB 0x13acc00]
+  %121 = phi i32 [ %117, %116 ], [ %119, %118 ]
+  store i32 %121, i32* @__unbuffered_p1_EAX, align 4
+  %122 = load i32, i32* @y, align 4
+  %123 = icmp eq i32 %122, 2
+  br i1 %123, label %124, label %130
+Successor: 0x13acfe0
+Successor: 0x13ad030
+[BB 0x13ac9b0]
+  %117 = phi i32 [ %113, %111 ], [ %115, %114 ]
+  br label %120
+Successor: 0x13acc00
+[BB 0x13acfe0]
+  %125 = load i32, i32* @__unbuffered_p0_EAX, align 4
+  %126 = icmp eq i32 %125, 2
+  br i1 %126, label %127, label %130
+Successor: 0x13ad230
+Successor: 0x13ad030
+[BB 0x13ad030]
+  %131 = phi i1 [ false, %124 ], [ false, %120 ], [ %129, %127 ]
+  %132 = xor i1 %131, true
+  %133 = zext i1 %132 to i8
+  store i8 %133, i8* @"main$tmp_guard1", align 1
+[Caller:   call void (...) @__VERIFIER_atomic_end()]
+[Callee: __VERIFIER_atomic_end]
+  %134 = load i8, i8* @"main$tmp_guard1", align 1
+  %135 = trunc i8 %134 to i1
+  %136 = zext i1 %135 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %136)]
+[Callee: __VERIFIER_assert]
+  ret i32 0
+[BB 0x13ad230]
+  %128 = load i32, i32* @__unbuffered_p1_EAX, align 4
+  %129 = icmp eq i32 %128, 1
+  br label %130
+Successor: 0x13ad030
+[Function: pthread_create]
+[Function: pthread_create]
+[Function: pthread_create]
+[Function: __VERIFIER_atomic_begin]
+[Function: __VERIFIER_atomic_end]
+[Function: __VERIFIER_assume]
+[Function: __VERIFIER_atomic_begin]
+[Function: __VERIFIER_atomic_end]
+[Function: __VERIFIER_atomic_begin]
+[Function: __VERIFIER_nondet_pointer]
+[Function: __VERIFIER_atomic_end]
+[Function: __VERIFIER_assert]
+[BB 0x1383ba0]
+  %2 = alloca i32, align 4
+  store i32 %0, i32* %2, align 4
+  %3 = load i32, i32* %2, align 4
+  %4 = icmp ne i32 %3, 0
+  br i1 %4, label %7, label %5
+Successor: 0x1383d90
+Successor: 0x1383de0
+[BB 0x1383d90]
+  ret void
+[BB 0x1383de0]
+  br label %6
+Successor: 0x1383f20
+[BB 0x1383f20]
+[Caller:   call void (...) @__VERIFIER_error() #4]
+[Callee: __VERIFIER_error]
+  unreachable
+[Function: __VERIFIER_error]

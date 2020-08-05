@@ -1,0 +1,230 @@
+[Function: main]
+[BB 0x1b0cc60]
+  %1 = alloca i32, align 4
+  %2 = alloca double, align 8
+  %3 = alloca double, align 8
+  %4 = alloca double, align 8
+  store i32 0, i32* %1, align 4
+  store double -3.600000e+02, double* %2, align 8
+  br label %5
+Successor: 0x1b0d030
+[BB 0x1b0d030]
+  %6 = load double, double* %2, align 8
+  %7 = fcmp ole double %6, 3.600000e+02
+  br i1 %7, label %8, label %40
+Successor: 0x1b0d1f0
+Successor: 0x1b0d240
+[BB 0x1b0d1f0]
+[Caller:   %9 = call double (...) @__VERIFIER_nondet_double()]
+[Callee: __VERIFIER_nondet_double]
+  store double %9, double* %3, align 8
+  %10 = load double, double* %3, align 8
+  %11 = load double, double* %2, align 8
+  %12 = fdiv double %11, 2.000000e+00
+  %13 = fcmp oge double %10, %12
+  br i1 %13, label %14, label %20
+Successor: 0x1b0d810
+Successor: 0x1b0d8a0
+[BB 0x1b0d240]
+  ret i32 0
+[BB 0x1b0d810]
+  %15 = load double, double* %3, align 8
+  %16 = load double, double* %2, align 8
+  %17 = fadd double %16, 1.000000e+00
+  %18 = fdiv double %17, 2.000000e+00
+  %19 = fcmp ole double %15, %18
+  br label %20
+Successor: 0x1b0d8a0
+[BB 0x1b0d8a0]
+  %21 = phi i1 [ false, %8 ], [ %19, %14 ]
+  %22 = zext i1 %21 to i32
+[Caller:   call void @__VERIFIER_assume(i32 %22)]
+[Callee: __VERIFIER_assume]
+  %23 = load double, double* %3, align 8
+[Caller:   %24 = call double @SIN(double %23)]
+[Callee: SIN]
+  %25 = load double, double* %3, align 8
+  %26 = fsub double -0.000000e+00, %25
+[Caller:   %27 = call double @SIN(double %26)]
+[Callee: SIN]
+  %28 = fadd double %24, %27
+  store double %28, double* %4, align 8
+  %29 = load double, double* %4, align 8
+  %30 = fcmp oge double %29, -6.000000e-02
+  br i1 %30, label %31, label %34
+Successor: 0x1b0e550
+Successor: 0x1b0e5a0
+[BB 0x1b0e550]
+  %32 = load double, double* %4, align 8
+  %33 = fcmp ole double %32, 6.000000e-02
+  br label %34
+Successor: 0x1b0e5a0
+[BB 0x1b0e5a0]
+  %35 = phi i1 [ false, %20 ], [ %33, %31 ]
+  %36 = zext i1 %35 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %36)]
+[Callee: __VERIFIER_assert]
+  br label %37
+Successor: 0x1b05220
+[BB 0x1b05220]
+  %38 = load double, double* %2, align 8
+  %39 = fadd double %38, 1.000000e+00
+  store double %39, double* %2, align 8
+  br label %5
+Successor: 0x1b0d030
+[Function: __VERIFIER_nondet_double]
+[Function: __VERIFIER_assume]
+[Function: SIN]
+[BB 0x1b0c010]
+  %2 = alloca double, align 8
+  %3 = alloca double, align 8
+  store double %0, double* %3, align 8
+  %4 = load double, double* %3, align 8
+  %5 = fcmp olt double %4, 0.000000e+00
+  br i1 %5, label %6, label %11
+Successor: 0x1b0c350
+Successor: 0x1b0c3a0
+[BB 0x1b0c350]
+  %7 = load double, double* %3, align 8
+  %8 = fsub double -0.000000e+00, %7
+[Caller:   %9 = call double @SIN_POS(double %8)]
+[Callee: SIN_POS]
+  %10 = fsub double -0.000000e+00, %9
+  store double %10, double* %2, align 8
+  br label %14
+Successor: 0x1b0c7f0
+[BB 0x1b0c3a0]
+  %12 = load double, double* %3, align 8
+[Caller:   %13 = call double @SIN_POS(double %12)]
+[Callee: SIN_POS]
+  store double %13, double* %2, align 8
+  br label %14
+Successor: 0x1b0c7f0
+[BB 0x1b0c7f0]
+  %15 = load double, double* %2, align 8
+  ret double %15
+[Function: SIN]
+[Function: __VERIFIER_assert]
+[BB 0x1b07770]
+  %2 = alloca i32, align 4
+  store i32 %0, i32* %2, align 4
+  %3 = load i32, i32* %2, align 4
+  %4 = icmp ne i32 %3, 0
+  br i1 %4, label %7, label %5
+Successor: 0x1b07f30
+Successor: 0x1b07f80
+[BB 0x1b07f30]
+  ret void
+[BB 0x1b07f80]
+  br label %6
+Successor: 0x1b080c0
+[BB 0x1b080c0]
+[Caller:   call void (...) @__VERIFIER_error() #3]
+[Callee: __VERIFIER_error]
+  unreachable
+[Function: SIN_POS]
+[BB 0x1b0b080]
+  %2 = alloca double, align 8
+  %3 = alloca double, align 8
+  store double %0, double* %3, align 8
+  %4 = load double, double* %3, align 8
+  %5 = fcmp ogt double %4, 1.800000e+02
+  br i1 %5, label %6, label %16
+Successor: 0x1b0b3c0
+Successor: 0x1b0b410
+[BB 0x1b0b3c0]
+  %7 = load double, double* %3, align 8
+  %8 = load double, double* %3, align 8
+  %9 = fadd double %8, 1.800000e+02
+  %10 = fdiv double %9, 3.600000e+02
+  %11 = fptosi double %10 to i32
+  %12 = sitofp i32 %11 to double
+  %13 = fmul double 3.600000e+02, %12
+  %14 = fsub double %7, %13
+[Caller:   %15 = call double @SIN_180(double %14)]
+[Callee: SIN_180]
+  store double %15, double* %2, align 8
+  br label %19
+Successor: 0x1b0bb10
+[BB 0x1b0b410]
+  %17 = load double, double* %3, align 8
+[Caller:   %18 = call double @SIN_180(double %17)]
+[Callee: SIN_180]
+  store double %18, double* %2, align 8
+  br label %19
+Successor: 0x1b0bb10
+[BB 0x1b0bb10]
+  %20 = load double, double* %2, align 8
+  ret double %20
+[Function: SIN_POS]
+[Function: __VERIFIER_error]
+[Function: SIN_180]
+[BB 0x1b097f0]
+  %2 = alloca double, align 8
+  %3 = alloca double, align 8
+  store double %0, double* %3, align 8
+  %4 = load double, double* %3, align 8
+  %5 = fcmp olt double %4, 0.000000e+00
+  br i1 %5, label %6, label %11
+Successor: 0x1b0a6b0
+Successor: 0x1b0a700
+[BB 0x1b0a6b0]
+  %7 = load double, double* %3, align 8
+  %8 = fsub double -0.000000e+00, %7
+[Caller:   %9 = call double @SIN_0_180(double %8)]
+[Callee: SIN_0_180]
+  %10 = fsub double -0.000000e+00, %9
+  store double %10, double* %2, align 8
+  br label %14
+Successor: 0x1b0ab50
+[BB 0x1b0a700]
+  %12 = load double, double* %3, align 8
+[Caller:   %13 = call double @SIN_0_180(double %12)]
+[Callee: SIN_0_180]
+  store double %13, double* %2, align 8
+  br label %14
+Successor: 0x1b0ab50
+[BB 0x1b0ab50]
+  %15 = load double, double* %2, align 8
+  ret double %15
+[Function: SIN_180]
+[Function: SIN_0_180]
+[BB 0x1b084c0]
+  %2 = alloca double, align 8
+  %3 = alloca double, align 8
+  %4 = alloca double, align 8
+  %5 = alloca double, align 8
+  %6 = alloca double, align 8
+  %7 = alloca i32, align 4
+  store double %0, double* %2, align 8
+  %8 = load double, double* %2, align 8
+  %9 = fmul double 2.000000e+00, %8
+  store double %9, double* %3, align 8
+  %10 = load double, double* %3, align 8
+  %11 = fptosi double %10 to i32
+  store i32 %11, i32* %7, align 4
+  %12 = load i32, i32* %7, align 4
+  %13 = sitofp i32 %12 to double
+  store double %13, double* %4, align 8
+  %14 = load i32, i32* %7, align 4
+  %15 = sext i32 %14 to i64
+  %16 = getelementptr inbounds [362 x double], [362 x double]* @T, i64 0, i64 %15
+  %17 = load double, double* %16, align 8
+  store double %17, double* %5, align 8
+  %18 = load i32, i32* %7, align 4
+  %19 = add nsw i32 %18, 1
+  %20 = sext i32 %19 to i64
+  %21 = getelementptr inbounds [362 x double], [362 x double]* @T, i64 0, i64 %20
+  %22 = load double, double* %21, align 8
+  store double %22, double* %6, align 8
+  %23 = load double, double* %5, align 8
+  %24 = load double, double* %3, align 8
+  %25 = load double, double* %4, align 8
+  %26 = fsub double %24, %25
+  %27 = load double, double* %6, align 8
+  %28 = load double, double* %5, align 8
+  %29 = fsub double %27, %28
+  %30 = fmul double %26, %29
+  %31 = fadd double %23, %30
+  ret double %31
+[Function: SIN_0_180]

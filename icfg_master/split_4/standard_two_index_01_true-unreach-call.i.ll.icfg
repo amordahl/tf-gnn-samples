@@ -1,0 +1,111 @@
+[Function: main]
+[BB 0x20df980]
+  %1 = alloca i32, align 4
+  %2 = alloca [10000 x i32], align 16
+  %3 = alloca [10000 x i32], align 16
+  %4 = alloca i32, align 4
+  %5 = alloca i32, align 4
+  store i32 0, i32* %1, align 4
+  store i32 0, i32* %4, align 4
+  store i32 0, i32* %5, align 4
+  br label %6
+Successor: 0x20e0310
+[BB 0x20e0310]
+  %7 = load i32, i32* %4, align 4
+  %8 = icmp slt i32 %7, 10000
+  br i1 %8, label %9, label %16
+Successor: 0x20e01c0
+Successor: 0x20e0560
+[BB 0x20e01c0]
+[Caller:   %10 = call i32 (...) @__VERIFIER_nondet_int()]
+[Callee: __VERIFIER_nondet_int]
+  %11 = load i32, i32* %4, align 4
+  %12 = sext i32 %11 to i64
+  %13 = getelementptr inbounds [10000 x i32], [10000 x i32]* %3, i64 0, i64 %12
+  store i32 %10, i32* %13, align 4
+  %14 = load i32, i32* %4, align 4
+  %15 = add nsw i32 %14, 1
+  store i32 %15, i32* %4, align 4
+  br label %6
+Successor: 0x20e0310
+[BB 0x20e0560]
+  store i32 0, i32* %4, align 4
+  br label %17
+Successor: 0x20e0c80
+[BB 0x20e0c80]
+  %18 = load i32, i32* %4, align 4
+  %19 = icmp slt i32 %18, 10000
+  br i1 %19, label %20, label %32
+Successor: 0x20e0e40
+Successor: 0x20e0e90
+[BB 0x20e0e40]
+  %21 = load i32, i32* %4, align 4
+  %22 = sext i32 %21 to i64
+  %23 = getelementptr inbounds [10000 x i32], [10000 x i32]* %3, i64 0, i64 %22
+  %24 = load i32, i32* %23, align 4
+  %25 = load i32, i32* %5, align 4
+  %26 = sext i32 %25 to i64
+  %27 = getelementptr inbounds [10000 x i32], [10000 x i32]* %2, i64 0, i64 %26
+  store i32 %24, i32* %27, align 4
+  %28 = load i32, i32* %4, align 4
+  %29 = add nsw i32 %28, 1
+  store i32 %29, i32* %4, align 4
+  %30 = load i32, i32* %5, align 4
+  %31 = add nsw i32 %30, 1
+  store i32 %31, i32* %5, align 4
+  br label %17
+Successor: 0x20e0c80
+[BB 0x20e0e90]
+  store i32 0, i32* %4, align 4
+  store i32 0, i32* %5, align 4
+  br label %33
+Successor: 0x20e1a90
+[BB 0x20e1a90]
+  %34 = load i32, i32* %4, align 4
+  %35 = icmp slt i32 %34, 10000
+  br i1 %35, label %36, label %51
+Successor: 0x20e1c50
+Successor: 0x20e1ca0
+[BB 0x20e1c50]
+  %37 = load i32, i32* %5, align 4
+  %38 = sext i32 %37 to i64
+  %39 = getelementptr inbounds [10000 x i32], [10000 x i32]* %2, i64 0, i64 %38
+  %40 = load i32, i32* %39, align 4
+  %41 = load i32, i32* %5, align 4
+  %42 = sext i32 %41 to i64
+  %43 = getelementptr inbounds [10000 x i32], [10000 x i32]* %3, i64 0, i64 %42
+  %44 = load i32, i32* %43, align 4
+  %45 = icmp eq i32 %40, %44
+  %46 = zext i1 %45 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %46)]
+[Callee: __VERIFIER_assert]
+  %47 = load i32, i32* %4, align 4
+  %48 = add nsw i32 %47, 1
+  store i32 %48, i32* %4, align 4
+  %49 = load i32, i32* %5, align 4
+  %50 = add nsw i32 %49, 1
+  store i32 %50, i32* %5, align 4
+  br label %33
+Successor: 0x20e1a90
+[BB 0x20e1ca0]
+  ret i32 0
+[Function: __VERIFIER_nondet_int]
+[Function: __VERIFIER_assert]
+[BB 0x20dec50]
+  %2 = alloca i32, align 4
+  store i32 %0, i32* %2, align 4
+  %3 = load i32, i32* %2, align 4
+  %4 = icmp ne i32 %3, 0
+  br i1 %4, label %7, label %5
+Successor: 0x20df480
+Successor: 0x20df4d0
+[BB 0x20df480]
+  ret void
+[BB 0x20df4d0]
+  br label %6
+Successor: 0x20df610
+[BB 0x20df610]
+[Caller:   call void (...) @__VERIFIER_error() #3]
+[Callee: __VERIFIER_error]
+  unreachable
+[Function: __VERIFIER_error]

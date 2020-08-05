@@ -1,0 +1,80 @@
+[Function: main]
+[BB 0x175e340]
+  %1 = alloca i32, align 4
+  %2 = alloca i64, align 8
+  %3 = alloca i64, align 8
+  store i32 0, i32* %1, align 4
+[Caller:   %4 = call i32 @pthread_create(i64* %2, %union.pthread_attr_t* null, i8* (i8*)* @P0, i8* null) #4]
+[Callee: pthread_create]
+[Caller:   %5 = call i32 @pthread_create(i64* %3, %union.pthread_attr_t* null, i8* (i8*)* @P1, i8* null) #4]
+[Callee: pthread_create]
+[Caller:   call void (...) @__VERIFIER_atomic_begin()]
+[Callee: __VERIFIER_atomic_begin]
+  %6 = load i32, i32* @__unbuffered_cnt, align 4
+  %7 = icmp eq i32 %6, 2
+  %8 = zext i1 %7 to i8
+  store i8 %8, i8* @"main$tmp_guard0", align 1
+[Caller:   call void (...) @__VERIFIER_atomic_end()]
+[Callee: __VERIFIER_atomic_end]
+  %9 = load i8, i8* @"main$tmp_guard0", align 1
+  %10 = trunc i8 %9 to i1
+  %11 = zext i1 %10 to i32
+[Caller:   call void @__VERIFIER_assume(i32 %11)]
+[Callee: __VERIFIER_assume]
+[Caller:   call void (...) @__VERIFIER_atomic_begin()]
+[Callee: __VERIFIER_atomic_begin]
+[Caller:   call void (...) @__VERIFIER_atomic_end()]
+[Callee: __VERIFIER_atomic_end]
+[Caller:   call void (...) @__VERIFIER_atomic_begin()]
+[Callee: __VERIFIER_atomic_begin]
+  %12 = load i32, i32* @__unbuffered_p0_EAX, align 4
+  %13 = icmp eq i32 %12, 1
+  br i1 %13, label %14, label %17
+Successor: 0x175f910
+Successor: 0x175f960
+[BB 0x175f910]
+  %15 = load i32, i32* @__unbuffered_p1_EAX, align 4
+  %16 = icmp eq i32 %15, 1
+  br label %17
+Successor: 0x175f960
+[BB 0x175f960]
+  %18 = phi i1 [ false, %0 ], [ %16, %14 ]
+  %19 = xor i1 %18, true
+  %20 = zext i1 %19 to i8
+  store i8 %20, i8* @"main$tmp_guard1", align 1
+[Caller:   call void (...) @__VERIFIER_atomic_end()]
+[Callee: __VERIFIER_atomic_end]
+  %21 = load i8, i8* @"main$tmp_guard1", align 1
+  %22 = trunc i8 %21 to i1
+  %23 = zext i1 %22 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %23)]
+[Callee: __VERIFIER_assert]
+  ret i32 0
+[Function: pthread_create]
+[Function: pthread_create]
+[Function: __VERIFIER_atomic_begin]
+[Function: __VERIFIER_atomic_end]
+[Function: __VERIFIER_assume]
+[Function: __VERIFIER_atomic_begin]
+[Function: __VERIFIER_atomic_end]
+[Function: __VERIFIER_atomic_begin]
+[Function: __VERIFIER_atomic_end]
+[Function: __VERIFIER_assert]
+[BB 0x175b620]
+  %2 = alloca i32, align 4
+  store i32 %0, i32* %2, align 4
+  %3 = load i32, i32* %2, align 4
+  %4 = icmp ne i32 %3, 0
+  br i1 %4, label %7, label %5
+Successor: 0x175b810
+Successor: 0x175b860
+[BB 0x175b810]
+  ret void
+[BB 0x175b860]
+  br label %6
+Successor: 0x175b9a0
+[BB 0x175b9a0]
+[Caller:   call void (...) @__VERIFIER_error() #4]
+[Callee: __VERIFIER_error]
+  unreachable
+[Function: __VERIFIER_error]

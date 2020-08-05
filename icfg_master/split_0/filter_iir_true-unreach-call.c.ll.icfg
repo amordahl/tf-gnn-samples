@@ -1,0 +1,138 @@
+[Function: main]
+[BB 0xcfe370]
+  %1 = alloca i32, align 4
+  store i32 0, i32* %1, align 4
+  store double 0.000000e+00, double* getelementptr inbounds ([2 x double], [2 x double]* @D1, i64 0, i64 0), align 16
+  store double 0.000000e+00, double* getelementptr inbounds ([2 x double], [2 x double]* @D1, i64 0, i64 1), align 8
+  store double 0.000000e+00, double* getelementptr inbounds ([2 x double], [2 x double]* @D2, i64 0, i64 0), align 16
+  store double 0.000000e+00, double* getelementptr inbounds ([2 x double], [2 x double]* @D2, i64 0, i64 1), align 8
+  store double 0.000000e+00, double* @P, align 8
+  br label %2
+Successor: 0xcfe7b0
+[BB 0xcfe7b0]
+[Caller:   %3 = call double (...) @__VERIFIER_nondet_double()]
+[Callee: __VERIFIER_nondet_double]
+  store double %3, double* @X, align 8
+  %4 = load double, double* @X, align 8
+  %5 = fcmp oge double %4, -1.000000e+01
+  br i1 %5, label %6, label %9
+Successor: 0xcfeeb0
+Successor: 0xcfef40
+[BB 0xcfeeb0]
+  %7 = load double, double* @X, align 8
+  %8 = fcmp ole double %7, 1.000000e+01
+  br label %9
+Successor: 0xcfef40
+[BB 0xcfef40]
+  %10 = phi i1 [ false, %2 ], [ %8, %6 ]
+  %11 = zext i1 %10 to i32
+[Caller:   call void @__VERIFIER_assume(i32 %11)]
+[Callee: __VERIFIER_assume]
+[Caller:   call void @iir4(double* @X, double* @P)]
+[Callee: iir4]
+  %12 = load double, double* @P, align 8
+  %13 = fcmp oge double %12, -1.000000e+30
+  br i1 %13, label %14, label %17
+Successor: 0xcff7c0
+Successor: 0xcff850
+[BB 0xcff7c0]
+  %15 = load double, double* @P, align 8
+  %16 = fcmp ole double %15, 1.000000e+30
+  br label %17
+Successor: 0xcff850
+[BB 0xcff850]
+  %18 = phi i1 [ false, %9 ], [ %16, %14 ]
+  %19 = zext i1 %18 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %19)]
+[Callee: __VERIFIER_assert]
+  br label %2
+Successor: 0xcfe7b0
+[Function: __VERIFIER_nondet_double]
+[Function: __VERIFIER_assume]
+[Function: iir4]
+[BB 0xcfb630]
+  %3 = alloca double*, align 8
+  %4 = alloca double*, align 8
+  %5 = alloca double, align 8
+  %6 = alloca double, align 8
+  %7 = alloca double, align 8
+  %8 = alloca double, align 8
+  store double* %0, double** %3, align 8
+  store double* %1, double** %4, align 8
+  %9 = load double*, double** %3, align 8
+  %10 = load double, double* %9, align 8
+  %11 = fmul double 0x3F881D758AF1E275, %10
+  store double %11, double* %5, align 8
+  %12 = load double, double* %5, align 8
+  %13 = load double, double* getelementptr inbounds ([2 x double], [2 x double]* @b1, i64 0, i64 0), align 16
+  %14 = load double, double* getelementptr inbounds ([2 x double], [2 x double]* @D1, i64 0, i64 0), align 16
+  %15 = fmul double %13, %14
+  %16 = fadd double %12, %15
+  %17 = load double, double* getelementptr inbounds ([2 x double], [2 x double]* @b1, i64 0, i64 1), align 8
+  %18 = load double, double* getelementptr inbounds ([2 x double], [2 x double]* @D1, i64 0, i64 1), align 8
+  %19 = fmul double %17, %18
+  %20 = fsub double %16, %19
+  store double %20, double* %7, align 8
+  %21 = load double, double* getelementptr inbounds ([3 x double], [3 x double]* @A1, i64 0, i64 0), align 16
+  %22 = load double, double* %7, align 8
+  %23 = fmul double %21, %22
+  %24 = load double, double* getelementptr inbounds ([3 x double], [3 x double]* @A1, i64 0, i64 1), align 8
+  %25 = load double, double* getelementptr inbounds ([2 x double], [2 x double]* @D1, i64 0, i64 0), align 16
+  %26 = fmul double %24, %25
+  %27 = fsub double %23, %26
+  %28 = load double, double* getelementptr inbounds ([3 x double], [3 x double]* @A1, i64 0, i64 2), align 16
+  %29 = load double, double* getelementptr inbounds ([2 x double], [2 x double]* @D1, i64 0, i64 1), align 8
+  %30 = fmul double %28, %29
+  %31 = fadd double %27, %30
+  store double %31, double* %6, align 8
+  %32 = load double, double* getelementptr inbounds ([2 x double], [2 x double]* @D1, i64 0, i64 0), align 16
+  store double %32, double* getelementptr inbounds ([2 x double], [2 x double]* @D1, i64 0, i64 1), align 8
+  %33 = load double, double* %7, align 8
+  store double %33, double* getelementptr inbounds ([2 x double], [2 x double]* @D1, i64 0, i64 0), align 16
+  %34 = load double, double* %6, align 8
+  %35 = load double, double* getelementptr inbounds ([2 x double], [2 x double]* @b2, i64 0, i64 0), align 16
+  %36 = load double, double* getelementptr inbounds ([2 x double], [2 x double]* @D2, i64 0, i64 0), align 16
+  %37 = fmul double %35, %36
+  %38 = fadd double %34, %37
+  %39 = load double, double* getelementptr inbounds ([2 x double], [2 x double]* @b2, i64 0, i64 1), align 8
+  %40 = load double, double* getelementptr inbounds ([2 x double], [2 x double]* @D2, i64 0, i64 1), align 8
+  %41 = fmul double %39, %40
+  %42 = fsub double %38, %41
+  store double %42, double* %8, align 8
+  %43 = load double, double* getelementptr inbounds ([3 x double], [3 x double]* @A2, i64 0, i64 0), align 16
+  %44 = load double, double* %8, align 8
+  %45 = fmul double %43, %44
+  %46 = load double, double* getelementptr inbounds ([3 x double], [3 x double]* @A2, i64 0, i64 1), align 8
+  %47 = load double, double* getelementptr inbounds ([2 x double], [2 x double]* @D2, i64 0, i64 0), align 16
+  %48 = fmul double %46, %47
+  %49 = fsub double %45, %48
+  %50 = load double, double* getelementptr inbounds ([3 x double], [3 x double]* @A2, i64 0, i64 2), align 16
+  %51 = load double, double* getelementptr inbounds ([2 x double], [2 x double]* @D2, i64 0, i64 1), align 8
+  %52 = fmul double %50, %51
+  %53 = fadd double %49, %52
+  %54 = load double*, double** %4, align 8
+  store double %53, double* %54, align 8
+  %55 = load double, double* getelementptr inbounds ([2 x double], [2 x double]* @D2, i64 0, i64 0), align 16
+  store double %55, double* getelementptr inbounds ([2 x double], [2 x double]* @D2, i64 0, i64 1), align 8
+  %56 = load double, double* %8, align 8
+  store double %56, double* getelementptr inbounds ([2 x double], [2 x double]* @D2, i64 0, i64 0), align 16
+  ret void
+[Function: __VERIFIER_assert]
+[BB 0xcfa8e0]
+  %2 = alloca i32, align 4
+  store i32 %0, i32* %2, align 4
+  %3 = load i32, i32* %2, align 4
+  %4 = icmp ne i32 %3, 0
+  br i1 %4, label %7, label %5
+Successor: 0xcfb110
+Successor: 0xcfb160
+[BB 0xcfb110]
+  ret void
+[BB 0xcfb160]
+  br label %6
+Successor: 0xcfb2a0
+[BB 0xcfb2a0]
+[Caller:   call void (...) @__VERIFIER_error() #3]
+[Callee: __VERIFIER_error]
+  unreachable
+[Function: __VERIFIER_error]

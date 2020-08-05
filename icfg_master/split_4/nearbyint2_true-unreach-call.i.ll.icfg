@@ -1,0 +1,140 @@
+[Function: main]
+[BB 0x209cab0]
+[Caller:   %1 = call i32 @fesetround(i32 0) #5]
+[Callee: fesetround]
+[Caller:   %2 = call double @llvm.nearbyint.f64(double 2.300000e+00)]
+[Callee: llvm.nearbyint.f64]
+  %3 = fcmp oeq double %2, 2.000000e+00
+  %4 = zext i1 %3 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %4)]
+[Callee: __VERIFIER_assert]
+[Caller:   %5 = call double @llvm.nearbyint.f64(double 2.500000e+00)]
+[Callee: llvm.nearbyint.f64]
+  %6 = fcmp oeq double %5, 2.000000e+00
+  %7 = zext i1 %6 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %7)]
+[Callee: __VERIFIER_assert]
+[Caller:   %8 = call double @llvm.nearbyint.f64(double 3.500000e+00)]
+[Callee: llvm.nearbyint.f64]
+  %9 = fcmp oeq double %8, 4.000000e+00
+  %10 = zext i1 %9 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %10)]
+[Callee: __VERIFIER_assert]
+[Caller:   %11 = call double @llvm.nearbyint.f64(double -2.300000e+00)]
+[Callee: llvm.nearbyint.f64]
+  %12 = fcmp oeq double %11, -2.000000e+00
+  %13 = zext i1 %12 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %13)]
+[Callee: __VERIFIER_assert]
+[Caller:   %14 = call double @llvm.nearbyint.f64(double -2.500000e+00)]
+[Callee: llvm.nearbyint.f64]
+  %15 = fcmp oeq double %14, -2.000000e+00
+  %16 = zext i1 %15 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %16)]
+[Callee: __VERIFIER_assert]
+[Caller:   %17 = call double @llvm.nearbyint.f64(double -3.500000e+00)]
+[Callee: llvm.nearbyint.f64]
+  %18 = fcmp oeq double %17, -4.000000e+00
+  %19 = zext i1 %18 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %19)]
+[Callee: __VERIFIER_assert]
+[Caller:   %20 = call i32 @fesetround(i32 1024) #5]
+[Callee: fesetround]
+[Caller:   %21 = call double @llvm.nearbyint.f64(double 2.300000e+00)]
+[Callee: llvm.nearbyint.f64]
+  %22 = fcmp oeq double %21, 2.000000e+00
+  %23 = zext i1 %22 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %23)]
+[Callee: __VERIFIER_assert]
+[Caller:   %24 = call double @llvm.nearbyint.f64(double 2.500000e+00)]
+[Callee: llvm.nearbyint.f64]
+  %25 = fcmp oeq double %24, 2.000000e+00
+  %26 = zext i1 %25 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %26)]
+[Callee: __VERIFIER_assert]
+[Caller:   %27 = call double @llvm.nearbyint.f64(double 3.500000e+00)]
+[Callee: llvm.nearbyint.f64]
+  %28 = fcmp oeq double %27, 3.000000e+00
+  %29 = zext i1 %28 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %29)]
+[Callee: __VERIFIER_assert]
+[Caller:   %30 = call double @llvm.nearbyint.f64(double -2.300000e+00)]
+[Callee: llvm.nearbyint.f64]
+  %31 = fcmp oeq double %30, -3.000000e+00
+  %32 = zext i1 %31 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %32)]
+[Callee: __VERIFIER_assert]
+[Caller:   %33 = call double @llvm.nearbyint.f64(double -2.500000e+00)]
+[Callee: llvm.nearbyint.f64]
+  %34 = fcmp oeq double %33, -3.000000e+00
+  %35 = zext i1 %34 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %35)]
+[Callee: __VERIFIER_assert]
+[Caller:   %36 = call double @llvm.nearbyint.f64(double -3.500000e+00)]
+[Callee: llvm.nearbyint.f64]
+  %37 = fcmp oeq double %36, -4.000000e+00
+  %38 = zext i1 %37 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %38)]
+[Callee: __VERIFIER_assert]
+[Caller:   %39 = call double @llvm.nearbyint.f64(double -0.000000e+00)]
+[Callee: llvm.nearbyint.f64]
+[Caller:   %40 = call i32 @__signbit(double %39) #6]
+[Callee: __signbit]
+[Caller:   call void @__VERIFIER_assert(i32 %40)]
+[Callee: __VERIFIER_assert]
+[Caller:   %41 = call double @llvm.nearbyint.f64(double 0xFFF0000000000000)]
+[Callee: llvm.nearbyint.f64]
+  %42 = fcmp oeq double %41, 0xFFF0000000000000
+  %43 = zext i1 %42 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %43)]
+[Callee: __VERIFIER_assert]
+  ret i32 0
+[Function: fesetround]
+[Function: llvm.nearbyint.f64]
+[Function: __VERIFIER_assert]
+[BB 0x209bd80]
+  %2 = alloca i32, align 4
+  store i32 %0, i32* %2, align 4
+  %3 = load i32, i32* %2, align 4
+  %4 = icmp ne i32 %3, 0
+  br i1 %4, label %7, label %5
+Successor: 0x209c5b0
+Successor: 0x209c600
+[BB 0x209c5b0]
+  ret void
+[BB 0x209c600]
+  br label %6
+Successor: 0x209c740
+[BB 0x209c740]
+[Caller:   call void (...) @__VERIFIER_error() #5]
+[Callee: __VERIFIER_error]
+  unreachable
+[Function: llvm.nearbyint.f64]
+[Function: __VERIFIER_assert]
+[Function: llvm.nearbyint.f64]
+[Function: __VERIFIER_assert]
+[Function: llvm.nearbyint.f64]
+[Function: __VERIFIER_assert]
+[Function: llvm.nearbyint.f64]
+[Function: __VERIFIER_assert]
+[Function: llvm.nearbyint.f64]
+[Function: __VERIFIER_assert]
+[Function: fesetround]
+[Function: llvm.nearbyint.f64]
+[Function: __VERIFIER_assert]
+[Function: llvm.nearbyint.f64]
+[Function: __VERIFIER_assert]
+[Function: llvm.nearbyint.f64]
+[Function: __VERIFIER_assert]
+[Function: llvm.nearbyint.f64]
+[Function: __VERIFIER_assert]
+[Function: llvm.nearbyint.f64]
+[Function: __VERIFIER_assert]
+[Function: llvm.nearbyint.f64]
+[Function: __VERIFIER_assert]
+[Function: llvm.nearbyint.f64]
+[Function: __signbit]
+[Function: __VERIFIER_assert]
+[Function: llvm.nearbyint.f64]
+[Function: __VERIFIER_assert]
+[Function: __VERIFIER_error]

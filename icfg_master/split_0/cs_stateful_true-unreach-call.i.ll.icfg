@@ -1,0 +1,354 @@
+[Function: main]
+[BB 0x249cd80]
+  %1 = alloca i32, align 4
+  %2 = alloca [2 x [3 x i8]], align 1
+  %3 = alloca [2 x [3 x i8*]], align 16
+  %4 = alloca [2 x i8], align 1
+  %5 = alloca [2 x i8], align 1
+  %6 = alloca [2 x i32], align 4
+  %7 = alloca [2 x i32], align 4
+  %8 = alloca i32, align 4
+  %9 = alloca i32, align 4
+  store i32 0, i32* %1, align 4
+  store i32 0, i32* %8, align 4
+  br label %10
+Successor: 0x249cfe0
+[BB 0x249cfe0]
+  %11 = load i32, i32* %8, align 4
+  %12 = icmp slt i32 %11, 2
+  br i1 %12, label %13, label %55
+Successor: 0x249d580
+Successor: 0x249d5d0
+[BB 0x249d580]
+[Caller:   %14 = call zeroext i8 @__VERIFIER_nondet_uchar()]
+[Callee: __VERIFIER_nondet_uchar]
+  %15 = load i32, i32* %8, align 4
+  %16 = sext i32 %15 to i64
+  %17 = getelementptr inbounds [2 x i8], [2 x i8]* %4, i64 0, i64 %16
+  store i8 %14, i8* %17, align 1
+[Caller:   %18 = call zeroext i8 @__VERIFIER_nondet_uchar()]
+[Callee: __VERIFIER_nondet_uchar]
+  %19 = load i32, i32* %8, align 4
+  %20 = sext i32 %19 to i64
+  %21 = getelementptr inbounds [2 x i8], [2 x i8]* %5, i64 0, i64 %20
+  store i8 %18, i8* %21, align 1
+[Caller:   %22 = call i32 @__VERIFIER_nondet_int()]
+[Callee: __VERIFIER_nondet_int]
+  %23 = load i32, i32* %8, align 4
+  %24 = sext i32 %23 to i64
+  %25 = getelementptr inbounds [2 x i32], [2 x i32]* %6, i64 0, i64 %24
+  store i32 %22, i32* %25, align 4
+[Caller:   %26 = call i32 @__VERIFIER_nondet_int()]
+[Callee: __VERIFIER_nondet_int]
+  %27 = load i32, i32* %8, align 4
+  %28 = sext i32 %27 to i64
+  %29 = getelementptr inbounds [2 x i32], [2 x i32]* %7, i64 0, i64 %28
+  store i32 %26, i32* %29, align 4
+  store i32 0, i32* %9, align 4
+  br label %30
+Successor: 0x249e300
+[BB 0x249d5d0]
+  %56 = getelementptr inbounds [2 x [3 x i8]], [2 x [3 x i8]]* %2, i64 0, i64 1
+  %57 = getelementptr inbounds [3 x i8], [3 x i8]* %56, i64 0, i64 0
+  %58 = load i8, i8* %57, align 1
+  store i8 %58, i8* getelementptr inbounds ([2 x [3 x i8]], [2 x [3 x i8]]* @__CS_thread_status, i64 0, i64 1, i64 0), align 1
+  %59 = getelementptr inbounds [2 x [3 x i8]], [2 x [3 x i8]]* %2, i64 0, i64 1
+  %60 = getelementptr inbounds [3 x i8], [3 x i8]* %59, i64 0, i64 1
+  %61 = load i8, i8* %60, align 1
+  store i8 %61, i8* getelementptr inbounds ([2 x [3 x i8]], [2 x [3 x i8]]* @__CS_thread_status, i64 0, i64 1, i64 1), align 1
+  %62 = getelementptr inbounds [2 x [3 x i8]], [2 x [3 x i8]]* %2, i64 0, i64 1
+  %63 = getelementptr inbounds [3 x i8], [3 x i8]* %62, i64 0, i64 2
+  %64 = load i8, i8* %63, align 1
+  store i8 %64, i8* getelementptr inbounds ([2 x [3 x i8]], [2 x [3 x i8]]* @__CS_thread_status, i64 0, i64 1, i64 2), align 1
+  %65 = getelementptr inbounds [2 x [3 x i8*]], [2 x [3 x i8*]]* %3, i64 0, i64 1
+  %66 = getelementptr inbounds [3 x i8*], [3 x i8*]* %65, i64 0, i64 0
+  %67 = load i8*, i8** %66, align 8
+  store i8* %67, i8** getelementptr inbounds ([2 x [3 x i8*]], [2 x [3 x i8*]]* @__CS_thread_lockedon, i64 0, i64 1, i64 0), align 8
+  %68 = getelementptr inbounds [2 x [3 x i8*]], [2 x [3 x i8*]]* %3, i64 0, i64 1
+  %69 = getelementptr inbounds [3 x i8*], [3 x i8*]* %68, i64 0, i64 1
+  %70 = load i8*, i8** %69, align 8
+  store i8* %70, i8** getelementptr inbounds ([2 x [3 x i8*]], [2 x [3 x i8*]]* @__CS_thread_lockedon, i64 0, i64 1, i64 1), align 8
+  %71 = getelementptr inbounds [2 x [3 x i8*]], [2 x [3 x i8*]]* %3, i64 0, i64 1
+  %72 = getelementptr inbounds [3 x i8*], [3 x i8*]* %71, i64 0, i64 2
+  %73 = load i8*, i8** %72, align 8
+  store i8* %73, i8** getelementptr inbounds ([2 x [3 x i8*]], [2 x [3 x i8*]]* @__CS_thread_lockedon, i64 0, i64 1, i64 2), align 8
+  %74 = getelementptr inbounds [2 x i8], [2 x i8]* %4, i64 0, i64 1
+  %75 = load i8, i8* %74, align 1
+  store i8 %75, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @ma, i64 0, i64 1), align 1
+  %76 = getelementptr inbounds [2 x i8], [2 x i8]* %5, i64 0, i64 1
+  %77 = load i8, i8* %76, align 1
+  store i8 %77, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @mb, i64 0, i64 1), align 1
+  %78 = getelementptr inbounds [2 x i32], [2 x i32]* %6, i64 0, i64 1
+  %79 = load i32, i32* %78, align 4
+  store i32 %79, i32* getelementptr inbounds ([2 x i32], [2 x i32]* @data1, i64 0, i64 1), align 4
+  %80 = getelementptr inbounds [2 x i32], [2 x i32]* %7, i64 0, i64 1
+  %81 = load i32, i32* %80, align 4
+  store i32 %81, i32* getelementptr inbounds ([2 x i32], [2 x i32]* @data2, i64 0, i64 1), align 4
+  store i8 0, i8* @__CS_round, align 1
+  store i8 0, i8* @__CS_thread_index, align 1
+  %82 = load i8, i8* @__CS_round, align 1
+  store i8 %82, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @__CS_thread_born_round, i64 0, i64 0), align 1
+  store i8 1, i8* getelementptr inbounds ([2 x [3 x i8]], [2 x [3 x i8]]* @__CS_thread_status, i64 0, i64 0, i64 0), align 1
+  store i8* (i8*)* @main_thread, i8* (i8*)** getelementptr inbounds ([3 x i8* (i8*)*], [3 x i8* (i8*)*]* @__CS_thread, i64 0, i64 0), align 16
+  store i8 1, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @__CS_thread_allocated, i64 0, i64 0), align 1
+  %83 = load i8, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @__CS_thread_allocated, i64 0, i64 0), align 1
+  %84 = zext i8 %83 to i32
+  %85 = icmp eq i32 %84, 1
+  br i1 %85, label %86, label %99
+Successor: 0x24a1c90
+Successor: 0x24a1ce0
+[BB 0x249e300]
+  %31 = load i32, i32* %9, align 4
+  %32 = icmp slt i32 %31, 3
+  br i1 %32, label %33, label %51
+Successor: 0x249e4c0
+Successor: 0x249e510
+[BB 0x24a1c90]
+  %87 = load i8, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @__CS_thread_born_round, i64 0, i64 0), align 1
+  store i8 %87, i8* @__CS_round, align 1
+  store i8 0, i8* @__CS_ret, align 1
+  %88 = load i8* (i8*)*, i8* (i8*)** getelementptr inbounds ([3 x i8* (i8*)*], [3 x i8* (i8*)*]* @__CS_thread, i64 0, i64 0), align 16
+[Caller:   %89 = call i8* %88(i8* null)]
+  %90 = load i8, i8* @__CS_ret, align 1
+  %91 = zext i8 %90 to i32
+  %92 = icmp ne i32 %91, 1
+  br i1 %92, label %93, label %98
+Successor: 0x24a2240
+Successor: 0x24a2290
+[BB 0x24a1ce0]
+  %100 = load i8, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @__CS_thread_allocated, i64 0, i64 1), align 1
+  %101 = zext i8 %100 to i32
+  %102 = icmp eq i32 %101, 1
+  br i1 %102, label %103, label %116
+Successor: 0x24a2960
+Successor: 0x24a29b0
+[BB 0x249e4c0]
+[Caller:   %34 = call zeroext i8 @__VERIFIER_nondet_uchar()]
+[Callee: __VERIFIER_nondet_uchar]
+  %35 = load i32, i32* %8, align 4
+  %36 = sext i32 %35 to i64
+  %37 = getelementptr inbounds [2 x [3 x i8]], [2 x [3 x i8]]* %2, i64 0, i64 %36
+  %38 = load i32, i32* %9, align 4
+  %39 = sext i32 %38 to i64
+  %40 = getelementptr inbounds [3 x i8], [3 x i8]* %37, i64 0, i64 %39
+  store i8 %34, i8* %40, align 1
+[Caller:   %41 = call i8* @__VERIFIER_nondet_pointer()]
+[Callee: __VERIFIER_nondet_pointer]
+  %42 = load i32, i32* %8, align 4
+  %43 = sext i32 %42 to i64
+  %44 = getelementptr inbounds [2 x [3 x i8*]], [2 x [3 x i8*]]* %3, i64 0, i64 %43
+  %45 = load i32, i32* %9, align 4
+  %46 = sext i32 %45 to i64
+  %47 = getelementptr inbounds [3 x i8*], [3 x i8*]* %44, i64 0, i64 %46
+  store i8* %41, i8** %47, align 8
+  br label %48
+Successor: 0x249f070
+[BB 0x249e510]
+  br label %52
+Successor: 0x249f330
+[BB 0x24a2240]
+  %94 = load i8, i8* @__CS_round, align 1
+  %95 = zext i8 %94 to i64
+  %96 = getelementptr inbounds [2 x [3 x i8]], [2 x [3 x i8]]* @__CS_thread_status, i64 0, i64 %95
+  %97 = getelementptr inbounds [3 x i8], [3 x i8]* %96, i64 0, i64 0
+  store i8 2, i8* %97, align 1
+  br label %98
+Successor: 0x24a2290
+[BB 0x24a2290]
+  br label %99
+Successor: 0x24a1ce0
+[BB 0x24a2960]
+  %104 = load i8, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @__CS_thread_born_round, i64 0, i64 1), align 1
+  store i8 %104, i8* @__CS_round, align 1
+  store i8 0, i8* @__CS_ret, align 1
+  %105 = load i8* (i8*)*, i8* (i8*)** getelementptr inbounds ([3 x i8* (i8*)*], [3 x i8* (i8*)*]* @__CS_thread, i64 0, i64 1), align 8
+[Caller:   %106 = call i8* %105(i8* null)]
+  %107 = load i8, i8* @__CS_ret, align 1
+  %108 = zext i8 %107 to i32
+  %109 = icmp ne i32 %108, 1
+  br i1 %109, label %110, label %115
+Successor: 0x24a3030
+Successor: 0x24a3080
+[BB 0x24a29b0]
+  %117 = load i8, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @__CS_thread_allocated, i64 0, i64 2), align 1
+  %118 = zext i8 %117 to i32
+  %119 = icmp eq i32 %118, 1
+  br i1 %119, label %120, label %133
+Successor: 0x24a3750
+Successor: 0x24a37a0
+[BB 0x249f070]
+  %49 = load i32, i32* %9, align 4
+  %50 = add nsw i32 %49, 1
+  store i32 %50, i32* %9, align 4
+  br label %30
+Successor: 0x249e300
+[BB 0x249f330]
+  %53 = load i32, i32* %8, align 4
+  %54 = add nsw i32 %53, 1
+  store i32 %54, i32* %8, align 4
+  br label %10
+Successor: 0x249cfe0
+[BB 0x24a3030]
+  %111 = load i8, i8* @__CS_round, align 1
+  %112 = zext i8 %111 to i64
+  %113 = getelementptr inbounds [2 x [3 x i8]], [2 x [3 x i8]]* @__CS_thread_status, i64 0, i64 %112
+  %114 = getelementptr inbounds [3 x i8], [3 x i8]* %113, i64 0, i64 1
+  store i8 2, i8* %114, align 1
+  br label %115
+Successor: 0x24a3080
+[BB 0x24a3080]
+  br label %116
+Successor: 0x24a29b0
+[BB 0x24a3750]
+  %121 = load i8, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @__CS_thread_born_round, i64 0, i64 2), align 1
+  store i8 %121, i8* @__CS_round, align 1
+  store i8 0, i8* @__CS_ret, align 1
+  %122 = load i8* (i8*)*, i8* (i8*)** getelementptr inbounds ([3 x i8* (i8*)*], [3 x i8* (i8*)*]* @__CS_thread, i64 0, i64 2), align 16
+[Caller:   %123 = call i8* %122(i8* null)]
+  %124 = load i8, i8* @__CS_ret, align 1
+  %125 = zext i8 %124 to i32
+  %126 = icmp ne i32 %125, 1
+  br i1 %126, label %127, label %132
+Successor: 0x24a3e20
+Successor: 0x24a3e70
+[BB 0x24a37a0]
+  %134 = load i8, i8* getelementptr inbounds ([2 x [3 x i8]], [2 x [3 x i8]]* @__CS_thread_status, i64 0, i64 0, i64 0), align 1
+  %135 = zext i8 %134 to i32
+  %136 = getelementptr inbounds [2 x [3 x i8]], [2 x [3 x i8]]* %2, i64 0, i64 1
+  %137 = getelementptr inbounds [3 x i8], [3 x i8]* %136, i64 0, i64 0
+  %138 = load i8, i8* %137, align 1
+  %139 = zext i8 %138 to i32
+  %140 = icmp eq i32 %135, %139
+  %141 = zext i1 %140 to i32
+[Caller:   call void @__VERIFIER_assume(i32 %141)]
+[Callee: __VERIFIER_assume]
+  %142 = load i8, i8* getelementptr inbounds ([2 x [3 x i8]], [2 x [3 x i8]]* @__CS_thread_status, i64 0, i64 0, i64 1), align 1
+  %143 = zext i8 %142 to i32
+  %144 = getelementptr inbounds [2 x [3 x i8]], [2 x [3 x i8]]* %2, i64 0, i64 1
+  %145 = getelementptr inbounds [3 x i8], [3 x i8]* %144, i64 0, i64 1
+  %146 = load i8, i8* %145, align 1
+  %147 = zext i8 %146 to i32
+  %148 = icmp eq i32 %143, %147
+  %149 = zext i1 %148 to i32
+[Caller:   call void @__VERIFIER_assume(i32 %149)]
+[Callee: __VERIFIER_assume]
+  %150 = load i8, i8* getelementptr inbounds ([2 x [3 x i8]], [2 x [3 x i8]]* @__CS_thread_status, i64 0, i64 0, i64 2), align 1
+  %151 = zext i8 %150 to i32
+  %152 = getelementptr inbounds [2 x [3 x i8]], [2 x [3 x i8]]* %2, i64 0, i64 1
+  %153 = getelementptr inbounds [3 x i8], [3 x i8]* %152, i64 0, i64 2
+  %154 = load i8, i8* %153, align 1
+  %155 = zext i8 %154 to i32
+  %156 = icmp eq i32 %151, %155
+  %157 = zext i1 %156 to i32
+[Caller:   call void @__VERIFIER_assume(i32 %157)]
+[Callee: __VERIFIER_assume]
+  %158 = load i8*, i8** getelementptr inbounds ([2 x [3 x i8*]], [2 x [3 x i8*]]* @__CS_thread_lockedon, i64 0, i64 0, i64 0), align 16
+  %159 = getelementptr inbounds [2 x [3 x i8*]], [2 x [3 x i8*]]* %3, i64 0, i64 1
+  %160 = getelementptr inbounds [3 x i8*], [3 x i8*]* %159, i64 0, i64 0
+  %161 = load i8*, i8** %160, align 8
+  %162 = icmp eq i8* %158, %161
+  %163 = zext i1 %162 to i32
+[Caller:   call void @__VERIFIER_assume(i32 %163)]
+[Callee: __VERIFIER_assume]
+  %164 = load i8*, i8** getelementptr inbounds ([2 x [3 x i8*]], [2 x [3 x i8*]]* @__CS_thread_lockedon, i64 0, i64 0, i64 1), align 8
+  %165 = getelementptr inbounds [2 x [3 x i8*]], [2 x [3 x i8*]]* %3, i64 0, i64 1
+  %166 = getelementptr inbounds [3 x i8*], [3 x i8*]* %165, i64 0, i64 1
+  %167 = load i8*, i8** %166, align 8
+  %168 = icmp eq i8* %164, %167
+  %169 = zext i1 %168 to i32
+[Caller:   call void @__VERIFIER_assume(i32 %169)]
+[Callee: __VERIFIER_assume]
+  %170 = load i8*, i8** getelementptr inbounds ([2 x [3 x i8*]], [2 x [3 x i8*]]* @__CS_thread_lockedon, i64 0, i64 0, i64 2), align 16
+  %171 = getelementptr inbounds [2 x [3 x i8*]], [2 x [3 x i8*]]* %3, i64 0, i64 1
+  %172 = getelementptr inbounds [3 x i8*], [3 x i8*]* %171, i64 0, i64 2
+  %173 = load i8*, i8** %172, align 8
+  %174 = icmp eq i8* %170, %173
+  %175 = zext i1 %174 to i32
+[Caller:   call void @__VERIFIER_assume(i32 %175)]
+[Callee: __VERIFIER_assume]
+  %176 = load i8, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @ma, i64 0, i64 0), align 1
+  %177 = zext i8 %176 to i32
+  %178 = getelementptr inbounds [2 x i8], [2 x i8]* %4, i64 0, i64 1
+  %179 = load i8, i8* %178, align 1
+  %180 = zext i8 %179 to i32
+  %181 = icmp eq i32 %177, %180
+  %182 = zext i1 %181 to i32
+[Caller:   call void @__VERIFIER_assume(i32 %182)]
+[Callee: __VERIFIER_assume]
+  %183 = load i8, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @mb, i64 0, i64 0), align 1
+  %184 = zext i8 %183 to i32
+  %185 = getelementptr inbounds [2 x i8], [2 x i8]* %5, i64 0, i64 1
+  %186 = load i8, i8* %185, align 1
+  %187 = zext i8 %186 to i32
+  %188 = icmp eq i32 %184, %187
+  %189 = zext i1 %188 to i32
+[Caller:   call void @__VERIFIER_assume(i32 %189)]
+[Callee: __VERIFIER_assume]
+  %190 = load i32, i32* getelementptr inbounds ([2 x i32], [2 x i32]* @data1, i64 0, i64 0), align 4
+  %191 = getelementptr inbounds [2 x i32], [2 x i32]* %6, i64 0, i64 1
+  %192 = load i32, i32* %191, align 4
+  %193 = icmp eq i32 %190, %192
+  %194 = zext i1 %193 to i32
+[Caller:   call void @__VERIFIER_assume(i32 %194)]
+[Callee: __VERIFIER_assume]
+  %195 = load i32, i32* getelementptr inbounds ([2 x i32], [2 x i32]* @data2, i64 0, i64 0), align 4
+  %196 = getelementptr inbounds [2 x i32], [2 x i32]* %7, i64 0, i64 1
+  %197 = load i32, i32* %196, align 4
+  %198 = icmp eq i32 %195, %197
+  %199 = zext i1 %198 to i32
+[Caller:   call void @__VERIFIER_assume(i32 %199)]
+[Callee: __VERIFIER_assume]
+  %200 = load i8, i8* @__CS_error, align 1
+  %201 = zext i8 %200 to i32
+  %202 = icmp ne i32 %201, 1
+  %203 = zext i1 %202 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %203)]
+[Callee: __VERIFIER_assert]
+  %204 = load i32, i32* %1, align 4
+  ret i32 %204
+[BB 0x24a3e20]
+  %128 = load i8, i8* @__CS_round, align 1
+  %129 = zext i8 %128 to i64
+  %130 = getelementptr inbounds [2 x [3 x i8]], [2 x [3 x i8]]* @__CS_thread_status, i64 0, i64 %129
+  %131 = getelementptr inbounds [3 x i8], [3 x i8]* %130, i64 0, i64 2
+  store i8 2, i8* %131, align 1
+  br label %132
+Successor: 0x24a3e70
+[BB 0x24a3e70]
+  br label %133
+Successor: 0x24a37a0
+[Function: __VERIFIER_nondet_uchar]
+[Function: __VERIFIER_nondet_uchar]
+[Function: __VERIFIER_nondet_int]
+[Function: __VERIFIER_nondet_int]
+[Function: __VERIFIER_nondet_uchar]
+[Function: __VERIFIER_nondet_pointer]
+[Function: __VERIFIER_assume]
+[Function: __VERIFIER_assume]
+[Function: __VERIFIER_assume]
+[Function: __VERIFIER_assume]
+[Function: __VERIFIER_assume]
+[Function: __VERIFIER_assume]
+[Function: __VERIFIER_assume]
+[Function: __VERIFIER_assume]
+[Function: __VERIFIER_assume]
+[Function: __VERIFIER_assume]
+[Function: __VERIFIER_assert]
+[BB 0x2481930]
+  %2 = alloca i32, align 4
+  store i32 %0, i32* %2, align 4
+  %3 = load i32, i32* %2, align 4
+  %4 = icmp ne i32 %3, 0
+  br i1 %4, label %7, label %5
+Successor: 0x2481b50
+Successor: 0x2481ba0
+[BB 0x2481b50]
+  ret void
+[BB 0x2481ba0]
+  br label %6
+Successor: 0x2481ce0
+[BB 0x2481ce0]
+[Caller:   call void (...) @__VERIFIER_error() #3]
+[Callee: __VERIFIER_error]
+  unreachable
+[Function: __VERIFIER_error]

@@ -1,0 +1,172 @@
+[Function: main]
+[BB 0x1805030]
+  %1 = alloca i32, align 4
+  %2 = alloca i32, align 4
+  %3 = alloca i8*, align 8
+  %4 = alloca i64, align 8
+  %5 = alloca i64, align 8
+  %6 = alloca i32, align 4
+  store i32 0, i32* %1, align 4
+[Caller:   %7 = call i32 @__VERIFIER_nondet_int()]
+[Callee: __VERIFIER_nondet_int]
+  store i32 %7, i32* @SIZE, align 4
+  %8 = load i32, i32* @SIZE, align 4
+  %9 = icmp sgt i32 %8, 1
+  br i1 %9, label %10, label %80
+Successor: 0x1805260
+Successor: 0x18056e0
+[BB 0x1805260]
+  %11 = load i32, i32* @SIZE, align 4
+  %12 = zext i32 %11 to i64
+[Caller:   %13 = call i8* @llvm.stacksave()]
+[Callee: llvm.stacksave]
+  store i8* %13, i8** %3, align 8
+  %14 = alloca i32, i64 %12, align 16
+  store i64 %12, i64* %4, align 8
+  %15 = load i32, i32* @SIZE, align 4
+  %16 = zext i32 %15 to i64
+  %17 = alloca i32, i64 %16, align 16
+  store i64 %16, i64* %5, align 8
+  %18 = load i32, i32* @SIZE, align 4
+  %19 = srem i32 %18, 2
+  %20 = icmp ne i32 %19, 0
+  br i1 %20, label %21, label %22
+Successor: 0x1805f50
+Successor: 0x1805fe0
+[BB 0x18056e0]
+  store i32 1, i32* %1, align 4
+  br label %81
+Successor: 0x18091d0
+[BB 0x1805f50]
+  store i32 1, i32* %1, align 4
+  store i32 1, i32* %6, align 4
+  br label %76
+Successor: 0x1806240
+[BB 0x1805fe0]
+  %23 = load i32, i32* @SIZE, align 4
+  %24 = srem i32 %23, 2
+  %25 = icmp eq i32 %24, 0
+  %26 = zext i1 %25 to i32
+[Caller:   call void @__VERIFIER_assume(i32 %26)]
+[Callee: __VERIFIER_assume]
+  store i32 0, i32* %2, align 4
+  br label %27
+Successor: 0x1806800
+[BB 0x18091d0]
+  %82 = load i32, i32* %1, align 4
+  ret i32 %82
+[BB 0x1806240]
+  %77 = load i8*, i8** %3, align 8
+[Caller:   call void @llvm.stackrestore(i8* %77)]
+[Callee: llvm.stackrestore]
+  %78 = load i32, i32* %6, align 4
+  switch i32 %78, label %83 [
+    i32 0, label %79
+    i32 1, label %81
+  ]
+Successor: 0x1809130
+Successor: 0x1809180
+Successor: 0x18091d0
+[BB 0x1806800]
+  %28 = load i32, i32* %2, align 4
+  %29 = load i32, i32* @SIZE, align 4
+  %30 = sdiv i32 %29, 2
+  %31 = icmp slt i32 %28, %30
+  br i1 %31, label %32, label %56
+Successor: 0x1806ac0
+Successor: 0x1806b10
+[BB 0x1809130]
+  unreachable
+[BB 0x1809180]
+  br label %80
+Successor: 0x18056e0
+[BB 0x1806ac0]
+  %33 = load i32, i32* @SIZE, align 4
+  %34 = load i32, i32* %2, align 4
+  %35 = sub nsw i32 %33, %34
+  %36 = sub nsw i32 %35, 1
+  %37 = sext i32 %36 to i64
+  %38 = getelementptr inbounds i32, i32* %14, i64 %37
+  %39 = load i32, i32* %38, align 4
+  %40 = load i32, i32* @SIZE, align 4
+  %41 = load i32, i32* %2, align 4
+  %42 = sub nsw i32 %40, %41
+  %43 = sub nsw i32 %42, 1
+  %44 = sext i32 %43 to i64
+  %45 = getelementptr inbounds i32, i32* %17, i64 %44
+  store i32 %39, i32* %45, align 4
+  %46 = load i32, i32* %2, align 4
+  %47 = sext i32 %46 to i64
+  %48 = getelementptr inbounds i32, i32* %14, i64 %47
+  %49 = load i32, i32* %48, align 4
+  %50 = load i32, i32* %2, align 4
+  %51 = sext i32 %50 to i64
+  %52 = getelementptr inbounds i32, i32* %17, i64 %51
+  store i32 %49, i32* %52, align 4
+  br label %53
+Successor: 0x1807980
+[BB 0x1806b10]
+  store i32 0, i32* %2, align 4
+  br label %57
+Successor: 0x1807cd0
+[BB 0x1807980]
+  %54 = load i32, i32* %2, align 4
+  %55 = add nsw i32 %54, 1
+  store i32 %55, i32* %2, align 4
+  br label %27
+Successor: 0x1806800
+[BB 0x1807cd0]
+  %58 = load i32, i32* %2, align 4
+  %59 = load i32, i32* @SIZE, align 4
+  %60 = icmp slt i32 %58, %59
+  br i1 %60, label %61, label %75
+Successor: 0x1807f00
+Successor: 0x1807f50
+[BB 0x1807f00]
+  %62 = load i32, i32* %2, align 4
+  %63 = sext i32 %62 to i64
+  %64 = getelementptr inbounds i32, i32* %17, i64 %63
+  %65 = load i32, i32* %64, align 4
+  %66 = load i32, i32* %2, align 4
+  %67 = sext i32 %66 to i64
+  %68 = getelementptr inbounds i32, i32* %14, i64 %67
+  %69 = load i32, i32* %68, align 4
+  %70 = icmp eq i32 %65, %69
+  %71 = zext i1 %70 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %71)]
+[Callee: __VERIFIER_assert]
+  br label %72
+Successor: 0x1808a80
+[BB 0x1807f50]
+  store i32 0, i32* %6, align 4
+  br label %76
+Successor: 0x1806240
+[BB 0x1808a80]
+  %73 = load i32, i32* %2, align 4
+  %74 = add nsw i32 %73, 1
+  store i32 %74, i32* %2, align 4
+  br label %57
+Successor: 0x1807cd0
+[Function: __VERIFIER_nondet_int]
+[Function: llvm.stacksave]
+[Function: __VERIFIER_assume]
+[Function: llvm.stackrestore]
+[Function: __VERIFIER_assert]
+[BB 0x18048e0]
+  %2 = alloca i32, align 4
+  store i32 %0, i32* %2, align 4
+  %3 = load i32, i32* %2, align 4
+  %4 = icmp ne i32 %3, 0
+  br i1 %4, label %7, label %5
+Successor: 0x1804ad0
+Successor: 0x1804b20
+[BB 0x1804ad0]
+  ret void
+[BB 0x1804b20]
+  br label %6
+Successor: 0x1804c60
+[BB 0x1804c60]
+[Caller:   call void (...) @__VERIFIER_error() #4]
+[Callee: __VERIFIER_error]
+  unreachable
+[Function: __VERIFIER_error]

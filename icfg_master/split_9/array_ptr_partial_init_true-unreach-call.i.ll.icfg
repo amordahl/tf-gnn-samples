@@ -1,0 +1,101 @@
+[Function: main]
+[BB 0x6f03e0]
+  %1 = alloca i32, align 4
+  store i32 0, i32* %1, align 4
+  store i32 0, i32* @i, align 4
+  br label %2
+Successor: 0x6f04c0
+[BB 0x6f04c0]
+  %3 = load i32, i32* @i, align 4
+  %4 = icmp slt i32 %3, 100000
+  br i1 %4, label %5, label %12
+Successor: 0x6f0700
+Successor: 0x6f0750
+[BB 0x6f0700]
+  %6 = load i32, i32* @i, align 4
+  %7 = sext i32 %6 to i64
+  %8 = getelementptr inbounds [100000 x i32*], [100000 x i32*]* @a, i64 0, i64 %7
+  store i32* null, i32** %8, align 8
+  br label %9
+Successor: 0x6f06b0
+[BB 0x6f0750]
+  store i32 0, i32* @i, align 4
+  br label %13
+Successor: 0x6f1220
+[BB 0x6f06b0]
+  %10 = load i32, i32* @i, align 4
+  %11 = add nsw i32 %10, 1
+  store i32 %11, i32* @i, align 4
+  br label %2
+Successor: 0x6f04c0
+[BB 0x6f1220]
+  %14 = load i32, i32* @i, align 4
+  %15 = icmp slt i32 %14, 50000
+  br i1 %15, label %16, label %25
+Successor: 0x6f1410
+Successor: 0x6f1460
+[BB 0x6f1410]
+[Caller:   %17 = call noalias i8* @malloc(i32 4) #3]
+[Callee: malloc]
+  %18 = bitcast i8* %17 to i32*
+  %19 = load i32, i32* @i, align 4
+  %20 = sext i32 %19 to i64
+  %21 = getelementptr inbounds [100000 x i32*], [100000 x i32*]* @a, i64 0, i64 %20
+  store i32* %18, i32** %21, align 8
+  br label %22
+Successor: 0x6f1990
+[BB 0x6f1460]
+  store i32 0, i32* @i, align 4
+  br label %26
+Successor: 0x6f1d20
+[BB 0x6f1990]
+  %23 = load i32, i32* @i, align 4
+  %24 = add nsw i32 %23, 1
+  store i32 %24, i32* @i, align 4
+  br label %13
+Successor: 0x6f1220
+[BB 0x6f1d20]
+  %27 = load i32, i32* @i, align 4
+  %28 = icmp slt i32 %27, 50000
+  br i1 %28, label %29, label %39
+Successor: 0x6f1ee0
+Successor: 0x6f1f30
+[BB 0x6f1ee0]
+  %30 = load i32, i32* @i, align 4
+  %31 = sext i32 %30 to i64
+  %32 = getelementptr inbounds [100000 x i32*], [100000 x i32*]* @a, i64 0, i64 %31
+  %33 = load i32*, i32** %32, align 8
+  %34 = icmp ne i32* %33, null
+  %35 = zext i1 %34 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %35)]
+[Callee: __VERIFIER_assert]
+  br label %36
+Successor: 0x6f26a0
+[BB 0x6f1f30]
+  ret i32 0
+[BB 0x6f26a0]
+  %37 = load i32, i32* @i, align 4
+  %38 = add nsw i32 %37, 1
+  store i32 %38, i32* @i, align 4
+  br label %26
+Successor: 0x6f1d20
+[Function: malloc]
+[Function: __VERIFIER_assert]
+[BB 0x6efcf0]
+  %2 = alloca i32, align 4
+  store i32 %0, i32* %2, align 4
+  %3 = load i32, i32* %2, align 4
+  %4 = icmp ne i32 %3, 0
+  br i1 %4, label %7, label %5
+Successor: 0x6efee0
+Successor: 0x6eff30
+[BB 0x6efee0]
+  ret void
+[BB 0x6eff30]
+  br label %6
+Successor: 0x6f0070
+[BB 0x6f0070]
+[Caller:   call void (...) @__VERIFIER_error() #3]
+[Callee: __VERIFIER_error]
+  unreachable
+[Function: __VERIFIER_error]

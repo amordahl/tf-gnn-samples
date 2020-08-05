@@ -1,0 +1,72 @@
+[Function: main]
+[BB 0x22d3270]
+  %1 = alloca i32, align 4
+  %2 = alloca x86_fp80, align 16
+  %3 = alloca i64, align 8
+  %4 = alloca i32, align 4
+  store i32 0, i32* %1, align 4
+  store x86_fp80 0xK3FFC9249249249249000, x86_fp80* %2, align 16
+  store i64 0, i64* %3, align 8
+  store i32 1, i32* %4, align 4
+  br label %5
+Successor: 0x22d4060
+[BB 0x22d4060]
+  %6 = load x86_fp80, x86_fp80* %2, align 16
+  %7 = fcmp une x86_fp80 %6, 0xK00000000000000000000
+  br i1 %7, label %8, label %29
+Successor: 0x22d4260
+Successor: 0x22d42f0
+[BB 0x22d4260]
+  %9 = load x86_fp80, x86_fp80* %2, align 16
+  %10 = fmul x86_fp80 %9, 0xK4002A000000000000000
+  %11 = fptosi x86_fp80 %10 to i32
+  %12 = srem i32 %11, 10
+  %13 = load i32, i32* %4, align 4
+  %14 = mul nsw i32 %13, 10
+  %15 = mul nsw i32 %12, %14
+  %16 = sext i32 %15 to i64
+  %17 = load i64, i64* %3, align 8
+  %18 = add nsw i64 %17, %16
+  store i64 %18, i64* %3, align 8
+  %19 = load x86_fp80, x86_fp80* %2, align 16
+  %20 = fmul x86_fp80 %19, 0xK4002A000000000000000
+  %21 = load x86_fp80, x86_fp80* %2, align 16
+  %22 = fptosi x86_fp80 %21 to i32
+  %23 = mul nsw i32 %22, 10
+  %24 = sitofp i32 %23 to x86_fp80
+  %25 = fsub x86_fp80 %20, %24
+  store x86_fp80 %25, x86_fp80* %2, align 16
+  br label %26
+Successor: 0x22d34a0
+[BB 0x22d42f0]
+  %30 = load i64, i64* %3, align 8
+  %31 = icmp sgt i64 %30, 67050
+  %32 = zext i1 %31 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %32)]
+[Callee: __VERIFIER_assert]
+  ret i32 0
+[BB 0x22d34a0]
+  %27 = load i32, i32* %4, align 4
+  %28 = add nsw i32 %27, 1
+  store i32 %28, i32* %4, align 4
+  br label %5
+Successor: 0x22d4060
+[Function: __VERIFIER_assert]
+[BB 0x22d2540]
+  %2 = alloca i32, align 4
+  store i32 %0, i32* %2, align 4
+  %3 = load i32, i32* %2, align 4
+  %4 = icmp ne i32 %3, 0
+  br i1 %4, label %7, label %5
+Successor: 0x22d2d70
+Successor: 0x22d2dc0
+[BB 0x22d2d70]
+  ret void
+[BB 0x22d2dc0]
+  br label %6
+Successor: 0x22d2f00
+[BB 0x22d2f00]
+[Caller:   call void (...) @__VERIFIER_error() #2]
+[Callee: __VERIFIER_error]
+  unreachable
+[Function: __VERIFIER_error]

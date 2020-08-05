@@ -1,0 +1,57 @@
+TranslationUnitDecl 0x563186dbfdf8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x563186dc06b8 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x563186dc0390 '__int128'
+|-TypedefDecl 0x563186dc0728 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x563186dc03b0 'unsigned __int128'
+|-TypedefDecl 0x563186dc0a30 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x563186dc0800 'struct __NSConstantString_tag'
+|   `-Record 0x563186dc0780 '__NSConstantString_tag'
+|-TypedefDecl 0x563186dc0ad8 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x563186dc0a90 'char *'
+|   `-BuiltinType 0x563186dbfe90 'char'
+|-TypedefDecl 0x563186dff7f0 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x563186dc0d70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x563186dc0bb0 'struct __va_list_tag'
+|     `-Record 0x563186dc0b30 '__va_list_tag'
+|-FunctionDecl 0x563186dff8d0 <./split_6/simple_true-unreach-call4.i:1:1, col:61> col:13 used __VERIFIER_error 'void () __attribute__((noreturn))' extern
+|-FunctionDecl 0x563186dffaa0 <line:2:1, line:7:1> line:2:6 used __VERIFIER_assert 'void (int)'
+| |-ParmVarDecl 0x563186dff9d0 <col:24, col:28> col:28 used cond 'int'
+| `-CompoundStmt 0x563186dffcf0 <col:34, line:7:1>
+|   |-IfStmt 0x563186dffcc8 <line:3:3, line:5:3>
+|   | |-UnaryOperator 0x563186dffba0 <line:3:7, col:13> 'int' prefix '!' cannot overflow
+|   | | `-ImplicitCastExpr 0x563186dffb88 <col:8, col:13> 'int' <LValueToRValue>
+|   | |   `-ParenExpr 0x563186dffb68 <col:8, col:13> 'int' lvalue
+|   | |     `-DeclRefExpr 0x563186dffb48 <col:9> 'int' lvalue ParmVar 0x563186dff9d0 'cond' 'int'
+|   | `-CompoundStmt 0x563186dffcb0 <col:16, line:5:3>
+|   |   `-LabelStmt 0x563186dffc98 <line:4:5, col:29> 'ERROR'
+|   |     `-CallExpr 0x563186dffc28 <col:12, col:29> 'void'
+|   |       `-ImplicitCastExpr 0x563186dffc10 <col:12> 'void (*)() __attribute__((noreturn))' <FunctionToPointerDecay>
+|   |         `-DeclRefExpr 0x563186dffbb8 <col:12> 'void () __attribute__((noreturn))' Function 0x563186dff8d0 '__VERIFIER_error' 'void () __attribute__((noreturn))'
+|   `-ReturnStmt 0x563186dffce0 <line:6:3>
+`-FunctionDecl 0x563186dffde8 <line:8:1, line:14:1> line:8:5 main 'int (void)'
+  `-CompoundStmt 0x563186e00240 <col:16, line:14:1>
+    |-DeclStmt 0x563186dfff78 <line:9:3, col:30>
+    | `-VarDecl 0x563186dffed8 <col:3, col:20> col:16 used x 'unsigned int' cinit
+    |   `-ImplicitCastExpr 0x563186dfff60 <col:20> 'unsigned int' <IntegralCast>
+    |     `-IntegerLiteral 0x563186dfff40 <col:20> 'int' 268435440
+    |-WhileStmt 0x563186e000c0 <line:10:3, line:12:3>
+    | |-BinaryOperator 0x563186e00000 <line:10:10, col:14> 'int' '>'
+    | | |-ImplicitCastExpr 0x563186dfffd0 <col:10> 'unsigned int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x563186dfff90 <col:10> 'unsigned int' lvalue Var 0x563186dffed8 'x' 'unsigned int'
+    | | `-ImplicitCastExpr 0x563186dfffe8 <col:14> 'unsigned int' <IntegralCast>
+    | |   `-IntegerLiteral 0x563186dfffb0 <col:14> 'int' 0
+    | `-CompoundStmt 0x563186e000a8 <col:17, line:12:3>
+    |   `-CompoundAssignOperator 0x563186e00078 <line:11:5, col:10> 'unsigned int' '-=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+    |     |-DeclRefExpr 0x563186e00020 <col:5> 'unsigned int' lvalue Var 0x563186dffed8 'x' 'unsigned int'
+    |     `-ImplicitCastExpr 0x563186e00060 <col:10> 'unsigned int' <IntegralCast>
+    |       `-IntegerLiteral 0x563186e00040 <col:10> 'int' 2
+    `-CallExpr 0x563186e00218 <line:13:3, col:29> 'void'
+      |-ImplicitCastExpr 0x563186e00200 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x563186e000e0 <col:3> 'void (int)' Function 0x563186dffaa0 '__VERIFIER_assert' 'void (int)'
+      `-UnaryOperator 0x563186e001b0 <col:21, col:28> 'int' prefix '!' cannot overflow
+        `-ParenExpr 0x563186e00190 <col:22, col:28> 'unsigned int'
+          `-BinaryOperator 0x563186e00170 <col:23, col:27> 'unsigned int' '%'
+            |-ImplicitCastExpr 0x563186e00140 <col:23> 'unsigned int' <LValueToRValue>
+            | `-DeclRefExpr 0x563186e00100 <col:23> 'unsigned int' lvalue Var 0x563186dffed8 'x' 'unsigned int'
+            `-ImplicitCastExpr 0x563186e00158 <col:27> 'unsigned int' <IntegralCast>
+              `-IntegerLiteral 0x563186e00120 <col:27> 'int' 2

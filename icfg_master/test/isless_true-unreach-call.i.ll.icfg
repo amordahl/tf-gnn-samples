@@ -1,0 +1,35 @@
+[Function: main]
+[BB 0x19a5cb0]
+  %1 = alloca i32, align 4
+  store i32 0, i32* %1, align 4
+[Caller:   call void @__VERIFIER_assert(i32 1)]
+[Callee: __VERIFIER_assert]
+[Caller:   call void @__VERIFIER_assert(i32 1)]
+[Callee: __VERIFIER_assert]
+[Caller:   call void @__VERIFIER_assert(i32 1)]
+[Callee: __VERIFIER_assert]
+[Caller:   call void @__VERIFIER_assert(i32 1)]
+[Callee: __VERIFIER_assert]
+  ret i32 0
+[Function: __VERIFIER_assert]
+[BB 0x19a4f20]
+  %2 = alloca i32, align 4
+  store i32 %0, i32* %2, align 4
+  %3 = load i32, i32* %2, align 4
+  %4 = icmp ne i32 %3, 0
+  br i1 %4, label %7, label %5
+Successor: 0x19a5750
+Successor: 0x19a57a0
+[BB 0x19a5750]
+  ret void
+[BB 0x19a57a0]
+  br label %6
+Successor: 0x19a58e0
+[BB 0x19a58e0]
+[Caller:   call void (...) @__VERIFIER_error() #2]
+[Callee: __VERIFIER_error]
+  unreachable
+[Function: __VERIFIER_assert]
+[Function: __VERIFIER_assert]
+[Function: __VERIFIER_assert]
+[Function: __VERIFIER_error]

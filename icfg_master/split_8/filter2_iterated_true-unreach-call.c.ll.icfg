@@ -1,0 +1,251 @@
+[Function: main]
+[BB 0x815f50]
+  %1 = alloca i32, align 4
+  store i32 0, i32* %1, align 4
+  store float 0.000000e+00, float* @X, align 4
+  store i32 1, i32* @INIT1, align 4
+  store i32 1, i32* @INIT2, align 4
+  br label %2
+Successor: 0x816270
+[BB 0x816270]
+  %3 = load float, float* @X, align 4
+  %4 = fpext float %3 to double
+  %5 = fmul double 0x3FEF5C28F5C28F5C, %4
+  %6 = fadd double %5, 8.500000e+01
+  %7 = fptrunc double %6 to float
+  store float %7, float* @X, align 4
+  %8 = load float, float* @X, align 4
+  %9 = fpext float %8 to double
+  %10 = fcmp oge double %9, -4.000000e+02
+  br i1 %10, label %11, label %20
+Successor: 0x816440
+Successor: 0x816970
+[BB 0x816440]
+  %12 = load float, float* @X, align 4
+  %13 = fpext float %12 to double
+  %14 = fcmp ole double %13, 4.000000e+02
+  br i1 %14, label %15, label %20
+Successor: 0x816c20
+Successor: 0x816970
+[BB 0x816970]
+  %21 = load float, float* @X, align 4
+  %22 = fpext float %21 to double
+  %23 = fcmp oge double %22, -8.000000e+02
+  br i1 %23, label %24, label %33
+Successor: 0x817310
+Successor: 0x8173a0
+[BB 0x816c20]
+[Caller:   call void @filter1()]
+[Callee: filter1]
+  %16 = load float, float* @X, align 4
+  %17 = fpext float %16 to double
+  %18 = fadd double %17, 1.000000e+02
+  %19 = fptrunc double %18 to float
+  store float %19, float* @X, align 4
+  store i32 0, i32* @INIT1, align 4
+  br label %34
+Successor: 0x8170a0
+[BB 0x817310]
+  %25 = load float, float* @X, align 4
+  %26 = fpext float %25 to double
+  %27 = fcmp ole double %26, 8.000000e+02
+  br i1 %27, label %28, label %33
+Successor: 0x817650
+Successor: 0x8173a0
+[BB 0x8173a0]
+  br label %34
+Successor: 0x8170a0
+[BB 0x8170a0]
+  %35 = load float, float* @X, align 4
+  %36 = fpext float %35 to double
+  %37 = fcmp oge double %36, -1.155000e+03
+  br i1 %37, label %38, label %42
+Successor: 0x817db0
+Successor: 0x817e00
+[BB 0x817650]
+[Caller:   call void @filter2()]
+[Callee: filter2]
+  %29 = load float, float* @X, align 4
+  %30 = fpext float %29 to double
+  %31 = fsub double %30, 5.000000e+01
+  %32 = fptrunc double %31 to float
+  store float %32, float* @X, align 4
+  store i32 0, i32* @INIT2, align 4
+  br label %33
+Successor: 0x8173a0
+[BB 0x817db0]
+  %39 = load float, float* @X, align 4
+  %40 = fpext float %39 to double
+  %41 = fcmp ole double %40, 4.251000e+03
+  br label %42
+Successor: 0x817e00
+[BB 0x817e00]
+  %43 = phi i1 [ false, %34 ], [ %41, %38 ]
+  %44 = zext i1 %43 to i32
+[Caller:   call void @__VERIFIER_assert(i32 %44)]
+[Callee: __VERIFIER_assert]
+  br label %2
+Successor: 0x816270
+[Function: filter1]
+[BB 0x810f00]
+  %1 = load i32, i32* @INIT1, align 4
+  %2 = icmp ne i32 %1, 0
+  br i1 %2, label %3, label %7
+Successor: 0x810fe0
+Successor: 0x811030
+[BB 0x810fe0]
+  %4 = load float, float* @X, align 4
+  store float %4, float* getelementptr inbounds ([2 x float], [2 x float]* @filter1.S, i64 0, i64 0), align 4
+  %5 = load float, float* @X, align 4
+  store float %5, float* @P, align 4
+  %6 = load float, float* @X, align 4
+  store float %6, float* getelementptr inbounds ([2 x float], [2 x float]* @filter1.E, i64 0, i64 0), align 4
+  store float 0.000000e+00, float* getelementptr inbounds ([2 x float], [2 x float]* @filter1.E, i64 0, i64 1), align 4
+  store float 0.000000e+00, float* getelementptr inbounds ([2 x float], [2 x float]* @filter1.S, i64 0, i64 1), align 4
+  br label %40
+Successor: 0x811990
+[BB 0x811030]
+  %8 = load float, float* @X, align 4
+  %9 = fpext float %8 to double
+  %10 = fmul double 5.000000e-01, %9
+  %11 = load float, float* getelementptr inbounds ([2 x float], [2 x float]* @filter1.E, i64 0, i64 0), align 4
+  %12 = fpext float %11 to double
+  %13 = fmul double 0x3FE6666666666666, %12
+  %14 = fsub double %10, %13
+  %15 = load float, float* getelementptr inbounds ([2 x float], [2 x float]* @filter1.E, i64 0, i64 1), align 4
+  %16 = fpext float %15 to double
+  %17 = fmul double 4.000000e-01, %16
+  %18 = fadd double %14, %17
+  %19 = load float, float* getelementptr inbounds ([2 x float], [2 x float]* @filter1.S, i64 0, i64 0), align 4
+  %20 = fpext float %19 to double
+  %21 = fmul double 1.500000e+00, %20
+  %22 = fadd double %18, %21
+  %23 = load float, float* getelementptr inbounds ([2 x float], [2 x float]* @filter1.S, i64 0, i64 1), align 4
+  %24 = fpext float %23 to double
+  %25 = fmul double %24, 0x3FE6666666666666
+  %26 = fsub double %22, %25
+  %27 = fptrunc double %26 to float
+  store float %27, float* @P, align 4
+  %28 = load float, float* getelementptr inbounds ([2 x float], [2 x float]* @filter1.E, i64 0, i64 0), align 4
+  store float %28, float* getelementptr inbounds ([2 x float], [2 x float]* @filter1.E, i64 0, i64 1), align 4
+  %29 = load float, float* @X, align 4
+  store float %29, float* getelementptr inbounds ([2 x float], [2 x float]* @filter1.E, i64 0, i64 0), align 4
+  %30 = load float, float* getelementptr inbounds ([2 x float], [2 x float]* @filter1.S, i64 0, i64 0), align 4
+  store float %30, float* getelementptr inbounds ([2 x float], [2 x float]* @filter1.S, i64 0, i64 1), align 4
+  %31 = load float, float* @P, align 4
+  store float %31, float* getelementptr inbounds ([2 x float], [2 x float]* @filter1.S, i64 0, i64 0), align 4
+  %32 = load float, float* @P, align 4
+  %33 = fpext float %32 to double
+  %34 = fdiv double %33, 6.000000e+00
+  %35 = load float, float* getelementptr inbounds ([2 x float], [2 x float]* @filter1.S, i64 0, i64 1), align 4
+  %36 = fpext float %35 to double
+  %37 = fdiv double %36, 5.000000e+00
+  %38 = fadd double %34, %37
+  %39 = fptrunc double %38 to float
+  store float %39, float* @X, align 4
+  br label %40
+Successor: 0x811990
+[BB 0x811990]
+  ret void
+[Function: filter2]
+[BB 0x813220]
+  %1 = load i32, i32* @INIT2, align 4
+  %2 = icmp ne i32 %1, 0
+  br i1 %2, label %3, label %13
+Successor: 0x8133c0
+Successor: 0x813410
+[BB 0x8133c0]
+  %4 = load float, float* @X, align 4
+  %5 = fpext float %4 to double
+  %6 = fmul double 5.000000e-01, %5
+  %7 = fptrunc double %6 to float
+  store float %7, float* getelementptr inbounds ([2 x float], [2 x float]* @filter2.S2, i64 0, i64 0), align 4
+  %8 = load float, float* @X, align 4
+  store float %8, float* @P, align 4
+  %9 = load float, float* @X, align 4
+  %10 = fpext float %9 to double
+  %11 = fmul double 8.000000e-01, %10
+  %12 = fptrunc double %11 to float
+  store float %12, float* getelementptr inbounds ([2 x float], [2 x float]* @filter2.E2, i64 0, i64 0), align 4
+  store float 0.000000e+00, float* getelementptr inbounds ([2 x float], [2 x float]* @filter2.E2, i64 0, i64 1), align 4
+  store float 0.000000e+00, float* getelementptr inbounds ([2 x float], [2 x float]* @filter2.S2, i64 0, i64 1), align 4
+  br label %62
+Successor: 0x8135c0
+[BB 0x813410]
+  %14 = load float, float* @X, align 4
+  %15 = fpext float %14 to double
+  %16 = fmul double 3.000000e-01, %15
+  %17 = load float, float* getelementptr inbounds ([2 x float], [2 x float]* @filter2.E2, i64 0, i64 0), align 4
+  %18 = fpext float %17 to double
+  %19 = fmul double %18, 2.000000e-01
+  %20 = fsub double %16, %19
+  %21 = load float, float* getelementptr inbounds ([2 x float], [2 x float]* @filter2.E2, i64 0, i64 1), align 4
+  %22 = fpext float %21 to double
+  %23 = fmul double %22, 1.400000e+00
+  %24 = fadd double %20, %23
+  %25 = load float, float* getelementptr inbounds ([2 x float], [2 x float]* @filter2.S2, i64 0, i64 0), align 4
+  %26 = fpext float %25 to double
+  %27 = fmul double %26, 5.000000e-01
+  %28 = fadd double %24, %27
+  %29 = load float, float* getelementptr inbounds ([2 x float], [2 x float]* @filter2.S2, i64 0, i64 1), align 4
+  %30 = fpext float %29 to double
+  %31 = fmul double %30, 1.700000e+00
+  %32 = fsub double %28, %31
+  %33 = fptrunc double %32 to float
+  store float %33, float* @P, align 4
+  %34 = load float, float* getelementptr inbounds ([2 x float], [2 x float]* @filter2.E2, i64 0, i64 0), align 4
+  %35 = fpext float %34 to double
+  %36 = fmul double 5.000000e-01, %35
+  %37 = fptrunc double %36 to float
+  store float %37, float* getelementptr inbounds ([2 x float], [2 x float]* @filter2.E2, i64 0, i64 1), align 4
+  %38 = load float, float* @X, align 4
+  %39 = fpext float %38 to double
+  %40 = fmul double 2.000000e+00, %39
+  %41 = fptrunc double %40 to float
+  store float %41, float* getelementptr inbounds ([2 x float], [2 x float]* @filter2.E2, i64 0, i64 0), align 4
+  %42 = load float, float* getelementptr inbounds ([2 x float], [2 x float]* @filter2.S2, i64 0, i64 0), align 4
+  %43 = fpext float %42 to double
+  %44 = fadd double %43, 1.000000e+01
+  %45 = fptrunc double %44 to float
+  store float %45, float* getelementptr inbounds ([2 x float], [2 x float]* @filter2.S2, i64 0, i64 1), align 4
+  %46 = load float, float* @P, align 4
+  %47 = fpext float %46 to double
+  %48 = fdiv double %47, 2.000000e+00
+  %49 = load float, float* getelementptr inbounds ([2 x float], [2 x float]* @filter2.S2, i64 0, i64 1), align 4
+  %50 = fpext float %49 to double
+  %51 = fdiv double %50, 3.000000e+00
+  %52 = fadd double %48, %51
+  %53 = fptrunc double %52 to float
+  store float %53, float* getelementptr inbounds ([2 x float], [2 x float]* @filter2.S2, i64 0, i64 0), align 4
+  %54 = load float, float* @P, align 4
+  %55 = fpext float %54 to double
+  %56 = fdiv double %55, 8.000000e+00
+  %57 = load float, float* getelementptr inbounds ([2 x float], [2 x float]* @filter2.S2, i64 0, i64 1), align 4
+  %58 = fpext float %57 to double
+  %59 = fdiv double %58, 1.000000e+01
+  %60 = fadd double %56, %59
+  %61 = fptrunc double %60 to float
+  store float %61, float* @X, align 4
+  br label %62
+Successor: 0x8135c0
+[BB 0x8135c0]
+  ret void
+[Function: __VERIFIER_assert]
+[BB 0x810810]
+  %2 = alloca i32, align 4
+  store i32 %0, i32* %2, align 4
+  %3 = load i32, i32* %2, align 4
+  %4 = icmp ne i32 %3, 0
+  br i1 %4, label %7, label %5
+Successor: 0x810a00
+Successor: 0x810a50
+[BB 0x810a00]
+  ret void
+[BB 0x810a50]
+  br label %6
+Successor: 0x810b90
+[BB 0x810b90]
+[Caller:   call void (...) @__VERIFIER_error() #2]
+[Callee: __VERIFIER_error]
+  unreachable
+[Function: __VERIFIER_error]
