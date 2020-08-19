@@ -30,7 +30,7 @@ if [ ! -d "$DATASET_DIR" ]; then
     echo 'Transferring to dataset folder.'
     for i in {0..9}; do
 	# Create the directory
-	mkdir "$DATASET_DIR/$i"
+	mkdir -p "$DATASET_DIR/$i"
 	mkdir "$DATASET_DIR/$i/graphs-valid"
 	find "$MASTER_FOLDER" -type f -name '*.json' | grep "split_$i" | parallel cp -t "$DATASET_DIR/$i/graphs-valid"
 	mkdir "$DATASET_DIR/$i/graphs-train" 
@@ -48,6 +48,6 @@ fi
 
 # Perform training.
 echo 'Now training.'
-parallel --progress python train.py --data-path "$DATASET_DIR"/{} --result-dir "$RESULTS_DIR"/{} GGNN varmisuse ::: 0 1 2 3 4 5 6 7 8 9
+parallel -j 1 --progress python train.py --data-path "$DATASET_DIR"/{2} --result-dir "$RESULTS_DIR"/{1}/{2} --model-param-overrides ''\''{"random_seed": {1}}'\''' GGNN varmisuse ::: 1591 8340 2137 9914 3407 ::: 0 1 2 3 4 5 6 7 8 9
 echo 'Training done. Now testing.'
 find "$RESULTS_DIR" -type f -name '*.pickle' | parallel "python test.py {} $DATASET_DIR/graphs-test > {}.test"
